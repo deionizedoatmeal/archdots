@@ -20,9 +20,9 @@ set foldnestmax=10      " 10 nested fold max
 nnoremap <space> za
 set foldmethod=indent   " fold based on indent level
 
-au BufEnter * :hi EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
+"au BufEnter * :hi EndOfBuffer ctermbg=guibg ctermfg=guibg guibg=guibg guifg=guibg
 "au BufEnter * :Minimap
-au BufEnter * :hi VertSplit ctermbg=bg ctermfg=bg
+"au BufEnter * :hi VertSplit ctermbg=guibg ctermfg=guibg
 
 "plugins
 call plug#begin('~/.config/nvim/plugs')
@@ -31,7 +31,7 @@ Plug 'junegunn/limelight.vim'
 Plug 'severin-lemaignan/vim-minimap'
 Plug 'dylanaraps/wal.vim'
 Plug 'lervag/vimtex'
-Plug 'sirver/ultisnips'
+"Plug 'sirver/ultisnips'
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
 call plug#end()
@@ -47,9 +47,9 @@ set conceallevel=1
 let g:tex_conceal='abdmg'
 
 "utilsnips
-let g:UltiSnipsExpandTrigger = '<tab>'
-let g:UltiSnipsJumpForwardTrigger = '<tab>'
-let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+"let g:UltiSnipsExpandTrigger = '<tab>'
+"let g:UltiSnipsJumpForwardTrigger = '<tab>'
+"let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
 "colors
 colorscheme wal

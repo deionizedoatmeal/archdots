@@ -42,7 +42,7 @@ cp -r spotify-tui/* ~/.config/spotify-tui/
 cp -r spotifyd/* ~/.config/spotifyd/
 cp .bashrc ~/
 cp .Xresources ~/
-cp -r chrome/* ~/.mozilla/firefox/*.default-release/chrome/
+cp -r chrome ~/.mozilla/firefox/*.default-release/.
 sudo cp -r fonts/* /usr/share/fonts/.
 sudo cp ranger/ranger.desktop /usr/share/applications/.
 sudo cp spotify-tui/spotify-tui.desktop /usr/share/applications/.

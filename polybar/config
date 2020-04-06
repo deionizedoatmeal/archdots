@@ -40,7 +40,7 @@ font-2 = Iosevka Nerd Font:size=41;8
 #font-1 = Iosevka Nerd Font:size=14;4
 #font-2 = Iosevka Nerd Font:size=22;4
 
-modules-left = i3 spotify
+modules-left = i3
 modules-center = date
 modules-right = bluetooth-display pulseaudio redshift-display backlight cpu temperature system-cpu-frequency-display memory power-profile-display battery network vpn-display
 
