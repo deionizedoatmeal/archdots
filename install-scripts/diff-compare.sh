@@ -40,6 +40,8 @@ echo "##### ranger/ranger.desktop ######"
 diff ../ranger/ranger.desktop /usr/share/applications/ranger.desktop
 echo "##### spotify-tui/spotify-tui.desktop ######"
 diff ../spotify-tui/spotify-tui.desktop /usr/share/applications/spotify-tui.desktop
+echo "##### sudoers ######"
+sudo diff ../sudoers /etc/sudoers
 
 echo "
 

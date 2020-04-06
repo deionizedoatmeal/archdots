@@ -160,3 +160,7 @@
     spacing: 0;
     text-color: @normal-foreground;
 }}
+
+#icons {{
+    show-icons: false;
+}}

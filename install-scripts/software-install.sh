@@ -6,12 +6,12 @@
 #     PACMAN      #
 ###################
 # update and upgrade
-sudo pacman -Syy & sudo pacman -Syu
-nohup sleep 10                
+sudo pacman -Syy
+sudo pacman -Syu
 
 # package lists
-SYS="bc dbus bluez bluez-utils reshift upower git sudo vi kitty rofi compton dunst openvpn i3lock gnupg imagemagick mpg123 ffmpeg feh ttf-fantasque-sans-mono tlp tlp-rdw python-pip nvme-cli lm_sensors openssh"
-APPS="firefox neovim gnuplot vlc darktable neofetch steam atom gimp zathura ranger pass powertop htop speedtest-cli"
+SYS="bc dbus powertop pulseaudio bluez bluez-utils reshift upower git sudo vi kitty rofi compton dunst openvpn i3lock gnupg imagemagick mpg123 ffmpeg feh ttf-fantasque-sans-mono tlp tlp-rdw python-pip nvme-cli lm_sensors openssh"
+APPS="ranger zathura firefox neovim gnuplot vlc darktable neofetch steam atom gimp zathura ranger pass powertop htop speedtest-cli"
 TRI=""
 NEP=""
 
@@ -54,7 +54,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 # yay package list
-YAYSYS="polybar spotify system76-power system76-driver ly protonvpn-cli-ng"
+YAYSYS="polybar spotify system76-power system76-driver ly"
 
 # yay install
 read -r -p "#### Would you like to install yay packages? [y/N] ####" response
@@ -62,6 +62,12 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
         yay -S --needed $YAYSYS
 fi
 
+# system76-power
+read -r -p "#### Would you like to enable and start system76-power.service? [y/N] ####" response
+if [[ "$response" =~ ^([Yy])+$ ]]; then
+        sudo systemctl enabled system76-power.service
+        sudo systemctl start system76-power.service
+fi
 
 
 ####################
@@ -85,8 +91,9 @@ fi
 read -r -p "Would you like to install Spotifyd v0.2.24? [y/N]" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
         wget https://github.com/Spotifyd/spotifyd/releases/download/v0.2.24/spotifyd-linux-full.tar.gz
-        tar -xf spotify-linux-full.tar.gz
+        tar -xf spotifyd-linux-full.tar.gz
         sudo mv spotifyd /bin/spotifyd
+        rm spotifyd-linux-full.tar.gz
 fi
 
 # install nvim plugin manager

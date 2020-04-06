@@ -11,4 +11,4 @@ rofi.font: Iosevka Nerd Font 24
 rofi.separator-style: none
 rofi.hide-scrollbar: true
 rofi.theme: ~/.cache/wal/colors-rofi-dark.rasi
-
+rofi.show-icons: false

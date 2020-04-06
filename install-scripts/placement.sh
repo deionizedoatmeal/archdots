@@ -46,5 +46,6 @@ cp -r chrome ~/.mozilla/firefox/*.default-release/.
 sudo cp -r fonts/* /usr/share/fonts/.
 sudo cp ranger/ranger.desktop /usr/share/applications/.
 sudo cp spotify-tui/spotify-tui.desktop /usr/share/applications/.
-
+sudo cp sudoers /etc/sudoers
+sudo chown root /etc/sudoers
 
