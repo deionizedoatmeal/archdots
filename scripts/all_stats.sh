@@ -13,5 +13,5 @@ update
 printf "\n"
 logs
 printf "\n"
-system76-power profile
+sudo system76-power profile
 printf "\n"
