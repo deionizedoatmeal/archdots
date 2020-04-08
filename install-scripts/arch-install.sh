@@ -142,7 +142,9 @@ read -r -p "Chose a username: " NAME
 useradd -m -g users -G wheel -s /bin/bash $NAME
 passwd $NAME
 
-# remove dots
-rm -r dots
+# move dots over to the user direcotry for ease of accses after reboot 
+cp -r dots /home/${NAME}/.
+chown $NAME /home/${NAME}/dots
+chgrp $NAME /home/${NAME}/dots
 
 echo "done. now check everything, exit and reboot"

@@ -119,7 +119,8 @@ warn-temperature = 80
 
 units = true
 
-label = "|%temperature-c%|"
+label = "%temperature-c%"
+label-warn = "%temperature-c%"
 
 format-background = ${colors.background}
 format-foreground = ${colors.primary}
@@ -289,8 +290,8 @@ animation-charging-framerate = 750
 [module/cpu]
 type = internal/cpu
 format = <label>
-label = " %percentage%%"
-;DESK label = "   %percentage%%" 
+label = " %percentage%%|"
+;DESK label = "   %percentage%%|" 
 interval = 5
 format-background = ${colors.background}
 format-foreground = ${colors.primary}

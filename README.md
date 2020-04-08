@@ -1,20 +1,29 @@
-These are my dotfiles and scripts for my personal system. My process after a fresh install is: 
-1) clone the repo 
-2) run package-install.sh, i3gaps-install.sh, polybar-install.sh, and placement.sh 
-3) reboot and migrate data
+These are my dotfiles and scripts for my personal system. My process for a fresh install is: 
+1) boot from a live .iso
+2) clone the repository: `git clone https://github.com/deionizedoatmeal/dots.git`
+3) run the script `./dots/install-scripts/arch-install.sh`
+4) follow the instructions, then manually check everything after it finishes
+5) `exit` and `reboot` system
+6) enter the disk encryption password, the log into tty
+7) run `./software-install.sh`, `./i3gaps-install` and `./placement.sh`
+8) securely import my ssh and gpg keys and run `./pass-setup.sh`
+9) reboot and log into i3 via ly
+10) import my data, log into applications (messages, spotify, firefox, and steam)
 
 # configuation files for:
 - i3wm (w/ gaps & rounded corners)  
+- polybar  
+- picom 
 - kitty
 - rofi  
 - dunst
-- polybar  
 - firefox
 - neovim 
-- comptom  
 - ranger
 - zathura
 - spotify-tui + spotifyd
+- ly (display manager)
+- grub, mkinitcpio and sudo
 # installation scripts:  
 - installing apt, python and rust packages
 - installing ben friesen's fork of i3-gaps  
