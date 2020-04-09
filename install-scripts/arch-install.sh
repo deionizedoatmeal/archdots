@@ -50,7 +50,7 @@ vgcreate vg /dev/mapper/cryptlvm
 # ask for user input
 read -r -p "How much swap would you like in the system? (Answer in integer GB, ian likes 8)" SWAP
 
-read -r -p "How much space for root would you like in the system? (Answer in integer GB, ian likes 10)" ROOT
+read -r -p "How much space for root would you like in the system? (Answer in integer GB, ian likes 20)" ROOT
 
 # set up swap, root and home
 lvcreate -L ${SWAP}G vg -n swap

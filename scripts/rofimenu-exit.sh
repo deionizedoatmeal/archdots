@@ -22,7 +22,10 @@ case $chosen in
         lock
         ;;
     $log_out)
-        i3-msg exit
+        i3-msg exit && killall -u ian
+        #killall -q redshift
+        #killall -q polybar
+        #killall -q compton
         ;;
 esac
 
