@@ -129,5 +129,10 @@ source $HOME/.cargo/env
 #PYWAL#
 #######
 # make colors persit when starting newterminal
-(cat ~/.cache/wal/sequences)
+#(cat ~/.cache/wal/sequences)
+
+##########
+# EDITOR #
+##########
+export EDITOR=nvim
 
