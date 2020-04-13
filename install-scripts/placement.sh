@@ -26,6 +26,7 @@ mkdir ~/.config/dunst/
 mkdir ~/.config/wal/templates/
 mkdir ~/.config/spotify-tui/
 mkdir ~/.config/spotifyd/
+mkdir ~/.config/'Android Messages'/
 
 #move dotfiles into corresponding config directories
 cd ..
@@ -43,6 +44,7 @@ cp -r spotifyd/* ~/.config/spotifyd/
 cp .bashrc ~/
 cp .Xresources ~/
 cp -r chrome ~/.mozilla/firefox/*.default-release/.
+cp -r android_messages ~/.config/'Android Messages'/.
 sudo cp -r fonts/* /usr/share/fonts/.
 sudo cp ranger/ranger.desktop /usr/share/applications/.
 sudo cp spotify-tui/spotify-tui.desktop /usr/share/applications/.
