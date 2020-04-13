@@ -28,18 +28,23 @@ echo "##### wal/templates/colors-rofi-dark.rasi #####"
 diff ../wal/templates/colors-rofi-dark.rasi ~/.config/wal/templates/colors-rofi-dark.rasi
 echo "##### wal/templates/dunstrc #####"
 diff ../wal/templates/dunstrc ~/.config/wal/templates/dunstrc
+echo "##### kitty/kitty.conf #####"
+diff ../kitty/kitty.conf ~/.config/kitty/kitty.conf
 echo "##### .bashrc ######"
 diff ../.bashrc ~/.bashrc
 echo "##### .Xresources ######"
 diff ../.Xresources ~/.Xresources 
 echo "##### chrome/userChrome.css ######"
 diff ../chrome/userChrome.css ~/.mozilla/firefox/*.default-release/chrome/userChrome.css
-echo "##### chrome/userContent.css ######"
-diff ../chrome/userContent.css ~/.mozilla/firefox/*.default-release/chrome/userContent.css
 echo "##### ranger/ranger.desktop ######"
 diff ../ranger/ranger.desktop /usr/share/applications/ranger.desktop
 echo "##### spotify-tui/spotify-tui.desktop ######"
 diff ../spotify-tui/spotify-tui.desktop /usr/share/applications/spotify-tui.desktop
+echo "##### Android Messages/Settings ######"
+diff ../android_messages/Settings ~/.config/'Android Messages'/Settings
+echo "##### zoomus.conf ######"
+diff ../zoomus.conf ~/.config/zoomus.conf
+
 
 echo "
 

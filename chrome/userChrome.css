@@ -35,11 +35,12 @@ box {
   background-color: #0f111a !important;
 }
 #navigator-toolbox {
+  z-index: 1 !important;
   --tabs-border-color: #0f111a !important;
 }
 
 toolbox {
-  z-index: 10;
+  z-index: 1 !important;
   margin-top: 0px !important;
   margin-bottom: -40px !important;
   height: 0 !important;
@@ -47,13 +48,13 @@ toolbox {
 
 #nav-bar {
   opacity: 0;
-  transition: opacity 0.4s ease-in-out !important;
+  transition: opacity 0.5s ease-in-out !important;
 }
 
 :hover > toolbox,
 toolbox:focus-within {
   opacity: 1;
-  transition: opacity 0.4s ease-in-out !important ;
+  transition: opacity 0.5s ease-in-out !important ;
 }
 :hover > #nav-bar,
 toolbox:focus-within > #nav-bar {

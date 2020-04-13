@@ -25,9 +25,8 @@ client.background       $bg
 # FONT #
 ########
 #LAP
-font pango:Iosevka Nerd Font 24
-#DESK
-#font pango:Iosevka Nerd Font 8
+font pango:JetBrains Mono ExtraBold 24
+#DESK font pango:JetBrains Mono ExtraBold 12
 
 # RESIZE VARIABLES
 set $center move position center

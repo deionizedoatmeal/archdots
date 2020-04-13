@@ -117,7 +117,8 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
     sudo pip3 install inkscape-figures
     sudo pip3 install spotdl
     sudo pip3 install cl-chess
-    sudo pip3 install wpgtk
+    sudo pip3 install wal-steam
+    #sudo pip3 install wpgtk
     echo 'python packages installed'
 fi
 

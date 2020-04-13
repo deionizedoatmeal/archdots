@@ -37,6 +37,7 @@ cp -r compton/* ~/.config/compton/
 cp -r zathura/* ~/.config/zathura/
 cp -r ranger/* ~/.config/ranger/
 cp -r nvim/* ~/.config/nvim/
+cp -r kitty/* ~/.config/kitty/
 ln -sf ~/.cache/wal/dunstrc ~/.config/dunst/dunstrc
 cp -r wal/* ~/.config/wal/
 cp -r spotify-tui/* ~/.config/spotify-tui/
@@ -45,7 +46,9 @@ cp .bashrc ~/
 cp .Xresources ~/
 cp -r chrome ~/.mozilla/firefox/*.default-release/.
 cp -r android_messages ~/.config/'Android Messages'/.
+cp zoomus.conf ~/.config/.
 sudo cp -r fonts/* /usr/share/fonts/.
 sudo cp ranger/ranger.desktop /usr/share/applications/.
 sudo cp spotify-tui/spotify-tui.desktop /usr/share/applications/.
+
 

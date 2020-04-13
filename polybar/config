@@ -15,13 +15,9 @@ bottom = false
 fixed-center = true
 line-size = 2
 padding-right = 2
-#tray-detached = true
-#tray-maxsize = 48
-#tray-offset-x = -30 
 radius = 30.0
 #DESK radius = 16.0
 tray-position = none
-#tray-padding = 2
 
 
 # Don't set wm-restack and don't override-redirect

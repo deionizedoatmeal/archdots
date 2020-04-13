@@ -6,8 +6,8 @@ rofi.color-urgent: #141021, #e4b226, #312842, #e4b226, #ffeefc
 rofi.width: 800
 #DESK rofi.width:400
 rofi.padding: 50
-rofi.font: Iosevka Nerd Font 24
-#DESK rofi.font Iosevka Nerd Font 12
+rofi.font: JetBrains Mono Bold 24
+#DESK rofi.font JetBrains Mono Bold 12
 rofi.separator-style: none
 rofi.hide-scrollbar: true
 rofi.theme: ~/.cache/wal/colors-rofi-dark.rasi
