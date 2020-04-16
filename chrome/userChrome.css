@@ -1,3 +1,21 @@
+/*
+** In order for userChrome.css to work, you need to open `about:config` and change
+** `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`.
+*/
+
+
+/* Import the CSS file.
+   Change 'ian' to your username. */
+@import url('file:///home/ian/.cache/wal/colors.css');
+
+:root {
+	/*change the default blue accent color in many different elements.*/
+	--lwt-accent-color: var(--color2) !important;
+
+	/*color of highlighted text in the urlbar, searchbar, and other UI elements*/
+	--chrome-selection-background-color: var(--cursor) !important;
+}
+
 #navigator-toolbox {
   -moz-appearance: none;
   background-color: #0f111a00 !important;
@@ -15,11 +33,11 @@
   > .tab-stack
   > .tab-background[selected='true']:-moz-lwtheme,
 box {
-  background-color: #0f111a !important;
+  background-color: var(--color1) !important;
   background-image: none !important;
 }
 * {
-  --tab-line-color: #ff5370;
+  --tab-line-color: var(--background);
   --tab-min-width: 76px;
 }
 
@@ -32,15 +50,15 @@ box {
 #urlbar:not(.megabar):-moz-lwtheme,
 #urlbar.megabar:-moz-lwtheme > #urlbar-background,
 #navigator-toolbox #searchbar:-moz-lwtheme {
-  background-color: #0f111a !important;
+  background-color: var(--background) !important;
 }
 #navigator-toolbox {
   z-index: 1 !important;
-  --tabs-border-color: #0f111a !important;
+  --tabs-border-color: var(--color1) !important;
 }
 
 toolbox {
-  z-index: 1 !important;
+  z-index: 20 !important;
   margin-top: 0px !important;
   margin-bottom: -40px !important;
   height: 0 !important;
@@ -59,5 +77,32 @@ toolbox:focus-within {
 :hover > #nav-bar,
 toolbox:focus-within > #nav-bar {
   opacity: 1;
-  background-color: #0f111a !important;
+  background-color: var(--color1) !important;
+}
+
+#urlbar {
+  color: var(--foreground) !important;
+  caret-color: var(--color3);
+}
+
+#urlbar ::-moz-selection,
+.searchbar-textbox ::-moz-selection {
+   background-color: var(--color2) !important;
+   color: var(--cursor) !important;
+}
+
+
+#tracking-protection-icon-container {
+   background-color: var(--background) !important;
+}
+
+#tracking-protection-icon-box {
+   background-color: var(--background) !important;
+}
+#identity-icon  {
+   background-color: var(--background)
+}
+
+#identity-box {
+   background-color: var(--background) !important;
 }

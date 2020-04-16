@@ -1,3 +1,8 @@
+/* Import the CSS file.
+   Change 'ian' to your username. */
+@import url('file:///home/ian/.cache/wal/colors.css');
+
+
 /* Hide scrollbar */
   
   :root{
@@ -11,3 +16,5 @@
     scrollbar-width: none !important;
   }
   }
+
+
