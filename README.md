@@ -31,12 +31,15 @@ These are my dotfiles and scripts for my personal system. My process for a fresh
 - installing fonts, cloning repos and doing some housekeeping
 - moving config files and scripts into neccesary locations 
 # functionality scripts:  
-- status, usage and monitoring
+- system status, resource usage and monitoring
 - wrapper for launching and kill spotifyd and spotify-tui simulataneously
 - volume adjustment w/ notification
 - backlight adjustment w/ notification
 - simple lock screen
+- toggle light and dark themes
+- a paper mode to be used in conjuction with i3-gaps
 - toggle redshift & display redshift status in polybar  
+- toggling bluetooth interface and connecting to bluetooth devices
 - display cpu frequency in polybar  
 - display power useage profile in polybar  
 - using rofi to change power usage profile
