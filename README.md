@@ -11,20 +11,21 @@ These are my dotfiles and scripts for my personal system. My process for a fresh
 
 # configuation files for:
 - i3wm (w/ gaps & rounded corners)  
-- polybar  
-- picom 
-- kitty
-- rofi  
-- dunst
-- firefox
-- neovim 
-- ranger
-- zathura
-- spotify-tui + spotifyd
+- polybar (desktop status bar)
+- picom (compositor)
+- kitty (terminal emulator)
+- rofi (application launcher)
+- dunst (notification serivce)
+- firefox (web browser)
+- neovim (text editor)
+- ranger (TUI file browser)
+- zathura (PDF reader)
+- spotify-tui + spotifyd (TUI music streaming client)
 - ly (display manager)
 - grub, mkinitcpio and sudo
 # installation scripts:  
-- installing apt, python and rust packages
+- installing archlinux with sane defaults, and a LVM on LUKS encryption scheme
+- installing pacman, aur, github, python and rust packages
 - installing ben friesen's fork of i3-gaps  
 - installing polybar
 - installing fonts, cloning repos and doing some housekeeping
@@ -43,6 +44,7 @@ These are my dotfiles and scripts for my personal system. My process for a fresh
 - using rofi to connect to bluetooth devices
 - using rofi to mannage vpn
 - using rofi to connect to wireless networks (comming soon)
+- mounting and opening encrypted LUKS drives
 # screenshots (slightly out of date)
 ![Clock](/screenshots/2020-02-15-025155_3200x1800_scrot.png)
 ![Clock](/screenshots/2020-02-15-022234_3200x1800_scrot.png)
