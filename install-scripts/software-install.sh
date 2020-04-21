@@ -54,7 +54,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 # yay package list
-YAYSYS="compton-tyrone-git android-messages-desktop polybar spotify system76-power system76-driver ly"
+YAYSYS="betterlockscreen compton-tyrone-git android-messages-desktop polybar spotify system76-power system76-driver ly"
 
 # yay install
 read -r -p "#### Would you like to install yay packages? [y/N] ####" response
