@@ -50,5 +50,7 @@ cp zoomus.conf ~/.config/.
 sudo cp -r fonts/* /usr/share/fonts/.
 sudo cp ranger/ranger.desktop /usr/share/applications/.
 sudo cp spotify-tui/spotify-tui.desktop /usr/share/applications/.
+echo "***<| REMBER TO SET layers.acceleration.force-enabled --> true TO PREVENT TARING IN FIREFOX |>***"
+
 
 
