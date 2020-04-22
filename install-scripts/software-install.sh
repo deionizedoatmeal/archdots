@@ -10,8 +10,8 @@ sudo pacman -Syy
 sudo pacman -Syu
 
 # package lists
-SYS="bc gdisk dbus powertop pulseaudio bluez bluez-utils reshift upower git sudo vi kitty rofi picom dunst openvpn i3lock gnupg imagemagick mpg123 ffmpeg feh ttf-fantasque-sans-mono tlp tlp-rdw python-pip nvme-cli lm_sensors openssh"
-APPS="nmap htop ranger zathura firefox neovim gnuplot vlc darktable neofetch steam atom gimp zathura ranger pass powertop htop speedtest-cli net-tools"
+SYS="bc gdisk dbus powertop pulseaudio bluez bluez-utils reshift upower git sudo vi kitty rofi dunst openvpn i3lock gnupg imagemagick mpg123 ffmpeg feh ttf-fantasque-sans-mono tlp tlp-rdw python-pip nvme-cli lm_sensors openssh"
+NONES="bash-completion nmap htop ranger zathura firefox neovim gnuplot vlc darktable neofetch steam atom gimp zathura ranger pass powertop htop speedtest-cli net-tools"
 TRI=""
 NEP=""
 
@@ -27,7 +27,7 @@ fi
 
 read -r -p "#### Would you like to install optional software? [y/N] ####" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
-        sudo pacman -S --needed $APPS
+        sudo pacman -S --needed $NONES
 fi
 
 read -r -p "#### Would you like to install triton software? [y/N] ####" response
@@ -54,7 +54,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 # yay package list
-YAYSYS="android-messages-desktop polybar spotify system76-power system76-driver ly"
+YAYSYS="betterlockscreen compton-tyrone-git android-messages-desktop polybar spotify system76-power system76-driver ly"
 
 # yay install
 read -r -p "#### Would you like to install yay packages? [y/N] ####" response

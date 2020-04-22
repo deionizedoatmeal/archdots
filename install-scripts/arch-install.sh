@@ -2,6 +2,11 @@
 # script to initalize an arch linux system from a live .iso
 # sets up a system with LVM on LUKS installer
 # mostly thrown together from various guides and the arch wiki
+# to use, boot an arch live iso, then run these commands:
+# --> pacman -Syy --noconfirm git
+# --> git clone https:/github.com/deionizedoatmeal/dots.git
+# --> ./dots/install-scripts/arch-install.sh
+# or just open this in your phone's browser and do it by hand i guess
 
 # update system clock
 timedatectl set-ntp true
@@ -167,9 +172,9 @@ read -r -p "Chose a username: " NAME
 useradd -m -g users -G wheel -s /bin/bash $NAME
 passwd $NAME
 
-# move dots over to the user direcotry for ease of accses after reboot 
-cp -r dots /home/${NAME}/.
-chown $NAME /home/${NAME}/dots
-chgrp $NAME /home/${NAME}/dots
+# clone dots for ease of accses after reboot 
+cd /home/${NAME}
+mkdir Repos && cd Repos
+git clone https://github.com/deionizedoatmeal/dots.git
 
 echo "done. now check everything, exit and reboot"
