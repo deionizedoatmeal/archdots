@@ -54,7 +54,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 # yay package list
-YAYSYS="betterlockscreen compton-tyrone-git android-messages-desktop polybar spotify system76-power system76-driver ly"
+YAYSYS="paper-icon-theme-git gllock-git autotiling betterlockscreen compton-tyrone-git android-messages-desktop polybar spotify system76-power system76-driver ly"
 
 # yay install
 read -r -p "#### Would you like to install yay packages? [y/N] ####" response
@@ -119,6 +119,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
     sudo pip3 install cl-chess
     sudo pip3 install wal-steam
     sudo pipx install jrnl
+    sudo pip install mdv
     #sudo pip3 install wpgtk
     echo 'python packages installed'
 fi
@@ -136,6 +137,7 @@ fi
 read -r -p "Would you like to install rust packages? [y/N]" response 
 if [[ "$response" =~ ^([Yy])+$ ]]; then
         cargo install spotify-tui
+        cargo install bottom
         cargo install -f --git https://github.com/cjbassi/ytop ytop
 fi
 

@@ -28,18 +28,17 @@ set foldmethod=indent   " fold based on indent level
 call plug#begin('~/.config/nvim/plugs')
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
-Plug 'severin-lemaignan/vim-minimap'
 Plug 'dylanaraps/wal.vim'
 Plug 'lervag/vimtex'
-"Plug 'sirver/ultisnips'
-Plug 'joshdick/onedark.vim'
+Plug 'sirver/ultisnips'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-repeat'
 Plug 'svermeulen/vim-easyclip'
+Plug 'xuhdev/vim-latex-live-preview'
+Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'} 
+Plug 'tmsvg/pear-tree'
+Plug 'yuttie/comfortable-motion.vim'
 call plug#end()
-
-"minimap
-let g:minimap_highlight='Visual'
 
 "vim tex
 let g:tex_flavor='latex'
@@ -56,4 +55,9 @@ let g:tex_conceal='abdmg'
 "colors
 colorscheme wal
 
+"pdf latex
+let g:livepreview_previewer = 'zathura'
 
+"tex conceal
+set conceallevel=2
+let g:tex_conceal="abdgm"
