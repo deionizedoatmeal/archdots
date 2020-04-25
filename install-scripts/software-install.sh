@@ -10,8 +10,8 @@ sudo pacman -Syy
 sudo pacman -Syu
 
 # package lists
-SYS="bc gdisk dbus powertop pulseaudio bluez bluez-utils reshift upower git sudo vi kitty rofi dunst openvpn i3lock gnupg imagemagick mpg123 ffmpeg feh ttf-fantasque-sans-mono tlp tlp-rdw python-pip nvme-cli lm_sensors openssh"
-NONES="bash-completion nmap htop ranger zathura firefox neovim gnuplot vlc darktable neofetch steam atom gimp zathura ranger pass powertop htop speedtest-cli net-tools"
+SYS="bc gdisk dbus powertop pulseaudio bluez bluez-utils reshift upower git sudo vi kitty rofi dunst openvpn i3lock gnupg imagemagick mpg123 ffmpeg feh ttf-fantasque-sans-mono tlp tlp-rdw python3-venv python-pip nvme-cli lm_sensors openssh"
+NONES="pipx bash-completion nmap htop ranger zathura firefox neovim gnuplot vlc darktable neofetch steam atom gimp zathura ranger pass powertop htop speedtest-cli net-tools"
 TRI=""
 NEP=""
 
@@ -54,7 +54,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 # yay package list
-YAYSYS="betterlockscreen compton-tyrone-git android-messages-desktop polybar spotify system76-power system76-driver ly"
+YAYSYS="paper-icon-theme-git gllock-git autotiling betterlockscreen compton-tyrone-git android-messages-desktop polybar spotify system76-power system76-driver ly"
 
 # yay install
 read -r -p "#### Would you like to install yay packages? [y/N] ####" response
@@ -85,6 +85,17 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
         cd ..
         sudo rm -r light
         echo 'backlight utility installed'
+fi
+
+# gnuplot pywal 
+read -r -p "Would you like to install Gnuplot-Pywal? [y/N]" response
+if [[ "$response" =~ ^([Yy])+$ ]]; then
+        git clone https://github.com/GideonWolfe/Gnuplot-Pywal.git
+        cd Gnuplot-Pywal
+        sudo ./install.sh
+        cd ..
+        sudo rm -r Gnuplot-Pywal
+        echo 'Gnuplot-Pywal installed'
 fi
 
 # install spotifyd
@@ -118,6 +129,8 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
     sudo pip3 install spotdl
     sudo pip3 install cl-chess
     sudo pip3 install wal-steam
+    sudo pipx install jrnl
+    sudo pip install mdv
     #sudo pip3 install wpgtk
     echo 'python packages installed'
 fi
@@ -135,6 +148,7 @@ fi
 read -r -p "Would you like to install rust packages? [y/N]" response 
 if [[ "$response" =~ ^([Yy])+$ ]]; then
         cargo install spotify-tui
+        cargo install bottom
         cargo install -f --git https://github.com/cjbassi/ytop ytop
 fi
 
