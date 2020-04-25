@@ -19,7 +19,7 @@ set guioptions ""
 
 # zathurarc-dark
 
-set font "inconsolata 15"
+set font "JetBrainsMono 15"
 set default-bg "#000000" #00
 set default-fg "#F7F7F6" #01
 
@@ -56,6 +56,3 @@ set recolor-keephue "true"
 
 set render-loading "false"
 set scroll-step 50
-unmap f
-map f toggle_fullscreen
-map [fullscreen] f toggle_fullscreen

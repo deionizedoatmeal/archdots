@@ -24,9 +24,11 @@ client.background       $bg
 ########
 # FONT #
 ########
-#LAP
+
+#TRITON
 font pango:JetBrains Mono ExtraBold 24
-#DESK font pango:JetBrains Mono ExtraBold 12
+#NEPTUNE 
+#font pango:JetBrains Mono ExtraBold 12
 
 # RESIZE VARIABLES
 set $center move position center
@@ -182,6 +184,9 @@ for_window [class="^.*"] border pixel 0
 ##############
 bindsym $mod+p exec --no-startup-id paper-mode-toggle 400
 
+#NEPTUNE
+#bindsym $mod+l exec --no-startup-id paper-mode-toggle 200
+
 ##############
 # SCREENSHOT #
 ##############
@@ -236,4 +241,4 @@ bindsym $mod+n exec --no-startup-id redshift-toggle
 #############
 # FLOAT MAX #
 #############
-floating_maximum_size 3200 x 1800
+floating_maximum_size 2600 x 1400
