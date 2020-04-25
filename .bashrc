@@ -142,5 +142,5 @@ export EDITOR=nvim
 ############
 alias t='python $HOME/Tasks/t/t.py --task-dir $HOME/Tasks --list tasks'
 alias t-pull='git -C /home/ian/Tasks pull origin master'
-alias t-push='git -C /home/ian/Tasks push origin master'
+alias t-push='git -C /home/ian/Tasks add -A && git -C /home/ian/Tasks commit --allow-empty-message -m "" && git -C /home/ian/Tasks push origin master'
 
