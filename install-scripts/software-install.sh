@@ -10,8 +10,8 @@ sudo pacman -Syy
 sudo pacman -Syu
 
 # package lists
-SYS="bc gdisk dbus powertop pulseaudio bluez bluez-utils reshift upower git sudo vi kitty rofi dunst openvpn i3lock gnupg imagemagick mpg123 ffmpeg feh ttf-fantasque-sans-mono tlp tlp-rdw python-pip nvme-cli lm_sensors openssh"
-NONES="bash-completion nmap htop ranger zathura firefox neovim gnuplot vlc darktable neofetch steam atom gimp zathura ranger pass powertop htop speedtest-cli net-tools"
+SYS="bc gdisk dbus powertop pulseaudio bluez bluez-utils reshift upower git sudo vi kitty rofi dunst openvpn i3lock gnupg imagemagick mpg123 ffmpeg feh ttf-fantasque-sans-mono tlp tlp-rdw python3-venv python-pip nvme-cli lm_sensors openssh"
+NONES="pipx bash-completion nmap htop ranger zathura firefox neovim gnuplot vlc darktable neofetch steam atom gimp zathura ranger pass powertop htop speedtest-cli net-tools"
 TRI=""
 NEP=""
 
@@ -118,6 +118,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
     sudo pip3 install spotdl
     sudo pip3 install cl-chess
     sudo pip3 install wal-steam
+    sudo pipx install jrnl
     #sudo pip3 install wpgtk
     echo 'python packages installed'
 fi
