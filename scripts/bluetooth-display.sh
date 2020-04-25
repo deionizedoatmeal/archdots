@@ -1,55 +1,32 @@
-#!/bin/sh
-# tlp - switch bluetooth/wifi/wwan on/off
-#
-# Copyright (c) 2019 Thomas Koch <linrunner at gmx.net> and others.
-# This software is licensed under the GPL v2 or later.
+#!/bin/bash
 
-# shellcheck disable=SC2086,SC2154
+# bluetooth status on
+RETURN=""
 
-# --- Source libraries
+# bluetooth connected
+if [ "$(bluetoothctl info | sed -n -e 's/^.*Connected: //p')" == "yes" ]; then
+    RETURN=""
+fi
 
-for lib in /usr/share/tlp/tlp-func-base /usr/share/tlp/func.d/25-tlp-func-rf /usr/share/tlp/func.d/30-tlp-func-rf-sw; do
-    # shellcheck disable=SC1090
-    . $lib
-done
+# bluetooth off
+if [ "$(bluetoothctl show | sed -n -e 's/^.*Powered: //p')" == "no" ]; then
+    RETURN=""
+fi
 
-# --- MAIN
 
-read_defaults
-carg1=$1
-parse_args4config "$@"
-add_sbin2path
-self=${0##*/}
+# device icon
+ICON=""
 
-case $self in
-    bluetooth|wifi|wwan)
-        case $carg1 in
-            on)
-                device_switch $self on
-                echo_device_state $self $_devs
-                ;;
+#headphones
+if [ "$(bluetoothctl info D8:AF:F1:A9:BE:D7 | sed -n -e 's/^.*Connected: //p')" == "yes" ]; then
+	ICON=" "
+fi
+ 
+#earbuds
+if [ "$(bluetoothctl info D1:64:9F:2F:F5:D3 | sed -n -e 's/^.*Connected: //p')" == "yes" ]; then
+	ICON=""
+fi
 
-            off)
-                device_switch $self off
-                echo_device_state $self $_devs
-                ;;
+echo $ICON $RETURN
 
-            toggle)
-                device_switch $self toggle
-                echo_device_state $self $_devs
-                ;;
 
-            *)
-                device_state $self
-                echo_device_state $self $_devs
-                ;;
-        esac
-        ;;
-
-    *)
-        echo "Error: unknown device type \"$self\"." 1>&2
-        exit 1
-        ;;
-esac
-
-exit 0
