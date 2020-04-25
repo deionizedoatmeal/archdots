@@ -141,4 +141,6 @@ export EDITOR=nvim
 # T (todo) #
 ############
 alias t='python $HOME/Tasks/t/t.py --task-dir $HOME/Tasks --list tasks'
+alias t-pull='$HOME/Tasks git pull origin master'
+alias t-push='$HOME/Tasks git push origin master'
 
