@@ -1,5 +1,5 @@
 [global]
-font = Iosevka Nerd Font 16
+font = Iosevka Nerd Font 24
 markup = yes
 plain_text = no
 format = "<b>%s</b>\n%b"
@@ -13,7 +13,7 @@ word_wrap = no
 ignore_newline = no
 stack_duplicates = yes
 hide_duplicates_count = yes
-geometry = "600x50-75-75"
+geometry = "1000x100-75-75"
 corner_radius = 16
 shrink = yes
 transparency = 5

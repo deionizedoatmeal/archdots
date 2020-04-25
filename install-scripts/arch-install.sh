@@ -1,6 +1,6 @@
 #!/bin/bash
 # script to initalize an arch linux system from a live .iso
-# sets up a system with LVM on LUKS installer
+# sets up a system with LVM on LUKS 
 # mostly thrown together from various guides and the arch wiki
 # to use, boot an arch live iso, then run these commands:
 # --> pacman -Syy --noconfirm git
