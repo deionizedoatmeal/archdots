@@ -87,6 +87,17 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
         echo 'backlight utility installed'
 fi
 
+# gnuplot pywal 
+read -r -p "Would you like to install Gnuplot-Pywal? [y/N]" response
+if [[ "$response" =~ ^([Yy])+$ ]]; then
+        git clone https://github.com/GideonWolfe/Gnuplot-Pywal.git
+        cd Gnuplot-Pywal
+        sudo ./install.sh
+        cd ..
+        sudo rm -r Gnuplot-Pywal
+        echo 'Gnuplot-Pywal installed'
+fi
+
 # install spotifyd
 read -r -p "Would you like to install Spotifyd v0.2.24? [y/N]" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
