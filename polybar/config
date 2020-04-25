@@ -43,10 +43,10 @@ modules-left = i3
 modules-center = date
 
 #TRITON
-modules-right = bluetooth-display pulseaudio redshift-display backlight cpu temperature system-cpu-frequency-display memory power-profile-display battery network vpn-display
+modules-right = bluetooth-display pulseaudio redshift-display backlight cpu temperature system-cpu-frequency-display memory power-profile-display battery wireless-network network vpn-display
 
 #NEPTUNE
-#modules-right = bluetooth-display pulseaudio redshift-display cpu temperature system-cpu-frequency-display memory network vpn-display
+#modules-right = bluetooth-display pulseaudio redshift-display cpu temperature system-cpu-frequency-display memory wireless-network network vpn-display
 
 module-margin = 0
 cursor-click = pointer
@@ -352,11 +352,55 @@ label = " %percentage%%  "
 format-background = ${colors.background}
 format-foreground = ${colors.secondary}
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-[module/network]
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;  N   N  NNNN  NNNNN
+;  NN  N  N       N
+;  N N N  NNN     N
+;  N  NN  N       N
+;  N   N  NNNN    N
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[module/wireless-network]
 type = internal/network
-format-connected =" 直"
-format-disconnected =" 睊"
+format-connected ="直"
+format-disconnected ="睊"
+
+#TRITON
 interface = wlp59s0
+
+#NEPTUNE
+#interface = wlo1
+
+#TRITON
+format-disconnected-background = ${colors.background}
+format-connected-background = ${colors.background}
+format-connected-foreground = ${colors.secondary}
+format-disconnected-foreground = ${colors.secondary}
+
+#NEPTUNE
+#format-disconnected-background = ${colors.background}
+#format-connected-background = ${colors.background}
+#format-connected-foreground = ${colors.primary}
+#format-disconnected-foreground = ${colors.primary}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;  N   N  NNNN  NNNNN      NNNN
+;  NN  N  N       N        N 
+;  N N N  NNN     N   NNN  NNN
+;  N  NN  N       N        N
+;  N   N  NNNN    N        NNNN
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[module/network]
+type = internal/network   
+format-connected =" "
+format-disconnected =""
+
+#TRITON
+interface = enp58s0f1
+
+#NEPTUNE
+#interface = eno1
 
 #TRITON
 format-disconnected-background = ${colors.background}
