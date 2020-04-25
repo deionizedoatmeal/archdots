@@ -12,12 +12,17 @@
 
 I3MSG=$(i3-msg -t get_tree)
 DELIM='"focused":true'
+#echo ${DELIM}
 FOCUSED=${I3MSG%%${DELIM}*}
+#echo ${FOCUSED}
 GAPS=${FOCUSED##*gaps}
+#echo ${GAPS}
 DELIM='"right":'
+#echo ${DELIM}
 RIGHT=${GAPS##*${DELIM}}
+#echo ${RIGHT}
 RIGHTVALUE=${RIGHT%%,*}
-
+#echo "-!--> *** ***"
 #echo ${RIGHTVALUE}
 
 if [[ ${RIGHTVALUE} -eq 0 ]]; then

@@ -26,6 +26,7 @@ mkdir ~/.config/dunst/
 mkdir ~/.config/wal/templates/
 mkdir ~/.config/spotify-tui/
 mkdir ~/.config/spotifyd/
+mkdir ~/.config/wal/
 mkdir ~/.config/'Android Messages'/
 
 #move dotfiles into corresponding config directories
@@ -42,14 +43,14 @@ ln -sf ~/.cache/wal/dunstrc ~/.config/dunst/dunstrc
 cp -r wal/* ~/.config/wal/
 cp -r spotify-tui/* ~/.config/spotify-tui/
 cp -r spotifyd/* ~/.config/spotifyd/
-cp .bashrc ~/
-cp .Xresources ~/
+cp .bashrc ~/.
+cp .Xresources ~/.
 cp -r chrome ~/.mozilla/firefox/*.default-release/.
 cp -r android_messages ~/.config/'Android Messages'/.
 cp zoomus.conf ~/.config/.
 sudo cp -r fonts/* /usr/share/fonts/.
-sudo cp ranger/ranger.desktop /usr/share/applications/.
-sudo cp spotify-tui/spotify-tui.desktop /usr/share/applications/.
+#sudo cp ranger/ranger.desktop /usr/share/applications/.
+#sudo cp spotify-tui/spotify-tui.desktop /usr/share/applications/.
 echo "***<| REMBER TO SET layers.acceleration.force-enabled --> true TO PREVENT TARING IN FIREFOX |>***"
 
 

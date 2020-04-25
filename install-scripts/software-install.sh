@@ -98,6 +98,13 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
         echo 'Gnuplot-Pywal installed'
 fi
 
+# t todo 
+read -r -p "t.py (todo list)? [y/N]" response
+if [[ "$response" =~ ^([Yy])+$ ]]; then
+        git clone https://github.com/sjl/t.git $HOME/Tasks/.
+fi
+
+
 # install spotifyd
 read -r -p "Would you like to install Spotifyd v0.2.24? [y/N]" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then

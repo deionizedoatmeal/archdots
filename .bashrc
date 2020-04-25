@@ -113,6 +113,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
+
 ########
 # PASS #
 ########
@@ -135,4 +136,9 @@ source $HOME/.cargo/env
 # EDITOR #
 ##########
 export EDITOR=nvim
+
+############
+# T (todo) #
+############
+alias t='python $HOME/Tasks/t/t.py --task-dir $HOME/Tasks --list tasks'
 

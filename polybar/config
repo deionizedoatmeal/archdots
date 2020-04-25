@@ -15,8 +15,10 @@ bottom = false
 fixed-center = true
 line-size = 2
 padding-right = 2
+#TRITON
 radius = 30.0
-#DESK radius = 16.0
+#NEPTUNE
+#radius = 16.0
 tray-position = none
 
 
@@ -27,20 +29,23 @@ override-redirect = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 
+#TRITON
 font-0 = Iosevka Nerd Font:pixelsize=24;4
 font-1 = Iosevka Nerd Font:size=24;4
 font-2 = Iosevka Nerd Font:size=41;8
 
-#DESK
+#NEPTUNE
 #font-0 = Iosevka Nerd Font:pixelsize=14;4
 #font-1 = Iosevka Nerd Font:size=14;4
 #font-2 = Iosevka Nerd Font:size=22;4
 
 modules-left = i3
 modules-center = date
+
+#TRITON
 modules-right = bluetooth-display pulseaudio redshift-display backlight cpu temperature system-cpu-frequency-display memory power-profile-display battery network vpn-display
 
-#DESK
+#NEPTUNE
 #modules-right = bluetooth-display pulseaudio redshift-display cpu temperature system-cpu-frequency-display memory network vpn-display
 
 module-margin = 0
@@ -233,12 +238,15 @@ type = custom/script
 exec = vpn-display
 interval = 1
 format-background = ${colors.background}    
+
+#TRITON
 format-foreground = ${colors.secondary}
-#DESK format-foreground = ${colors.primary}
+#NEPTUNE
+format-foreground = ${colors.primary}
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-[module/battery]                                                                
+[module/battery]
 type = internal/battery
-;full-at = 96
 time-format = %H:%M
 battery = BAT0
 adapter = AC
@@ -254,7 +262,6 @@ label-discharging-foreground = ${colors.primary}
 format-full =<label-full>
 format-full-foreground = ${colors.primary}
 label-full = " %percentage%% "
-
 format-full-prefix = ""
 ramp-capacity-0 =""
 ramp-capacity-1 =""
@@ -266,12 +273,12 @@ ramp-capacity-6 =""
 ramp-capacity-7 =""
 ramp-capacity-8 =""
 ramp-capacity-9 =""
- 
+
 ramp-capacity-0-foreground = ${colors.alert}
 ramp-capacity-1-foreground = ${colors.alert}
 ramp-capacity-foreground   = ${colors.primary}
-;bar-capacity-width = 10
- 
+bar-capacity-width = 10
+
 animation-charging-0 =
 animation-charging-1 =
 animation-charging-2 =
@@ -286,8 +293,13 @@ animation-charging-framerate = 750
 [module/cpu]
 type = internal/cpu
 format = <label>
+
+#TRITON
 label = " %percentage%%|"
-;DESK label = "   %percentage%%|" 
+
+#NEPTUNE
+#label = "   %percentage%%|" 
+
 interval = 5
 format-background = ${colors.background}
 format-foreground = ${colors.primary}
@@ -296,7 +308,6 @@ format-foreground = ${colors.primary}
 type = internal/memory
 format = <label>
 label = "   %percentage_used%%  "
-
 interval = 5
 format-background = ${colors.background}
 format-foreground = ${colors.secondary}
@@ -346,12 +357,14 @@ type = internal/network
 format-connected =" 直"
 format-disconnected =" 睊"
 interface = wlp59s0
+
+#TRITON
 format-disconnected-background = ${colors.background}
 format-connected-background = ${colors.background}
 format-connected-foreground = ${colors.secondary}
 format-disconnected-foreground = ${colors.secondary}
 
-#DESK
+#NEPTUNE
 #format-disconnected-background = ${colors.background}
 #format-connected-background = ${colors.background}
 #format-connected-foreground = ${colors.primary}
