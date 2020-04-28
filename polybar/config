@@ -216,7 +216,7 @@ type = custom/script
 exec = bluetooth-display
 interval = 1
 format-background = ${colors.background}    
-format-foreground = ${colors.primary}
+format-foreground = ${colors.secondary}
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [module/power-profile-display]
 type = custom/script
@@ -333,10 +333,10 @@ use-ui-max = false
 interval = 5
 format-volume = "<ramp-volume> <label-volume>  "
 format-muted = "<label-muted>  "
-label-muted ="  0%"
-ramp-volume-0 =" "
-ramp-volume-1 =" "
-ramp-volume-2 =" 墳"
+label-muted ="   0%"
+ramp-volume-0 ="  "
+ramp-volume-1 ="  "
+ramp-volume-2 ="  墳"
 format-volume-background = ${colors.background}
 format-volume-foreground = ${colors.primary}
 format-muted-background = ${colors.background}
@@ -362,8 +362,8 @@ format-foreground = ${colors.secondary}
 
 [module/wireless-network]
 type = internal/network
-format-connected ="直"
-format-disconnected ="睊"
+format-connected =" 直"
+format-disconnected =" 睊"
 
 #TRITON
 interface = wlp59s0
@@ -393,7 +393,7 @@ format-disconnected-foreground = ${colors.secondary}
 
 [module/network]
 type = internal/network   
-format-connected =" "
+format-connected ="|"
 
 #TRITON
 interface = enp58s0f1

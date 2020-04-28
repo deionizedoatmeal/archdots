@@ -19,14 +19,14 @@ ICON=""
 
 #headphones
 if [ "$(bluetoothctl info D8:AF:F1:A9:BE:D7 | sed -n -e 's/^.*Connected: //p')" == "yes" ]; then
-	ICON=" "
+	ICON="|"
 fi
  
 #earbuds
 if [ "$(bluetoothctl info D1:64:9F:2F:F5:D3 | sed -n -e 's/^.*Connected: //p')" == "yes" ]; then
-	ICON=""
+	ICON="|"
 fi
 
-echo $ICON $RETURN
+echo $ICON$RETURN
 
 
