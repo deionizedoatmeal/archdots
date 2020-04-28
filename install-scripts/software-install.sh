@@ -11,7 +11,7 @@ sudo pacman -Syu
 
 # package lists
 SYS="bc gdisk dbus powertop pulseaudio bluez bluez-utils reshift upower git sudo vi kitty rofi dunst openvpn i3lock gnupg imagemagick mpg123 ffmpeg feh ttf-fantasque-sans-mono tlp tlp-rdw python3-venv python-pip nvme-cli lm_sensors openssh"
-NONES="pipx bash-completion nmap htop ranger zathura firefox neovim gnuplot vlc darktable neofetch steam atom gimp zathura ranger pass powertop htop speedtest-cli net-tools"
+NONES="pipx bash-completion nmap htop ranger zathura zathura-pdf-mupdf firefox neovim gnuplot vlc darktable neofetch steam atom gimp zathura ranger pass powertop htop speedtest-cli net-tools"
 TRI=""
 NEP=""
 
@@ -86,19 +86,6 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
         sudo rm -r light
         echo 'backlight utility installed'
 fi
-
-
-# install zathura-pywal
-read -r -p "Would you like to install zathura-pywal? [y/N]" response
-if [[ "$response" =~ ^([Yy])+$ ]]; then
-        git clone https://github.com/GideonWolfe/Zathura-Pywal.git
-        cd Zarthura-Pywal
-        sudo ./install       
-        cd ..
-        sudo rm -r Zathura-Pywal
-        echo 'zathura-pywal installed'
-fi
-
 
 # gnuplot pywal 
 read -r -p "Would you like to install Gnuplot-Pywal? [y/N]" response

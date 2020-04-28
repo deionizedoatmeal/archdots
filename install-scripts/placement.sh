@@ -35,7 +35,7 @@ cp -r i3/* ~/.config/i3/
 cp -r polybar/* ~/.config/polybar/
 cp -r rofi/* ~/.config/rofi/
 cp -r compton/* ~/.config/compton/
-cp -r zathura/* ~/.config/zathura/
+ln -sf ~/.cache/wal/zathurarc ~/.config/zathura/zathurarc
 cp -r ranger/* ~/.config/ranger/
 cp -r nvim/* ~/.config/nvim/
 cp -r kitty/* ~/.config/kitty/
