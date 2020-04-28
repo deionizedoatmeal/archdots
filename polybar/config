@@ -6,6 +6,7 @@ primary = ${xrdb:color2:#222}
 secondary = ${xrdb:color3:#222}
 alert = ${xrdb:color7:#222}
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 [bar/main]
 width = 98.1250%
 height = 03.0000%
@@ -16,41 +17,66 @@ fixed-center = true
 line-size = 2
 padding-right = 2
 #TRITON
-radius = 30.0
+#radius = 30.0
 #NEPTUNE
 #radius = 16.0
 tray-position = none
-
-
-# Don't set wm-restack and don't override-redirect
 wm-restack = i3
 override-redirect = true
-
 background = ${colors.background}
 foreground = ${colors.foreground}
-
 #TRITON
-font-0 = Iosevka Nerd Font:pixelsize=24;4
-font-1 = Iosevka Nerd Font:size=24;4
-font-2 = Iosevka Nerd Font:size=41;8
-
+#font-0 = Iosevka Nerd Font:pixelsize=24;4
+#font-1 = Iosevka Nerd Font:size=24;4
+#font-2 = Iosevka Nerd Font:size=41;8
 #NEPTUNE
 #font-0 = Iosevka Nerd Font:pixelsize=14;4
 #font-1 = Iosevka Nerd Font:size=14;4
 #font-2 = Iosevka Nerd Font:size=22;4
-
 modules-left = i3
 modules-center = date
-
 #TRITON
-modules-right = bluetooth-display pulseaudio redshift-display backlight cpu temperature system-cpu-frequency-display memory power-profile-display battery wireless-network network vpn-display
-
+#modules-right = bluetooth-display pulseaudio redshift-display backlight cpu temperature system-cpu-frequency-display memory power-profile-display battery wireless-network network vpn-display
 #NEPTUNE
 #modules-right = bluetooth-display pulseaudio redshift-display cpu temperature system-cpu-frequency-display memory wireless-network network vpn-display
-
 module-margin = 0
 cursor-click = pointer
 cursor-scroll = ns-resize
+#NEPTUNE
+#monitor = HDMI-0
+
+########################
+
+#### SECOND BAR #####
+
+#NEPTUNE  \/
+[bar/secondary]
+width = 98.1250%
+height = 03.0000%
+offset-x = 00.9375%
+offset-y = 01.1111%
+bottom = false
+fixed-center = true
+line-size = 2
+padding-right = 2
+radius = 16.0
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+modules-left = i3
+modules-center = date
+modules-right = bluetooth-display pulseaudio redshift-display cpu temperature system-cpu-frequency-display memory wireless-network network vpn-display
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+monitor = VGA-0
+#NEPTUNE /\
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; #### MODULES ####
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -240,7 +266,7 @@ interval = 1
 format-background = ${colors.background}    
 
 #TRITON
-format-foreground = ${colors.secondary}
+#format-foreground = ${colors.secondary}
 #NEPTUNE
 #format-foreground = ${colors.primary}
 
@@ -295,7 +321,7 @@ type = internal/cpu
 format = <label>
 
 #TRITON
-label = " %percentage%%|"
+#label = " %percentage%%|"
 
 #NEPTUNE
 #label = "   %percentage%%|" 
@@ -366,16 +392,16 @@ format-connected =" 直"
 format-disconnected =" 睊"
 
 #TRITON
-interface = wlp59s0
+#interface = wlp59s0
 
 #NEPTUNE
 #interface = wlo1
 
 #TRITON
-format-disconnected-background = ${colors.background}
-format-connected-background = ${colors.background}
-format-connected-foreground = ${colors.secondary}
-format-disconnected-foreground = ${colors.secondary}
+#format-disconnected-background = ${colors.background}
+#format-connected-background = ${colors.background}
+#format-connected-foreground = ${colors.secondary}
+#format-disconnected-foreground = ${colors.secondary}
 
 #NEPTUNE
 #format-disconnected-background = ${colors.background}
@@ -396,16 +422,16 @@ type = internal/network
 format-connected ="|"
 
 #TRITON
-interface = enp58s0f1
+#interface = enp58s0f1
 
 #NEPTUNE
 #interface = eno1
 
 #TRITON
-format-disconnected-background = ${colors.background}
-format-connected-background = ${colors.background}
-format-connected-foreground = ${colors.secondary}
-format-disconnected-foreground = ${colors.secondary}
+#format-disconnected-background = ${colors.background}
+#format-connected-background = ${colors.background}
+#format-connected-foreground = ${colors.secondary}
+#format-disconnected-foreground = ${colors.secondary}
 
 #NEPTUNE
 #format-disconnected-background = ${colors.background}
