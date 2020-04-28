@@ -242,7 +242,7 @@ format-background = ${colors.background}
 #TRITON
 format-foreground = ${colors.secondary}
 #NEPTUNE
-format-foreground = ${colors.primary}
+#format-foreground = ${colors.primary}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [module/battery]
@@ -394,7 +394,6 @@ format-disconnected-foreground = ${colors.secondary}
 [module/network]
 type = internal/network   
 format-connected =" "
-format-disconnected =""
 
 #TRITON
 interface = enp58s0f1
