@@ -87,6 +87,19 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
         echo 'backlight utility installed'
 fi
 
+
+# install zathura-pywal
+read -r -p "Would you like to install zathura-pywal? [y/N]" response
+if [[ "$response" =~ ^([Yy])+$ ]]; then
+        git clone https://github.com/GideonWolfe/Zathura-Pywal.git
+        cd Zarthura-Pywal
+        sudo ./install       
+        cd ..
+        sudo rm -r Zathura-Pywal
+        echo 'zathura-pywal installed'
+fi
+
+
 # gnuplot pywal 
 read -r -p "Would you like to install Gnuplot-Pywal? [y/N]" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
@@ -97,6 +110,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
         sudo rm -r Gnuplot-Pywal
         echo 'Gnuplot-Pywal installed'
 fi
+
 
 # t todo 
 read -r -p "t.py (todo list)? [y/N]" response
