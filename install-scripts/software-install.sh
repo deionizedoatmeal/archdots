@@ -139,6 +139,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
     sudo pip3 install wal-steam
     sudo pipx install jrnl
     sudo pip install mdv
+    sudo pip install i3-py
     #sudo pip3 install wpgtk
     echo 'python packages installed'
 fi

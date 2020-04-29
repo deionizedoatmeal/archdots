@@ -28,6 +28,8 @@ mkdir ~/.config/spotify-tui/
 mkdir ~/.config/spotifyd/
 mkdir ~/.config/wal/
 mkdir ~/.config/'Android Messages'/
+mkdir ~/.config/gtk-3.0/
+mkdir ~/.config/gtk-4.0/
 
 #move dotfiles into corresponding config directories
 cd ..
@@ -48,6 +50,9 @@ cp .Xresources ~/.
 cp -r chrome ~/.mozilla/firefox/*.default-release/.
 cp -r android_messages ~/.config/'Android Messages'/.
 cp zoomus.conf ~/.config/.
+cp gtk/*.ini ${HOME}/.config/gtk-3.0/.
+cp gtk/*.ini ${HOME}/.config/gtk-4.0/.
+cp gtk/.* ${HOME}/.
 sudo cp -r fonts/* /usr/share/fonts/.
 #sudo cp ranger/ranger.desktop /usr/share/applications/.
 #sudo cp spotify-tui/spotify-tui.desktop /usr/share/applications/.

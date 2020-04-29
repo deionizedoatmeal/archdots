@@ -44,9 +44,16 @@ echo "##### spotify-tui/spotify-tui.desktop ######"
 diff ../spotify-tui/spotify-tui.desktop /usr/share/applications/spotify-tui.desktop
 echo "##### Android Messages/Settings ######"
 diff ../android_messages/Settings ~/.config/'Android Messages'/Settings
-echo "##### zoomus.conf ######"
-diff ../zoomus.conf ~/.config/zoomus.conf
-
+echo "##### gtk/dark.ini ######"
+diff ../gtk/dark.ini ${HOME}/.config/gtk-3.0/dark.ini
+diff ../gtk/dark.ini ${HOME}/.config/gtk-4.0/dark.ini
+echo "##### gtk/light.ini ######"
+diff ../gtk/light.ini ${HOME}/.config/gtk-3.0/light.ini
+diff ../gtk/light.ini ${HOME}/.config/gtk-4.0/light.ini
+echo "##### gtk/.gtkrc-2.0.dark ######"
+diff ../gtk/.gtkrc-2.0.dark ${HOME}/.gtkrc-2.0.dark
+echo "##### gtk/.gtkrc-2.0.light ######"
+diff ../gtk/.gtkrc-2.0.light ${HOME}/.gtkrc-2.0.light
 
 echo "
 
