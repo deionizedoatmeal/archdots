@@ -23,7 +23,12 @@
  *color14:    #71bebe
  *color15:    #ffffff
 
-Xft.dpi: 180
+#TRITON
+#Xft.dpi: 120
+
+#NEPTUNE
+Xft.dpi: 64
+
 Xft.autohint: 0
 Xft.lcdfilter:  lcddefault
 Xft.hintstyle:  hintfull

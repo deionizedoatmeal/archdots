@@ -12,8 +12,6 @@ echo "##### rofi/config ######"
 diff ../rofi/config ~/.config/rofi/config
 echo "##### compton/compton.conf ######"
 diff ../compton/compton.conf ~/.config/compton/compton.conf
-echo "##### zathura/zathurarc ######"
-diff ../zathura/zathurarc ~/.config/zathura/zathurarc
 echo "##### spotify-tui/config.yml ######"
 diff ../spotify-tui/config.yml ~/.config/spotify-tui/config.yml
 echo "##### spotifyd/config ######"
@@ -28,6 +26,8 @@ echo "##### wal/templates/colors-rofi-dark.rasi #####"
 diff ../wal/templates/colors-rofi-dark.rasi ~/.config/wal/templates/colors-rofi-dark.rasi
 echo "##### wal/templates/dunstrc #####"
 diff ../wal/templates/dunstrc ~/.config/wal/templates/dunstrc
+echo "##### wal/templates/zathurarc #####"
+diff ../wal/templates/zathurarc ~/.config/wal/templates/zathurarc
 echo "##### kitty/kitty.conf #####"
 diff ../kitty/kitty.conf ~/.config/kitty/kitty.conf
 echo "##### .bashrc ######"

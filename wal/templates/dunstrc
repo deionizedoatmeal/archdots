@@ -1,5 +1,10 @@
 [global]
-font = Iosevka Nerd Font 24
+
+#TRITON
+#font = JetBrainsMono Bold 24
+#NEPTUNE
+font = JetBrainsMono Bold 12
+
 markup = yes
 plain_text = no
 format = "<b>%s</b>\n%b"
