@@ -19,7 +19,7 @@ padding-right = 2
 #TRITON
 #radius = 30.0
 #NEPTUNE
-#radius = 16.0
+radius = 16.0
 tray-position = none
 wm-restack = i3
 override-redirect = true
@@ -30,20 +30,20 @@ foreground = ${colors.foreground}
 #font-1 = Iosevka Nerd Font:size=24;4
 #font-2 = Iosevka Nerd Font:size=41;8
 #NEPTUNE
-#font-0 = Iosevka Nerd Font:pixelsize=14;4
-#font-1 = Iosevka Nerd Font:size=14;4
-#font-2 = Iosevka Nerd Font:size=22;4
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
 modules-left = i3
 modules-center = date
 #TRITON
 #modules-right = bluetooth-display pulseaudio redshift-display backlight cpu temperature system-cpu-frequency-display memory power-profile-display battery wireless-network network vpn-display
 #NEPTUNE
-#modules-right = bluetooth-display pulseaudio redshift-display cpu temperature system-cpu-frequency-display memory wireless-network network vpn-display
+modules-right = bluetooth-display pulseaudio redshift-display cpu temperature system-cpu-frequency-display memory wireless-network network vpn-display
 module-margin = 0
 cursor-click = pointer
 cursor-scroll = ns-resize
 #NEPTUNE
-#monitor = HDMI-0
+monitor = HDMI-0
 
 ########################
 
@@ -268,7 +268,7 @@ format-background = ${colors.background}
 #TRITON
 #format-foreground = ${colors.secondary}
 #NEPTUNE
-#format-foreground = ${colors.primary}
+format-foreground = ${colors.primary}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [module/battery]
@@ -324,7 +324,7 @@ format = <label>
 #label = " %percentage%%|"
 
 #NEPTUNE
-#label = "   %percentage%%|" 
+label = "   %percentage%%|" 
 
 interval = 5
 format-background = ${colors.background}
@@ -333,7 +333,11 @@ format-foreground = ${colors.primary}
 [module/memory]
 type = internal/memory
 format = <label>
-label = "   %percentage_used%%  "
+
+#TRITON
+#label = "   %percentage_used%%  "
+#NEPTUNE
+label = "   %percentage_used%% "
 interval = 5
 format-background = ${colors.background}
 format-foreground = ${colors.secondary}
@@ -395,7 +399,7 @@ format-disconnected =" 睊"
 #interface = wlp59s0
 
 #NEPTUNE
-#interface = wlo1
+interface = wlo1
 
 #TRITON
 #format-disconnected-background = ${colors.background}
@@ -404,10 +408,10 @@ format-disconnected =" 睊"
 #format-disconnected-foreground = ${colors.secondary}
 
 #NEPTUNE
-#format-disconnected-background = ${colors.background}
-#format-connected-background = ${colors.background}
-#format-connected-foreground = ${colors.primary}
-#format-disconnected-foreground = ${colors.primary}
+format-disconnected-background = ${colors.background}
+format-connected-background = ${colors.background}
+format-connected-foreground = ${colors.primary}
+format-disconnected-foreground = ${colors.primary}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;  N   N  NNNN  NNNNN      NNNN
@@ -425,7 +429,7 @@ format-connected ="|"
 #interface = enp58s0f1
 
 #NEPTUNE
-#interface = eno1
+interface = eno1
 
 #TRITON
 #format-disconnected-background = ${colors.background}
@@ -434,10 +438,10 @@ format-connected ="|"
 #format-disconnected-foreground = ${colors.secondary}
 
 #NEPTUNE
-#format-disconnected-background = ${colors.background}
-#format-connected-background = ${colors.background}
-#format-connected-foreground = ${colors.primary}
-#format-disconnected-foreground = ${colors.primary}
+format-disconnected-background = ${colors.background}
+format-connected-background = ${colors.background}
+format-connected-foreground = ${colors.primary}
+format-disconnected-foreground = ${colors.primary}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [module/date]
