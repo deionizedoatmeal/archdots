@@ -176,7 +176,7 @@ exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 ####################
 border_radius 16
 gaps top 35
-gaps inner 20
+gaps inner 25
 for_window [class="^.*"] border pixel 0
 
 ##############
@@ -217,7 +217,7 @@ bindsym $mod+Escape exec --no-startup-id click1; exec --no-startup-id lock
 # SCREEN TIME OUT #
 ###################
 exec_always --no-startup-id xset dpms 200
-bindsym $mod+z dpms-toggle
+bindsym $mod+z exec --no-startup-id dpms-toggle
 
 #########
 # AUDIO #
