@@ -1,9 +1,9 @@
 [global]
 
 #TRITON
-#font = JetBrainsMono Bold 24
+#font = IosevkaNerdFont 24
 #NEPTUNE
-font = JetBrainsMono Bold 12
+font = IosevkaNerdFont 24
 
 markup = yes
 plain_text = no
