@@ -174,7 +174,11 @@ exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 ####################
 # GAPS AND BORDERS #
 ####################
+#TRITON
+#border_raidus 30
+#NEPTUNE
 border_radius 16
+
 gaps top 35
 gaps inner 25
 for_window [class="^.*"] border pixel 0
