@@ -1,6 +1,6 @@
 #!/bin/bash
 # comment out needed lines for apt based or pacman based systems 
-# this compiles resloved's fork of i3-gaps (https://github.com/resloved/i3.git)
+# this compiles a fork of i3-gaps with rounded window corners (https://github.com/resloved/i3.git)
 
 # pacman
 sudo pacman -Syy && sudo pacman -Syu

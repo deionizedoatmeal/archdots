@@ -1,6 +1,6 @@
 #!/bin/bash
 # by ian k. bania
-# script to install various pacman, AUR, python, rust packages as well as clone and compiling some software directly from github
+# script to install various pacman, AUR, python, rust packages as well as clone and compiling some software directly from github, really only meant to work with my set up so feel free to canibalize for your own install scripts
 
 ###################
 #     PACMAN      #
@@ -10,8 +10,8 @@ sudo pacman -Syy
 sudo pacman -Syu
 
 # package lists
-SYS="bc gdisk dbus powertop pulseaudio bluez bluez-utils reshift upower git sudo vi kitty rofi dunst openvpn i3lock gnupg imagemagick mpg123 ffmpeg feh ttf-fantasque-sans-mono tlp tlp-rdw python3-venv python-pip nvme-cli lm_sensors openssh"
-NONES="pavucontrol pipx bash-completion nmap htop ranger zathura zathura-pdf-mupdf firefox neovim gnuplot vlc darktable neofetch steam atom gimp zathura ranger pass powertop htop speedtest-cli net-tools"
+SYS="bc gdisk dbus powertop pulseaudio bluez bluez-utils reshift upower git sudo vi kitty rofi dunst openvpn i3lock gnupg imagemagick mpg123 ffmpeg feh ttf-fantasque-sans-mono tlp tlp-rdw python3-venv python-pip nvme-cli lm_sensors openssh pipx"
+NONES="pavucontrol bash-completion nmap htop ranger zathura zathura-pdf-mupdf firefox neovim gnuplot vlc darktable neofetch steam atom gimp zathura ranger pass powertop htop speedtest-cli net-tools"
 TRI=""
 NEP=""
 
@@ -20,22 +20,22 @@ NEP=""
 
 
 # pacman install
-read -r -p "#### Would you like to install essential software? [y/N] ####" response
+read -r -p "#### Would you like to install 'essential' software? [y/N] ####" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
         sudo pacman -S --needed $SYS
 fi
 
-read -r -p "#### Would you like to install optional software? [y/N] ####" response
+read -r -p "#### Would you like to install 'optional' software? [y/N] ####" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
         sudo pacman -S --needed $NONES
 fi
 
-read -r -p "#### Would you like to install triton software? [y/N] ####" response
+read -r -p "#### Would you like to install 'triton' software? [y/N] ####" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
         sudo pacman -S --needed $TRI
 fi
 
-read -r -p "#### Would you like to install neptune software? [y/N] ####" response
+read -r -p "#### Would you like to install 'neptune' software? [y/N] ####" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
         sudo pacman -S --needed $NEP
 fi
@@ -53,15 +53,32 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
         cd .. && sudo rm -r yay
 fi
 
-# yay package list
-YAYSYS="paper-icon-theme-git gllock-git autotiling betterlockscreen compton-tyrone-git android-messages-desktop polybar spotify system76-power system76-driver ly"
-
+# yay package list #########################################################
+YAYSYS="vim-plug gllock-git autotiling betterlockscreen compton-tyrone-git polybar ly"
+YAYNEPTUNE=""
+YAYTRITON="system76-power system76-driver"
+YAYNONES="spotify paper-icon-theme-git android-messages-desktop spotifyd"
+##########################################################################
 # yay install
-read -r -p "#### Would you like to install yay packages? [y/N] ####" response
+read -r -p "#### Would you like to install 'essential' yay packages? [y/N] ####" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
         yay -S --needed $YAYSYS
 fi
 
+read -r -p "#### Would you like to install 'triton' yay packages? [y/N] ####" response
+if [[ "$response" =~ ^([Yy])+$ ]]; then
+        yay -S --needed $YAYTRITON
+fi
+
+read -r -p "#### Would you like to install 'optional' yay packages? [y/N] ####" response
+if [[ "$response" =~ ^([Yy])+$ ]]; then
+        yay -S --needed $YAYTRITON
+fi
+
+
+####################
+#     SERVICES     #
+####################
 # system76-power
 read -r -p "#### Would you like to enable and start system76-power.service? [y/N] ####" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
@@ -74,7 +91,7 @@ fi
 #    GIT REPOS     #
 ####################
 # install light utility
-read -r -p "Would you like to install light (a backlight utility)? [y/N]" response
+read -r -p "Would you like to install light (a backlight control utility)? [y/N]" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
         git clone https://github.com/haikarainen/light.git
         cd light
@@ -84,7 +101,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
         sudo make install              
         cd ..
         sudo rm -r light
-        echo 'backlight utility installed'
+        echo 'light.git installed'
 fi
 
 # gnuplot pywal 
@@ -95,33 +112,32 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
         sudo ./install.sh
         cd ..
         sudo rm -r Gnuplot-Pywal
-        echo 'Gnuplot-Pywal installed'
+        echo 'Gnuplot-Pywal.git installed'
 fi
 
 
 # t todo 
-read -r -p "t.py (todo list)? [y/N]" response
+read -r -p "Would you like to install t.py (a bare bones CLI todo list)? [y/N]" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
         git clone https://github.com/sjl/t.git $HOME/Tasks/.
+        echo 't.git installed'
 fi
 
-
+# now using the AUR
 # install spotifyd
-read -r -p "Would you like to install Spotifyd v0.2.24? [y/N]" response
-if [[ "$response" =~ ^([Yy])+$ ]]; then
-        wget https://github.com/Spotifyd/spotifyd/releases/download/v0.2.24/spotifyd-linux-full.tar.gz
-        tar -xf spotifyd-linux-full.tar.gz
-        sudo mv spotifyd /bin/spotifyd
-        rm spotifyd-linux-full.tar.gz
-fi
-
+#read -r -p "Would you like to install Spotifyd v0.2.24? [y/N]" response
+#if [[ "$response" =~ ^([Yy])+$ ]]; then
+#        wget https://github.com/Spotifyd/spotifyd/releases/download/v0.2.24/spotifyd-linux-full.tar.gz
+#        tar -xf spotifyd-linux-full.tar.gz
+#        sudo mv spotifyd /bin/spotifyd
+#        rm spotifyd-linux-full.tar.gz
+#fi
 # install nvim plugin manager
-read -r -p "Would you like to install vim-plug? [y/N]" response
-if [[ "$response" =~ ^([Yy])+$ ]]; then
-        curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.git
-        hubusercontent.com/junegunn/vim-plug/master/plug.vim
-fi
-
+#read -r -p "Would you like to install vim-plug? [y/N]" response
+#if [[ "$response" =~ ^([Yy])+$ ]]; then
+#        curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.git
+#        hubusercontent.com/junegunn/vim-plug/master/plug.vim
+#fi
 
 
 ####################
@@ -162,7 +178,6 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 
-
 ####################
 #    i3 COMPILE    #
 ####################
@@ -173,6 +188,4 @@ fi
 
 
 
-
-
-
+# all done!
