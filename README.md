@@ -1,3 +1,4 @@
+-> MORE COMING SOON <-
 These are my dotfiles and scripts for my personal system. My process for a fresh install is: 
 1) boot from a live .iso
 2) clone the repository: `git clone https://github.com/deionizedoatmeal/dots.git`
