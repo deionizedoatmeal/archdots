@@ -67,7 +67,7 @@ vgcreate vg /dev/mapper/cryptlvm
 # ask for user input
 read -r -p "How much swap would you like in the system? (Answer in integer GB, ian likes 8)" SWAP
 
-read -r -p "How much space for root would you like in the system? (Answer in integer GB, ian likes 20)" ROOT
+read -r -p "How much space for root would you like in the system? (Answer in integer GB, ian likes 20 or 30)" ROOT
 
 # set up swap, root and home
 lvcreate -L ${SWAP}G vg -n swap
@@ -134,14 +134,13 @@ hwclock --systohc
 read -r -p "Chose a hostname: " NAME
 touch /etc/hostname && cat /etc/hostname ${NAME}
 
-# clone my repo on the system
+# clone repo on the system
 git clone https://github.com/deionizedoatmeal/dots.git
 
-# copy /etc/hosts /etc/sudoers /etc/mkinitcpio.conf and /etc/default/grub over
-cp -p /dots/hosts /etc/hosts
-cp -p /dots/sudoers /etc/sudoers
-cp -p mkinitcpio.conf /etc/mkinitcpio.conf
-cp -p default.grub /etc/default/grub
+# copy /etc/sudoers /etc/mkinitcpio.conf and /etc/default/grub over
+cp -p /dots/system/sudoers /etc/sudoers
+cp -p /dots/system/mkinitcpio.conf /etc/mkinitcpio.conf
+cp -p /dots/system/default.grub /etc/default/grub
 
 # create a keyfile to embed in initramfs
 mkdir /root/secrets && chmod 700 /root/secrets
@@ -152,6 +151,7 @@ cryptsetup -v luksAddKey -i 1 /dev/${DISKP}2 /root/secrets/crypto_keyfile.bin
 mkinitcpio -p linux
 
 # set root password
+echo "Set your root password:"
 passwd
 
 # install grub
@@ -168,13 +168,14 @@ grub-mkconfig -o /boot/grub/grub.cfg
 chmod 700 /boot
 
 # create user
-read -r -p "Chose a username: " NAME
+read -r -p "Choose a username: " NAME
 useradd -m -g users -G wheel -s /bin/bash $NAME
+echo "Now choose a password:"
 passwd $NAME
 
-# clone dots for ease of accses after reboot 
+# reclone dots for ease of accses after reboot 
 cd /home/${NAME}
 mkdir Repos && cd Repos
 git clone https://github.com/deionizedoatmeal/dots.git
 
-echo "done. now check everything, exit and reboot"
+echo "REMBER TO COPY HOSTS TO /etc/hosts! now check everything, exit and reboot"
