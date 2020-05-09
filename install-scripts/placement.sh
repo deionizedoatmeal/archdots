@@ -56,13 +56,17 @@ cp gtk/.* ${HOME}/.
 sudo cp -r fonts/* /usr/share/fonts/.
 #sudo cp ranger/ranger.desktop /usr/share/applications/.
 #sudo cp spotify-tui/spotify-tui.desktop /usr/share/applications/.
-echo "|> REMBER TO:"
+echo "|> REMEMBER TO:"
 echo "|> set layers.acceleration.force-enabled --> true TO PREVENT TARING IN FIREFOX"
+echo "|> choose between triton and neptune options in configs"
 echo "|> change spotifyd password in the config"
 echo "|> import gpg and ssh keys"
+echo "|> set up busybox/dropbear server to headless decrypt at boot"
 echo "|> run powertop and tlp"
 echo "|> set up pass, and tasks"
 echo "|> pair all bluetooth devices"
+echo "|> install Wolfram Wathematica"
+echo "|> install windows in VM"
 
 
 

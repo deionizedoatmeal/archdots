@@ -24,9 +24,9 @@ client.background       $bg
 ########
 # FONT #
 ########
-
+#*SELECT
 #TRITON
-font pango:JetBrains Mono ExtraBold 24
+#font pango:JetBrains Mono ExtraBold 24
 #NEPTUNE 
 #font pango:JetBrains Mono ExtraBold 12
 
@@ -96,7 +96,6 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -109,12 +108,15 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
+# move workspace to other monitor
+bindsym $mod+Ctrl+Left move workspace to output VGA-0
+bindsym $mod+Ctrl+Right move workspace to output HDMI-0
+
 # custom workspace switching
 bindsym $mod+Prior workspace next
 bindsym $mod+Next workspace prev
 bindsym $mod+Home workspace $ws1
 bindsym $mod+End workspace $ws10
-
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -138,7 +140,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 ##############
-# ROFI MENUS # (make sure to place scripts into /bin or just call their location directly)
+# ROFI MENUS # (place scripts into /bin)
 ##############
 bindsym $mod+Shift+e exec rofimenu-exit
 bindsym $mod+Shift+p exec rofimenu-power
@@ -150,13 +152,13 @@ bindsym $mod+Shift+v exec --no-startup-id rofimenu-vpn
 ###########################
 bindsym $mod+t exec theme-toggle
 
+##########################          
+# RESIZE FLOATING WINDOW # (you can also use the mouse for that) 
 ##########################
-# RESIZE FLOATING WINDOW # (you can also use the mouse for that)
-##########################
-bindsym $mod+Shift+bracketleft resize shrink width 30 px or 30 ppt
-bindsym $mod+Shift+equal resize grow height 30 px or 30 ppt
-bindsym $mod+Shift+minus resize shrink height 30 px or 30 ppt
-bindsym $mod+Shift+bracketright resize grow width 30 px or 30 ppt
+bindsym $mod+Shift+bracketleft resize shrink width 20 px or 20 ppt
+bindsym $mod+Shift+equal resize grow height 20 px or 20 ppt
+bindsym $mod+Shift+minus resize shrink height 20 px or 20 ppt
+bindsym $mod+Shift+bracketright resize grow width 20 px or 20 ppt
 
 ######################################
 # POLYBAR, COMPTON AND OTHER STARTUP #
@@ -171,13 +173,15 @@ exec_always --no-startup-id compton --config ~/.config/compton/compton.conf
 exec_always --no-startup-id flashfocus
 exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
+
 ####################
 # GAPS AND BORDERS #
 ####################
+#*SELECT*
 #TRITON
 #border_raidus 30
 #NEPTUNE
-border_radius 16
+#border_radius 16
 
 gaps top 35
 gaps inner 25
@@ -186,10 +190,12 @@ for_window [class="^.*"] border pixel 0
 ##############
 # PAPER MODE #
 ##############
-bindsym $mod+p exec --no-startup-id paper-mode-toggle 400
-
+#*SELECT*
+#TRITON
+#bindsym $mod+p exec --no-startup-id paper-mode-toggle 400
 #NEPTUNE
-#bindsym $mod+l exec --no-startup-id paper-mode-toggle 200
+#bindsym $mod+p exec --no-startup-id paper-mode-toggle 400
+#bindsym $mod+o exec --no-startup-id paper-mode-toggle 200
 
 ##############
 # SCREENSHOT #
@@ -201,10 +207,9 @@ bindsym --release $mod+Print exec --no-startup-id scrot; exec --no-startup-id cl
 ####################
 for_window [class="nautilus"] floating enable
 for_window [class="feh"] floating enable
-for_window [class="com.github.donadigo.eddy"] floating enable
 for_window [class="gnome-disks"] floating enable
 for_window [class="gnome-font-viewer"] floating enable
-for_window [class="eog"] floating enable
+for_window [class="steam"] floating enable
 for_window [class="evince"] floating enable
 for_window [class="baobab"] floating enable
 for_window [class="system-config-printer"] floating enable
@@ -215,7 +220,7 @@ for_window [class="popsicle-gtk"] floating enable
 # LOCK #
 ########
 bindsym $mod+BackSpace exec --no-startup-id click1; exec --no-startup-id lock
-bindsym $mod+Escape exec --no-startup-id click1; exec --no-startup-id lock
+bindsym $mod+Escape exec --no-startup-id click1; exec --no-startup-id lock 
 
 ###################
 # SCREEN TIME OUT #
@@ -246,4 +251,8 @@ bindsym $mod+n exec --no-startup-id redshift-toggle
 #############
 # FLOAT MAX #
 #############
-floating_maximum_size 2600 x 1400
+#*SELECT*
+#TRITON
+#floating_maximum_size 2600 x 1400
+#NEPTUNE
+#floating_maximum_size 1800 x 900

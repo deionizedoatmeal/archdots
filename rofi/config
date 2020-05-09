@@ -4,14 +4,16 @@ rofi.color-normal: #141021, #ffeefc, #312842, #c16772, #ffeefc
 rofi.color-active: #141021, #c05c47, #312842, #c05c47, #ffeefc
 rofi.color-urgent: #141021, #e4b226, #312842, #e4b226, #ffeefc
 
-#TRITON
-rofi.width: 800
+#*SELECT*       
+#TRITON  
+#rofi.font JetBrains Mono Bold 24
+#rofi.width:800
 #NEPTUNE
+#rofi.font JetBrains Mono Bold 12
 #rofi.width:400
+#*SELECT*
 
 rofi.padding: 50
-rofi.font: JetBrains Mono Bold 24
-#DESK rofi.font JetBrains Mono Bold 12
 rofi.separator-style: none
 rofi.hide-scrollbar: true
 rofi.theme: ~/.cache/wal/colors-rofi-dark.rasi
