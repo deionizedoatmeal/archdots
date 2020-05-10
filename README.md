@@ -6,7 +6,7 @@ These are my dotfiles and scripts for my workstation/server and my personal lapt
 5) run the script `./dots/install-scripts/arch-install.sh`, follow the prompts and then manually check everything once it finishes
 6) `exit` and `reboot` the system
 7) enter the disk encryption password, then log into tty
-8) run `./software-install.sh`, `./i3gaps-install` and `./placement.sh`
+8) run `./software-install.sh` and `./placement.sh`
 8) securely import ssh and gpg keys and run `./pass-setup.sh`
 9) reboot and log into [i3](https://github.com/resloved/i3) via [ly](https://github.com/cylgom/ly)
 10) import my data, log into applications (messages, spotify, firefox, and steam)
