@@ -23,7 +23,7 @@ read -r -p "What disk would you like to install on? (e.g. nvme0n1 or sda)" DISK
 
 # if using an nvme, make sure to at the p for the partion numbers in commands
 DISKP=${DISK}
-if [[ $(echo ${DISK} | cut -c 1-4) == "nvme" ]]; then 
+if [[ $(echo ${DISK} | cut -c 1-1) == "n" ]]; then 
         DISKP=$(echo "${DISK}p") 
 fi
 
