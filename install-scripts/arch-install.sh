@@ -111,6 +111,9 @@ genfstab -U /mnt >> /mnt/etc/fstab
 # chroot to the new system
 arch-chroot /mnt
 
+# RESTART?
+
+
 # user confirmation
 echo "Disk should be partioned and volumized as such:"
 echo "${DISK}"
@@ -147,7 +150,7 @@ git clone https://github.com/deionizedoatmeal/dots.git
 # copy /etc/sudoers /etc/mkinitcpio.conf and /etc/default/grub over
 cp -p /dots/system/sudoers /etc/sudoers
 cp -p /dots/system/mkinitcpio.conf /etc/mkinitcpio.conf
-cp -p /dots/system/default.grub /etc/default/grub
+cp -p /dots/system/grub.default /etc/default/grub
 
 # create a keyfile to embed in initramfs
 mkdir /root/secrets && chmod 700 /root/secrets
@@ -158,11 +161,11 @@ cryptsetup -v luksAddKey -i 1 /dev/${DISKP}2 /root/secrets/crypto_keyfile.bin
 mkinitcpio -p linux
 
 # set root password
-echo "Set your root password:"
+echo "Set your root password!"
 passwd
 
 # install grub
-pacman -S efibootmgr
+pacman -S efibootmgr grub
 grub-install --target=x86_64-efi --efi-directory=/efi
 
 # intel microcode updates
@@ -175,9 +178,9 @@ grub-mkconfig -o /boot/grub/grub.cfg
 chmod 700 /boot
 
 # create user
-read -r -p "Choose a username: " NAME
+read -r -p "Choose a username! " NAME
 useradd -m -g users -G wheel -s /bin/bash $NAME
-echo "Now choose a password:"
+echo "Now choose a password!"
 passwd $NAME
 
 # reclone dots for ease of accses after reboot 
@@ -185,4 +188,4 @@ cd /home/${NAME}
 mkdir Repos && cd Repos
 git clone https://github.com/deionizedoatmeal/dots.git
 
-echo "REMBER TO COPY HOSTS TO /etc/hosts! now check everything, exit and reboot"
+echo "REMBER TO COPY HOSTS TO /etc/hosts and remove this repo. Now check everything, exit and reboot"
