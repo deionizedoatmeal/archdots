@@ -1,9 +1,12 @@
 #!/bin/bash
 # script to initalize an arch linux system from a live .iso
-# sets up a system with LVM on LUKS 
+# sets up a system with LVM on LUKS encryption
 # mostly thrown together from various guides and the arch wiki
-# to use, boot an arch live iso, then run these commands:
-# --> pacman -Syy --noconfirm git
+# i honestly don't remcomend using this yet it barely works for me
+
+# to use, boot an arch live iso, connect to the internet, then run these commands:
+# --> pacman -Syy
+# --> pacman -S git
 # --> git clone https:/github.com/deionizedoatmeal/dots.git
 # --> ./dots/install-scripts/arch-install.sh
 # or just open this in your phone's browser and do it by hand i guess
@@ -11,30 +14,36 @@
 # update system clock
 timedatectl set-ntp true
 
-
-## partition disk ##
+##########################
+##### PARTITION DISK #####
+##########################
 # ask user what disk to install on
 lsblk
 read -r -p "What disk would you like to install on? (e.g. nvme0n1 or sda)" DISK
 
 # if using an nvme, make sure to at the p for the partion numbers in commands
 DISKP=$"${DISK}"
-if [[ (echo ${DISK} | cut -c 1-4) == "nvme" ]]; then DISKP=$"${DISK}p" fi
+if [[ $(echo ${DISK} | cut -c 1-4) == "nvme" ]]; then 
+        DISKP=$(echo "${DISK}p") 
+fi
+
 
 # launch gdisk
 sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | gdisk /dev/${DISK}
-  o             # clear table
-  Y             # confirm
-  n             # new patition
-                # default number (1)
-                # default start sector
-  +550M         # 550 MiB
-  EF00          # EFI system
-  n             # new partion 
-                # default
-                # rest of disk
-  8309          # linux luks filesystem
-  w             # write and exit
+        o             # clear table
+        Y             # confirm
+        n             # new patition
+                      # default number (1)
+                      # default start sector
+        +550M         # 550 MiB
+        EF00          # EFI system
+        n             # new partion 
+                      # default number (2)
+                      # rest of disk
+                      # rest of disk
+        8309          # linux luks filesystem
+        w             # write and exit
+        Y             # confirm
 EOF
 
 # user confirmation
@@ -48,8 +57,7 @@ lsblk
 read -r -p "Does this look correct? [Y/n]" response
 if [[ "$response" =~ ^([Nn])+$ ]]; then
         echo "OK, fix it yourself"
-        sleep 2
-        gdisk /dev/${DISK}
+        set -e
 fi
 
 # create encyrpted LUKS1 container on LUKS partion (GRUB still hates LUKS2 smh)
@@ -118,8 +126,7 @@ lsblk
 read -r -p "Does this look correct? [Y/n]" response
 if [[ "$response" =~ ^([Nn])+$ ]]; then
         echo "OK, fix it yourself"
-        sleep 2
-        gdisk /dev/${DISKP}
+        set -e
 fi
 
 # set timezone
