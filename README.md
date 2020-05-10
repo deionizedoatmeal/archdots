@@ -26,12 +26,13 @@ These are my dotfiles and scripts for my workstation/server and my personal lapt
 - [ly](https://github.com/cylgom/ly) (display manager)
 - grub, mkinitcpio and sudo (specific configs needed for encryption and of my scripts)
 # installation scripts:  
-- installing archlinux with sane defaults, and a LVM on LUKS encryption scheme
+- installing archlinux with sane* defaults, and a LVM on LUKS encryption scheme
 - installing pacman, aur, github, python and rust packages
-- installing ben friesen's fork of i3-gaps  
+- installing a fork of i3-gaps with rounded window borders
 - installing polybar
 - installing fonts, cloning repos and doing some housekeeping
 - moving config files and scripts into neccesary locations 
+* acording to me lol
 # functionality scripts:  
 - system status, resource usage and monitoring
 - wrapper for launching and kill spotifyd and spotify-tui simulataneously
