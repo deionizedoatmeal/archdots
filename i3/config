@@ -21,14 +21,23 @@ client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
 client.background       $bg
 
-########
-# FONT #
-########
-#*SELECT
+# these are the variables which are different on my two machines
+# they are commented/uncommented by placement.sh
+
+#*SELECT*
 #TRITON
 #font pango:JetBrains Mono ExtraBold 24
+#bindsym $mod+p exec --no-startup-id paper-mode-toggle 400
+#border_radius 27
+#floating_maximum_size 2600 x 1400
 #NEPTUNE 
 #font pango:JetBrains Mono ExtraBold 12
+#bindsym $mod+Ctrl+Left move workspace to output VGA-0
+#bindsym $mod+Ctrl+Right move workspace to output HDMI-0
+#bindsym $mod+p exec --no-startup-id paper-mode-toggle 400
+#bindsym $mod+o exec --no-startup-id paper-mode-toggle 200
+#border_radius 16
+#floating_maximum_size 1800 x 900
 
 # RESIZE VARIABLES
 set $center move position center
@@ -43,7 +52,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # start rofi 
-bindsym $mod+d exec rofi -show-icons -show drun
+bindsym $mod+d exec rofi -show drun
 
 # change focus by using the cursor keys:
 bindsym $mod+Left focus left
@@ -108,10 +117,6 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
-# move workspace to other monitor
-bindsym $mod+Ctrl+Left move workspace to output VGA-0
-bindsym $mod+Ctrl+Right move workspace to output HDMI-0
-
 # custom workspace switching
 bindsym $mod+Prior workspace next
 bindsym $mod+Next workspace prev
@@ -168,7 +173,7 @@ exec_always --no-startup-id killall -q compton
 exec_always --no-startup-id killall -q redshift
 exec_always --no-startup-id killall -q dunst
 exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec_always --no-startup-id redshift-toggle
+exec_always --no-startup-id redshift-toggle 44:-123
 exec_always --no-startup-id compton --config ~/.config/compton/compton.conf
 exec_always --no-startup-id flashfocus
 exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
@@ -177,25 +182,9 @@ exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 ####################
 # GAPS AND BORDERS #
 ####################
-#*SELECT*
-#TRITON
-#border_raidus 30
-#NEPTUNE
-#border_radius 16
-
 gaps top 35
 gaps inner 25
 for_window [class="^.*"] border pixel 0
-
-##############
-# PAPER MODE #
-##############
-#*SELECT*
-#TRITON
-#bindsym $mod+p exec --no-startup-id paper-mode-toggle 400
-#NEPTUNE
-#bindsym $mod+p exec --no-startup-id paper-mode-toggle 400
-#bindsym $mod+o exec --no-startup-id paper-mode-toggle 200
 
 ##############
 # SCREENSHOT #
@@ -248,12 +237,3 @@ bindsym F9 exec --no-startup-id light-up; exec --no-startup-id click0
 bindsym F8 exec --no-startup-id light-down; exec --no-startup-id click0
 #enter your lat and long here
 bindsym $mod+n exec --no-startup-id redshift-toggle 44:-123
-
-#############
-# FLOAT MAX #
-#############
-#*SELECT*
-#TRITON
-#floating_maximum_size 2600 x 1400
-#NEPTUNE
-#floating_maximum_size 1800 x 900

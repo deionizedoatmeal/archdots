@@ -54,10 +54,10 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 # yay package list #########################################################
-YAYSYS="vim-plug gllock-git autotiling betterlockscreen compton-tyrone-git polybar ly"
+YAYSYS="i3-gaps-rounded-git vim-plug gllock-git autotiling betterlockscreen compton-tyrone-git polybar ly"
 YAYNEPTUNE=""
 YAYTRITON="system76-power system76-driver"
-YAYNONES="spotify paper-icon-theme-git android-messages-desktop spotifyd"
+YAYNONES="spotify paper-icon-theme-git android-messages-desktop spotifyd-bin-full zoom"
 ##########################################################################
 # yay install
 read -r -p "#### Would you like to install 'essential' yay packages? [y/N] ####" response
@@ -148,7 +148,7 @@ read -r -p "Would you like to install python packages? [y/N]" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
     sudo pip3 install pywal
     sudo pip install flashfocus
-    sudo pip3 install protonvpn-cli
+    #sudo pip3 install protonvpn-cli
     sudo pip3 install inkscape-figures
     sudo pip3 install spotdl
     sudo pip3 install cl-chess

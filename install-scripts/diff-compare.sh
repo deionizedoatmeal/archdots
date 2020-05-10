@@ -9,7 +9,7 @@ diff ../polybar/config ~/.config/polybar/config
 echo "##### polybar/launch.sh ######"
 diff ../polybar/launch.sh ~/.config/polybar/launch.sh
 echo "##### rofi/config ######"
-diff ../rofi/config ~/.config/rofi/config
+diff ../rofi/config.rasi ~/.config/rofi/config.rasi
 echo "##### compton/compton.conf ######"
 diff ../compton/compton.conf ~/.config/compton/compton.conf
 echo "##### spotify-tui/config.yml ######"
