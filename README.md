@@ -39,7 +39,7 @@ These are my dotfiles and scripts for my workstation/server and my personal lapt
 - volume adjustment w/ notification
 - backlight adjustment w/ notification
 - simple lock screen
-- toggle light and dark themes
+- toggling dpsm (screen saver display power off power saving thingy)
 - a paper mode to be used in conjuction with i3-gaps
 - toggle redshift & display redshift status in polybar  
 - toggling bluetooth interface and connecting to bluetooth devices
