@@ -1,7 +1,6 @@
--> MORE COMING SOON <-
-These are my dotfiles and scripts for my personal system. My process for a fresh install is: 
+These are my dotfiles and scripts for my workstation/server and my personal laptop. My process for a fresh install is: 
 1) boot from a live .iso
-2) connect to the internet (wired or wifi-menu)
+2) connect to the internet (wired or via the `wifi-menu` command)
 3) install git with: `pacman -Syy && pacman -S git`
 4) clone the repository: `git clone https://github.com/deionizedoatmeal/dots.git`
 5) run the script `./dots/install-scripts/arch-install.sh`, follow the prompts and then manually check everything once it finishes
