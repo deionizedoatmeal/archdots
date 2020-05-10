@@ -1,29 +1,31 @@
 -> MORE COMING SOON <-
 These are my dotfiles and scripts for my personal system. My process for a fresh install is: 
 1) boot from a live .iso
-2) clone the repository: `git clone https://github.com/deionizedoatmeal/dots.git`
-3) run the script `./dots/install-scripts/arch-install.sh`, then manually check everything once it finishes
-5) `exit` and `reboot` the system
-6) enter the disk encryption password, then log into tty
-7) run `./software-install.sh`, `./i3gaps-install` and `./placement.sh`
-8) securely import my ssh and gpg keys and run `./pass-setup.sh`
-9) reboot and log into i3 via ly
+2) connect to the internet (wired or wifi-menu)
+3) install git with: `pacman -Syy && pacman -S git`
+4) clone the repository: `git clone https://github.com/deionizedoatmeal/dots.git`
+5) run the script `./dots/install-scripts/arch-install.sh`, follow the prompts and then manually check everything once it finishes
+6) `exit` and `reboot` the system
+7) enter the disk encryption password, then log into tty
+8) run `./software-install.sh`, `./i3gaps-install` and `./placement.sh`
+8) securely import ssh and gpg keys and run `./pass-setup.sh`
+9) reboot and log into [i3](https://github.com/resloved/i3) via [ly](https://github.com/cylgom/ly)
 10) import my data, log into applications (messages, spotify, firefox, and steam)
 
 # configuation files for:
-- i3wm (w/ gaps & rounded corners)  
-- polybar (desktop status bar)
-- picom (compositor)
-- kitty (terminal emulator)
-- rofi (application launcher)
-- dunst (notification serivce)
+- [i3-gaps-rounded](https://github.com/resloved/i3) (Ben Friesen's fork of the infamous tiling window manager)
+- [polybar](https://github.com/polybar/polybar) (desktop status bar)
+- [Bernd Busse's (aka tryonne144) fork of compton](https://github.com/tryone144/compton) (a graphical compositor)
+- [kitty](https://github.com/kovidgoyal/kitty) (terminal emulator)
+- [rofi](https://github.com/davatorium/rofi) (highly customizable application launcher)
+- [dunst](https://github.com/dunst-project/dunst) (notification serivce)
 - firefox (web browser)
 - neovim (text editor)
-- ranger (TUI file browser)
-- zathura (PDF reader)
-- spotify-tui + spotifyd (TUI music streaming client)
-- ly (display manager)
-- grub, mkinitcpio and sudo
+- [ranger](https://github.com/ranger/ranger) (TUI file browser)
+- [zathura](https://github.com/pwmt/zathura) (PDF reader)
+- [spotify-tui](https://github.com/Rigellute/spotify-tui) + [spotifyd](https://github.com/Spotifyd/spotifyd) (TUI version of the spotify streaming client)
+- [ly](https://github.com/cylgom/ly) (display manager)
+- grub, mkinitcpio and sudo (specific configs needed for encryption and of my scripts)
 # installation scripts:  
 - installing archlinux with sane defaults, and a LVM on LUKS encryption scheme
 - installing pacman, aur, github, python and rust packages
@@ -49,6 +51,7 @@ These are my dotfiles and scripts for my personal system. My process for a fresh
 - using rofi to mannage vpn
 - using rofi to connect to wireless networks (comming soon)
 - mounting and opening encrypted LUKS drives
+- switching between system wide dark and light mode
 # screenshots (slightly out of date)
 ![Clock](/screenshots/2020-02-15-025155_3200x1800_scrot.png)
 ![Clock](/screenshots/2020-02-15-022234_3200x1800_scrot.png)
