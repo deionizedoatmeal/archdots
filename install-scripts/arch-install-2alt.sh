@@ -5,7 +5,7 @@
 echo "Disk should be partioned and volumized as such:"
 echo "#########################################################"
 echo "${DISK}"
-echo "--> ${DISKP}1 -------- 550M ------------ part ----- /efi"
+echo "--> ${DISKP}1 -------- 550M ------------ part ----- /boot"
 echo "--> ${DISKP}2 -------- rest of disk ---- part ----- "
 echo "   --> cryptlvm ------ rest of disk ---- crypt ---- "
 echo "      --> vg-swap ---- 8G -------------- lvm ------ [SWAP]"
@@ -63,7 +63,7 @@ cp -p /dots/system/grub /etc/default/grub
 
 # install grub
 pacman -S efibootmgr grub
-grub-install --target=x86_64-efi --efi-directory=/efi
+grub-install --target=x86_64-efi --efi-directory=/boot
 
 # intel microcode updates
 pacman -S intel-ucode

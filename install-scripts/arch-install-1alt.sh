@@ -110,8 +110,8 @@ swapon /dev/vg/swap
 mkfs.fat -F32 /dev/${DISKP}1
 
 # mount EFI partion
-mkdir /mnt/efi
-mount /dev/${DISKP}1 /mnt/efi
+mkdir /mnt/boot
+mount /dev/${DISKP}1 /mnt/boot
 
 # install base system
 pacstrap /mnt base base-devel linux linux-firmware mkinitcpio lvm2 vi dhcpcd wpa_supplicant netctl dialog git
