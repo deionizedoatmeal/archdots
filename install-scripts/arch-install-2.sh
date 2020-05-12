@@ -46,10 +46,27 @@ touch /etc/hostname && cat /etc/hostname ${HNAME}
 echo "127.0.1.1 	${HNAME}.localdomain	${HNAME}" >> /dots/system/hosts_incomplete
 cp /dots/system/hosts_incomplete /etc/hosts
 
+
+# get the UUID for LUKS partition
+LUKSUUID=$(blkid | grep "${DISKP}2" | grep -o "UUID=.*" | cut -d\" -f2)
+
+# insert that into tempelate for /etc/default/grub
+LINEINSERT$="GRUB_CMDLINE_LINUX="cryptdevice=UUID=${LUKSUUID}:cryptlvm root=/dev/vg/root cryptkey=rootfs:/root/secrets/crypto_keyfile.bin""
+
+awk '/INSERT_UUID_OF_LUKS_PARTITION_HERE/ { print; print $LINEINSERT; next }1' /dots/system/grub.default
+
 # copy /etc/sudoers /etc/mkinitcpio.conf and /etc/default/grub over
 cp -p /dots/system/sudoers /etc/sudoers
 cp -p /dots/system/mkinitcpio.conf /etc/mkinitcpio.conf
 cp -p /dots/system/grub.default /etc/default/grub
+
+
+# install grub
+pacman -S efibootmgr grub
+grub-install --target=x86_64-efi --efi-directory=/efi
+
+# intel microcode updates
+pacman -S intel-ucode
 
 # create a keyfile to embed in initramfs
 mkdir /root/secrets && chmod 700 /root/secrets
@@ -71,15 +88,6 @@ while true; do
         else
                 continue
         fi
-
-
-
-# install grub
-pacman -S efibootmgr grub
-grub-install --target=x86_64-efi --efi-directory=/efi
-
-# intel microcode updates
-pacman -S intel-ucode
 
 # generate grub.conf
 grub-mkconfig -o /boot/grub/grub.cfg
