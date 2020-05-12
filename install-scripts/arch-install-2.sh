@@ -33,7 +33,7 @@ while true; dp
                 echo "Sorry the timelords have decided that timezone does not exist, try again."
                 continue
         fi
-
+done
 
 # clock stuff
 hwclock --systohc
@@ -88,6 +88,7 @@ while true; do
         else
                 continue
         fi
+done
 
 # generate grub.conf
 grub-mkconfig -o /boot/grub/grub.cfg
