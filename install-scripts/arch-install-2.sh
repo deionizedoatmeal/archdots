@@ -1,6 +1,23 @@
 #!/bin/bash
 # arch install part 2 electric buggalo
 
+git clone https://aur.archlinux.org/aic94xx-firmware.git
+git clone https://aur.archlinux.org/wd719x-firmware.git
+
+# aic94xx-firmware
+cd aic94xx-firmware
+makepkg -sri
+cd ..
+rm -r aic94xx-firmware
+
+# wd719x-firmware
+cd wd719x-firmware
+makepkg -sri
+cd ..
+rm -r wd719x-firmware
+
+echo "Firmware installed."
+
 # user confirmation of lvm and luks setuo
 echo "Disk should be partioned and volumized as such:"
 echo "#########################################################"

@@ -54,7 +54,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 # yay package list #########################################################
-YAYSYS="i3-gaps-rounded-git vim-plug gllock-git autotiling betterlockscreen compton-tyrone-git polybar ly"
+YAYSYS="aic94xx-firmware wd719x-firmware i3-gaps-rounded-git vim-plug gllock-git autotiling betterlockscreen compton-tyrone-git polybar ly"
 YAYNEPTUNE=""
 YAYTRITON="system76-power system76-driver"
 YAYNONES="spotify paper-icon-theme-git android-messages-desktop spotifyd-bin-full zoom"
