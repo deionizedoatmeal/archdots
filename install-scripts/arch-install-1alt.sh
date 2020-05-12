@@ -49,10 +49,15 @@ sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | gdisk /dev/${DISK}
         n             # new patition
                       # default number (1)
                       # default start sector
+        +250M         # 250 MiB
+        EF02          # BIOS boot partition
+        n             # new patition
+                      # default number (2)
+                      # default start sector
         +550M         # 550 MiB
         EF00          # EFI system
-        n             # new partion 
-                      # default number (2)
+        n             # new partition 
+                      # default number (3)
                       # rest of disk
                       # rest of disk
         8309          # linux luks filesystem
@@ -63,8 +68,9 @@ EOF
 # user confirmation
 echo "Disk should be partioned as such:"
 echo "${DISK}"
-echo "--> ${DISKP}1 ---- 550M ----------- EFI"
-echo "--> ${DISKP}2 ---- rest of disk --- Linux LUKS"
+echo "--> ${DISKP}1 ---- 250M ----------- BIOS"
+echo "--> ${DISKP}2 ---- 550M ----------- EFI"
+echo "--> ${DISKP}3 ---- rest of disk --- Linux LUKS"
 echo "lsblk:"
 
 lsblk
@@ -75,10 +81,10 @@ if [[ "$response" =~ ^([Nn])+$ ]]; then
 fi
 
 # create encyrpted LUKS1 container on LUKS partion (GRUB still doesn't like LUKS2 smh)
-cryptsetup luksFormat --type luks1 --use-random -S 1 -s 512 -h sha512 -i 5000 /dev/${DISKP}2
+cryptsetup luksFormat --type luks1 --use-random -S 1 -s 512 -h sha512 -i 5000 /dev/${DISKP}3
 
 # open the LUKS container (shows up at /dev/mapper/cryptlvm)
-cryptsetup open /dev/${DISKP}2 cryptlvm
+cryptsetup open /dev/${DISKP}3 cryptlvm
 
 # create physical volume on opened LUKS container
 pvcreate /dev/mapper/cryptlvm
@@ -107,12 +113,18 @@ mkdir /mnt/home
 mount /dev/vg/home /mnt/home
 swapon /dev/vg/swap
 
-# format EFI partion
-mkfs.fat -F32 /dev/${DISKP}1
+# format boot partition
+mkfs.ext2 /dev/${DISKP}1
 
-# mount EFI partion
+# format EFI partion
+mkfs.fat -F32 /dev/${DISKP}2
+
+# mount boot partion
 mkdir /mnt/boot
 mount /dev/${DISKP}1 /mnt/boot
+
+mkdir /mnt/boot/efi
+mount /dev/${DISKP}2 /mnt/boot/efi
 
 # install base system
 pacstrap /mnt base base-devel linux linux-firmware mkinitcpio lvm2 vi dhcpcd wpa_supplicant netctl dialog git

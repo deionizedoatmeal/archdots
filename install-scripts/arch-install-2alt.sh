@@ -18,8 +18,9 @@ echo "Firmware installed."
 echo "Disk should be partioned and volumized as such:"
 echo "#########################################################"
 echo "${DISK}"
-echo "--> ${DISKP}1 -------- 550M ------------ part ----- /boot"
-echo "--> ${DISKP}2 -------- rest of disk ---- part ----- "
+echo "--> ${DISKP}1 -------- 250M ------------ part ----- /boot"
+echo "--> ${DISKP}2 -------- 550M ------------ part ----- /boot/efi"
+echo "--> ${DISKP}3 -------- rest of disk ---- part ----- "
 echo "   --> cryptlvm ------ rest of disk ---- crypt ---- "
 echo "      --> vg-swap ---- 8G -------------- lvm ------ [SWAP]"
 echo "      --> vg-root ---- 20G ------------- lvm ------ /"
@@ -61,7 +62,7 @@ cp /dots/system/hosts_incomplete /etc/hosts
 
 
 # get the UUID for LUKS partition
-LUKSUUID=$(blkid | grep "${DISKP}2" | grep -o "UUID=.*" | cut -d\" -f2)
+LUKSUUID=$(blkid | grep "${DISKP}3" | grep -o "UUID=.*" | cut -d\" -f2)
 
 # insert that into tempelate for /etc/default/grub
 LINEINSERT$="GRUB_CMDLINE_LINUX="cryptdevice=UUID=${LUKSUUID}:cryptlvm root=/dev/vg/root cryptkey=rootfs:/root/secrets/crypto_keyfile.bin""
@@ -76,7 +77,7 @@ cp -p /dots/system/grub /etc/default/grub
 
 # install grub
 pacman -S efibootmgr grub
-grub-install --target=x86_64-efi --efi-directory=/boot
+grub-install --target=x86_64-efi --efi-directory=/boot/efi
 
 # intel microcode updates
 pacman -S intel-ucode
@@ -84,7 +85,7 @@ pacman -S intel-ucode
 # create a keyfile to embed in initramfs
 mkdir /root/secrets && chmod 700 /root/secrets
 head -c 64 /dev/urandom > /root/secrets/crypto_keyfile.bin && chmod 600 /root/secrets/crypto_keyfile.bin
-cryptsetup -v luksAddKey -i 1 /dev/${DISKP}2 /root/secrets/crypto_keyfile.bin
+cryptsetup -v luksAddKey -i 1 /dev/${DISKP}3 /root/secrets/crypto_keyfile.bin
 
 # create initramfs image
 mkinitcpio -p linux
