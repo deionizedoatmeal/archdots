@@ -1,6 +1,19 @@
 #!/bin/bash
 # arch install part 2 electric buggalo
 
+# aic94xx-firmware
+cd aic94xx-firmware
+makepkg -sri
+cd ..
+rm -r aic94xx-firmware
+
+# wd719x-firmware
+cd wd719x-firmware
+makepkg -sri
+cd ..
+rm -r wd719x-firmware
+
+echo "Firmware installed."
 # user confirmation of lvm and luks setuo
 echo "Disk should be partioned and volumized as such:"
 echo "#########################################################"
@@ -22,7 +35,7 @@ if [[ "$response" =~ ^([Nn])+$ ]]; then
 fi
 
 
-while true; dp
+while true; do
         # set timezone
         read -r -p "Pick a timezone, some options are: America/Anchorage, America/Los_Angeles, America/Denver, America/Chicago, America/New_York, America/Santiago, America/Sao_Paulo, Europe/London, Europe/Berlin, Europe/Istanbul, Europe/Moscow, Asia/Honk_Kong, Asia/Tokyo, Australia/Canberra, Pacific/Honolulu" TIMEZN
 
@@ -33,7 +46,7 @@ while true; dp
                 echo "Sorry the timelords have decided that timezone does not exist, try again."
                 continue
         fi
-
+done
 
 # clock stuff
 hwclock --systohc
@@ -88,6 +101,7 @@ while true; do
         else
                 continue
         fi
+done
 
 # generate grub.conf
 grub-mkconfig -o /boot/grub/grub.cfg
@@ -110,6 +124,7 @@ while true; do
         else
                 continue
         fi
+done
 
 # reclone dots for ease of accses after reboot 
 cd /home/${UNAME}

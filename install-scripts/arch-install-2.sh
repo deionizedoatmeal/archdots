@@ -1,9 +1,6 @@
 #!/bin/bash
 # arch install part 2 electric buggalo
 
-git clone https://aur.archlinux.org/aic94xx-firmware.git
-git clone https://aur.archlinux.org/wd719x-firmware.git
-
 # aic94xx-firmware
 cd aic94xx-firmware
 makepkg -sri
@@ -128,6 +125,7 @@ while true; do
         else
                 continue
         fi
+done
 
 # reclone dots for ease of accses after reboot 
 cd /home/${UNAME}
