@@ -121,7 +121,7 @@ pacstrap /mnt base base-devel linux linux-firmware mkinitcpio lvm2 vi dhcpcd wpa
 genfstab -U /mnt >> /mnt/etc/fstab
 
 # clone this repo on the new system
-git clone https://github.com/deionizedoatmeal/dots.git
+git clone https://github.com/deionizedoatmeal/dots.git /mnt/dots
 
 echo "Live image set up complete, now going to chroot into the new system. Once there execute the arch-install-2.sh script to finish the install process."
 

@@ -22,7 +22,7 @@ if [[ "$response" =~ ^([Nn])+$ ]]; then
 fi
 
 
-while true; dp
+while true; do
         # set timezone
         read -r -p "Pick a timezone, some options are: America/Anchorage, America/Los_Angeles, America/Denver, America/Chicago, America/New_York, America/Santiago, America/Sao_Paulo, Europe/London, Europe/Berlin, Europe/Istanbul, Europe/Moscow, Asia/Honk_Kong, Asia/Tokyo, Australia/Canberra, Pacific/Honolulu" TIMEZN
 
