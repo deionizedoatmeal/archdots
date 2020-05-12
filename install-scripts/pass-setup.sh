@@ -5,3 +5,4 @@ pass git init
 pass git remote add origin ian@neptune:/home/ian/Repos/pass
 pass git pull origin master --allow-unrelated-histories
 
+cp ../system/gpg-agent.conf ${HOME}/.gnupg/.
