@@ -58,7 +58,7 @@ sudo cp -r fonts/* /usr/share/fonts/.
 #sudo cp spotify-tui/spotify-tui.desktop /usr/share/applications/.
 echo "|> REMEMBER TO:"
 echo "|> set layers.acceleration.force-enabled --> true TO PREVENT TARING IN FIREFOX"
-echo "|> choose between triton and neptune options in configs"
+echo "|> choose between triton and neptune options in configs on i3, polybar, launch.sh, rofi, and kitty, .Xresources, .profile"
 echo "|> change spotifyd password in the config"
 echo "|> import gpg and ssh keys"
 echo "|> set up busybox/dropbear server to headless decrypt at boot"
@@ -67,6 +67,7 @@ echo "|> set up pass, and tasks"
 echo "|> pair all bluetooth devices"
 echo "|> install Wolfram Wathematica"
 echo "|> install windows in VM"
+echo "|> set up spotifyd"
 
 
 
