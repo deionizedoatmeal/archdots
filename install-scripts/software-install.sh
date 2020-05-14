@@ -10,7 +10,7 @@ sudo pacman -Syy
 sudo pacman -Syu
 
 # package lists
-SYS="bc gdisk dbus powertop pulseaudio bluez bluez-utils redshift upower git sudo vi kitty rofi dunst openvpn i3lock gnupg imagemagick mpg123 ffmpeg feh ttf-fantasque-sans-mono tlp tlp-rdw python-pip nvme-cli lm_sensors openssh"
+SYS="bc gdisk rust dbus powertop pulseaudio bluez bluez-utils redshift upower git sudo vi kitty rofi dunst openvpn i3lock gnupg imagemagick mpg123 ffmpeg feh ttf-fantasque-sans-mono tlp tlp-rdw python-pip nvme-cli lm_sensors openssh"
 NONES="pavucontrol bash-completion nmap htop ranger zathura zathura-pdf-mupdf firefox neovim gnuplot vlc darktable neofetch steam atom gimp zathura ranger pass powertop htop speedtest-cli net-tools"
 TRI=""
 NEP="nvidia"
@@ -158,7 +158,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
     sudo pip3 install wal-steam
     sudo pipx install jrnl
     sudo pip install mdv
-    sudo pip install i3-py
+    #sudo pip install i3-py
     #sudo pip3 install wpgtk
     echo 'python packages installed'
 fi
@@ -167,10 +167,10 @@ fi
 #      RUST        #
 ####################
 # install rust
-read -r -p "Would you like to install rust? [y/N]" response 
-if [[ "$response" =~ ^([Yy])+$ ]]; then
-        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-fi
+#read -r -p "Would you like to install rust? [y/N]" response 
+#if [[ "$response" =~ ^([Yy])+$ ]]; then
+#        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+#fi
 
 # install rust packages    
 read -r -p "Would you like to install rust packages? [y/N]" response 
@@ -184,10 +184,10 @@ fi
 ####################
 #    i3 COMPILE    #
 ####################
-read -r -p "#### Would you like to compile and install i3? [y/N] ####" response
-if [[ "$response" =~ ^([Yy])+$ ]]; then
-        ./i3gaps-install
-fi
+#read -r -p "#### Would you like to compile and install i3? [y/N] ####" response
+#if [[ "$response" =~ ^([Yy])+$ ]]; then
+#        ./i3gaps-install
+#fi
 
 
 
