@@ -81,29 +81,31 @@ if [[ "$response" =~ ^([Nn])+$ ]]; then
 fi
 
 # create encyrpted LUKS1 container on LUKS partion (GRUB still doesn't like LUKS2 smh)
+echo "You will now be asked to set and confirm your encryption passphrase, DO NOT forget this. If you make a typo you will have the option of trying again."
 while true; do
         cryptsetup luksFormat --type luks1 --use-random -S 1 -s 512 -h sha512 -i 5000 /dev/${DISKP}3
 
         #retry if ya goofed
-        read -r -p "Do you need to try again? [Y/n]" response
-        if [[ "$response" =~ ^([Nn])+$ ]]; then
-                break
-        else
+        read -r -p "Do you need to try again? [y/N]" response
+        if [[ "$response" =~ ^([Yy])+$ ]]; then
                 continue
+        else
+                break
         fi
 done
 
 
 # open the LUKS container (shows up at /dev/mapper/cryptlvm)
+echo "You will now be asked to use that passphrase to open the encrypted partition. If you make a typo you will have the option of trying again."
 while true; do
         cryptsetup open /dev/${DISKP}3 cryptlvm
         
         #retry if ya goofed
-        read -r -p "Do you need to try again? [Y/n]" response
-        if [[ "$response" =~ ^([Nn])+$ ]]; then
-                break
-        else
+        read -r -p "Do you need to try again? [y/N]" response
+        if [[ "$response" =~ ^([Yy])+$ ]]; then
                 continue
+        else
+                break
         fi
 done
 

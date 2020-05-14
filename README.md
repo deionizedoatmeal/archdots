@@ -8,9 +8,10 @@ These are my dotfiles and scripts for my workstation/server and my personal lapt
 6) `exit` and `reboot` the system
 7) enter the disk encryption password, then log into the tty
 8) make sure the network interfaces are up, move to the install-scripts directoy, run `./software-install.sh` and `./placement.sh`
-8) securely import ssh and gpg keys and run `./pass-setup.sh`
-9) reboot and log into [i3](https://github.com/resloved/i3) via [ly](https://github.com/cylgom/ly)
-10) import data, log into applications (messages, spotify, firefox, and steam)
+9) set my intial wallpaper and colorschemes `wal -i ~/Repos/archdots/blurrr.jpg`
+10) securely import ssh and gpg keys and run `./pass-setup.sh`
+11) reboot and log into [i3](https://github.com/resloved/i3) via [ly](https://github.com/cylgom/ly)
+12) import data, log into applications (messages, spotify, firefox, and steam)
 
 # configuation files for:
 - [i3-gaps-rounded](https://github.com/resloved/i3) (Ben Friesen's fork of the infamous tiling window manager)

@@ -27,7 +27,7 @@ echo "--> ${DISKP}2 -------- 550M ------------ part ----- /boot/efi"
 echo "--> ${DISKP}3 -------- rest of disk ---- part ----- "
 echo "   --> cryptlvm ------ rest of disk ---- crypt ---- "
 echo "      --> vg-swap ---- 8G -------------- lvm ------ [SWAP]"
-echo "      --> vg-root ---- 20G ------------- lvm ------ /"
+echo "      --> vg-root ---- 20G or 30G------- lvm ------ /"
 echo "      --> vg-home ---- rest of disk ---- lvm ------ /home"
 echo "#########################################################"
 echo "lsblk:"
@@ -92,7 +92,7 @@ pacman -S intel-ucode
 # create a keyfile to embed in initramfs
 mkdir /root/secrets && chmod 700 /root/secrets
 head -c 64 /dev/urandom > /root/secrets/crypto_keyfile.bin && chmod 600 /root/secrets/crypto_keyfile.bin
-echo "Now enter your disk encryption password!"
+echo "Now enter your disk encryption passphrase!"
 cryptsetup -v luksAddKey -i 1 /dev/${DISKP}3 /root/secrets/crypto_keyfile.bin
 
 # create initramfs image
@@ -104,11 +104,11 @@ while true; do
         passwd
 
         #retry if ya goofed
-        read -r -p "Do you need to try again? [Y/n]" response
-        if [[ "$response" =~ ^([Nn])+$ ]]; then
-                break
-        else
+        read -r -p "Do you need to try again? [y/N]" response
+        if [[ "$response" =~ ^([Yy])+$ ]]; then
                 continue
+        else
+                break
         fi
 done
 
@@ -127,11 +127,11 @@ while true; do
         passwd $UNAME
         
         #retry if ya goofed
-        read -r -p "Do you need to try again? [Y/n]" response
-        if [[ "$response" =~ ^([Nn])+$ ]]; then
-                break
-        else
+        read -r -p "Do you need to try again? [y/N]" response
+        if [[ "$response" =~ ^([Yy])+$ ]]; then
                 continue
+        else
+                break
         fi
 done
 
