@@ -47,6 +47,7 @@ cp -r spotify-tui/* ~/.config/spotify-tui/
 cp -r spotifyd/* ~/.config/spotifyd/
 cp .bashrc ~/.
 cp .Xresources ~/.
+cp .xprofile ~/.
 cp -r chrome ~/.mozilla/firefox/*.default-release/.
 cp -r android_messages ~/.config/'Android Messages'/.
 cp zoomus.conf ~/.config/.
@@ -58,7 +59,7 @@ sudo cp -r fonts/* /usr/share/fonts/.
 #sudo cp spotify-tui/spotify-tui.desktop /usr/share/applications/.
 echo "|> REMEMBER TO:"
 echo "|> set layers.acceleration.force-enabled --> true TO PREVENT TARING IN FIREFOX"
-echo "|> choose between triton and neptune options in configs on i3, polybar, launch.sh, rofi, and kitty, .Xresources, .profile"
+echo "|> choose between triton and neptune options in configs on i3, polybar, launch.sh, rofi, and kitty, .Xresources, .xprofile"
 echo "|> change spotifyd password in the config"
 echo "|> import gpg and ssh keys"
 echo "|> set up busybox/dropbear server to headless decrypt at boot"
