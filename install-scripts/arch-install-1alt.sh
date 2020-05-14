@@ -155,10 +155,17 @@ genfstab -U /mnt >> /mnt/etc/fstab
 
 # clone this repo on the new system
 git clone https://github.com/deionizedoatmeal/dots.git /mnt/dots
+
+#firmware stuff
 git clone https://aur.archlinux.org/aic94xx-firmware.git /mnt/aic94xx-firmware
 git clone https://aur.archlinux.org/wd719x-firmware.git /mnt/wd719x-firmware
 
 echo "Live image set up complete, now going to chroot into the new system. Once there execute the arch-install-2.sh script to finish the install process."
+
+touch /mnt/dots/system/diskp
+touch /mnt/dots/system/disk
+echo ${DISKP} >> /mnt/dots/system/diskp
+echo ${DISK} >> /mnt/dots/system/disk
 
 # chroot to the new system
 arch-chroot /mnt

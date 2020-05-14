@@ -1,6 +1,10 @@
 #!/bin/bash
 # arch install part 2 electric buggalo
 
+#read in variables
+DISK=$(cat /dots/system/disk)
+DISKP=$(cat /dots/system/diskp)
+
 # aic94xx-firmware
 cd aic94xx-firmware
 makepkg -sri
