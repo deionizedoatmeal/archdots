@@ -47,6 +47,7 @@ cp -r spotify-tui/* ~/.config/spotify-tui/
 cp -r spotifyd/* ~/.config/spotifyd/
 cp .bashrc ~/.
 cp .Xresources ~/.
+cp .gitconfig ~/.
 cp .xprofile ~/.
 cp -r chrome ~/.mozilla/firefox/*.default-release/.
 cp -r android_messages ~/.config/'Android Messages'/.
