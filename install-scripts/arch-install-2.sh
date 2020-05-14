@@ -77,10 +77,10 @@ sed -i "${LINEINSERT}" /archdots/system/grub
 # copy /etc/default/grub over
 cp -p /archdots/system/grub /etc/default/grub
 
-# copy /etc/sudoers and /etc/mkinitcpio.conf over
+# copy sudoers mkinitcpio.conf and pacman.conf
 cp -p /archdots/system/sudoers /etc/sudoers
 cp -p /archdots/system/mkinitcpio.conf /etc/mkinitcpio.conf
-
+cp -p /archdots/system/pacman.conf /etc/pacman.conf
 
 # install grub
 pacman -S efibootmgr grub
@@ -142,6 +142,10 @@ if [[ "$response" =~ ^([Nn])+$ ]]; then
 else
         pacman -S nvidia
 fi
+
+#enable multilib
+#LINE="Include = /etc/pacman.d/mirrorlist"
+#sed -i "/^#$LINE/ c$LINE" /etc/pacman.conf
 
 
 # reclone archdots for ease of accses after reboot 

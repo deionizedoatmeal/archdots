@@ -15,7 +15,9 @@ NONES="pavucontrol bash-completion nmap htop ranger zathura zathura-pdf-mupdf fi
 TRI=""
 NEP="nvidia"
 
-#python3-venv
+#python3-venv?
+#pipx?
+
 #DESKTOP="busybox busybox-initramfs dropbear-initramfs system76-driver-nvidia openssh-server"
 #SYS="libxss-dev macchanger libssl-dev speedtest-cli transmission-cli transmission-daemon exfat-utils libxcb-render0-dev libffi-dev python-dev python-cffi"
 
