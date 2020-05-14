@@ -80,6 +80,7 @@ root ALL=(ALL) ALL
 ian ALL=(ALL) ALL
 ian ALL=NOPASSWD:/bin/rfkill 
 ian ALL=NOPASSWD:/bin/system76-power
+#your name where ian is
 
 
 ## Uncomment to allow members of group wheel to execute any command

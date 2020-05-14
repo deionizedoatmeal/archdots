@@ -22,7 +22,7 @@ lsblk
 
 # make sure the user types the disk name in corrently
 while true; do
-        read -r -p "What disk would you like to install on? (e.g. nvme0n1 or sda) *NOTE* This will wipe the entire disk! No partition will be safe!" DISK
+        read -r -p "What disk would you like to install on? (e.g. nvme0n1 or sda) *NOTE* This will wipe the entire disk! No partition will be safe! " DISK
 
         # if using an nvme, make sure to at the p for the partion numbers in commands
 
@@ -148,7 +148,7 @@ mkdir /mnt/boot/efi
 mount /dev/${DISKP}2 /mnt/boot/efi
 
 # install base system
-pacstrap /mnt base base-devel linux linux-firmware mkinitcpio lvm2 vi dhcpcd wpa_supplicant netctl dialog git
+pacstrap /mnt base base-devel linux linux-firmware mkinitcpio lvm2 vi dhcpcd wpa_supplicant netctl dialog git neovim
 
 # generate fstab file
 genfstab -U /mnt >> /mnt/etc/fstab

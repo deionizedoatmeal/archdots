@@ -6,15 +6,15 @@ DISK=$(cat /archdots/system/disk)
 DISKP=$(cat /archdots/system/diskp)
 
 # aic94xx-firmware
-cd aic94xx-firmware
-makepkg -sri
-cd ..
+#cd aic94xx-firmware
+#makepkg -sri
+#cd ..
 rm -r aic94xx-firmware
 
 # wd719x-firmware
-cd wd719x-firmware
-makepkg -sri
-cd ..
+#cd wd719x-firmware
+#makepkg -sri
+#cd ..
 rm -r wd719x-firmware
 
 echo "Firmware installed."
@@ -91,6 +91,7 @@ pacman -S intel-ucode
 # create a keyfile to embed in initramfs
 mkdir /root/secrets && chmod 700 /root/secrets
 head -c 64 /dev/urandom > /root/secrets/crypto_keyfile.bin && chmod 600 /root/secrets/crypto_keyfile.bin
+echo "Now enter your disk encryption password!"
 cryptsetup -v luksAddKey -i 1 /dev/${DISKP}3 /root/secrets/crypto_keyfile.bin
 
 # create initramfs image
