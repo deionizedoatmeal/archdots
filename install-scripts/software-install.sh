@@ -10,11 +10,12 @@ sudo pacman -Syy
 sudo pacman -Syu
 
 # package lists
-SYS="bc gdisk dbus powertop pulseaudio bluez bluez-utils redshift upower git sudo vi kitty rofi dunst openvpn i3lock gnupg imagemagick mpg123 ffmpeg feh ttf-fantasque-sans-mono tlp tlp-rdw python3-venv python-pip nvme-cli lm_sensors openssh pipx"
+SYS="bc gdisk dbus powertop pulseaudio bluez bluez-utils redshift upower git sudo vi kitty rofi dunst openvpn i3lock gnupg imagemagick mpg123 ffmpeg feh ttf-fantasque-sans-mono tlp tlp-rdw python-pip nvme-cli lm_sensors openssh"
 NONES="pavucontrol bash-completion nmap htop ranger zathura zathura-pdf-mupdf firefox neovim gnuplot vlc darktable neofetch steam atom gimp zathura ranger pass powertop htop speedtest-cli net-tools"
 TRI=""
 NEP="nvidia"
 
+#python3-venv
 #DESKTOP="busybox busybox-initramfs dropbear-initramfs system76-driver-nvidia openssh-server"
 #SYS="libxss-dev macchanger libssl-dev speedtest-cli transmission-cli transmission-daemon exfat-utils libxcb-render0-dev libffi-dev python-dev python-cffi"
 
@@ -54,7 +55,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 # yay package list #########################################################
-YAYSYS="aic94xx-firmware wd719x-firmware i3-gaps-rounded-git vim-plug gllock-git autotiling betterlockscreen compton-tyrone-git polybar ly"
+YAYSYS="aic94xx-firmware wd719x-firmware i3-gaps-rounded-git vim-plug gllock-git autotiling betterlockscreen compton-tyrone-git polybar ly pipx"
 YAYNEPTUNE=""
 YAYTRITON="system76-power system76-driver"
 YAYNONES="spotify paper-icon-theme-git android-messages-desktop spotifyd-bin-full zoom"
