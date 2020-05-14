@@ -5,18 +5,6 @@
 DISK=$(cat /archdots/system/disk)
 DISKP=$(cat /archdots/system/diskp)
 
-# aic94xx-firmware
-#cd aic94xx-firmware
-#makepkg -sri
-#cd ..
-rm -r aic94xx-firmware
-
-# wd719x-firmware
-#cd wd719x-firmware
-#makepkg -sri
-#cd ..
-rm -r wd719x-firmware
-
 echo "Firmware installed."
 # user confirmation of lvm and luks setuo
 echo "Disk should be partioned and volumized as such:"
@@ -81,6 +69,7 @@ cp -p /archdots/system/grub /etc/default/grub
 cp -p /archdots/system/sudoers /etc/sudoers
 cp -p /archdots/system/mkinitcpio.conf /etc/mkinitcpio.conf
 cp -p /archdots/system/pacman.conf /etc/pacman.conf
+pacman -Syy
 
 # install grub
 pacman -S efibootmgr grub
@@ -146,12 +135,6 @@ fi
 #enable multilib
 #LINE="Include = /etc/pacman.d/mirrorlist"
 #sed -i "/^#$LINE/ c$LINE" /etc/pacman.conf
-
-
-# reclone archdots for ease of accses after reboot 
-cd /home/${UNAME}
-mkdir Repos && cd Repos
-git clone https://github.com/deionizedoatmeal/archdots.git
 
 # remove this repo
 rm -r /archdots

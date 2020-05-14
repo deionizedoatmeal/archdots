@@ -96,18 +96,7 @@ done
 
 
 # open the LUKS container (shows up at /dev/mapper/cryptlvm)
-echo "You will now be asked to use that passphrase to open the encrypted partition. If you make a typo you will have the option of trying again."
-while true; do
-        cryptsetup open /dev/${DISKP}3 cryptlvm
-        
-        #retry if ya goofed
-        read -r -p "Do you need to try again? [y/N]" response
-        if [[ "$response" =~ ^([Yy])+$ ]]; then
-                continue
-        else
-                break
-        fi
-done
+cryptsetup open /dev/${DISKP}3 cryptlvm
 
 # create physical volume on opened LUKS container
 pvcreate /dev/mapper/cryptlvm
@@ -157,10 +146,6 @@ genfstab -U /mnt >> /mnt/etc/fstab
 
 # clone this repo on the new system
 git clone https://github.com/deionizedoatmeal/archdots.git /mnt/archdots
-
-#firmware stuff
-git clone https://aur.archlinux.org/aic94xx-firmware.git /mnt/aic94xx-firmware
-git clone https://aur.archlinux.org/wd719x-firmware.git /mnt/wd719x-firmware
 
 echo "Live image set up complete, now going to chroot into the new system. Once there execute the arch-install-2.sh script to finish the install process."
 

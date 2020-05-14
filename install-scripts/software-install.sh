@@ -10,8 +10,8 @@ sudo pacman -Syy
 sudo pacman -Syu
 
 # package lists
-SYS="bc gdisk rust dbus powertop pulseaudio bluez bluez-utils redshift upower git sudo vi kitty rofi dunst openvpn i3lock gnupg imagemagick mpg123 ffmpeg feh ttf-fantasque-sans-mono tlp tlp-rdw python-pip nvme-cli lm_sensors openssh"
-NONES="pavucontrol bash-completion nmap htop ranger zathura zathura-pdf-mupdf firefox neovim gnuplot vlc darktable neofetch steam atom gimp zathura ranger pass powertop htop speedtest-cli net-tools"
+SYS="bc gdisk rust dbus powertop pulseaudio bluez bluez-utils redshift upower git sudo vi kitty rofi dunst openvpn gnupg imagemagick mpg123 ffmpeg feh ttf-fantasque-sans-mono tlp tlp-rdw python-pip nvme-cli lm_sensors openssh vim bash-completion"
+NONES="pavucontrol nmap htop ranger zathura zathura-pdf-mupdf firefox neovim gnuplot vlc darktable neofetch steam atom gimp zathura ranger pass powertop htop speedtest-cli net-tools"
 TRI=""
 NEP="nvidia"
 
@@ -57,7 +57,8 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 # yay package list #########################################################
-YAYSYS="aic94xx-firmware wd719x-firmware i3-gaps-rounded-git vim-plug gllock-git autotiling betterlockscreen compton-tryone-git polybar ly python-pipx"
+YAYSYS="aic94xx-firmware wd719x-firmware i3-gaps-rounded-git vim-plug gllock-git compton-tryone-git polybar ly"
+#python-pipx autotiling
 YAYNEPTUNE=""
 YAYTRITON="system76-power system76-driver light-git"
 YAYNONES="spotify paper-icon-theme-git android-messages-desktop spotifyd-bin-full zoom"
@@ -65,17 +66,26 @@ YAYNONES="spotify paper-icon-theme-git android-messages-desktop spotifyd-bin-ful
 # yay install
 read -r -p "#### Would you like to install 'essential' yay packages? [y/N] ####" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
-        yay -S --needed $YAYSYS
+        ARR=($YAYSYS)
+        for i in "${ARR[@]}"; do
+                yay -S --needed $i
+        done
 fi
 
 read -r -p "#### Would you like to install 'triton' yay packages? [y/N] ####" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
-        yay -S --needed $YAYTRITON
+        ARR=($YAYTRITON)
+        for i in "${ARR[@]}"; do
+                yay -S --needed $i
+        done
 fi
 
 read -r -p "#### Would you like to install 'optional' yay packages? [y/N] ####" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
-        yay -S --needed $YAYNONES
+        ARR=($YAYNONES)
+        for i in "${ARR[@]}"; do
+                yay -S --needed $i
+        done
 fi
 
 
@@ -90,7 +100,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 
-read -r -p "#### Would you like to enable and start ly.service? (display manager) [y/N] ####" response
+read -r -p "#### Would you like to enable ly.service? (display manager) [y/N] ####" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
         sudo systemctl enable ly.service
         sudo systemctl disable getty@tty2.service
@@ -127,6 +137,7 @@ fi
 
 # t todo 
 read -r -p "Would you like to install t.py (a bare bones CLI todo list)? [y/N]" response
+MKDIR $HOME/Tasks
 if [[ "$response" =~ ^([Yy])+$ ]]; then
         git clone https://github.com/sjl/t.git $HOME/Tasks/.
         echo 't.git installed'
@@ -161,7 +172,6 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
     sudo pip3 install inkscape-figures
     sudo pip3 install spotdl
     sudo pip3 install cl-chess
-    sudo pip3 install wal-steam
     sudo pipx install jrnl
     sudo pip install mdv
     #sudo pip install i3-py

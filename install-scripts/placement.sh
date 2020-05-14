@@ -26,7 +26,7 @@ mkdir ~/.config/dunst/
 mkdir ~/.config/wal/templates/
 mkdir ~/.config/spotify-tui/
 mkdir ~/.config/spotifyd/
-mkdir ~/.config/wal/
+mkdir ~/.config/kitty/
 mkdir ~/.config/'Android Messages'/
 mkdir ~/.config/gtk-3.0/
 mkdir ~/.config/gtk-4.0/

@@ -124,7 +124,7 @@ alias pass-push='pass git push origin master'
 ########
 # RUST #
 ########
-source $HOME/.cargo/env
+EXPORT PATH="$HOME/.cargo/bin=$PATH"
 
 #######
 #PYWAL#
