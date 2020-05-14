@@ -59,7 +59,7 @@ fi
 # yay package list #########################################################
 YAYSYS="aic94xx-firmware wd719x-firmware i3-gaps-rounded-git vim-plug gllock-git autotiling betterlockscreen compton-tryone-git polybar ly python-pipx"
 YAYNEPTUNE=""
-YAYTRITON="system76-power system76-driver"
+YAYTRITON="system76-power system76-driver light-git"
 YAYNONES="spotify paper-icon-theme-git android-messages-desktop spotifyd-bin-full zoom"
 ##########################################################################
 # yay install
@@ -94,18 +94,18 @@ fi
 #    GIT REPOS     #
 ####################
 # install light utility
-read -r -p "Would you like to install light (a backlight control utility)? [y/N]" response
-if [[ "$response" =~ ^([Yy])+$ ]]; then
-        git clone https://github.com/haikarainen/light.git
-        cd light
-        ./autogen.sh
-        ./configure
-        make
-        sudo make install              
-        cd ..
-        sudo rm -r light
-        echo 'light.git installed'
-fi
+#read -r -p "Would you like to install light (a backlight control utility)? [y/N]" response
+#if [[ "$response" =~ ^([Yy])+$ ]]; then
+#        git clone https://github.com/haikarainen/light.git
+#        cd light
+#        ./autogen.sh
+#        ./configure
+#        make
+#        sudo make install              
+#        cd ..
+#        sudo rm -r light
+#        echo 'light.git installed'
+#fi
 
 # gnuplot pywal 
 read -r -p "Would you like to install Gnuplot-Pywal? [y/N]" response
