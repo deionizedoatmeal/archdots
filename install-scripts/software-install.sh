@@ -10,7 +10,7 @@ sudo pacman -Syy
 sudo pacman -Syu
 
 # package lists
-SYS="bc gdisk dbus powertop pulseaudio bluez bluez-utils reshift upower git sudo vi kitty rofi dunst openvpn i3lock gnupg imagemagick mpg123 ffmpeg feh ttf-fantasque-sans-mono tlp tlp-rdw python3-venv python-pip nvme-cli lm_sensors openssh pipx"
+SYS="bc gdisk dbus powertop pulseaudio bluez bluez-utils redshift upower git sudo vi kitty rofi dunst openvpn i3lock gnupg imagemagick mpg123 ffmpeg feh ttf-fantasque-sans-mono tlp tlp-rdw python3-venv python-pip nvme-cli lm_sensors openssh pipx"
 NONES="pavucontrol bash-completion nmap htop ranger zathura zathura-pdf-mupdf firefox neovim gnuplot vlc darktable neofetch steam atom gimp zathura ranger pass powertop htop speedtest-cli net-tools"
 TRI=""
 NEP="nvidia"
