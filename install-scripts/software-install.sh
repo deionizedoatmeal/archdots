@@ -90,6 +90,12 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 
+read -r -p "#### Would you like to enable and start ly.service? (display manager) [y/N] ####" response
+if [[ "$response" =~ ^([Yy])+$ ]]; then
+        sudo systemctl enable ly.service
+        sudo systemctl disable getty@tty2.service
+fi
+
 ####################
 #    GIT REPOS     #
 ####################
