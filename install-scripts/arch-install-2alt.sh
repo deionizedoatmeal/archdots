@@ -2,8 +2,8 @@
 # arch install part 2 electric buggalo
 
 #read in variables
-DISK=$(cat /dots/system/disk)
-DISKP=$(cat /dots/system/diskp)
+DISK=$(cat /archdots/system/disk)
+DISKP=$(cat /archdots/system/diskp)
 
 # aic94xx-firmware
 cd aic94xx-firmware
@@ -61,8 +61,8 @@ read -r -p "Chose a hostname: " HNAME
 touch /etc/hostname && cat /etc/hostname ${HNAME}
 
 # set up /etc/hosts
-echo "127.0.1.1 	${HNAME}.localdomain	${HNAME}" >> /dots/system/hosts_incomplete
-cp /dots/system/hosts_incomplete /etc/hosts
+echo "127.0.1.1 	${HNAME}.localdomain	${HNAME}" >> /archdots/system/hosts_incomplete
+cp /archdots/system/hosts_incomplete /etc/hosts
 
 
 # get the UUID for LUKS partition
@@ -71,14 +71,14 @@ LUKSUUID=$(blkid | grep "${DISKP}3" | grep -o "UUID=.*" | cut -d\" -f2)
 # insert that into tempelate for /etc/default/grub
 LINEINSERT=$(echo "10iGRUB_CMDLINE_LINUX="cryptdevice=UUID=${LUKSUUID}:cryptlvm root=/dev/vg/root cryptkey=rootfs:/root/secrets/crypto_keyfile.bin"")
 
-sed -i "${LINEINSERT}" /dots/system/grub
+sed -i "${LINEINSERT}" /archdots/system/grub
 
 # copy /etc/default/grub over
-cp -p /dots/system/grub /etc/default/grub
+cp -p /archdots/system/grub /etc/default/grub
 
 # copy /etc/sudoers and /etc/mkinitcpio.conf over
-cp -p /dots/system/sudoers /etc/sudoers
-cp -p /dots/system/mkinitcpio.conf /etc/mkinitcpio.conf
+cp -p /archdots/system/sudoers /etc/sudoers
+cp -p /archdots/system/mkinitcpio.conf /etc/mkinitcpio.conf
 
 
 # install grub
@@ -142,12 +142,12 @@ else
 fi
 
 
-# reclone dots for ease of accses after reboot 
+# reclone archdots for ease of accses after reboot 
 cd /home/${UNAME}
 mkdir Repos && cd Repos
-git clone https://github.com/deionizedoatmeal/dots.git
+git clone https://github.com/deionizedoatmeal/archdots.git
 
 # remove this repo
-rm -r /dots
+rm -r /archdots
 
 echo "Now check everything, exit and reboot"
