@@ -10,9 +10,12 @@ sudo pacman -Syy
 sudo pacman -Syu
 
 # package lists
-SYS="bc gdisk rust dbus powertop pulseaudio bluez bluez-utils redshift upower git sudo vi kitty rofi dunst openvpn gnupg imagemagick mpg123 ffmpeg feh ttf-fantasque-sans-mono tlp tlp-rdw python-pip nvme-cli lm_sensors openssh vim bash-completion"
+SYS="bc gdisk rust dbus powertop pulseaudio bluez bluez-utils redshift upower git sudo vi kitty rofi dunst openvpn gnupg imagemagick mpg123 ffmpeg feh python ttf-fantasque-sans-mono tlp tlp-rdw python-pip nvme-cli lm_sensors openssh vim bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib"
+
 NONES="pavucontrol nmap htop ranger zathura zathura-pdf-mupdf firefox neovim gnuplot vlc darktable neofetch steam atom gimp zathura ranger pass powertop htop speedtest-cli net-tools"
+
 TRI=""
+
 NEP="nvidia"
 
 #python3-venv?
@@ -64,6 +67,11 @@ YAYTRITON="system76-power system76-driver light-git"
 YAYNONES="spotify paper-icon-theme-git android-messages-desktop spotifyd-bin-full zoom"
 ##########################################################################
 # yay install
+
+# yay crashes if a single install canidate has issues, 
+# which is farirly common considering that yay's dependency system is broken 
+# and the AUR is the wild wild west, because of this we have to run yay
+# individually on each package
 read -r -p "#### Would you like to install 'essential' yay packages? [y/N] ####" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
         ARR=($YAYSYS)
