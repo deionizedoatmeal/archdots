@@ -42,7 +42,7 @@ cp -r ranger/* ~/.config/ranger/
 cp -r nvim/* ~/.config/nvim/
 cp -r kitty/* ~/.config/kitty/
 ln -sf ~/.cache/wal/dunstrc ~/.config/dunst/dunstrc
-cp -r wal/* ~/.config/wal/
+cp -r wal/templates/* ~/.config/wal/templates/.
 cp -r spotify-tui/* ~/.config/spotify-tui/
 cp -r spotifyd/* ~/.config/spotifyd/
 cp .bashrc ~/.

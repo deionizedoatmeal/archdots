@@ -31,7 +31,12 @@
     background-color: @background;
     border: 3;
     padding: 2.5ch;
+    //*SELECT*
+    //TRITON
+    //border-radius: 27px;
+    //NEPTUNE
     border-radius: 16px;
+    //*SELECT*
 }}
 
 #mainbox {{
