@@ -30,7 +30,7 @@ fi
 
 while true; do
         # set timezone
-        read -r -p "Pick a timezone, some options are: America/Anchorage, America/Los_Angeles, America/Denver, America/Chicago, America/New_York, America/Santiago, America/Sao_Paulo, Europe/London, Europe/Berlin, Europe/Istanbul, Europe/Moscow, Asia/Honk_Kong, Asia/Tokyo, Australia/Canberra, Pacific/Honolulu $'\n'Timezone: " TIMEZN
+        read -r -p "Pick a timezone, some options are: America/Anchorage, America/Los_Angeles, America/Denver, America/Chicago, America/New_York, America/Santiago, America/Sao_Paulo, Europe/London, Europe/Berlin, Europe/Istanbul, Europe/Moscow, Asia/Honk_Kong, Asia/Tokyo, Australia/Canberra, Pacific/Honolulu ####Timezone: " TIMEZN
 
         if [[ -f /usr/share/zoneinfo/${TIMEZN} ]]; then
                 ln -sf /usr/share/zoneinfo/${TIMEZN} /etc/localtime
