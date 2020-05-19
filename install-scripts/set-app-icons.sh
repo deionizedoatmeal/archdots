@@ -3,6 +3,9 @@
 
 cp -r /usr/share/applications /usr/share/applications.old
 
+# firefox isn't working with the append
+cp ../firefox.desktop /usr/share/applications/.
+
 cd /usr/share/applications
 
 # remove any applications you dont launch from rofi
@@ -30,10 +33,10 @@ echo "Name= Android Messages" >> android-messages-desktop.desktop
 echo "GenericName=SMS Messaging" >> android-messages-desktop.desktop
 
 # firefox
-sed -i '/Name=/d' ./firefox.desktop
-sed -i '/GenericName=/d' ./firefox.desktop
-echo "Name= Firefox" >> firefox.desktop
-echo "GenericName=Web Browser" >> firefox.desktop
+#sed -i '/Name=/d' ./firefox.desktop
+#sed -i '/GenericName=/d' ./firefox.desktop
+#echo "Name= Firefox" >> firefox.desktop
+#echo "GenericName=Web Browser" >> firefox.desktop
 
 # zoom
 sed -i '/Name=/d' ./org.pwmt.zathura.desktop
