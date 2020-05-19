@@ -32,6 +32,8 @@ echo "GenericName=SMS Messaging" >> android-messages-desktop.desktop
 # firefox
 sed -i '/Name=/d' ./firefox.desktop
 sed -i '/GenericName=/d' ./firefox.desktop
+echo "Name= Firefox" >> firefox.desktop
+echo "GenericName=Web Browser" >> firefox.desktop
 
 # zoom
 sed -i '/Name=/d' ./org.pwmt.zathura.desktop
