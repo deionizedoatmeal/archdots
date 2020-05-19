@@ -1,9 +1,13 @@
 [global]
 
+#*SELECT*
 #TRITON
-#font = IosevkaNerdFont 24
-#NEPTUNE
 font = IosevkaNerdFont 24
+corner_radius = 27
+#NEPTUNE
+#font = IosevkaNerdFont 24
+#corner_radius = 16
+#*SELECT*
 
 markup = yes
 plain_text = no
@@ -18,8 +22,8 @@ word_wrap = no
 ignore_newline = no
 stack_duplicates = yes
 hide_duplicates_count = yes
-geometry = "1000x100-75-75"
-corner_radius = 16
+timeout = 3
+geometry = "1500x100-75-75"
 shrink = yes
 transparency = 5
 idle_threshold = 0
@@ -56,6 +60,7 @@ context = ctrl+shift+period
     background = "{background}"
     foreground = "{color2}"
     frame_color = "{color2}"
+
 [urgency_critical]
     background = "{background}"
     foreground = "{foreground}"
