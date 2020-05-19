@@ -74,7 +74,7 @@ cp /archdots/system/hosts_incomplete /etc/hosts
 LUKSUUID=$(blkid | grep "${DISKP}3" | grep -o "UUID=.*" | cut -d\" -f2)
 
 # remove existing line in the file
-sed -i '/GRUB_CMDLINE_LINUX=/d' ./etc/default/grub
+sed -i '/GRUB_CMDLINE_LINUX=/d' /etc/default/grub
 
 # and insert that into tempelate for /etc/default/grub
 LINEINSERT=$(echo "10iGRUB_CMDLINE_LINUX="cryptdevice=UUID=${LUKSUUID}:cryptlvm root=/dev/vg/root cryptkey=rootfs:/root/secrets/crypto_keyfile.bin"")
