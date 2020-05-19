@@ -73,13 +73,17 @@ cp /archdots/system/hosts_incomplete /etc/hosts
 # get the UUID for LUKS partition
 LUKSUUID=$(blkid | grep "${DISKP}3" | grep -o "UUID=.*" | cut -d\" -f2)
 
-# insert that into tempelate for /etc/default/grub
+# remove existing line in the file
+sed -i '/GRUB_CMDLINE_LINUX=/d' ./etc/default/grub
+
+# and insert that into tempelate for /etc/default/grub
 LINEINSERT=$(echo "10iGRUB_CMDLINE_LINUX="cryptdevice=UUID=${LUKSUUID}:cryptlvm root=/dev/vg/root cryptkey=rootfs:/root/secrets/crypto_keyfile.bin"")
 
 sed -i "${LINEINSERT}" /archdots/system/grub
 
-# copy /etc/default/grub over
+# copy /etc/default/grub and font over
 cp -p /archdots/system/grub /etc/default/grub
+cp -p /archdots/system/JetBrainsMono-Bold.pf2 /boot/grub/fonts/.
 
 # copy sudoers mkinitcpio.conf and pacman.conf
 cp -p /archdots/system/sudoers /etc/sudoers
