@@ -19,7 +19,7 @@ case $chosen in
         systemctl reboot
         ;;
     $lock)
-        lock
+        gllock
         ;;
     $log_out)
         i3-msg exit && killall -u ian
