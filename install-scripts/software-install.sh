@@ -12,7 +12,7 @@ sudo pacman -Syu
 # package lists
 SYS="clang bc gdisk rust dbus powertop pulseaudio bluez bluez-utils redshift upower git sudo vi kitty rofi dunst openvpn gnupg imagemagick mpg123 ffmpeg feh python ttf-fantasque-sans-mono tlp tlp-rdw python-pip nvme-cli lm_sensors openssh vim bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib"
 
-NONES="pavucontrol nmap htop ranger zathura zathura-pdf-mupdf firefox neovim gnuplot vlc darktable neofetch steam atom gimp zathura ranger pass powertop htop speedtest-cli net-tools"
+NONES="pavucontrol libreoffice-fresh cheese nmap htop ranger zathura zathura-pdf-mupdf firefox neovim gnuplot vlc darktable neofetch steam atom gimp zathura ranger pass powertop htop speedtest-cli net-tools"
 
 TRI=""
 
@@ -60,7 +60,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 # yay package list #########################################################
-YAYSYS="aic94xx-firmware wd719x-firmware vim-plug gllock-git compton-tryone-git polybar ly"
+YAYSYS="aic94xx-firmware wd719x-firmware vim-plug gllock-git compton-tryone-git ly"
 #python-pipx autotiling
 YAYNEPTUNE=""
 YAYTRITON="system76-power system76-driver light-git"
@@ -103,11 +103,18 @@ fi
 # system76-power
 read -r -p "#### Would you like to enable and start system76-power.service? [y/N] ####" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
-        sudo systemctl enabled system76-power.service
+        sudo systemctl enable system76-power.service
         sudo systemctl start system76-power.service
 fi
 
+# DHCP
+read -r -p "#### Would you like to enable and start dhcpcd.service? [y/N] ####" response
+if [[ "$response" =~ ^([Yy])+$ ]]; then
+        sudo systemctl enable dhcpcd.service
+        sudo systemctl start dhcpcd.service
+fi
 
+# ly display manager
 read -r -p "#### Would you like to enable ly.service? (display manager) [y/N] ####" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
         sudo systemctl enable ly.service

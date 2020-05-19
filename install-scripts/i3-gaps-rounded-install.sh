@@ -28,3 +28,4 @@ mkdir -p build && cd build/
 make
 sudo make install
 
+echo "Remember to install polybar"

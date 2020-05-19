@@ -27,16 +27,32 @@ if [[ "$response" =~ ^([Nn])+$ ]]; then
         set -e
 fi
 
+echo "Pick a timezone, some options are:"
+echo " --> America/Anchorage"
+echo " --> America/Los_Angeles"
+echo " --> America/Denver"  
+echo " --> America/Chicago" 
+echo " --> America/New_York"
+echo " --> America/Santiago"
+echo " --> America/Sao_Paulo"
+echo " --> Europe/London"
+echo " --> Europe/Berlin" 
+echo " --> Europe/Istanbul" 
+echo " --> Europe/Moscow"
+echo " --> Asia/Honk_Kong"
+echo " --> Asia/Tokyo"
+echo " --> Australia/Canberra"
+echo " --> Pacific/Honolulu"
 
 while true; do
         # set timezone
-        read -r -p "Pick a timezone, some options are: America/Anchorage, America/Los_Angeles, America/Denver, America/Chicago, America/New_York, America/Santiago, America/Sao_Paulo, Europe/London, Europe/Berlin, Europe/Istanbul, Europe/Moscow, Asia/Honk_Kong, Asia/Tokyo, Australia/Canberra, Pacific/Honolulu ####Timezone: " TIMEZN
+        read -r -p "Timezone: " TIMEZN
 
         if [[ -f /usr/share/zoneinfo/${TIMEZN} ]]; then
                 ln -sf /usr/share/zoneinfo/${TIMEZN} /etc/localtime
                 break
         else
-                echo "Sorry the timelords have decided that timezone does not exist, try again."
+                echo "Sorry the unix timelords have decided that timezone does not exist, try again."
                 continue
         fi
 done
@@ -80,9 +96,22 @@ pacman -S intel-ucode
 
 # create a keyfile to embed in initramfs
 mkdir /root/secrets && chmod 700 /root/secrets
-head -c 64 /dev/urandom > /root/secrets/crypto_keyfile.bin && chmod 600 /root/secrets/crypto_keyfile.bin
-echo "Now enter your disk encryption passphrase!"
-cryptsetup -v luksAddKey -i 1 /dev/${DISKP}3 /root/secrets/crypto_keyfile.bin
+head -c 64 /dev/urandom > /root/secrets/crypto_keyfile.bin
+chmod 600 /root/secrets/crypto_keyfile.bin
+
+# unlock key slot for initramds
+while true; do
+        echo "Now enter your disk encryption passphrase! If you mess up you can try again."
+        cryptsetup -v luksAddKey -i 1 /dev/${DISKP}3 /root/secrets/crypto_keyfile.bin
+
+        #retry if ya goofed
+        read -r -p "Do you need to try again? [y/N]" response
+        if [[ "$response" =~ ^([Yy])+$ ]]; then
+                continue
+        else
+                break
+        fi
+done
 
 # create initramfs image
 mkinitcpio -p linux
