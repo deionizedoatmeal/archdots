@@ -175,7 +175,7 @@ exec_always --no-startup-id killall -q dunst
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id redshift-toggle 44:-123
 exec_always --no-startup-id compton --config ~/.config/compton/compton.conf
-exec_always --no-startup-id flashfocus
+exec_always --no-startup-id flashfocus -c ${HOME}/.config/flashfocus.yml
 exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
 
