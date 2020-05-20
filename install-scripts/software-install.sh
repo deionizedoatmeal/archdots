@@ -107,6 +107,15 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
         sudo systemctl start system76-power.service
 fi
 
+
+# tlp
+read -r -p "#### Would you like to enable and start tlp.service? [y/N] ####" response
+if [[ "$response" =~ ^([Yy])+$ ]]; then
+        sudo systemctl enable tlp.service
+        sudo systemctl start tlp.service
+fi
+
+
 # DHCP
 read -r -p "#### Would you like to enable and start dhcpcd.service? [y/N] ####" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
