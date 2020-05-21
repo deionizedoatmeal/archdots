@@ -19,9 +19,19 @@ padding-right = 2
 
 #*SELECT*
 #TRITON
-radius = 27.0
+#radius = 27.0
+#font-0 = Iosevka Nerd Font:pixelsize=24;4
+#font-1 = Iosevka Nerd Font:size=24;4
+#font-2 = Iosevka Nerd Font:size=41;8
+#modules-right = bluetooth-display pulseaudio redshift-display backlight cpu temperature system-cpu-frequency-display memory power-profile-display battery wireless-network network #vpn-display
 #NEPTUNE
 #radius = 16.0
+#font-0 = Iosevka Nerd Font:pixelsize=14;4
+#font-1 = Iosevka Nerd Font:size=14;4
+#font-2 = Iosevka Nerd Font:size=22;4
+#modules-right = bluetooth-display pulseaudio redshift-display cpu temperature system-cpu-frequency-display memory wireless-network network #vpn-display
+#monitor = HDMI-0
+#*SELECT*
 
 tray-position = none
 wm-restack = i3
@@ -29,37 +39,18 @@ override-redirect = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-#*SELECT*
-#TRITON
-font-0 = Iosevka Nerd Font:pixelsize=24;4
-font-1 = Iosevka Nerd Font:size=24;4
-font-2 = Iosevka Nerd Font:size=41;8
-#NEPTUNE
-#font-0 = Iosevka Nerd Font:pixelsize=14;4
-#font-1 = Iosevka Nerd Font:size=14;4
-#font-2 = Iosevka Nerd Font:size=22;4
-
 modules-left = i3
 modules-center = date
-
-#*SELECT
-#TRITON
-modules-right = bluetooth-display pulseaudio redshift-display backlight cpu temperature system-cpu-frequency-display memory power-profile-display battery wireless-network network #vpn-display
-#NEPTUNE
-#modules-right = bluetooth-display pulseaudio redshift-display cpu temperature system-cpu-frequency-display memory wireless-network network #vpn-display
 
 module-margin = 0
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-#NEPTUNE
-#monitor = HDMI-0
-
 ########################
-
 #### SECOND BAR #####
 
-#NEPTUNE  \/
+#*SELECT*
+#NEPTUNE
 [bar/secondary]
 width = 98.1250%
 height = 03.0000%
@@ -85,7 +76,7 @@ module-margin = 0
 cursor-click = pointer
 cursor-scroll = ns-resize
 monitor = VGA-0
-#NEPTUNE /\
+#*SELECT*
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; #### MODULES ####
@@ -98,17 +89,6 @@ index-sort = true
 enable-click = true
 enable-scroll = true
 format-padding = 1
-
-;icon-0 = 1;❶
-;icon-1 = 2;❷
-;icon-2 = 3;❸
-;icon-3 = 4;❹
-;icon-4 = 5;❺
-;icon-5 = 6;❻
-;icon-6 = 7;❼
-;icon-7 = 8;❽
-;icon-8 = 9;❾
-;icon-9 = 10;❿
 
 icon-default = 
  
@@ -277,7 +257,7 @@ format-background = ${colors.background}
 
 #*SELECT*
 #TRITON
-format-foreground = ${colors.secondary}
+#format-foreground = ${colors.secondary}
 #NEPTUNE
 #format-foreground = ${colors.primary}
 
@@ -333,9 +313,10 @@ format = <label>
 
 #*SELECT*
 #TRITON
-label = " %percentage%%|"
+#label = " %percentage%%|"
 #NEPTUNE
 #label = "   %percentage%%|" 
+#*SELECT*
 
 interval = 5
 format-background = ${colors.background}
@@ -347,9 +328,10 @@ format = <label>
 
 #*SELECT*
 #TRITON
-label = "   %percentage_used%%  "
+#label = "   %percentage_used%%  "
 #NEPTUNE
 #label = "   %percentage_used%% "
+#*SELECT*
 
 interval = 5
 format-background = ${colors.background}
@@ -410,21 +392,18 @@ format-disconnected =" 睊"
 
 #*SELECT*
 #TRITON
-interface = wlp59s0
+#interface = wlp59s0
+#format-disconnected-background = ${colors.background}
+#format-connected-background = ${colors.background}
+#format-connected-foreground = ${colors.secondary}
+#format-disconnected-foreground = ${colors.secondary}
 #NEPTUNE
 #interface = wlo1
-
-#*SELECT*
-#TRITON
-format-disconnected-background = ${colors.background}
-format-connected-background = ${colors.background}
-format-connected-foreground = ${colors.secondary}
-format-disconnected-foreground = ${colors.secondary}
-#NEPTUNE
 #format-disconnected-background = ${colors.background}
 #format-connected-background = ${colors.background}
 #format-connected-foreground = ${colors.primary}
 #format-disconnected-foreground = ${colors.primary}
+#*SELECT*
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;  N   N  NNNN  NNNNN      NNNN
@@ -440,22 +419,18 @@ format-connected ="|"
 
 #*SELECT*
 #TRITON
-interface = enp58s0f1
+#interface = enp58s0f1
+#format-disconnected-background = ${colors.background}
+#format-connected-background = ${colors.background}
+#format-connected-foreground = ${colors.secondary}
+#format-disconnected-foreground = ${colors.secondary}
 #NEPTUNE
 #interface = eno1
-
-
-#*SELECT*
-#TRITON
-format-disconnected-background = ${colors.background}
-format-connected-background = ${colors.background}
-format-connected-foreground = ${colors.secondary}
-format-disconnected-foreground = ${colors.secondary}
-#NEPTUNE
 #format-disconnected-background = ${colors.background}
 #format-connected-background = ${colors.background}
 #format-connected-foreground = ${colors.primary}
 #format-disconnected-foreground = ${colors.primary}
+#*SELECT*
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [module/date]

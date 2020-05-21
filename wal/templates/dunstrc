@@ -2,8 +2,8 @@
 
 #*SELECT*
 #TRITON
-font = IosevkaNerdFont 24
-corner_radius = 27
+#font = IosevkaNerdFont 24
+#corner_radius = 27
 #NEPTUNE
 #font = IosevkaNerdFont 24
 #corner_radius = 16
