@@ -2,10 +2,10 @@
 
 #*SELECT*
 #TRITON
-#font = IosevkaNerdFont 24
+#font = JetBrainsMono Bold 24
 #corner_radius = 27
 #NEPTUNE
-#font = IosevkaNerdFont 24
+#font = JetBrainsMono 18
 #corner_radius = 16
 #*SELECT*
 

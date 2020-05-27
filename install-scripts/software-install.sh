@@ -10,11 +10,11 @@ sudo pacman -Syy
 sudo pacman -Syu
 
 # package lists
-SYS="clang bc gdisk rust dbus powertop pulseaudio bluez bluez-utils redshift upower git sudo vi kitty rofi dunst openvpn gnupg imagemagick mpg123 ffmpeg feh python ttf-fantasque-sans-mono tlp tlp-rdw python-pip nvme-cli lm_sensors openssh vim bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib"
+SYS="materia-gtk-theme xorg-xrdb cmake clang bc gdisk rust dbus pulseaudio bluez bluez-utils redshift git sudo vi kitty rofi dunst openvpn gnupg imagemagick mpg123 ffmpeg feh python ttf-fantasque-sans-mono python-pip nvme-cli lm_sensors openssh vim bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib"
 
 NONES="pavucontrol libreoffice-fresh cheese nmap htop ranger zathura zathura-pdf-mupdf firefox neovim gnuplot vlc darktable neofetch steam atom gimp zathura ranger pass powertop htop speedtest-cli net-tools"
 
-TRI=""
+TRI="tlp tlp-rdw powertop upower"
 
 NEP="nvidia"
 
@@ -60,11 +60,11 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 # yay package list #########################################################
-YAYSYS="aic94xx-firmware wd719x-firmware vim-plug gllock-git compton-tryone-git ly"
+YAYSYS="paper-icon-theme aic94xx-firmware wd719x-firmware vim-plug gllock-git compton-tryone-git ly"
 #python-pipx autotiling
 YAYNEPTUNE=""
 YAYTRITON="system76-power system76-driver light-git"
-YAYNONES="spotify paper-icon-theme-git android-messages-desktop spotifyd-bin-full zoom"
+YAYNONES="spotify android-messages-desktop spotifyd-bin-full zoom"
 ##########################################################################
 # yay install
 
@@ -161,8 +161,8 @@ fi
 
 # t todo 
 read -r -p "Would you like to install t.py (a bare bones CLI todo list)? [y/N]" response
-MKDIR $HOME/Tasks
 if [[ "$response" =~ ^([Yy])+$ ]]; then
+        mkdir ${HOME}/Tasks
         git clone https://github.com/sjl/t.git $HOME/Tasks/.
         echo 't.git installed'
 fi
@@ -192,12 +192,13 @@ read -r -p "Would you like to install python packages? [y/N]" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
     sudo pip3 install pywal
     sudo pip install flashfocus
-    #sudo pip3 install protonvpn-cli
+    sudo pip3 install protonvpn-cli
     sudo pip3 install inkscape-figures
     sudo pip3 install spotdl
     sudo pip3 install cl-chess
     sudo pipx install jrnl
     sudo pip install mdv
+   
     #sudo pip install i3-py
     #sudo pip3 install wpgtk
     echo 'python packages installed'

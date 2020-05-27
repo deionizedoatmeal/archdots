@@ -113,6 +113,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
+########
+# RUST #
+########
+export PATH="$HOME/.cargo/bin:$PATH"
 
 ########
 # PASS #
@@ -120,11 +124,6 @@ fi
 # some more aliases
 alias pass-pull='pass git pull origin master'
 alias pass-push='pass git push origin master'
-
-########
-# RUST #
-########
-export PATH="$HOME/.cargo/bin=$PATH"
 
 #######
 #PYWAL#
