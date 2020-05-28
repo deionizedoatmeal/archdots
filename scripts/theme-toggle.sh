@@ -31,8 +31,7 @@ fi
 
 
 ### FIREFOX ###
-FIRE=$(ps aux | grep -w 'firefox' | wc -l)
-FIRE=$(($FIRE - 1))
+FIRE=$(ps aux | grep -w 'firefox' | grep -v 'grep' | wc -l)
 
 # close them
 killall -q firefox
@@ -45,8 +44,7 @@ fi
 
 ### ZATHURA ###
 # check how many zathura windows are open
-ZATH=$(ps aux | grep -w 'zathura' | wc -l)
-ZATH=$(($ZATH - 1))
+ZATH=$(ps aux | grep -w 'zathura'  | grep -v 'grep' | wc -l)
 
 # close them
 killall -q zathura
