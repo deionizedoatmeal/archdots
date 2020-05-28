@@ -139,7 +139,7 @@ mkdir /mnt/boot/efi
 mount /dev/${DISKP}2 /mnt/boot/efi
 
 # install base system
-pacstrap /mnt base base-devel linux linux-firmware mkinitcpio lvm2 vi dhcpcd wpa_supplicant netctl dialog git neovim
+pacstrap /mnt base base-devel linux linux-firmware mkinitcpio lvm2 vi dhcpcd networkmanager wpa_supplicant dialog git neovim
 
 # generate fstab file
 genfstab -U /mnt >> /mnt/etc/fstab
