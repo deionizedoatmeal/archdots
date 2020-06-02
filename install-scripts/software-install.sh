@@ -61,6 +61,8 @@ fi
 
 # yay package list #########################################################
 YAYSYS="paper-icon-theme aic94xx-firmware wd719x-firmware vim-plug gllock-git compton-tryone-git ly"
+# ytop fix ttf-ubraille?
+
 #python-pipx autotiling
 YAYNEPTUNE=""
 YAYTRITON="system76-power system76-driver light-git"
