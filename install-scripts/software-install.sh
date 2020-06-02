@@ -16,7 +16,7 @@ NONES="pavucontrol libreoffice-fresh cheese nmap htop ranger zathura zathura-pdf
 
 TRI="tlp tlp-rdw powertop upower"
 
-NEP="nvidia"
+NEP="virtualbox nvidia"
 
 #python3-venv?
 #pipx?
