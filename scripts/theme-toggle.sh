@@ -30,11 +30,21 @@ else
 fi
 
 
+### FIREFOX ###
+FIRE=$(ps aux | grep -w 'firefox' | grep -v 'grep' | wc -l)
+
+# close them
+killall -q firefox
+
+# if firefox was open
+if [[ ${FIRE} -gt 0 ]]; then
+        (firefox &> /dev/null &)
+fi
+
+
 ### ZATHURA ###
 # check how many zathura windows are open
-ZATH=$(ps aux | grep -w 'zathura' | wc -l)
-
-ZATH=$(($ZATH - 1))
+ZATH=$(ps aux | grep -w 'zathura'  | grep -v 'grep' | wc -l)
 
 # close them
 killall -q zathura

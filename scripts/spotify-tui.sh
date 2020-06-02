@@ -1,7 +1,11 @@
 #!/bin/bash
 # launches spotifyd and spotify-tui while listening to kill spotifyd when the tui is closed
 
-cat ~/.cache/wal/sequences
+#cat ~/.cache/wal/sequences
+
+# cargo path
+export PATH="$HOME/.cargo/bin:$PATH"
+
 spotifyd --device pulse --config-path $HOME/.config/spotifyd/config
 spt
 

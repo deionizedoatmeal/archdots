@@ -24,6 +24,7 @@ mkdir ~/.config/nvim/
 mkdir ~/.config/ranger/
 mkdir ~/.config/dunst/
 mkdir ~/.config/wal/templates/
+mkdir ~/.config/wal/
 mkdir ~/.config/spotify-tui/
 mkdir ~/.config/spotifyd/
 mkdir ~/.config/kitty/

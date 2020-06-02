@@ -3,6 +3,6 @@ Type=Application
 Name=Spotify (TUI)
 GenericName=TUI Music Player
 Icon=spotify-client
-Exec=kitty spotify-tui
+Exec=kitty sh -c "spotify-tui"
 Categories=Audio;Music;Player;AudioVideo;
 StartupWMClass=spotify-tui

@@ -157,6 +157,11 @@ bindsym $mod+Shift+v exec --no-startup-id rofimenu-vpn
 ###########################
 bindsym $mod+t exec theme-toggle
 
+########################
+# FLASH FOCUSED WINDOW #
+########################
+bindsym $mod+slash exec --no-startup-id flash_window
+
 ##########################          
 # RESIZE FLOATING WINDOW # (you can also use the mouse for that) 
 ##########################
@@ -168,16 +173,17 @@ bindsym $mod+Shift+bracketright resize grow width 20 px or 20 ppt
 ######################################
 # POLYBAR, COMPTON AND OTHER STARTUP #
 ######################################
-#exec_always --no-startup-id system76-power daemon
-exec_always --no-startup-id killall -q compton
-exec_always --no-startup-id killall -q redshift
-exec_always --no-startup-id killall -q dunst
-exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec_always --no-startup-id redshift-toggle 44:-123
-exec_always --no-startup-id compton --config ~/.config/compton/compton.conf
-exec_always --no-startup-id flashfocus -c ${HOME}/.config/flashfocus.yml
-exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
+exec_always killall -q compton
+exec_always killall -q redshift
+exec_always killall -q dunst
+exec_always killall -q flashfocus
+exec_always killall -q redshift
 
+exec_always --no-startup-id "~/.config/polybar/launch.sh"
+exec_always --no-startup-id "redshift-toggle 44:-123"
+exec_always --no-startup-id "compton --config ~/.config/compton/compton.conf"
+exec_always --no-startup-id "flashfocus-start"
+exec_always --no-startup-id "dunst -config ~/.config/dunst/dunstrc"
 
 ####################
 # GAPS AND BORDERS #

@@ -81,8 +81,29 @@ LINEINSERT=$(echo "10iGRUB_CMDLINE_LINUX="cryptdevice=UUID=${LUKSUUID}:cryptlvm 
 
 sed -i "${LINEINSERT}" /archdots/system/grub
 
-# copy /etc/default/grub and font over
+# copy /etc/default/grub over
 cp -p /archdots/system/grub /etc/default/grub
+
+# set grub font
+while true; do
+        #retry if ya goofed
+        read -r -p "What size font for grub, 12 or 24? [12/24]" response
+        if [[ "$response" =~ ^([12])+$ ]]; then
+                cp -p /archdots/system/JetBrainsMono-Bold12.pf2 /boot/grub/fonts/JetBrainsMono-Bold.pf2
+                break
+
+        if [[ "$response" =~ ^([24])+$ ]]; then
+                cp -p /archdots/system/JetBrainsMono-Bold24.pf2 /boot/grub/fonts/JetBrainsMono-Bold.pf2
+                break
+        
+        else
+                echo "Not a valid font size, try again."
+                countine
+        fi
+done
+
+
+
 cp -p /archdots/system/JetBrainsMono-Bold.pf2 /boot/grub/fonts/.
 
 # copy sudoers mkinitcpio.conf and pacman.conf
