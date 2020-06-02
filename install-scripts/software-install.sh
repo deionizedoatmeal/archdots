@@ -10,11 +10,11 @@ sudo pacman -Syy
 sudo pacman -Syu
 
 # package lists
-SYS="clang bc gdisk rust dbus powertop pulseaudio bluez bluez-utils redshift upower git sudo vi kitty rofi dunst openvpn gnupg imagemagick mpg123 ffmpeg feh python ttf-fantasque-sans-mono tlp tlp-rdw python-pip nvme-cli lm_sensors openssh vim bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib dialog python-setuptools"
+SYS="pulseaudio-bluetooth materia-gtk-theme xorg-xrdb cmake clang bc gdisk rust dbus pulseaudio bluez bluez-utils redshift git sudo vi kitty rofi dunst openvpn gnupg imagemagick mpg123 ffmpeg feh python ttf-fantasque-sans-mono python-pip nvme-cli lm_sensors openssh vim bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib dialog python-setuptools"
 
-NONES="pavucontrol libreoffice-fresh cheese nmap htop ranger zathura zathura-pdf-mupdf firefox neovim gnuplot vlc darktable neofetch steam atom gimp zathura ranger pass powertop htop speedtest-cli net-tools"
+NONES="pavucontrol libreoffice-fresh cheese nmap htop ranger zathura zathura-pdf-mupdf firefox neovim gnuplot vlc darktable neofetch steam atom gimp zathura ranger pass speedtest-cli net-tools"
 
-TRI=""
+TRI="tlp tlp-rdw powertop upower"
 
 NEP="nvidia"
 
@@ -107,7 +107,6 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
         sudo systemctl start system76-power.service
 fi
 
-
 # tlp
 read -r -p "#### Would you like to enable and start tlp.service? [y/N] ####" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
@@ -115,12 +114,18 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
         sudo systemctl start tlp.service
 fi
 
-
 # DHCP
 read -r -p "#### Would you like to enable and start dhcpcd.service? [y/N] ####" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
         sudo systemctl enable dhcpcd.service
         sudo systemctl start dhcpcd.service
+fi
+
+# bluetooth 
+read -r -p "#### Would you like to enable and start bluetooth.service? [y/N] ####" response
+if [[ "$response" =~ ^([Yy])+$ ]]; then
+        sudo systemctl enable bluetooth.service
+        sudo systemctl start bluetooth.service
 fi
 
 # ly display manager
@@ -198,6 +203,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
     sudo pip3 install cl-chess
     sudo pipx install jrnl
     sudo pip install mdv
+
     #sudo pip install i3-py
     #sudo pip3 install wpgtk
     echo 'python packages installed'
