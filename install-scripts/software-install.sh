@@ -60,8 +60,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 # yay package list #########################################################
-YAYSYS="paper-icon-theme aic94xx-firmware wd719x-firmware vim-plug gllock-git compton-tryone-git ly"
-# ytop fix ttf-ubraille?
+YAYSYS="ttf-symbola paper-icon-theme aic94xx-firmware wd719x-firmware vim-plug gllock-git compton-tryone-git ly"
 
 #python-pipx autotiling
 YAYNEPTUNE=""
