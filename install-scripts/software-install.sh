@@ -65,7 +65,7 @@ YAYSYS="ttf-symbola paper-icon-theme aic94xx-firmware wd719x-firmware vim-plug g
 #python-pipx autotiling
 YAYNEPTUNE=""
 YAYTRITON="system76-power system76-driver light-git"
-YAYNONES="spotify android-messages-desktop spotifyd-bin-full zoom"
+YAYNONES="spotify mfetch-git android-messages-desktop spotifyd-bin-full zoom"
 ##########################################################################
 # yay install
 
