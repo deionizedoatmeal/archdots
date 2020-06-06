@@ -17,7 +17,7 @@ NONES="pavucontrol libreoffice-fresh cheese nmap htop ranger zathura zathura-pdf
 
 TRI="tlp tlp-rdw powertop upower"
 
-NEP="virtualbox virtualbox-host-modules-arch nvidia xf86-video-nouveau"
+NEP="remmina libvncserver virtualbox virtualbox-host-modules-arch nvidia xf86-video-nouveau"
 
 #python3-venv?
 #pipx?
@@ -63,10 +63,10 @@ fi
 # yay package list #########################################################
 YAYSYS="ttf-symbola paper-icon-theme aic94xx-firmware wd719x-firmware vim-plug gllock-git compton-tryone-git ly"
 
-#python-pipx autotiling
+#python-pipx teamviewer autotiling
 YAYNEPTUNE=""
 YAYTRITON="system76-power system76-driver light-git"
-YAYNONES="spotify teamviewer mfetch-git android-messages-desktop spotifyd-bin-full zoom"
+YAYNONES="remmina-plugin-rdesktop spotify mfetch-git android-messages-desktop spotifyd-bin-full zoom"
 ##########################################################################
 # yay install
 
@@ -117,11 +117,11 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 # teamviewer
-read -r -p "#### Would you like to enable and start teamviewerd.service? [y/N] ####" response
-if [[ "$response" =~ ^([Yy])+$ ]]; then
-        sudo systemctl enable teamviewerd.service
-        sudo systemctl start teamviewerd.service
-fi
+#read -r -p "#### Would you like to enable and start teamviewerd.service? [y/N] ####" response
+#if [[ "$response" =~ ^([Yy])+$ ]]; then
+#        sudo systemctl enable teamviewerd.service
+#        sudo systemctl start teamviewerd.service
+#fi
 
 # DHCP
 read -r -p "#### Would you like to enable and start dhcpcd.service? [y/N] ####" response
