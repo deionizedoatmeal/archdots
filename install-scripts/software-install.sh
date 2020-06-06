@@ -66,7 +66,7 @@ YAYSYS="ttf-symbola paper-icon-theme aic94xx-firmware wd719x-firmware vim-plug g
 #python-pipx autotiling
 YAYNEPTUNE=""
 YAYTRITON="system76-power system76-driver light-git"
-YAYNONES="spotify mfetch-git android-messages-desktop spotifyd-bin-full zoom"
+YAYNONES="spotify teamviewer mfetch-git android-messages-desktop spotifyd-bin-full zoom"
 ##########################################################################
 # yay install
 
@@ -114,6 +114,13 @@ read -r -p "#### Would you like to enable and start tlp.service? [y/N] ####" res
 if [[ "$response" =~ ^([Yy])+$ ]]; then
         sudo systemctl enable tlp.service
         sudo systemctl start tlp.service
+fi
+
+# teamviewer
+read -r -p "#### Would you like to enable and start teamviewerd.service? [y/N] ####" response
+if [[ "$response" =~ ^([Yy])+$ ]]; then
+        sudo systemctl enable teamviewerd.service
+        sudo systemctl start teamviewerd.service
 fi
 
 # DHCP
