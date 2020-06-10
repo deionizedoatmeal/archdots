@@ -23,13 +23,31 @@ rm electron.desktop
 rm electron4.desktop
 rm electron5.desktop
 rm cmake-gui.desktop
-
+rm org.fontforge.FontForge.desktop
 
 # zoom
 sed -i '/Name=/d' ./Zoom.desktop
 sed -i '/GenericName=/d' ./Zoom.desktop
 sed -i "2iName= Zoom" Zoom.desktop
 sed -i "3iGenericName=Video Confrencing" Zoom.desktop
+
+# remmina 
+sed -i '/Name=/d' ./org.remmina.Remmina.desktop
+sed -i '/GenericName=/d' ./org.remmina.Remmina.desktop
+sed -i "2iName= Remmina" org.remmina.Remmina.desktop
+sed -i "3iGenericName=Remote Desktop Client" org.remmina.Remmina.desktop
+
+# mathematica 
+sed -i '/Name=/d' ./wolfram-mathematica12.desktop
+sed -i '/GenericName=/d' ./wolfram-mathematica12.desktop
+sed -i "2iName= Mathematica" wolfram-mathematica12.desktop
+sed -i "3iGenericName=Technical Computing" wolfram-mathematica12.desktop
+
+# virtual box 
+sed -i '/Name=/d' ./virtualbox.desktop
+sed -i '/GenericName=/d' ./virtualbox.desktop
+sed -i "2iName= VirtualBox" virtualbox.desktop
+sed -i "3iGenericName=Virtualization" virtualbox.desktop
 
 # android-messages-desktop 
 sed -i '/Name=/d' ./android-messages-desktop.desktop
