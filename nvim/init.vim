@@ -38,6 +38,7 @@ Plug 'svermeulen/vim-easyclip'
 Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'} 
 Plug 'tmsvg/pear-tree'
 Plug 'yuttie/comfortable-motion.vim'
+Plug 'preservim/nerdtree'
 call plug#end()
 
 "vim tex
