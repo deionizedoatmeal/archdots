@@ -30,15 +30,21 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'dylanaraps/wal.vim'
 Plug 'lervag/vimtex'
-"Plug 'sirver/ultisnips'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-repeat'
 Plug 'svermeulen/vim-easyclip'
-"Plug 'xuhdev/vim-latex-live-preview'
 Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'} 
 Plug 'tmsvg/pear-tree'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'preservim/nerdtree'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-commentary'
+
+"Plug 'norcalli/nvim-colorizer.lua'
+"Plug 'xuhdev/vim-latex-live-preview'
+"Plug 'sirver/ultisnips'
 call plug#end()
 
 "vim tex
@@ -47,6 +53,7 @@ let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
 set conceallevel=1
 let g:tex_conceal='abdmg'
+
 
 "utilsnips
 "let g:UltiSnipsExpandTrigger = '<tab>'
