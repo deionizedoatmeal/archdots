@@ -109,6 +109,13 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
         sudo systemctl start system76-power.service
 fi
 
+# avahi
+read -r -p "#### Would you like to enable and start avahi-daemon.service? [y/N] ####" response
+if [[ "$response" =~ ^([Yy])+$ ]]; then
+        sudo systemctl enable avahi-daemon.service
+        sudo systemctl start avahi-daemon.service
+fi
+
 # tlp
 read -r -p "#### Would you like to enable and start tlp.service? [y/N] ####" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
