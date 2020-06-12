@@ -6,7 +6,6 @@
 #     PACMAN      #
 ###################
 # update and upgrade
-sudo pacman -Syy
 sudo pacman -Syu
 
 # package lists
