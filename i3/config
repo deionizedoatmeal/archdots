@@ -30,6 +30,10 @@ client.background       $bg
 #bindsym $mod+p exec --no-startup-id paper-mode-toggle 400
 #border_radius 27
 #floating_maximum_size 2600 x 1400
+#bindsym XF86MonBrightnessUp exec --no-startup-id light-up; exec --no-startup-id click0
+#bindsym XF86MonBrightnessDown exec --no-startup-id light-down; exec --no-startup-id click0
+#bindsym F9 exec --no-startup-id light-up; exec --no-startup-id click0
+#bindsym F8 exec --no-startup-id light-down; exec --no-startup-id click0
 #NEPTUNE 
 #font pango:JetBrains Mono ExtraBold 12
 #bindsym $mod+Ctrl+Left move workspace to output VGA-0
@@ -234,12 +238,8 @@ bindsym F6 exec --no-startup-id vol-up; exec --no-startup-id click1 #increase vo
 bindsym F5 exec --no-startup-id vol-down; exec --no-startup-id click1 #decrease volume
 bindsym F3 exec --no-startup-id amixer -D pulse sset Master toggle; exec --no-startup-id click1 #mute sound
 
-#############
-# BACKLIGHT #
-#############
-bindsym XF86MonBrightnessUp exec --no-startup-id light-up; exec --no-startup-id click0
-bindsym XF86MonBrightnessDown exec --no-startup-id light-down; exec --no-startup-id click0
-bindsym F9 exec --no-startup-id light-up; exec --no-startup-id click0
-bindsym F8 exec --no-startup-id light-down; exec --no-startup-id click0
+############
+# REDSHIFT #
+############
 #enter your lat and long here
 bindsym $mod+n exec --no-startup-id redshift-toggle 44:-123
