@@ -21,6 +21,10 @@ client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
 client.background       $bg
 
+#monitors
+set $LEFT VGA-0
+set $RIGHT HDMI-0
+
 # these are the variables which are different on my two machines
 # they are commented/uncommented by placement.sh
 
@@ -42,6 +46,16 @@ client.background       $bg
 #bindsym $mod+o exec --no-startup-id paper-mode-toggle 200
 #border_radius 16
 #floating_maximum_size 1800 x 900
+#Workspace $ws1 output $LEFT
+#Workspace $ws2 output $LEFT
+#Workspace $ws3 output $LEFT
+#Workspace $ws4 output $LEFT
+#Workspace $ws5 output $LEFT
+#Workspace $ws6 output $RIGHT
+#Workspace $ws7 output $RIGHT
+#Workspace $ws8 output $RIGHT
+#Workspace $ws9 output $RIGHT
+#Workspace $ws10 output $RIGHT
 
 # RESIZE VARIABLES
 set $center move position center
