@@ -1,16 +1,8 @@
 configuration {
  modi: "drun";
  theme: "~/.cache/wal/colors-rofi-dark.rasi";
-
- //TRITON  
- //font: "JetBrains Mono Bold 24";
- //width: 800;
- //END
- //NEPTUNE  
- //font: "JetBrains Mono Bold 12";
- //width: 400;
- //END       
-
+ font: "JetBrains Mono Bold 12";
+ width: 400;
  padding: 50;	
  separator-style: none;
  hide-scrollbar: true;

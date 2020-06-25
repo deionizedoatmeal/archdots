@@ -38,10 +38,8 @@ echo "##### chrome/userChrome.css ######"
 diff ../chrome/userChrome.css ~/.mozilla/firefox/*.default-release/chrome/userChrome.css
 echo "##### chrome/userContent.css ######"
 diff ../chrome/userContent.css ~/.mozilla/firefox/*.default-release/chrome/userContent.css
-echo "##### ranger/ranger.desktop ######"
-diff ../ranger/ranger.desktop /usr/share/applications/ranger.desktop
 echo "##### spotify-tui/spotify-tui.desktop ######"
-diff ../spotify-tui/spotify-tui.desktop /usr/share/applications/spotify-tui.desktop
+diff ../spotify-tui/spotify-tui.desktop ~/config/spotify-tui/spotify-tui.desktop
 echo "##### Android Messages/Settings ######"
 diff ../android_messages/Settings ~/.config/'Android Messages'/Settings
 echo "##### gtk/dark.ini ######"

@@ -23,13 +23,11 @@
  *color14:    #71bebe
  *color15:    #ffffff
 
-#*SELECT*
 #TRITON
-#Xft.dpi: 180
-#NEPTUNE
-#Xft.dpi: 74
-#*SELECT*
+#T Xft.dpi: 180
 
+#NEPTUNE
+#N Xft.dpi: 74
 
 #try 192 dpi for triton?
 
