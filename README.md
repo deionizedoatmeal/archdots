@@ -7,11 +7,14 @@ These are my dotfiles and scripts for my workstation/server and my personal lapt
 6) after the first script chroots to the new system, run the second script `./archdots/install-scripts/arch-install-2.sh`, follow the prompts and then manually check everything once it finishes
 6) `exit` and `reboot` the system
 7) enter the disk encryption password, then log into the tty
-8) make sure the network interfaces are up, move to the install-scripts directoy, run `./software-install.sh` and `./placement.sh`
-9) set my intial wallpaper and colorschemes `wal -i ~/Repos/archdots/blurrr.jpg`
+8) make sure the network interfaces are up, move to the install-scripts directoy, run `./software-install.sh`, `./placement.sh` and `sudo ./appicons-setup.sh`
+9) set my intial wallpaper and colorschemes using wal
 10) securely import ssh and gpg keys and run `./pass-setup.sh`
 11) reboot and log into [i3](https://github.com/resloved/i3) via [ly](https://github.com/cylgom/ly)
-12) import data, log into applications (messages, spotify, firefox, and steam)
+12) import data from backup disk, log into applications (android messages, spotify, firefox, zoom and steam)
+13) set set layers.acceleration.force-enabled --> true in firefox's about:config and manually install wolfram mathematica
+14) if on laptop: set up powertop and tlp
+15) if on workstation/server: set up SSH and set up busybox/dropbear server to do headless decrypt at boot
 
 # configuation files for:
 - [i3-gaps-rounded](https://github.com/resloved/i3) (Ben Friesen's fork of the infamous tiling window manager)
