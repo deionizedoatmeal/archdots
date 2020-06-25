@@ -15,6 +15,7 @@ These are my dotfiles and scripts for my workstation/server and my personal lapt
 13) set set layers.acceleration.force-enabled --> true in firefox's about:config and manually install wolfram mathematica
 14) if on laptop: set up powertop and tlp
 15) if on workstation/server: set up SSH and set up busybox/dropbear server to do headless decrypt at boot
+16) pair all bluetooth devices
 
 # configuation files for:
 - [i3-gaps-rounded](https://github.com/resloved/i3) (Ben Friesen's fork of the infamous tiling window manager)
