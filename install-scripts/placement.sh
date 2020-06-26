@@ -1,21 +1,8 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # this places all the dotfiles and scripts into my system where i need them
 
 read -r -p "THIS WILL OVERWRITE CURRENT CONFIGS, ARE YOU SURE??? [y/N]" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
-                # move scripts to bin and rename them to remove .sh
-                cd "${0%/*}"
-                cd ../scripts
-                for f in *.sh; do
-                        NAME=${f::-3}
-                        sudo cp -p $f /bin/$NAME
-                done
-
-                for f in *.py; do
-                        NAME=${f::-3}
-                        sudo cp -p $f /bin/$NAME
-                done
-
                 # make directories
                 mkdir ~/.config/i3/
                 mkdir ~/.config/polybar/

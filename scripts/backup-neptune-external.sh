@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ "$EUID" -e 0 ]
+  then echo "Please do not run as root"
+  exit
+fi
+
 echo \ 
 lsblk
 echo \ 
