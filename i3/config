@@ -37,6 +37,7 @@ set $RIGHT HDMI-0
 #T bindsym XF86MonBrightnessDown exec --no-startup-id light-down; exec --no-startup-id click0
 #T bindsym F9 exec --no-startup-id light-up; exec --no-startup-id click0
 #T bindsym F8 exec --no-startup-id light-down; exec --no-startup-id click0
+#T bindsym $mod+Shift+p exec rofimenu-power
 
 #NEPTUNE 
 #N font pango:JetBrains Mono ExtraBold 12
@@ -166,7 +167,6 @@ bindsym $mod+Shift+r restart
 # ROFI MENUS # (place scripts into /bin)
 ##############
 bindsym $mod+Shift+e exec rofimenu-exit
-bindsym $mod+Shift+p exec rofimenu-power
 bindsym $mod+Shift+b exec --no-startup-id rofimenu-bluetooth
 bindsym $mod+Shift+v exec --no-startup-id rofimenu-vpn
 

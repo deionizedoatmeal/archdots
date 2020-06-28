@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if [ "$EUID" -e 0 ]
-  then echo "Please do not run as root"
-  exit
+if [ "$EUID" -eq 0 ]; then 
+        echo "Please do not run as root"
+        exit
 fi
 
 echo \ 
