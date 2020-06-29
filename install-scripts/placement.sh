@@ -45,6 +45,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
                 ./install-scripts/uncomment.sh T wal/templates/dunstrc ${HOME}/.config/wal/templates/dunstrc
                 cp spotify-tui/* ${HOME}/.config/spotify-tui/.
                 cp spotifyd/* ${HOME}/.config/spotifyd/.
+                cp neofetch/* ${HOME}/.config/neofetch/.
                 cp .bashrc ${HOME}/.
                 cp .gitconfig ${HOME}/.
                 cp -r chrome ${HOME}/.mozilla/firefox/*.default-release/.
@@ -90,6 +91,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
                 ./install-scripts/uncomment.sh N wal/templates/dunstrc ${HOME}/.config/wal/templates/dunstrc
                 cp spotify-tui/* ${HOME}/.config/spotify-tui/.
                 cp spotifyd/* ${HOME}/.config/spotifyd/.
+                cp neofetch/* ${HOME}/.config/neofetch/.
                 cp .bashrc ${HOME}/.
                 cp .gitconfig ${HOME}/.
                 cp .xprofile ${HOME}/.

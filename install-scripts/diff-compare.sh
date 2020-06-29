@@ -20,6 +20,8 @@ echo "##### ranger/rc.conf ######"
 diff ../ranger/rc.conf ~/.config/ranger/rc.conf
 echo "##### ranger/rifle.conf ######"
 diff ../ranger/rifle.conf ~/.config/ranger/rifle.conf
+echo "##### neofetch/config.conf ######"
+diff ../neofetch/config.conf ~/.config/neofetch/config.conf
 echo "##### nvim/init.vim ######"
 diff ../nvim/init.vim ~/.config/nvim/init.vim
 echo "##### wal/templates/colors-rofi-dark.rasi #####"
