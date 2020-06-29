@@ -122,12 +122,12 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
         sudo systemctl start tlp.service
 fi
 
-# teamviewer
-#read -r -p "#### Would you like to enable and start teamviewerd.service? [y/N] ####" response
-#if [[ "$response" =~ ^([Yy])+$ ]]; then
-#        sudo systemctl enable teamviewerd.service
-#        sudo systemctl start teamviewerd.service
-#fi
+# cups
+read -r -p "#### Would you like to enable and start teamviewerd.service? [y/N] ####" response
+if [[ "$response" =~ ^([Yy])+$ ]]; then
+        sudo systemctl enable org.cups.cupsd.service
+        sudo systemctl start org.cups.cupsd.service
+fi
 
 # DHCP
 read -r -p "#### Would you like to enable and start dhcpcd.service? [y/N] ####" response
