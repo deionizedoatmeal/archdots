@@ -391,6 +391,7 @@ format-foreground = ${colors.secondary}
 type = internal/network
 format-connected =" 直"
 format-disconnected =" 睊"
+enable-click = true
 click-left = rofimenu-wifi
 
 #TRITON
