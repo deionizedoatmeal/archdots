@@ -55,7 +55,7 @@ These are my dotfiles and scripts for my workstation/server and my personal lapt
 - using rofi to exit session
 - using rofi to connect to bluetooth devices
 - using rofi to mannage vpn
-- using rofi to connect to wireless networks (comming soon)
+- using rofi to connect to wireless networks
 - mounting and opening encrypted LUKS drives
 - switching between system wide dark and light mode
 # screenshots
