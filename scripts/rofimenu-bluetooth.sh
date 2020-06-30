@@ -25,10 +25,10 @@ options="$zero\n$first\n$second"
 status=$(bluetoothctl show | sed -n -e 's/^.*Powered: //p')
 if [ "$status" == "no" ]
 then
-   echo "its off 1" 
+#   echo "its off 1" 
    onoff="off"
 else
-    echo "its on 2"
+#    echo "its on 2"
     onoff="on"
 fi
 

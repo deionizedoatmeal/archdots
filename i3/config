@@ -169,6 +169,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec rofimenu-exit
 bindsym $mod+Shift+b exec --no-startup-id rofimenu-bluetooth
 bindsym $mod+Shift+v exec --no-startup-id rofimenu-vpn
+bindsym $mod+Shift+w exec --no-startup-id rofimenu-wifi
 
 ###########################
 # LIGHT/DARK THEME TOGGLE #
