@@ -17,21 +17,20 @@ fixed-center = true
 line-size = 2
 padding-right = 2
 
-#*SELECT*
 #TRITON
-#radius = 27.0
-#font-0 = Iosevka Nerd Font:pixelsize=24;4
-#font-1 = Iosevka Nerd Font:size=24;4
-#font-2 = Iosevka Nerd Font:size=41;8
-#modules-right = bluetooth-display pulseaudio redshift-display dpms-display backlight cpu temperature system-cpu-frequency-display memory power-profile-display battery wireless-network network #vpn-display
+#T radius = 27.0
+#T font-0 = Iosevka Nerd Font:pixelsize=24;4
+#T font-1 = Iosevka Nerd Font:size=24;4
+#T font-2 = Iosevka Nerd Font:size=41;8
+#T modules-right = bluetooth-display pulseaudio redshift-display dpms-display backlight cpu temperature system-cpu-frequency-display memory power-profile-display battery wireless-network network #vpn-display
+
 #NEPTUNE
-#radius = 16.0
-#font-0 = Iosevka Nerd Font:pixelsize=14;4
-#font-1 = Iosevka Nerd Font:size=14;4
-#font-2 = Iosevka Nerd Font:size=22;4
-#modules-right = bluetooth-display pulseaudio redshift-display dpms-display cpu temperature system-cpu-frequency-display memory wireless-network network #vpn-display
-#monitor = HDMI-0
-#*SELECT*
+#N radius = 16.0
+#N font-0 = Iosevka Nerd Font:pixelsize=14;4
+#N font-1 = Iosevka Nerd Font:size=14;4
+#N font-2 = Iosevka Nerd Font:size=22;4
+#N modules-right = bluetooth-display pulseaudio redshift-display dpms-display cpu temperature system-cpu-frequency-display memory wireless-network network #vpn-display
+#N monitor = HDMI-0
 
 tray-position = none
 wm-restack = i3
@@ -49,8 +48,6 @@ cursor-scroll = ns-resize
 ########################
 #### SECOND BAR #####
 
-#*SELECT*
-#NEPTUNE
 [bar/secondary]
 width = 98.1250%
 height = 03.0000%
@@ -76,7 +73,6 @@ module-margin = 0
 cursor-click = pointer
 cursor-scroll = ns-resize
 monitor = VGA-0
-#*SELECT*
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; #### MODULES ####
@@ -255,11 +251,11 @@ exec = vpn-display
 interval = 1
 format-background = ${colors.background}    
 
-#*SELECT*
 #TRITON
-#format-foreground = ${colors.secondary}
+#T format-foreground = ${colors.secondary}
+
 #NEPTUNE
-#format-foreground = ${colors.primary}
+#N format-foreground = ${colors.primary}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [module/battery]
@@ -311,12 +307,11 @@ animation-charging-framerate = 750
 type = internal/cpu
 format = <label>
 
-#*SELECT*
 #TRITON
-#label = " %percentage%%|"
+#T label = " %percentage%%|"
+
 #NEPTUNE
-#label = "   %percentage%%|" 
-#*SELECT*
+#N label = "   %percentage%%|" 
 
 interval = 5
 format-background = ${colors.background}
@@ -326,12 +321,11 @@ format-foreground = ${colors.primary}
 type = internal/memory
 format = <label>
 
-#*SELECT*
 #TRITON
-#label = "   %percentage_used%%  "
+#T label = "   %percentage_used%%  "
+
 #NEPTUNE
-#label = "   %percentage_used%% "
-#*SELECT*
+#N label = "   %percentage_used%% "
 
 interval = 5
 format-background = ${colors.background}
@@ -397,21 +391,22 @@ format-foreground = ${colors.secondary}
 type = internal/network
 format-connected =" 直"
 format-disconnected =" 睊"
+enable-click = true
+click-left = rofimenu-wifi
 
-#*SELECT*
 #TRITON
-#interface = wlp59s0
-#format-disconnected-background = ${colors.background}
-#format-connected-background = ${colors.background}
-#format-connected-foreground = ${colors.secondary}
-#format-disconnected-foreground = ${colors.secondary}
+#T interface = wlp59s0
+#T format-disconnected-background = ${colors.background}
+#T format-connected-background = ${colors.background}
+#T format-connected-foreground = ${colors.secondary}
+#T format-disconnected-foreground = ${colors.secondary}
+
 #NEPTUNE
-#interface = wlo1
-#format-disconnected-background = ${colors.background}
-#format-connected-background = ${colors.background}
-#format-connected-foreground = ${colors.primary}
-#format-disconnected-foreground = ${colors.primary}
-#*SELECT*
+#N interface = wlo1
+#N format-disconnected-background = ${colors.background}
+#N format-connected-background = ${colors.background}
+#N format-connected-foreground = ${colors.primary}
+#N format-disconnected-foreground = ${colors.primary}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;  N   N  NNNN  NNNNN      NNNN
@@ -425,20 +420,19 @@ format-disconnected =" 睊"
 type = internal/network   
 format-connected ="|"
 
-#*SELECT*
 #TRITON
-#interface = enp58s0f1
-#format-disconnected-background = ${colors.background}
-#format-connected-background = ${colors.background}
-#format-connected-foreground = ${colors.secondary}
-#format-disconnected-foreground = ${colors.secondary}
+#T interface = enp58s0f1
+#T format-disconnected-background = ${colors.background}
+#T format-connected-background = ${colors.background}
+#T format-connected-foreground = ${colors.secondary}
+#T format-disconnected-foreground = ${colors.secondary}
+
 #NEPTUNE
-#interface = eno1
-#format-disconnected-background = ${colors.background}
-#format-connected-background = ${colors.background}
-#format-connected-foreground = ${colors.primary}
-#format-disconnected-foreground = ${colors.primary}
-#*SELECT*
+#N interface = eno1
+#N format-disconnected-background = ${colors.background}
+#N format-connected-background = ${colors.background}
+#N format-connected-foreground = ${colors.primary}
+#N format-disconnected-foreground = ${colors.primary}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [module/date]

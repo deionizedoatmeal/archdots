@@ -21,23 +21,42 @@ client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
 client.background       $bg
 
+#monitors
+set $LEFT VGA-0
+set $RIGHT HDMI-0
+
 # these are the variables which are different on my two machines
 # they are commented/uncommented by placement.sh
 
-#*SELECT*
 #TRITON
-#font pango:JetBrains Mono ExtraBold 24
-#bindsym $mod+p exec --no-startup-id paper-mode-toggle 400
-#border_radius 27
-#floating_maximum_size 2600 x 1400
+#T font pango:JetBrains Mono ExtraBold 24
+#T bindsym $mod+p exec --no-startup-id paper-mode-toggle 400
+#T border_radius 27
+#T floating_maximum_size 2600 x 1400
+#T bindsym XF86MonBrightnessUp exec --no-startup-id light-up; exec --no-startup-id click0
+#T bindsym XF86MonBrightnessDown exec --no-startup-id light-down; exec --no-startup-id click0
+#T bindsym F9 exec --no-startup-id light-up; exec --no-startup-id click0
+#T bindsym F8 exec --no-startup-id light-down; exec --no-startup-id click0
+#T bindsym $mod+Shift+p exec rofimenu-power
+
 #NEPTUNE 
-#font pango:JetBrains Mono ExtraBold 12
-#bindsym $mod+Ctrl+Left move workspace to output VGA-0
-#bindsym $mod+Ctrl+Right move workspace to output HDMI-0
-#bindsym $mod+p exec --no-startup-id paper-mode-toggle 400
-#bindsym $mod+o exec --no-startup-id paper-mode-toggle 200
-#border_radius 16
-#floating_maximum_size 1800 x 900
+#N font pango:JetBrains Mono ExtraBold 12
+#N bindsym $mod+Ctrl+Left move workspace to output VGA-0
+#N bindsym $mod+Ctrl+Right move workspace to output HDMI-0
+#N bindsym $mod+p exec --no-startup-id paper-mode-toggle 400
+#N bindsym $mod+o exec --no-startup-id paper-mode-toggle 200
+#N border_radius 16
+#N floating_maximum_size 1800 x 900
+#N Workspace $ws1 output $LEFT
+#N Workspace $ws2 output $LEFT
+#N Workspace $ws3 output $LEFT
+#N Workspace $ws4 output $LEFT
+#N Workspace $ws5 output $LEFT
+#N Workspace $ws6 output $RIGHT
+#N Workspace $ws7 output $RIGHT
+#N Workspace $ws8 output $RIGHT
+#N Workspace $ws9 output $RIGHT
+#N Workspace $ws10 output $RIGHT
 
 # RESIZE VARIABLES
 set $center move position center
@@ -148,9 +167,9 @@ bindsym $mod+Shift+r restart
 # ROFI MENUS # (place scripts into /bin)
 ##############
 bindsym $mod+Shift+e exec rofimenu-exit
-bindsym $mod+Shift+p exec rofimenu-power
 bindsym $mod+Shift+b exec --no-startup-id rofimenu-bluetooth
 bindsym $mod+Shift+v exec --no-startup-id rofimenu-vpn
+bindsym $mod+Shift+w exec --no-startup-id rofimenu-wifi
 
 ###########################
 # LIGHT/DARK THEME TOGGLE #
@@ -200,22 +219,15 @@ bindsym --release $mod+Print exec --no-startup-id scrot; exec --no-startup-id cl
 ####################
 # FLOATING WINDOWS #
 ####################
-for_window [class="nautilus"] floating enable
 for_window [class="feh"] floating enable
-for_window [class="gnome-disks"] floating enable
-for_window [class="gnome-font-viewer"] floating enable
 for_window [class="steam"] floating enable
-for_window [class="evince"] floating enable
-for_window [class="baobab"] floating enable
 for_window [class="system-config-printer"] floating enable
-for_window [class="seahorse"] floating enable
-for_window [class="popsicle-gtk"] floating enable
 
 ########
 # LOCK #
 ########
 bindsym $mod+BackSpace exec --no-startup-id click1; exec --no-startup-id gllock
-bindsym $mod+Escape exec --no-startup-id click1; exec --no-startup-id gllock 
+#bindsym $mod+Escape exec --no-startup-id click1; exec --no-startup-id gllock 
 
 ###################
 # SCREEN TIME OUT #
@@ -234,12 +246,8 @@ bindsym F6 exec --no-startup-id vol-up; exec --no-startup-id click1 #increase vo
 bindsym F5 exec --no-startup-id vol-down; exec --no-startup-id click1 #decrease volume
 bindsym F3 exec --no-startup-id amixer -D pulse sset Master toggle; exec --no-startup-id click1 #mute sound
 
-#############
-# BACKLIGHT #
-#############
-bindsym XF86MonBrightnessUp exec --no-startup-id light-up; exec --no-startup-id click0
-bindsym XF86MonBrightnessDown exec --no-startup-id light-down; exec --no-startup-id click0
-bindsym F9 exec --no-startup-id light-up; exec --no-startup-id click0
-bindsym F8 exec --no-startup-id light-down; exec --no-startup-id click0
+############
+# REDSHIFT #
+############
 #enter your lat and long here
 bindsym $mod+n exec --no-startup-id redshift-toggle 44:-123

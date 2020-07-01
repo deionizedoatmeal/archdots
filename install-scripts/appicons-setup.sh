@@ -1,10 +1,14 @@
 #!/bin/bash
 # run as sudo
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
 
 cp -r /usr/share/applications /usr/share/applications.old
 
 # firefox isn't working with the append
-cp ../firefox.desktop /usr/share/applications/.
+#cp ../firefox.desktop /usr/share/applications/.
 
 cd /usr/share/applications
 

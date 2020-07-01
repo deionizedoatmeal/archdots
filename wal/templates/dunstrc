@@ -1,13 +1,12 @@
 [global]
 
-#*SELECT*
 #TRITON
-#font = JetBrainsMono Bold 24
-#corner_radius = 27
+#T font = JetBrainsMono Bold 24
+#T corner_radius = 27
+
 #NEPTUNE
-#font = JetBrainsMono 18
-#corner_radius = 16
-#*SELECT*
+#N font = JetBrainsMono 18
+#N corner_radius = 16
 
 markup = yes
 plain_text = no

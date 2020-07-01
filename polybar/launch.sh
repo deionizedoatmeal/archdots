@@ -11,7 +11,5 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 # launch bars
 polybar main &
 
-#*SELECT*
 #NEPTUNE
-#polybar secondary &
-#NEPTUNE
+#N polybar secondary &
