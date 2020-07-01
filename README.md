@@ -37,25 +37,24 @@ These are my dotfiles and scripts for my workstation/server and my personal lapt
 - installing a fork of i3-gaps with rounded window borders
 - installing polybar
 - installing fonts, cloning repos and doing some housekeeping
-- moving config files and scripts into neccesary locations 
+- moving config files and scripts into neccesary locations
+- editing .desktop files to include font logos
 * acording to me lol
 # functionality scripts:  
-- system status, resource usage and monitoring
-- wrapper for launching and kill spotifyd and spotify-tui simulataneously
-- volume adjustment w/ notification
-- backlight adjustment w/ notification
-- simple lock screen
-- toggling dpsm (screen saver display power off power saving thingy)
-- a paper mode to be used in conjuction with i3-gaps
-- toggle redshift & display redshift status in polybar  
-- toggling bluetooth interface and connecting to bluetooth devices
-- display cpu frequency in polybar  
-- display power useage profile in polybar  
+- wrapper for launching and killng spotifyd and spotify-tui simulataneously
+- volume adjustment w/ dunst notification
+- backlight adjustment w/ dunst notification
+- toggling dpms (screen saver display power off power saving thingy)
+- a gaps 'paper' mode to be used in conjuction with i3-gaps
+- toggling redshift & displaying redshift status in polybar  
+- displaying bluetooth device status and radio status in polybar
+- displaying cpu frequency in polybar  
+- displaying power profile in polybar  
 - using rofi to change power usage profile
-- using rofi to exit session
-- using rofi to connect to bluetooth devices
-- using rofi to mannage vpn
-- using rofi to connect to wireless networks
+- using rofi to exit session, lock, reboot
+- using rofi to connect to bluetooth devices and toggle radios
+- using rofi to mannage vpn connection
+- using rofi to connect to wireless networks and toggle radios
 - mounting and opening encrypted LUKS drives
 - switching between system wide dark and light mode
 # screenshots
