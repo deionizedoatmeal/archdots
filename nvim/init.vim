@@ -38,7 +38,6 @@ Plug 'tmsvg/pear-tree'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'preservim/nerdtree'
 Plug 'francoiscabrol/ranger.vim'
-Plug 'rbgrouleff/bclose.vim'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-commentary'
 
