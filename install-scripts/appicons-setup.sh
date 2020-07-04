@@ -5,7 +5,7 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
-cp -r /usr/share/applications /usr/share/applications.old
+#cp -r /usr/share/applications /usr/share/applications.old
 
 # firefox isn't working with the append
 #cp ../firefox.desktop /usr/share/applications/.
