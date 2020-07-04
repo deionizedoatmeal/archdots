@@ -33,10 +33,10 @@ set $RIGHT HDMI-0
 #T bindsym $mod+p exec --no-startup-id paper-mode-toggle 400
 #T border_radius 27
 #T floating_maximum_size 2600 x 1400
-#T bindsym XF86MonBrightnessUp exec --no-startup-id light-up; exec --no-startup-id click0
-#T bindsym XF86MonBrightnessDown exec --no-startup-id light-down; exec --no-startup-id click0
-#T bindsym F9 exec --no-startup-id light-up; exec --no-startup-id click0
-#T bindsym F8 exec --no-startup-id light-down; exec --no-startup-id click0
+#T bindsym XF86MonBrightnessUp exec --no-startup-id light-up
+#T bindsym XF86MonBrightnessDown exec --no-startup-id light-down
+#T bindsym F9 exec --no-startup-id light-up
+#T bindsym F8 exec --no-startup-id light-down
 #T bindsym $mod+Shift+p exec rofimenu-power
 
 #NEPTUNE 
