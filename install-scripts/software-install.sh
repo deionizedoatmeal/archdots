@@ -64,7 +64,7 @@ YAYSYS="ttf-symbola paper-icon-theme aic94xx-firmware wd719x-firmware vim-plug g
 
 #python-pipx teamviewer autotiling
 YAYNEPTUNE=""
-YAYTRITON="system76-power system76-driver light-git"
+YAYTRITON="system76-power system76-firmware-daemon system76-driver light-git"
 YAYNONES="remmina-plugin-rdesktop spotify mfetch-git android-messages-desktop spotifyd-bin-full zoom"
 ##########################################################################
 # yay install
