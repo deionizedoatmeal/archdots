@@ -1,4 +1,8 @@
 #!/bin/bash
+# lvm mounting? 
 
-sudo cryptsetup open /dev/${1} ${1}
-sudo mount /dev/mapper/${1} ${2}
+
+NAME=$(printf ${1} | sed 's:.*/::')
+
+sudo cryptsetup open ${1} ${NAME}
+sudo mount /dev/mapper/${NAME} ${2}
