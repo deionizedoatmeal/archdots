@@ -63,9 +63,9 @@ fi
 YAYSYS="ttf-symbola paper-icon-theme aic94xx-firmware wd719x-firmware vim-plug gllock-git compton-tryone-git ly"
 
 #python-pipx teamviewer autotiling
-YAYNEPTUNE=""
+YAYNEPTUNE="google-earth-pro virtualbox-ext-oracle remmina-plugin-rdesktop"
 YAYTRITON="system76-power system76-firmware-daemon system76-driver light-git"
-YAYNONES="virtualbox-ext-oracle remmina-plugin-rdesktop spotify mfetch-git android-messages-desktop spotifyd-bin-full zoom"
+YAYNONES="spotify mfetch-git android-messages-desktop spotifyd-bin-full zoom"
 ##########################################################################
 # yay install
 
