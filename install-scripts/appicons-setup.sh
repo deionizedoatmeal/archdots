@@ -35,6 +35,12 @@ sed -i '/GenericName=/d' ./Zoom.desktop
 sed -i "2iName= Zoom" Zoom.desktop
 sed -i "3iGenericName=Video Confrencing" Zoom.desktop
 
+# google earth
+sed -i '/Name=/d' ./google-earth-pro.desktop
+sed -i '/GenericName=/d' ./google-earth-pro.desktop
+sed -i "2iName= Google Earth" google-earth-pro.desktop
+sed -i "3iGenericName=3D Planet Viewer" google-earth-pro.desktop
+
 # remmina 
 sed -i '/Name=/d' ./org.remmina.Remmina.desktop
 sed -i '/GenericName=/d' ./org.remmina.Remmina.desktop
