@@ -30,7 +30,8 @@ set $RIGHT HDMI-0
 
 #TRITON
 #T font pango:JetBrains Mono ExtraBold 24
-#T bindsym $mod+p exec --no-startup-id paper-mode-toggle 400
+#T bindsym $mod+p exec --no-startup-id paper-mode-toggle 400 150 150
+#T bindsym $mod+o exec --no-startup-id paper-mode-toggle 400 35 0
 #T border_radius 27
 #T floating_maximum_size 2600 x 1400
 #T bindsym XF86MonBrightnessUp exec --no-startup-id light-up
@@ -43,8 +44,8 @@ set $RIGHT HDMI-0
 #N font pango:JetBrains Mono ExtraBold 12
 #N bindsym $mod+Ctrl+Left move workspace to output VGA-0
 #N bindsym $mod+Ctrl+Right move workspace to output HDMI-0
-#N bindsym $mod+p exec --no-startup-id paper-mode-toggle 400
-#N bindsym $mod+o exec --no-startup-id paper-mode-toggle 200
+#N bindsym $mod+p exec --no-startup-id paper-mode-toggle 400 100 100
+#N bindsym $mod+o exec --no-startup-id paper-mode-toggle 200 100 100
 #N border_radius 16
 #N floating_maximum_size 1800 x 900
 #N Workspace $ws1 output $LEFT
