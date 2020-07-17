@@ -44,7 +44,7 @@ set $RIGHT HDMI-0
 #N font pango:JetBrains Mono ExtraBold 12
 #N bindsym $mod+Ctrl+Left move workspace to output VGA-0
 #N bindsym $mod+Ctrl+Right move workspace to output HDMI-0
-#N bindsym $mod+p exec --no-startup-id paper-mode-toggle 400 100 100
+#N bindsym $mod+p exec --no-startup-id paper-mode-toggle 400 200 200
 #N bindsym $mod+o exec --no-startup-id paper-mode-toggle 200 100 100
 #N border_radius 16
 #N floating_maximum_size 1800 x 900
