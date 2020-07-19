@@ -5,29 +5,37 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
-#cp -r /usr/share/applications /usr/share/applications.old
-
-# firefox isn't working with the append
-#cp ../firefox.desktop /usr/share/applications/.
-
 cd /usr/share/applications
+mkdir -p ../unused-applications
 
 # remove any applications you dont launch from rofi
-rm avahi-discover.desktop
-rm bssh.desktop
-rm bvnc.desktop
-rm compton.desktop
-rm feh.desktop
-rm lstopo.desktop
-rm redshift.desktop
-rm qv4l2.desktop
-rm qvidcap.desktop
-rm redshift-gtk.desktop
-rm electron.desktop
-rm electron4.desktop
-rm electron5.desktop
-rm cmake-gui.desktop
-rm org.fontforge.FontForge.desktop
+mv avahi-discover.desktop ../unused-applications/.
+mv bssh.desktop ../unused-applications/.
+mv bvnc.desktop ../unused-applications/.
+mv compton.desktop ../unused-applications/.
+mv feh.desktop ../unused-applications/.
+mv lstopo.desktop ../unused-applications/.
+mv redshift.desktop ../unused-applications/.
+mv qv4l2.desktop ../unused-applications/.
+mv qvidcap.desktop ../unused-applications/.
+mv redshift-gtk.desktop ../unused-applications/.
+mv electron.desktop ../unused-applications/.
+mv electron4.desktop ../unused-applications/.
+mv electron5.desktop ../unused-applications/.
+mv cmake-gui.desktop ../unused-applications/.
+mv org.fontforge.FontForge.desktop ../unused-applications/.
+
+# cups
+sed -i '/Name=/d' ./cups.desktop
+sed -i '/GenericName=/d' ./cups.desktop
+sed -i "2iName=朗 CUPS" cups.desktop
+sed -i "3iGenericName=Print Settings" cups.desktop
+
+# siril
+sed -i '/Name=/d' ./org.free_astro.siril.desktop
+sed -i '/GenericName=/d' ./org.free_astro.siril.desktop
+sed -i "2iName= Siril" org.free_astro.siril.desktop
+sed -i "3iGenericName=Astro Image Processing" org.free_astro.siril.desktop
 
 # zoom
 sed -i '/Name=/d' ./Zoom.desktop

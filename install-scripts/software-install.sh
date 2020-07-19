@@ -9,7 +9,8 @@
 sudo pacman -Syu
 
 # package lists
-SYS="exfat-utils dosfstools ntfsprogs cups cups-pdf python-pillow hddtemp rsync rdiff-backup displaycal pulseaudio-bluetooth materia-gtk-theme xorg-xrdb cmake clang bc gdisk rust dbus pulseaudio bluez bluez-utils redshift git sudo vi kitty rofi dunst openvpn gnupg imagemagick mpg123 ffmpeg feh python ttf-fantasque-sans-mono python-pip nvme-cli lm_sensors openssh vim bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib"
+SYS="polkit exfat-utils dosfstools ntfsprogs cups cups-pdf python-pillow hddtemp rsync rdiff-backup pulseaudio-bluetooth materia-gtk-theme xorg-xrdb cmake clang bc gdisk rust dbus pulseaudio bluez bluez-utils redshift git sudo vi kitty rofi dunst openvpn gnupg imagemagick mpg123 ffmpeg feh python ttf-fantasque-sans-mono python-pip nvme-cli lm_sensors openssh vim bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib"
+# displaycal
 # dialog python-setuptools installed on nep??
 
 NONES="inkscape pavucontrol libreoffice-fresh cheese nmap htop ranger zathura zathura-pdf-mupdf firefox neovim gnuplot vlc darktable neofetch steam atom gimp zathura ranger pass speedtest-cli net-tools"
@@ -63,7 +64,7 @@ fi
 YAYSYS="ttf-symbola paper-icon-theme aic94xx-firmware wd719x-firmware vim-plug gllock-git compton-tryone-git ly"
 
 #python-pipx teamviewer autotiling
-YAYNEPTUNE="google-earth-pro virtualbox-ext-oracle remmina-plugin-rdesktop"
+YAYNEPTUNE="siril-git google-earth-pro virtualbox-ext-oracle remmina-plugin-rdesktop"
 YAYTRITON="system76-power system76-firmware-daemon system76-driver light-git"
 YAYNONES="spotify mfetch-git android-messages-desktop spotifyd-bin-full zoom"
 ##########################################################################
