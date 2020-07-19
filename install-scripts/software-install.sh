@@ -9,7 +9,7 @@
 sudo pacman -Syu
 
 # package lists
-SYS="polkit exfat-utils dosfstools ntfsprogs cups cups-pdf python-pillow hddtemp rsync rdiff-backup pulseaudio-bluetooth materia-gtk-theme xorg-xrdb cmake clang bc gdisk rust dbus pulseaudio bluez bluez-utils redshift git sudo vi kitty rofi dunst openvpn gnupg imagemagick mpg123 ffmpeg feh python ttf-fantasque-sans-mono python-pip nvme-cli lm_sensors openssh vim bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib"
+SYS="exfat-utils dosfstools ntfsprogs cups cups-pdf python-pillow hddtemp rsync rdiff-backup pulseaudio-bluetooth materia-gtk-theme xorg-xrdb cmake clang bc gdisk rust dbus pulseaudio bluez bluez-utils redshift git sudo vi kitty rofi dunst openvpn gnupg imagemagick mpg123 ffmpeg feh python ttf-fantasque-sans-mono python-pip nvme-cli lm_sensors openssh vim bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib"
 # displaycal
 # dialog python-setuptools installed on nep??
 

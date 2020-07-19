@@ -124,6 +124,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # some more aliases
 alias pass-pull='pass git pull origin master'
 alias pass-push='pass git push origin master'
+alias remove-orphans='sudo pacman -Rns $(pacman -Qtdq)'
 
 #######
 #PYWAL#
