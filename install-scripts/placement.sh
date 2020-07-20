@@ -35,7 +35,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
                 cp rofi/config.rasi.tri ${HOME}/.config/rofi/config.rasi
                 cp compton/* ${HOME}/.config/compton/.
                 ln -sf ~/.cache/wal/zathurarc ~/.config/zathura/zathurarc
-                cp -r ranger/* ${HOME}/.config/ranger/.
+                cp ranger/* ${HOME}/.config/ranger/.
                 ./install-scripts/uncomment.sh T ranger/rifle.conf ${HOME}/.config/ranger/rifle.conf
                 cp -r nvim/* ${HOME}/.config/nvim/.
                 ./install-scripts/uncomment.sh T kitty/kitty.conf ${HOME}/.config/kitty/kitty.conf
@@ -81,7 +81,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
                 cp rofi/config.rasi.nep ${HOME}/.config/rofi/config.rasi
                 cp compton/* ${HOME}/.config/compton/.
                 ln -sf ~/.cache/wal/zathurarc ~/.config/zathura/zathurarc
-                cp -r ranger/* ${HOME}/.config/ranger/.
+                cp ranger/* ${HOME}/.config/ranger/.
                 ./install-scripts/uncomment.sh N ranger/rifle.conf ${HOME}/.config/ranger/rifle.conf
                 cp -r nvim/* ${HOME}/.config/nvim/.
                 ./install-scripts/uncomment.sh N kitty/kitty.conf ${HOME}/.config/kitty/kitty.conf
