@@ -192,6 +192,7 @@ read -r -p "Would you like to install rust packages? [y/N]" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
         cargo install spotify-tui
         cargo install bottom
+        cargo install dijo
         cargo install -f --git https://github.com/cjbassi/ytop ytop
 fi
 
