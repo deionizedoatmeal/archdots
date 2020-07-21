@@ -106,7 +106,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
           
                 # reminders 
                 echo "|> REMEMBER TO:"
-                echo "|> set layers.acceleration.force-enabled --> true TO PREVENT TARING IN FIREFOX"
+                echo "|> set layers.acceleration.force-enabled --> true TO PREVENT TEARING IN FIREFOX"
                 echo "|> change spotifyd password in the config"
                 echo "|> import gpg and ssh keys"
                 echo "|> set up busybox/dropbear server to headless decrypt at boot"
