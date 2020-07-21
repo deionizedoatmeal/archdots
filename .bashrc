@@ -121,16 +121,19 @@ export PATH="$HOME/.cargo/bin:$PATH"
 ########
 # PASS #
 ########
-# some more aliases
 alias pass-pull='pass git pull origin master'
 alias pass-push='pass git push origin master'
-alias remove-orphans='sudo pacman -Rns $(pacman -Qtdq)'
 
-#######
-#PYWAL#
-#######
-# make colors persit when starting newterminal
-#(cat ~/.cache/wal/sequences)
+########
+# PASS #
+########
+alias dijo-pull='git -C ${HOME}/.local/share/dijo pull origin master'
+alias dijo-push='git -C ${HOME}/.local/share/dijo add -A && git -C ${HOME}/.local/share/dijo commit --allow-empty-message -m "" && git -C ${HOME}/.local/share/dijo push origin master'
+
+##################
+# REMOVE ORPHANS #
+##################
+alias remove-orphans='sudo pacman -Rns $(pacman -Qtdq)'
 
 ##########
 # EDITOR #
