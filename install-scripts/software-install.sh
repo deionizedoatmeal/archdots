@@ -129,14 +129,6 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 
-# t todo 
-read -r -p "Would you like to install t.py (a bare bones CLI todo list)? [y/N]" response
-if [[ "$response" =~ ^([Yy])+$ ]]; then
-        mkdir ${HOME}/Tasks
-        git clone https://github.com/sjl/t.git $HOME/Tasks/.
-        echo 't.git installed'
-fi
-
 # now using the AUR
 # install spotifyd
 #read -r -p "Would you like to install Spotifyd v0.2.24? [y/N]" response
@@ -168,11 +160,6 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
     sudo pip3 install cl-chess
     sudo pipx install jrnl
     sudo pip install mdv
-<<<<<<< HEAD
-
-=======
-   
->>>>>>> 8287b71de018018620f37ec56cff49d76c377216
     #sudo pip install i3-py
     #sudo pip3 install wpgtk
     echo 'python packages installed'
