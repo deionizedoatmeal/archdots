@@ -57,6 +57,7 @@ These are my dotfiles and scripts for my workstation/server and my personal lapt
 - using rofi to connect to wireless networks and toggle radios
 - mounting and opening encrypted LUKS drives
 - switching between system wide dark and light mode
+
 # screenshots
 ![Rofi](/screenshots/rofi.png)
 ![Scripting](/screenshots/scripting.png)
