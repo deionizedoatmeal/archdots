@@ -25,6 +25,13 @@ mv electron5.desktop ../unused-applications/.
 mv cmake-gui.desktop ../unused-applications/.
 mv org.fontforge.FontForge.desktop ../unused-applications/.
 
+
+# arandr 
+sed -i '/Name=/d' ./arandr.desktop
+sed -i '/GenericName=/d' ./arandr.desktop
+sed -i "2iName= Arnadr" arandr.desktop
+sed -i "3iGenericName=Display Settings" arandr.desktop
+
 # cups
 sed -i '/Name=/d' ./cups.desktop
 sed -i '/GenericName=/d' ./cups.desktop
@@ -131,7 +138,7 @@ sed -i "3iGenericName=Camera" org.gnome.Cheese.desktop
 sed -i '/Name=/d' ./pavucontrol.desktop
 sed -i '/GenericName=/d' ./pavucontrol.desktop
 sed -i "2iName= Pulse Audio" pavucontrol.desktop
-sed -i "3iGenericName=Audio Control" pavucontrol.desktop
+sed -i "3iGenericName=Audio Settings" pavucontrol.desktop
 
 # vim 
 sed -i '/Name=/d' ./vim.desktop
