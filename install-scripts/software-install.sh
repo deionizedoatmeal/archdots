@@ -17,7 +17,7 @@ NONES="inkscape pavucontrol libreoffice-fresh cheese nmap htop perl-image-exifto
 
 TRI="tlp tlp-rdw powertop upower"
 
-NEP="remmina libvncserver virtualbox virtualbox-host-modules-arch nvidia xf86-video-nouveau"
+NEP="remmina flowblade libvncserver virtualbox virtualbox-host-modules-arch nvidia xf86-video-nouveau"
 
 #python3-venv?
 #pipx?
