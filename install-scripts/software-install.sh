@@ -13,11 +13,11 @@ SYS="arandr nfsidmap exfat-utils dosfstools ntfsprogs cups cups-pdf hddtemp rsyn
 # displaycal
 # dialog python-setuptools installed on nep??
 
-NONES="inkscape pavucontrol libreoffice-fresh cheese nmap htop perl-image-exiftool python-pillow ranger zathura zathura-pdf-mupdf firefox neovim gnuplot vlc darktable neofetch steam atom gimp zathura pass speedtest-cli net-tools"
+NONES="digikam inkscape pavucontrol libreoffice-fresh cheese nmap htop perl-image-exiftool python-pillow ranger zathura zathura-pdf-mupdf firefox neovim gnuplot vlc darktable neofetch steam atom gimp zathura pass speedtest-cli net-tools"
 
 TRI="tlp tlp-rdw powertop upower"
 
-NEP="remmina flowblade libvncserver virtualbox virtualbox-host-modules-arch nvidia xf86-video-nouveau"
+NEP="remmina flowblade kdenlive libvncserver virtualbox virtualbox-host-modules-arch nvidia xf86-video-nouveau"
 
 #python3-venv?
 #pipx?
