@@ -49,7 +49,7 @@ cursor-scroll = ns-resize
 #### SECOND BAR #####
 
 [bar/secondary]
-width = 98.1250%
+width = 12.0000%
 height = 03.0000%
 offset-x = 00.9375%
 offset-y = 01.1111%
@@ -67,8 +67,8 @@ font-0 = Iosevka Nerd Font:pixelsize=14;4
 font-1 = Iosevka Nerd Font:size=14;4
 font-2 = Iosevka Nerd Font:size=22;4
 modules-left = i3
-modules-center = date
-modules-right = bluetooth-display pulseaudio redshift-display dpms-display cpu temperature system-cpu-frequency-display memory wireless-network network vpn-display
+modules-center =
+modules-right =
 module-margin = 0
 cursor-click = pointer
 cursor-scroll = ns-resize
