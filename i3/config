@@ -50,7 +50,7 @@ set $RIGHT HDMI-0
 #N Workspace $ws2 output $LEFT
 #N Workspace $ws3 output $LEFT
 #N Workspace $ws4 output $LEFT
-#N Workspace $ws5 output $LEFT
+#N Workspace $ws5 output $RIGHT
 #N Workspace $ws6 output $RIGHT
 #N Workspace $ws7 output $RIGHT
 #N Workspace $ws8 output $RIGHT
