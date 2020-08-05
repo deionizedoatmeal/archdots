@@ -17,7 +17,7 @@ NONES="digikam inkscape pavucontrol libreoffice-fresh cheese nmap htop perl-imag
 
 TRI="tlp tlp-rdw powertop upower"
 
-NEP="remmina flowblade kdenlive libvncserver virtualbox virtualbox-host-modules-arch nvidia xf86-video-nouveau"
+NEP="remmina kdenlive libvncserver virtualbox virtualbox-host-modules-arch nvidia xf86-video-nouveau"
 
 #python3-venv?
 #pipx?
