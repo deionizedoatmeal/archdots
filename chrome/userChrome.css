@@ -1,3 +1,14 @@
+/* Changes various in-UI scrollabars to be slim and more subtle */
+
+.panel-subview-body,
+#permList,
+scrollbar{
+ color: inherit;
+ scrollbar-color: currentColor transparent;
+ scrollbar-width: thin 
+}
+
+
 
 tabbrowser tabpanels { background-color: rgb(13,13,14) !important; }
 
