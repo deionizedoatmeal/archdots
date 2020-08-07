@@ -193,4 +193,29 @@ fi
 # remove this repo
 rm -r /archdots
 
-echo "Now check everything, exit and reboot"
+read -r -p "Do you want to set up fstab and crypttab for neptune? [y/N]" response
+if [[ "$response" =~ ^([Yy])+$ ]]; then
+
+        # add crypto_keyfile to extra drives
+        ./archdots/install-scripts/keyfile-add.sh
+
+        # copy fstab and crypttab over
+        cp -p /archdots/system/fstab /etc/fstab
+        cp -p /archdots/system/crypttab /etc/crypttab
+
+fi
+
+# remove this repo
+rm -r /archdots
+
+echo "Notes for ian:
+echo "-> remember to clean the key slots for ssd, hdd, and external"
+echo "-> after mounting backup drive, copy lvm over to replace metadata"
+echo "-> copy ssh keys over"
+echo "-> set up remotes for pass and dijo"
+echo "-> copy ssh keys over"
+echo "-> set layers.acceleration.force-enabled --> true TO PREVENT TEARING IN FIREFOX"
+echo "-> set up busybox/dropbear server to headless decrypt at boot"
+echo "-> pair all bluetooth devices"
+echo "-> install Wolfram Wathematica"
+echo "Now check everything, exit and reboot."
