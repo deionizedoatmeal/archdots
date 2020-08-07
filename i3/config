@@ -44,9 +44,9 @@ set $RIGHT HDMI-1-3
 #N font pango:JetBrains Mono ExtraBold 12
 #N bindsym $mod+Ctrl+Left move workspace to output VGA-0
 #N bindsym $mod+Ctrl+Right move workspace to output HDMI-0
-#N bindsym $mod+p exec --no-startup-id paper-mode-toggle 400 200 200
+#N bindsym $mod+p exec --no-startup-id paper-mode-toggle 200 100 100
 #N border_radius 16
-#N floating_maximum_size 1800 x 900
+#N floating_maximum_size 1800 x 1800
 #N Workspace $ws1 output $LEFT
 #N Workspace $ws2 output $LEFT
 #N Workspace $ws3 output $LEFT
@@ -209,10 +209,10 @@ exec_always --no-startup-id "dunst -config ~/.config/dunst/dunstrc"
 ####################
 gaps top 35
 gaps inner 25
-bindsym $mod+bracketleft gaps horizontal current plus 10
-bindsym $mod+equal gaps vertical current minus 10
-bindsym $mod+minus gaps vertical current plus 10
-bindsym $mod+bracketright gaps horizontal current minus 10
+bindsym $mod+bracketleft gaps horizontal current plus 15
+bindsym $mod+equal gaps vertical current minus 15
+bindsym $mod+minus gaps vertical current plus 15
+bindsym $mod+bracketright gaps horizontal current minus 15
 for_window [class="^.*"] border pixel 0
 
 ##############

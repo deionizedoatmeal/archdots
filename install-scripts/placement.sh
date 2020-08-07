@@ -119,3 +119,5 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 
+# icons
+sudo ./appicons-setup.sh

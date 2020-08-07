@@ -25,6 +25,11 @@ mv electron5.desktop ../unused-applications/.
 mv cmake-gui.desktop ../unused-applications/.
 mv org.fontforge.FontForge.desktop ../unused-applications/.
 
+# kdenlive 
+sed -i '/Name=/d' ./org.kde.kdenlive.desktop
+sed -i '/GenericName=/d' ./org.kde.kdenlive.desktop
+sed -i "3iName= Kdenlive" org.kde.kdenlive.desktop
+sed -i "4iGenericName=Video Editor" org.kde.kdenlive.desktop
 
 # arandr 
 sed -i '/Name=/d' ./arandr.desktop
