@@ -9,7 +9,11 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # launch bars
-polybar main &
+
+#TRITON
+#T polybar main1800 &
 
 #NEPTUNE
-#N polybar secondary &
+#N polybar main1080 &
+#N polybar sq &
+#N polybar vert1080 &
