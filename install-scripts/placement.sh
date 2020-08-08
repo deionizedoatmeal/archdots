@@ -50,7 +50,6 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
                 cp .gitconfig ${HOME}/.
                 cp -r chrome ${HOME}/.mozilla/firefox/*.default-release/.
                 cp android_messages/* ${HOME}/.config/'Android Messages'/.
-                cp zoomus.conf ${HOME}/.config/.
                 cp gtk/*.ini ${HOME}/.config/gtk-3.0/.
                 cp gtk/*.ini ${HOME}/.config/gtk-4.0/.
                 cp gtk/.* ${HOME}/.
@@ -97,7 +96,6 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
                 cp .xprofile ${HOME}/.
                 cp -r chrome ${HOME}/.mozilla/firefox/*.default-release/.
                 cp android_messages/* ${HOME}/.config/'Android Messages'/.
-                cp zoomus.conf ${HOME}/.config/.
                 cp gtk/*.ini ${HOME}/.config/gtk-3.0/.
                 cp gtk/*.ini ${HOME}/.config/gtk-4.0/.
                 cp gtk/.* ${HOME}/.
