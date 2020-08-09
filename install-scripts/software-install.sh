@@ -9,21 +9,28 @@
 sudo pacman -Syu
 
 # package lists
-SYS="arandr nfsidmap exfat-utils dosfstools ntfsprogs cups cups-pdf hddtemp rsync rdiff-backup pulseaudio-bluetooth materia-gtk-theme xorg-xrdb cmake clang bc gdisk rust dbus pulseaudio bluez bluez-utils redshift git sudo vi kitty rofi dunst openvpn gnupg imagemagick mpg123 ffmpeg feh python ttf-fantasque-sans-mono python-pip nvme-cli lm_sensors openssh vim bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib"
-# vulkan-intel ??
+SYS="arandr nfsidmap exfat-utils dosfstools ntfsprogs cups cups-pdf hddtemp rsync rdiff-backup pulseaudio-bluetooth materia-gtk-theme xorg-xrdb neovim cmake clang bc gdisk rust dbus pulseaudio bluez bluez-utils pass redshift git sudo vi kitty rofi dunst openvpn gnupg imagemagick mpg123 ffmpeg feh python ttf-fantasque-sans-mono python-pip nvme-cli lm_sensors openssh vim bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib htop"
 # displaycal
 # dialog python-setuptools installed on nep??
 
-NONES="digikam inkscape pavucontrol libreoffice-fresh cheese nmap htop perl-image-exiftool python-pillow ranger zathura zathura-pdf-mupdf firefox neovim gnuplot vlc darktable neofetch steam atom gimp zathura pass speedtest-cli net-tools"
+NONES="digikam inkscape pavucontrol libreoffice-fresh cheese nmap perl-image-exiftool python-pillow ranger zathura zathura-pdf-mupdf firefox gnuplot vlc darktable neofetch steam atom gimp zathura speedtest-cli net-tools"
+#digikam?
 
-TRI="tlp tlp-rdw powertop upower"
+TRI="vulkan-intel tlp tlp-rdw powertop upower"
+#xf86-video-intel
 
-NEP="remmina kdenlive libvncserver virtualbox virtualbox-host-modules-arch nvidia xf86-video-nouveau"
+NEP="remmina kdenlive libvncserver virtualbox virtualbox-host-modules-arch"
+# NEW VIDEO
+# xf86-video-amdgpu 
+# vulkan-radeon lib32-vulkan-radeon
+# OLD VIDEO
+#vulkan-intel ??
+#nvidia xf86-video-nouveau
 
 #python3-venv?
 #pipx?
 
-#DESKTOP="busybox busybox-initramfs dropbear-initramfs system76-driver-nvidia openssh-server"
+#OLDDESKTOP="busybox busybox-initramfs dropbear-initramfs system76-driver-nvidia openssh-server"
 #SYS="libxss-dev macchanger libssl-dev speedtest-cli transmission-cli transmission-daemon exfat-utils libxcb-render0-dev libffi-dev python-dev python-cffi"
 
 
@@ -63,7 +70,6 @@ fi
 
 # yay package list #########################################################
 YAYSYS="brother-mfc-9560cdw ttf-symbola paper-icon-theme aic94xx-firmware wd719x-firmware vim-plug gllock-git compton-tryone-git ly"
-
 #python-pipx teamviewer autotiling
 YAYNEPTUNE="siril-git google-earth-pro virtualbox-ext-oracle remmina-plugin-rdesktop"
 YAYTRITON="system76-power system76-firmware-daemon system76-driver light-git"

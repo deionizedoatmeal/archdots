@@ -186,6 +186,22 @@ else
         pacman -S nvidia
 fi
 
+# install graphics drivers
+read -r -p "Do you want to install AMD drivers? [Y/n]" response
+if [[ "$response" =~ ^([Nn])+$ ]]; then
+        echo "cool"
+else
+        pacman -S xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon
+fi
+
+# install graphics drivers
+read -r -p "Do you want to install intel drivers? [Y/n]" response
+if [[ "$response" =~ ^([Nn])+$ ]]; then
+        echo "cool"
+else
+        pacman -S vulkan-intel
+fi
+
 #enable multilib
 #LINE="Include = /etc/pacman.d/mirrorlist"
 #sed -i "/^#$LINE/ c$LINE" /etc/pacman.conf
