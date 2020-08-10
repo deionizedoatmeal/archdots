@@ -23,7 +23,8 @@ client.background       $bg
 
 #monitors
 set $LEFT VGA-0
-set $RIGHT HDMI-0
+set $CENTER HDMI-0
+set $RIGHT HDMI-1-3
 
 # these are the variables which are different on my two machines
 # they are commented/uncommented by placement.sh
@@ -41,19 +42,17 @@ set $RIGHT HDMI-0
 
 #NEPTUNE 
 #N font pango:JetBrains Mono ExtraBold 12
-#N bindsym $mod+Ctrl+Left move workspace to output VGA-0
-#N bindsym $mod+Ctrl+Right move workspace to output HDMI-0
-#N bindsym $mod+p exec --no-startup-id paper-mode-toggle 400 200 200
+#N bindsym $mod+p exec --no-startup-id paper-mode-toggle 200 100 100
 #N border_radius 16
-#N floating_maximum_size 1800 x 900
+#N floating_maximum_size 1800 x 1800
 #N Workspace $ws1 output $LEFT
 #N Workspace $ws2 output $LEFT
 #N Workspace $ws3 output $LEFT
 #N Workspace $ws4 output $LEFT
-#N Workspace $ws5 output $LEFT
-#N Workspace $ws6 output $RIGHT
-#N Workspace $ws7 output $RIGHT
-#N Workspace $ws8 output $RIGHT
+#N Workspace $ws5 output $CENTER
+#N Workspace $ws6 output $CENTER
+#N Workspace $ws7 output $CENTER
+#N Workspace $ws8 output $CENTER
 #N Workspace $ws9 output $RIGHT
 #N Workspace $ws10 output $RIGHT
 
@@ -61,7 +60,7 @@ set $RIGHT HDMI-0
 set $center move position center
 
 # Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
+
 
 # start a terminal
 bindsym $mod+Return exec kitty
@@ -103,6 +102,9 @@ bindsym $mod+Shift+space floating toggle; $center
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
+
+# float modifier
+floating_modifier $mod
 
 # focus the parent container
 #bindsym $mod+a focus parent
@@ -208,10 +210,10 @@ exec_always --no-startup-id "dunst -config ~/.config/dunst/dunstrc"
 ####################
 gaps top 35
 gaps inner 25
-bindsym $mod+bracketleft gaps horizontal current plus 10
-bindsym $mod+equal gaps vertical current minus 10
-bindsym $mod+minus gaps vertical current plus 10
-bindsym $mod+bracketright gaps horizontal current minus 10
+bindsym $mod+bracketleft gaps horizontal current plus 15
+bindsym $mod+equal gaps vertical current minus 15
+bindsym $mod+minus gaps vertical current plus 15
+bindsym $mod+bracketright gaps horizontal current minus 15
 for_window [class="^.*"] border pixel 0
 
 ##############

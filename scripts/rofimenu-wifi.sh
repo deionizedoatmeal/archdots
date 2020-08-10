@@ -18,7 +18,7 @@ elif [[ "$CONSTATE" =~ "disabled" ]]; then
 fi
 
 # make an empty rofi menu while scaning for networks
-echo "scaning networks..." | rofi -dmenu -p "wifi $ONOFF" -lines 1 -width 23 &
+echo "scaning networks..." | rofi -dmenu -p "wifi $ONOFF" -lines 1 &
 
 # SSID,SECURITY,BARS,SIGNAL could also be used here
 FIELDS=SSID,BARS
@@ -46,7 +46,7 @@ fi
 killall rofi
 
 # start the real rofi menu
-CHENTRY=$(echo -e "$TOGGLE\n manual\n$LIST" | rofi -dmenu -p "wifi $ONOFF" -lines "$LINENUM" -width 23)
+CHENTRY=$(echo -e "$TOGGLE\n manual\n$LIST" | rofi -dmenu -p "wifi $ONOFF" -lines "$LINENUM")
 CHSSID=$(echo "$CHENTRY" | sed  's/\s\{2,\}/\|/g' | awk -F "|" '{print $1}' | cut -c 5-)
 
 # exit if the user didn't select anything

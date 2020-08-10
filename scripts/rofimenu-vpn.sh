@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rofi_command="rofi -lines 2 -width 19"
+rofi_command="rofi -lines 2"
 
 ### Options ###
 MSG=$(protonvpn s)

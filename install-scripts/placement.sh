@@ -50,7 +50,6 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
                 cp .gitconfig ${HOME}/.
                 cp -r chrome ${HOME}/.mozilla/firefox/*.default-release/.
                 cp android_messages/* ${HOME}/.config/'Android Messages'/.
-                cp zoomus.conf ${HOME}/.config/.
                 cp gtk/*.ini ${HOME}/.config/gtk-3.0/.
                 cp gtk/*.ini ${HOME}/.config/gtk-4.0/.
                 cp gtk/.* ${HOME}/.
@@ -97,7 +96,6 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
                 cp .xprofile ${HOME}/.
                 cp -r chrome ${HOME}/.mozilla/firefox/*.default-release/.
                 cp android_messages/* ${HOME}/.config/'Android Messages'/.
-                cp zoomus.conf ${HOME}/.config/.
                 cp gtk/*.ini ${HOME}/.config/gtk-3.0/.
                 cp gtk/*.ini ${HOME}/.config/gtk-4.0/.
                 cp gtk/.* ${HOME}/.
@@ -106,16 +104,11 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
           
                 # reminders 
                 echo "|> REMEMBER TO:"
-                echo "|> set layers.acceleration.force-enabled --> true TO PREVENT TEARING IN FIREFOX"
                 echo "|> change spotifyd password in the config"
-                echo "|> import gpg and ssh keys"
-                echo "|> set up busybox/dropbear server to headless decrypt at boot"
-                echo "|> set up pass, and tasks*"
-                echo "|> pair all bluetooth devices"
-                echo "|> install Wolfram Wathematica"
-                echo "|> install windows in VM"
-                echo "|> set up spotifyd with your password and email"
+                echo "|> set up icons in .desktop files"
         fi
 fi
 
 
+# icons
+sudo ./appicons-setup.sh

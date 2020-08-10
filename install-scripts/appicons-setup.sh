@@ -25,6 +25,11 @@ mv electron5.desktop ../unused-applications/.
 mv cmake-gui.desktop ../unused-applications/.
 mv org.fontforge.FontForge.desktop ../unused-applications/.
 
+# kdenlive 
+sed -i '/Name=/d' ./org.kde.kdenlive.desktop
+sed -i '/GenericName=/d' ./org.kde.kdenlive.desktop
+sed -i "3iName= Kdenlive" org.kde.kdenlive.desktop
+sed -i "4iGenericName=Video Editor" org.kde.kdenlive.desktop
 
 # arandr 
 sed -i '/Name=/d' ./arandr.desktop
@@ -191,37 +196,37 @@ sed -i "3iGenericName=Image Editor" gimp.desktop
 # libreoffice 
 sed -i '/Name=/d' ./libreoffice-startcenter.desktop
 sed -i '/GenericName=/d' ./libreoffice-startcenter.desktop
-sed -i "2iName= LibreOffice" libreoffice-startcenter.desktop
-sed -i "3iGenericName=Office Suite" libreoffice-startcenter.desktop
+sed -i "24iName= LibreOffice" libreoffice-startcenter.desktop
+sed -i "25iGenericName=Office Suite" libreoffice-startcenter.desktop
 
 sed -i '/Name=/d' ./libreoffice-writer.desktop
 sed -i '/GenericName=/d' ./libreoffice-writer.desktop
-sed -i "2iName= LibreOffice Writer" libreoffice-writer.desktop
-sed -i "3iGenericName=Word Processor" libreoffice-writer.desktop
+sed -i "24iName= LibreOffice Writer" libreoffice-writer.desktop
+sed -i "25iGenericName=Word Processor" libreoffice-writer.desktop
 
 sed -i '/Name=/d' ./libreoffice-calc.desktop
 sed -i '/GenericName=/d' ./libreoffice-calc.desktop
-sed -i "2iName= LibreOffice Calc" libreoffice-calc.desktop
-sed -i "3iGenericName=Spreadsheet" libreoffice-calc.desktop
+sed -i "24iName= LibreOffice Calc" libreoffice-calc.desktop
+sed -i "25iGenericName=Spreadsheet" libreoffice-calc.desktop
 
 sed -i '/Name=/d' ./libreoffice-impress.desktop
 sed -i '/GenericName=/d' ./libreoffice-impress.desktop
-sed -i "2iName=蠟 LibreOffice Impress" libreoffice-impress.desktop
-sed -i "3iGenericName=Presentation" libreoffice-impress.desktop
+sed -i "24iName=蠟 LibreOffice Impress" libreoffice-impress.desktop
+sed -i "25iGenericName=Presentation" libreoffice-impress.desktop
 
 sed -i '/Name=/d' ./libreoffice-draw.desktop
 sed -i '/GenericName=/d' ./libreoffice-draw.desktop
-sed -i "2iName= LibreOffice Draw" libreoffice-draw.desktop
-sed -i "3iGenericName=Drawing Program" libreoffice-draw.desktop
+sed -i "24iName= LibreOffice Draw" libreoffice-draw.desktop
+sed -i "25iGenericName=Drawing Program" libreoffice-draw.desktop
 
 sed -i '/Name=/d' ./libreoffice-base.desktop
 sed -i '/GenericName=/d' ./libreoffice-base.desktop
-sed -i "2iName= LibreOffice Base" libreoffice-base.desktop
-sed -i "3iGenericName=Database" libreoffice-base.desktop
+sed -i "24iName= LibreOffice Base" libreoffice-base.desktop
+sed -i "25iGenericName=Database" libreoffice-base.desktop
 
 sed -i '/Name=/d' ./libreoffice-math.desktop
 sed -i '/GenericName=/d' ./libreoffice-math.desktop
-sed -i "2iName=烈 LibreOffice Math" libreoffice-math.desktop
-sed -i "3iGenericName=Formula Editor" libreoffice-math.desktop
+sed -i "24iName=烈 LibreOffice Math" libreoffice-math.desktop
+sed -i "25iGenericName=Formula Editor" libreoffice-math.desktop
 
 exit
