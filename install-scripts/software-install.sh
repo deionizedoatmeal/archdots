@@ -14,7 +14,6 @@ SYS="arandr nfsidmap exfat-utils dosfstools ntfsprogs cups cups-pdf hddtemp rsyn
 # dialog python-setuptools installed on nep??
 
 NONES="digikam inkscape pavucontrol libreoffice-fresh cheese nmap perl-image-exiftool python-pillow ranger zathura zathura-pdf-mupdf firefox gnuplot vlc darktable neofetch steam atom gimp zathura speedtest-cli net-tools"
-#digikam?
 
 TRI="vulkan-intel tlp tlp-rdw powertop upower"
 #xf86-video-intel

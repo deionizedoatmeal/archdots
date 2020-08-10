@@ -24,6 +24,15 @@ mv electron4.desktop ../unused-applications/.
 mv electron5.desktop ../unused-applications/.
 mv cmake-gui.desktop ../unused-applications/.
 mv org.fontforge.FontForge.desktop ../unused-applications/.
+mv QMLPlayer.desktop ../unused-applications/.
+mv Player.desktop ../unused-applications/.
+mv org.kde.showfoto.desktop ../unused-applications/.
+
+# digiKam 
+sed -i '/Name=/d' ./org.kde.digikam.desktop
+sed -i '/GenericName=/d' ./org.kde.digikam.desktop
+sed -i "2iName= DigiKam" org.kde.digikam.desktop
+sed -i "3iGenericName=Photo Management Program" org.kde.digikam.desktop
 
 # kdenlive 
 sed -i '/Name=/d' ./org.kde.kdenlive.desktop
