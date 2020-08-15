@@ -1,2 +1,3 @@
 add to virtual box users group
 better groups?
+fstab boot failure case?

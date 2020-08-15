@@ -22,9 +22,9 @@ client.placeholder      $bg     $bg     $fg  $bg       $bg
 client.background       $bg
 
 #monitors
-set $LEFT VGA-0
-set $CENTER HDMI-0
-set $RIGHT HDMI-1-3
+set $LEFT DisplayPort-2
+set $CENTER HDMI-A-0
+set $RIGHT DisplayPort-1
 
 # these are the variables which are different on my two machines
 # they are commented/uncommented by placement.sh
