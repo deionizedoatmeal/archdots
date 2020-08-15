@@ -1,4 +1,5 @@
 #!/bin/bash
+# drops my ssh configs where they need to be and starts the systemd services
 
 # copy configs
 sudo cp ${HOME}/Secrets/ssh/sshd_config /etc/ssh/sshd_config

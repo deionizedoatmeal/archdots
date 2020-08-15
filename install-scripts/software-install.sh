@@ -1,6 +1,5 @@
 #!/bin/bash
 # by ian k. bania
-# script to install various pacman, AUR, python, rust packages as well as clone and compiling some software directly from github, really only meant to work with my set up so feel free to canibalize for your own install scripts
 
 ###################
 #     PACMAN      #

@@ -33,7 +33,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 # cups
-read -r -p "#### Would you like to enable and start teamviewerd.service? [y/N] ####" response
+read -r -p "#### Would you like to enable and start cups.service? [y/N] ####" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
         sudo systemctl enable org.cups.cupsd.service
         sudo systemctl start org.cups.cupsd.service

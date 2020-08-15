@@ -1,4 +1,6 @@
 #!/bin/bash
+# adds the keyfile that was randkmly generated at install tk my luks partions for the non root drives
+# this allows these drives to be automatically dexrypted at startup once the root partion is unlocked 
 
 # open and add key file
 sudo cryptsetup open /dev/sde1 external
