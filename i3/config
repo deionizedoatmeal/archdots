@@ -228,6 +228,8 @@ bindsym --release $mod+Print exec --no-startup-id scrot; exec --no-startup-id cl
 for_window [class="feh"] floating enable
 for_window [class="steam"] floating enable
 for_window [class="system-config-printer"] floating enable
+for_window [class="pavucontrol"] floating enable
+for_window [class="arandr"] floating enable
 
 ########
 # LOCK #
