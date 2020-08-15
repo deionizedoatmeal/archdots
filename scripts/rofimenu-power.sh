@@ -1,7 +1,7 @@
 #!/bin/bash
 # by ian k. bania
 # NOTE: the user who executes this script needs to be able to execute sudo system76-power without being prompted for a password. This isn't the case on ubuntu, but is on arch, check my sudoers for details.
-rofi_command="rofi -lines 3"
+rofi_command="rofi -lines 3 -width 250"
 profile="$(sudo system76-power profile | sed -n -e 's/^.*Profile: //p')"               
 
 
