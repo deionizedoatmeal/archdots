@@ -54,6 +54,7 @@ These are my dotfiles and scripts for my workstation/server and my personal lapt
 - using rofi to connect to bluetooth devices and toggle radios
 - using rofi to mannage vpn connection
 - using rofi to connect to wireless networks and toggle radios
+- using rofi to interface with [password-store](https://www.passwordstore.org) and autofill when logging in 
 - mounting and opening encrypted LUKS drives
 - switching between system wide dark and light mode
 
