@@ -38,6 +38,12 @@ set $RIGHT HDMI-A-0
 #T bindsym XF86MonBrightnessDown exec --no-startup-id light-down
 #T bindsym F9 exec --no-startup-id light-up
 #T bindsym F8 exec --no-startup-id light-down
+#T bindsym XF86AudioPlay exec --no-startup-id "playerctl play-pause"
+#T bindsym XF86AudioRaiseVolume exec --no-startup-id vol-up; exec --no-startup-id click1 #increase volume
+#T bindsym XF86AudioLowerVolume exec --no-startup-id vol-down; exec --no-startup-id click1 #decrease volume
+#T bindsym XF86AudioMute exec --no-startup-id amixer -D pulse sset Master toggle; exec --no-startup-id click1 #mute sound
+#T bindsym F6 exec --no-startup-id vol-up; exec --no-startup-id click1 #increase volume
+#T bindsym F5 exec --no-startup-id vol-down; exec --no-startup-id click1 #decrease volume
 #T bindsym $mod+Shift+p exec rofimenu-power
 
 #NEPTUNE 
@@ -45,6 +51,8 @@ set $RIGHT HDMI-A-0
 #N bindsym $mod+p exec --no-startup-id paper-mode-toggle 200 100 100
 #N border_radius 16
 #N floating_maximum_size 1800 x 1800
+#N bindsym F4 exec --no-startup-id vol-up; exec --no-startup-id click1 #increase volume
+#N bindsym F5 exec --no-startup-id vol-down; exec --no-startup-id click1 #decrease volume
 #N Workspace $ws1 output $LEFT
 #N Workspace $ws2 output $LEFT
 #N Workspace $ws3 output $LEFT
@@ -242,17 +250,6 @@ bindsym $mod+BackSpace exec --no-startup-id click1; exec --no-startup-id gllock
 ###################
 exec_always --no-startup-id xset dpms 200
 bindsym $mod+z exec --no-startup-id dpms-toggle
-
-#########
-# AUDIO #
-#########
-bindsym XF86AudioPlay exec --no-startup-id "playerctl play-pause"
-bindsym XF86AudioRaiseVolume exec --no-startup-id vol-up; exec --no-startup-id click1 #increase volume
-bindsym XF86AudioLowerVolume exec --no-startup-id vol-down; exec --no-startup-id click1 #decrease volume
-bindsym XF86AudioMute exec --no-startup-id amixer -D pulse sset Master toggle; exec --no-startup-id click1 #mute sound
-bindsym F6 exec --no-startup-id vol-up; exec --no-startup-id click1 #increase volume
-bindsym F5 exec --no-startup-id vol-down; exec --no-startup-id click1 #decrease volume
-bindsym F3 exec --no-startup-id amixer -D pulse sset Master toggle; exec --no-startup-id click1 #mute sound
 
 ############
 # REDSHIFT #
