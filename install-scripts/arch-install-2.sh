@@ -206,9 +206,6 @@ fi
 #LINE="Include = /etc/pacman.d/mirrorlist"
 #sed -i "/^#$LINE/ c$LINE" /etc/pacman.conf
 
-# remove this repo
-rm -r /archdots
-
 read -r -p "Do you want to set up fstab and crypttab for neptune? [y/N]" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
 
