@@ -18,13 +18,7 @@ NONES="digikam inkscape pavucontrol libreoffice-fresh cheese nmap perl-image-exi
 TRI="vulkan-intel tlp tlp-rdw powertop upower"
 #xf86-video-intel
 
-NEP="remmina kdenlive libvncserver virtualbox virtualbox-host-modules-arch"
-# NEW VIDEO
-# xf86-video-amdgpu 
-# vulkan-radeon lib32-vulkan-radeon
-# OLD VIDEO
-#vulkan-intel ??
-#nvidia xf86-video-nouveau
+NEP="xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon remmina kdenlive libvncserver virtualbox virtualbox-host-modules-arch"
 
 #python3-venv?
 #pipx?
