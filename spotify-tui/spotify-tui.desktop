@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Name=Spotify (TUI)
+Name=阮 Spotify (TUI)
 GenericName=TUI Music Player
 Icon=spotify-client
 Exec=kitty sh -c "spotify-tui"
