@@ -1,6 +1,12 @@
 #!/bin/bash
 
-rofi_command="rofi -lines 4 -width 200"
+# check for triton (hidpi) flag
+if [[ "$1" =~ ^([Tt])+$ ]]; then
+        rofi_command="rofi -lines 3 -width 350"
+else
+        rofi_command="rofi -lines 3 -width 200"
+fi
+
 
 ### Options ###
 power_off=" poweroff"

@@ -44,7 +44,10 @@ set $RIGHT HDMI-A-0
 #T bindsym XF86AudioMute exec --no-startup-id amixer -D pulse sset Master toggle; exec --no-startup-id click1 #mute sound
 #T bindsym F6 exec --no-startup-id vol-up; exec --no-startup-id click1 #increase volume
 #T bindsym F5 exec --no-startup-id vol-down; exec --no-startup-id click1 #decrease volume
-#T bindsym $mod+Shift+p exec rofimenu-power
+#T bindsym $mod+Shift+p exec rofimenu-power T
+#T bindsym $mod+Shift+e exec rofimenu-exit T
+#T bindsym $mod+Shift+b exec --no-startup-id rofimenu-bluetooth T
+#T bindsym $mod+Shift+v exec --no-startup-id rofimenu-vpn T
 
 #NEPTUNE 
 #N font pango:JetBrains Mono ExtraBold 12
@@ -63,6 +66,9 @@ set $RIGHT HDMI-A-0
 #N Workspace $ws8 output $CENTER
 #N Workspace $ws9 output $RIGHT
 #N Workspace $ws10 output $RIGHT
+#N bindsym $mod+Shift+e exec rofimenu-exit
+#N bindsym $mod+Shift+b exec --no-startup-id rofimenu-bluetooth
+#N bindsym $mod+Shift+v exec --no-startup-id rofimenu-vpn
 
 # RESIZE VARIABLES
 set $center move position center
@@ -175,9 +181,6 @@ bindsym $mod+Shift+r restart
 ##############
 # ROFI MENUS # (place scripts into /bin)
 ##############
-bindsym $mod+Shift+e exec rofimenu-exit
-bindsym $mod+Shift+b exec --no-startup-id rofimenu-bluetooth
-bindsym $mod+Shift+v exec --no-startup-id rofimenu-vpn
 bindsym $mod+Shift+w exec --no-startup-id rofimenu-wifi
 bindsym $mod+Shift+s exec --no-startup-id rofimenu-pass
 
