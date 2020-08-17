@@ -15,4 +15,3 @@
 [ ] dunst brightness bug
 [ ] i3 open windows as float rules
 [ ] modular gaps modes?
-[ ] dunst bug
