@@ -1,11 +1,11 @@
 [global]
 
 #TRITON
-#T font = JetBrainsMono Bold 24
+#T font = JetBrainsMono Bold 16
 #T corner_radius = 27
 
 #NEPTUNE
-#N font = JetBrainsMono 18
+#N font = JetBrainsMono 12
 #N corner_radius = 16
 
 markup = yes
