@@ -12,4 +12,4 @@
 (pactl set-sink-volume 10 -5%)
 
 VOL=$(pacmd dump-volumes | awk 'NR==1{print $8}' | sed 's/\%//')
-notify-send 墳$VOL -h string:x-canonical-private-synchronous:anything 
+notify-send "墳 $VOL" -h string:x-canonical-private-synchronous:anything 
