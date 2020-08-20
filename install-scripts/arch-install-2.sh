@@ -15,7 +15,7 @@ echo "--> ${DISKP}2 -------- 550M ------------ part ----- /boot/efi"
 echo "--> ${DISKP}3 -------- rest of disk ---- part ----- "
 echo "   --> cryptlvm ------ rest of disk ---- crypt ---- "
 echo "      --> vg-swap ---- 8G -------------- lvm ------ [SWAP]"
-echo "      --> vg-root ---- 20G or 30G------- lvm ------ /"
+echo "      --> vg-root ---- 40G or 30G------- lvm ------ /"
 echo "      --> vg-home ---- rest of disk ---- lvm ------ /home"
 echo "#########################################################"
 echo "lsblk:"
@@ -52,7 +52,7 @@ while true; do
                 ln -sf /usr/share/zoneinfo/${TIMEZN} /etc/localtime
                 break
         else
-                echo "Sorry the unix timelords have decided that timezone does not exist, try again."
+                echo "Sorry, the unix timelords have decided that timezone does not exist, try again."
                 continue
         fi
 done
@@ -74,7 +74,7 @@ cp /archdots/system/hosts_incomplete /etc/hosts
 LUKSUUID=$(blkid | grep "${DISKP}3" | grep -o "UUID=.*" | cut -d\" -f2)
 
 # remove existing line in the file
-sed -i '/GRUB_CMDLINE_LINUX=/d' /etc/default/grub
+sed -i '/GRUB_CMDLINE_LINUX=/d' /archdots/system/grub
 
 # and insert that into tempelate for /etc/default/grub
 LINEINSERT=$(echo "10iGRUB_CMDLINE_LINUX="cryptdevice=UUID=${LUKSUUID}:cryptlvm root=/dev/vg/root cryptkey=rootfs:/root/secrets/crypto_keyfile.bin"")
@@ -83,6 +83,8 @@ sed -i "${LINEINSERT}" /archdots/system/grub
 
 # copy /etc/default/grub over
 cp -p /archdots/system/grub /etc/default/grub
+
+mkdir /boot/grub/fonts
 
 # set grub font
 while true; do
@@ -93,7 +95,7 @@ while true; do
                 cp -p /archdots/system/JetBrainsMono-Bold12.pf2 /boot/grub/fonts/JetBrainsMono-Bold.pf2
                 break
 
-        if [[ "$response" =~ ^([24])+$ ]]; then
+        elif [[ "$response" =~ ^([24])+$ ]]; then
                 cp -p /archdots/system/JetBrainsMono-Bold24.pf2 /boot/grub/fonts/JetBrainsMono-Bold.pf2
                 break
         
@@ -103,8 +105,6 @@ while true; do
         fi
 done
 
-
-cp -p /archdots/system/JetBrainsMono-Bold.pf2 /boot/grub/fonts/.
 
 # copy sudoers mkinitcpio.conf and pacman.conf
 cp -p /archdots/system/sudoers /etc/sudoers
@@ -189,7 +189,7 @@ fi
 # install graphics drivers
 read -r -p "Do you want to install AMD drivers? [Y/n]" response
 if [[ "$response" =~ ^([Nn])+$ ]]; then
-        echo "cool"
+        echo "rad"
 else
         pacman -S xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon
 fi
@@ -197,7 +197,7 @@ fi
 # install graphics drivers
 read -r -p "Do you want to install intel drivers? [Y/n]" response
 if [[ "$response" =~ ^([Nn])+$ ]]; then
-        echo "cool"
+        echo "sweet"
 else
         pacman -S vulkan-intel
 fi

@@ -147,7 +147,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 # clone this repo on the new system
 git clone https://github.com/deionizedoatmeal/archdots.git /mnt/archdots
 
-echo "Live image set up complete, now going to chroot into the new system. Once there execute the arch-install-2.sh script to finish the install process."
+echo "Live image set up complete, now going to chroot into the new system. Once there execute the ./archdots/install-scripts/arch-install-2.sh script to finish the install process."
 
 touch /mnt/archdots/system/diskp
 touch /mnt/archdots/system/disk
