@@ -86,6 +86,7 @@ cp -p /archdots/system/grub /etc/default/grub
 
 # set grub font
 while true; do
+  
         #retry if ya goofed
         read -r -p "What size font for grub, 12 or 24? [12/24]" response
         if [[ "$response" =~ ^([12])+$ ]]; then
@@ -101,7 +102,6 @@ while true; do
                 countine
         fi
 done
-
 
 
 cp -p /archdots/system/JetBrainsMono-Bold.pf2 /boot/grub/fonts/.
