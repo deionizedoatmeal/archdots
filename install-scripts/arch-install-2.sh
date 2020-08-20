@@ -84,28 +84,6 @@ sed -i "${LINEINSERT}" /archdots/system/grub
 # copy /etc/default/grub over
 cp -p /archdots/system/grub /etc/default/grub
 
-mkdir /boot/grub/fonts
-
-# set grub font
-while true; do
-  
-        #retry if ya goofed
-        read -r -p "What size font for grub, 12 or 24? [12/24]" response
-        if [[ "$response" =~ ^([12])+$ ]]; then
-                cp -p /archdots/system/JetBrainsMono-Bold12.pf2 /boot/grub/fonts/JetBrainsMono-Bold.pf2
-                break
-
-        elif [[ "$response" =~ ^([24])+$ ]]; then
-                cp -p /archdots/system/JetBrainsMono-Bold24.pf2 /boot/grub/fonts/JetBrainsMono-Bold.pf2
-                break
-        
-        else
-                echo "Not a valid font size, try again."
-                countine
-        fi
-done
-
-
 # copy sudoers mkinitcpio.conf and pacman.conf
 cp -p /archdots/system/sudoers /etc/sudoers
 cp -p /archdots/system/mkinitcpio.conf /etc/mkinitcpio.conf
@@ -152,6 +130,27 @@ while true; do
                 continue
         else
                 break
+        fi
+done
+
+mkdir /boot/grub/fonts
+
+# set grub font
+while true; do
+  
+        #retry if ya goofed
+        read -r -p "What size font for grub, 12 or 24? [12/24]" response
+        if [[ "$response" =~ ^([12])+$ ]]; then
+                cp -p /archdots/system/JetBrainsMono-Bold12.pf2 /boot/grub/fonts/JetBrainsMono-Bold.pf2
+                break
+
+        elif [[ "$response" =~ ^([24])+$ ]]; then
+                cp -p /archdots/system/JetBrainsMono-Bold24.pf2 /boot/grub/fonts/JetBrainsMono-Bold.pf2
+                break
+        
+        else
+                echo "Not a valid font size, try again."
+                countine
         fi
 done
 
@@ -221,7 +220,7 @@ fi
 # remove this repo
 rm -r /archdots
 
-echo "Notes for ian:
+echo "Notes for ian:"
 echo "-> remember to clean the key slots for ssd, hdd, and external"
 echo "-> after mounting backup drive, copy lvm over to replace metadata"
 echo "-> copy ssh keys over"
