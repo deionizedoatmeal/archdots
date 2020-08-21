@@ -30,11 +30,11 @@ if [[ ${RIGHTVALUE} -eq 0 ]]; then
     i3-msg gaps left current set $1;
     i3-msg gaps top current set $2;
     i3-msg gaps bottom current set $3;
-    i3-msg split v;
+#    i3-msg split v;
 else
     i3-msg gaps right current set 0;
     i3-msg gaps left current set 0;
     i3-msg gaps top current set 35;
     i3-msg gaps bottom current set 0;
-    i3-msg split h;
+#    i3-msg split h;
 fi

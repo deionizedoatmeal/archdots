@@ -3,10 +3,10 @@
 # this compiles a fork of i3-gaps with rounded window corners (https://github.com/resloved/i3.git)
 
 # pacman
-sudo pacman -Syy && sudo pacman -Syu
+sudo pacman -Syyu
 
 # pacman dependencies on arch 
-sudo pacman -S --needed clang git wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl cairo pango
+sudo pacman -S --needed xorg xorg-xinit clang cmake git wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl cairo pango
 
 # build doesnt work with gcc
 export CC=/usr/bin/clang

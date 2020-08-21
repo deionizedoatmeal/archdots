@@ -19,11 +19,11 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 # avahi
-read -r -p "#### Would you like to enable and start avahi-daemon.service? [y/N] ####" response
-if [[ "$response" =~ ^([Yy])+$ ]]; then
-        sudo systemctl enable avahi-daemon.service
-        sudo systemctl start avahi-daemon.service
-fi
+#read -r -p "#### Would you like to enable and start avahi-daemon.service? [y/N] ####" response
+#if [[ "$response" =~ ^([Yy])+$ ]]; then
+#        sudo systemctl enable avahi-daemon.service
+#        sudo systemctl start avahi-daemon.service
+#fi
 
 # tlp
 read -r -p "#### Would you like to enable and start tlp.service? [y/N] ####" response
@@ -44,6 +44,13 @@ read -r -p "#### Would you like to enable and start dhcpcd.service? [y/N] ####" 
 if [[ "$response" =~ ^([Yy])+$ ]]; then
         sudo systemctl enable dhcpcd.service
         sudo systemctl start dhcpcd.service
+fi
+
+# NetworkManager
+read -r -p "#### Would you like to enable and start NetworkManager.service? [y/N] ####" response
+if [[ "$response" =~ ^([Yy])+$ ]]; then
+        sudo systemctl enable NetworkManager.service
+        sudo systemctl start NetworkManager.service
 fi
 
 # bluetooth 
