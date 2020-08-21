@@ -212,7 +212,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
         ./archdots/install-scripts/keyfile-add.sh
 
         # copy fstab and crypttab over
-        cp -p /archdots/system/fstab /etc/fstab
+        cat /archdots/system/fstab_incomplete >> /etc/fstab
         cp -p /archdots/system/crypttab /etc/crypttab
 
 fi
@@ -223,7 +223,7 @@ rm -r /archdots
 echo "Notes for ian:"
 echo "-> remember to clean the key slots for ssd, hdd, and external"
 echo "-> after mounting backup drive, copy lvm over to replace metadata"
-echo "-> copy ssh keys over"
+echo "-> copy ssh and gpg keys over"
 echo "-> set up remotes for pass and dijo"
 echo "-> copy ssh keys over"
 echo "-> on intel/nvidia graphics set layers.acceleration.force-enabled --> true TO PREVENT TEARING IN FIREFOX"
