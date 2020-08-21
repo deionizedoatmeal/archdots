@@ -1,6 +1,12 @@
 #!/bin/bash
 # enable and start all the systemd services after a fresh install
 
+# don't run as sudo
+if [ "$EUID" -eq 0 ]
+  then echo "Please do not run as root"
+  exit
+fi
+
 ####################
 #     SERVICES     #
 ####################
@@ -19,11 +25,11 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 # avahi
-read -r -p "#### Would you like to enable and start avahi-daemon.service? [y/N] ####" response
-if [[ "$response" =~ ^([Yy])+$ ]]; then
-        sudo systemctl enable avahi-daemon.service
-        sudo systemctl start avahi-daemon.service
-fi
+#read -r -p "#### Would you like to enable and start avahi-daemon.service? [y/N] ####" response
+#if [[ "$response" =~ ^([Yy])+$ ]]; then
+#        sudo systemctl enable avahi-daemon.service
+#        sudo systemctl start avahi-daemon.service
+#fi
 
 # tlp
 read -r -p "#### Would you like to enable and start tlp.service? [y/N] ####" response

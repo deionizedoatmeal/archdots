@@ -2,8 +2,14 @@
 # comment out needed lines for apt based or pacman based systems 
 # this compiles a fork of i3-gaps with rounded window corners (https://github.com/resloved/i3.git)
 
+# don't run as sudo
+if [ "$EUID" -eq 0 ]
+  then echo "Please do not run as root"
+  exit
+fi
+
 # pacman
-sudo pacman -Syy && sudo pacman -Syu
+sudo pacman -Syyu
 
 # pacman dependencies on arch 
 sudo pacman -S --needed clang git wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl cairo pango
