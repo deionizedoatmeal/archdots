@@ -25,5 +25,6 @@ else
 fi
 
 pass git pull origin master --allow-unrelated-histories
+pass git config pull.rebase false
 
 cp ../system/gpg-agent.conf ${HOME}/.gnupg/.
