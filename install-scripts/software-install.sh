@@ -20,8 +20,8 @@ SYS="inetutils arandr xdotool nfsidmap exfat-utils dosfstools ntfsprogs cups cup
 
 NONES="digikam inkscape pavucontrol libreoffice-fresh cheese nmap perl-image-exiftool python-pillow ranger zathura zathura-pdf-mupdf firefox gnuplot vlc darktable neofetch steam atom gimp zathura speedtest-cli"
 
-TRI="vulkan-intel tlp tlp-rdw powertop upower"
-#xf86-video-intel
+TRI="xf86-video-intel vulkan-intel powertop upower"
+#tlp tlp-rdw removed in aug 
 
 NEP="xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon remmina kdenlive libvncserver virtualbox virtualbox-host-modules-arch"
 
