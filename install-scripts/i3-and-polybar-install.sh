@@ -2,6 +2,12 @@
 # comment out needed lines for apt based or pacman based systems 
 # this compiles a fork of i3-gaps with rounded window corners (https://github.com/resloved/i3.git)
 
+# don't run as sudo
+if [ "$EUID" -eq 0 ]
+  then echo "Please do not run as root"
+  exit
+fi
+
 # pacman
 sudo pacman -Syyu
 

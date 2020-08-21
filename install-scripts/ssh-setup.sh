@@ -1,6 +1,10 @@
 #!/bin/bash
 # drops my ssh configs where they need to be and starts the systemd services
 
+# move the the directory the script is in
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+cd $DIR
+
 # copy configs
 sudo cp ${HOME}/Secrets/ssh/sshd_config /etc/ssh/sshd_config
 

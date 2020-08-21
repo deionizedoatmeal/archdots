@@ -2,6 +2,10 @@
 # by ian k. bania (feb '20)
 # lets me easily compare my local differences in dotfiles to the ones in the repo, so i dont overwrite any edits i've made locally
 
+# move to the directory the script is in
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+cd $DIR
+
 echo "##### i3/config ######"
 diff ../i3/config ~/.config/i3/config
 echo "##### polybar/config ######"

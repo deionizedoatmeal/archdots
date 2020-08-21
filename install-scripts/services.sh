@@ -1,6 +1,12 @@
 #!/bin/bash
 # enable and start all the systemd services after a fresh install
 
+# don't run as sudo
+if [ "$EUID" -eq 0 ]
+  then echo "Please do not run as root"
+  exit
+fi
+
 ####################
 #     SERVICES     #
 ####################
