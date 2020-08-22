@@ -97,8 +97,8 @@ sed -i "3iGenericName=SMS Messaging" android-messages-desktop.desktop
 # inkscape 
 sed -i '/Name=/d' ./org.inkscape.Inkscape.desktop
 sed -i '/GenericName=/d' ./org.inkscape.Inkscape.desktop
-sed -i "2iName= Inkscape" org.inkscape.Inkscape.desktop
-sed -i "3iGenericName=Vector Graphics Editor" org.inkscape.Inkscape.desktop
+sed -i "4iName= Inkscape" org.inkscape.Inkscape.desktop
+sed -i "5iGenericName=Vector Graphics Editor" org.inkscape.Inkscape.desktop
 
 # firefox
 sed -i '/Name=/d' ./firefox.desktop
