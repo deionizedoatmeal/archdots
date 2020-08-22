@@ -24,7 +24,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
         sudo systemctl start system76-firmware-daemon.service
 fi
 
-# avahi
+# avahi needed for mathmatica?
 #read -r -p "#### Would you like to enable and start avahi-daemon.service? [y/N] ####" response
 #if [[ "$response" =~ ^([Yy])+$ ]]; then
 #        sudo systemctl enable avahi-daemon.service
@@ -32,11 +32,11 @@ fi
 #fi
 
 # tlp
-read -r -p "#### Would you like to enable and start tlp.service? [y/N] ####" response
-if [[ "$response" =~ ^([Yy])+$ ]]; then
-        sudo systemctl enable tlp.service
-        sudo systemctl start tlp.service
-fi
+#read -r -p "#### Would you like to enable and start tlp.service? [y/N] ####" response
+#if [[ "$response" =~ ^([Yy])+$ ]]; then
+#        sudo systemctl enable tlp.service
+#        sudo systemctl start tlp.service
+#fi
 
 # cups
 read -r -p "#### Would you like to enable and start cups.service? [y/N] ####" response
@@ -46,7 +46,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 # DHCP
-read -r -p "#### Would you like to enable and start dhcpcd.service? [y/N] ####" response
+read -r -p "#### Would you like to enable and start dhcpcd.service? (tri only) [y/N] ####" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
         sudo systemctl enable dhcpcd.service
         sudo systemctl start dhcpcd.service
