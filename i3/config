@@ -229,6 +229,8 @@ bindsym $mod+equal gaps vertical current minus 15
 bindsym $mod+minus gaps vertical current plus 15
 bindsym $mod+bracketright gaps horizontal current minus 15
 for_window [class="^.*"] border pixel 0
+new_window none
+new_float none
 
 ##############
 # SCREENSHOT #
