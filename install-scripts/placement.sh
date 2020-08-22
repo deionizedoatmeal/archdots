@@ -30,7 +30,6 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
                 mkdir ~/.config/rofi/
                 mkdir ~/.config/spotifyd/
                 mkdir ~/.config/spotify-tui/
-                mkdir ~/.config/wal/templates/
                 mkdir ~/.config/wal/
                 mkdir ~/.config/zathura/
 
@@ -53,7 +52,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
                 ./install-scripts/uncomment.sh T kitty/kitty.conf ${HOME}/.config/kitty/kitty.conf
                 ./install-scripts/uncomment.sh T .Xresources ${HOME}/.Xresources
                 ln -sf ~/.cache/wal/dunstrc ${HOME}/.config/dunst/dunstrc
-                cp wal/templates/* ${HOME}/.config/wal/templates/.
+                cp -r wal/* ${HOME}/.config/wal/.
                 ./install-scripts/uncomment.sh T wal/templates/dunstrc ${HOME}/.config/wal/templates/dunstrc
                 cp spotify-tui/* ${HOME}/.config/spotify-tui/.
                 cp spotifyd/* ${HOME}/.config/spotifyd/.
@@ -99,7 +98,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
                 ./install-scripts/uncomment.sh N kitty/kitty.conf ${HOME}/.config/kitty/kitty.conf
                 ./install-scripts/uncomment.sh N .Xresources ${HOME}/.Xresources
                 ln -sf ~/.cache/wal/dunstrc ${HOME}/.config/dunst/dunstrc
-                cp wal/templates/* ${HOME}/.config/wal/templates/.
+                cp -r wal/* ${HOME}/.config/wal/.
                 ./install-scripts/uncomment.sh N wal/templates/dunstrc ${HOME}/.config/wal/templates/dunstrc
                 cp spotify-tui/* ${HOME}/.config/spotify-tui/.
                 cp spotifyd/* ${HOME}/.config/spotifyd/.
