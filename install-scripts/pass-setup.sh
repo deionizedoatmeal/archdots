@@ -35,6 +35,9 @@ read -r -p "Would you like to import gpg keys? [y/N] " RESPONSE
 if [[ "$RESPONSE" =~ ^([Yy])+$ ]]; then
         read -r -p "What is the path to the key? " KEYPATH
         gpg2 --import ${KEYPATH}
+        read -r -p "What is the name of the key? " NAME
+        echo "Once in gpg2, run the command 'trust', follow directions, then quit."
+        gpg2 --edit-key ${NAME}
 else
         set -e 
 fi
