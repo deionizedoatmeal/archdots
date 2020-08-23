@@ -18,7 +18,7 @@ SYS="dmidecode inetutils arandr xdotool nfsidmap exfat-utils dosfstools ntfsprog
 # displaycal
 # dialog python-setuptools installed on nep??
 
-NONES="digikam inkscape pavucontrol libreoffice-fresh cheese nmap perl-image-exiftool python-pillow ranger zathura zathura-pdf-mupdf firefox gnuplot vlc darktable neofetch steam atom gimp zathura speedtest-cli"
+NONES="digikam inkscape pavucontrol libreoffice-fresh cheese spotifyd nmap perl-image-exiftool python-pillow ranger zathura zathura-pdf-mupdf firefox gnuplot vlc darktable neofetch steam atom gimp zathura speedtest-cli"
 
 TRI="xf86-video-intel vulkan-intel powertop upower"
 #tlp tlp-rdw removed in aug 
@@ -71,7 +71,7 @@ YAYSYS="brother-mfc-9560cdw ttf-symbola paper-icon-theme vim-plug gllock-git com
 #python-pipx teamviewer autotiling
 YAYNEPTUNE="siril-git google-earth-pro virtualbox-ext-oracle remmina-plugin-rdesktop"
 YAYTRITON="system76-power system76-firmware-daemon system76-driver light-git"
-YAYNONES="spotify mfetch-git android-messages-desktop spotifyd-bin-full zoom"
+YAYNONES="spotify mfetch-git android-messages-desktop zoom"
 ##########################################################################
 # yay install
 
