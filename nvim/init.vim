@@ -2,6 +2,7 @@ set number
 set ruler
 syntax enable           " enable syntax processin
 set tabstop=4       " number of visual spaces per TAB
+set shiftwidth=4    
 set softtabstop=4   " number of spaces in tab when editing
 set expandtab       " tabs are spaces
 set showcmd             " show command in bottom bar
