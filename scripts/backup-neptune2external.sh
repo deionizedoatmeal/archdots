@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# game saves
+cp -ru .local/share/aspyr-media/ Steam/.
+cp -ru .local/share/Euro\ Truck\ Simulator\ 2/ Steam/.
+
 if [ "$EUID" -eq 0 ]; then 
         echo "Please do not run as root"
         exit
