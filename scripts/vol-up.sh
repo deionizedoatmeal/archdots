@@ -7,7 +7,7 @@ if [[ $VOL -lt 100 ]]; then
     for I in $SINKS; do
         (pactl set-sink-volume $I +5%)
     done
-        
+fi
 #    (pactl set-sink-volume 0 +5%)
 #    (pactl set-sink-volume 1 +5%)
 #    (pactl set-sink-volume 2 +5%)
@@ -20,7 +20,6 @@ if [[ $VOL -lt 100 ]]; then
 #    (pactl set-sink-volume 9 +5%)
 #    (pactl set-sink-volume 10 +5%)
 
-fi
 
 VOL=$(pacmd dump-volumes | awk 'NR==1{print $8}' | sed 's/\%//')
 

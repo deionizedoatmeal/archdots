@@ -22,6 +22,7 @@ nnoremap <space> za
 set foldmethod=indent   " fold based on indent level
 
 " system clipboard
+vnoremap <C-c> "*y
 :set clipboard=unnamed
 :set clipboard=unnamedplus
 
