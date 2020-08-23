@@ -21,6 +21,10 @@ set foldnestmax=10      " 10 nested fold max
 nnoremap <space> za
 set foldmethod=indent   " fold based on indent level
 
+" system clipboard
+:set clipboard=unnamed
+:set clipboard=unnamedplus
+
 "au BufEnter * :hi EndOfBuffer ctermbg=guibg ctermfg=guibg guibg=guibg guifg=guibg
 "au BufEnter * :Minimap
 "au BufEnter * :hi VertSplit ctermbg=guibg ctermfg=guibg
