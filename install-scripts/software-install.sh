@@ -71,7 +71,7 @@ YAYSYS="brother-mfc-9560cdw ttf-symbola paper-icon-theme vim-plug gllock-git com
 #python-pipx teamviewer autotiling
 YAYNEPTUNE="siril-git google-earth-pro virtualbox-ext-oracle remmina-plugin-rdesktop"
 YAYTRITON="system76-power system76-firmware-daemon system76-driver light-git"
-YAYNONES="spotify mfetch-git android-messages-desktop spotifyd-bin-full zoom"
+YAYNONES="slack-term-bin spotify mfetch-git android-messages-desktop spotifyd-bin-full zoom"
 ##########################################################################
 # yay install
 
