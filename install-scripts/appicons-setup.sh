@@ -34,6 +34,12 @@ sed -i '/GenericName=/d' ./org.kde.digikam.desktop
 sed -i "2iName= DigiKam" org.kde.digikam.desktop
 sed -i "3iGenericName=Photo Management Program" org.kde.digikam.desktop
 
+# slack
+sed -i '/Name=/d' ./slack.desktop
+sed -i '/GenericName=/d' ./slack.desktop
+sed -i "3iName= Slack" slack.desktop
+sed -i "4iGenericName=Group Messaging Client" slack.desktop
+
 # kdenlive 
 sed -i '/Name=/d' ./org.kde.kdenlive.desktop
 sed -i '/GenericName=/d' ./org.kde.kdenlive.desktop
