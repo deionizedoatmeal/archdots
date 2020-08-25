@@ -18,7 +18,7 @@ SYS="dmidecode inetutils arandr xdotool nfsidmap exfat-utils dosfstools ntfsprog
 # displaycal
 # dialog python-setuptools installed on nep??
 
-NONES="digikam inkscape pavucontrol libreoffice-fresh cheese nmap perl-image-exiftool python-pillow ranger zathura zathura-pdf-mupdf firefox gnuplot vlc darktable neofetch steam atom gimp zathura speedtest-cli"
+NONES="digikam inkscape pavucontrol libreoffice-fresh cheese spotifyd nmap perl-image-exiftool python-pillow ranger zathura zathura-pdf-mupdf firefox gnuplot vlc darktable neofetch steam atom gimp zathura speedtest-cli"
 
 TRI="xf86-video-intel vulkan-intel powertop upower"
 #tlp tlp-rdw removed in aug 
@@ -67,11 +67,11 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 # yay package list #########################################################
-YAYSYS="brother-mfc-9560cdw ttf-symbola paper-icon-theme vim-plug gllock-git compton-tryone-git ly steam-fonts"
+YAYSYS="fetch.sh-git brother-mfc-9560cdw ttf-symbola paper-icon-theme vim-plug gllock-git compton-tryone-git ly steam-fonts"
 #python-pipx teamviewer autotiling
 YAYNEPTUNE="siril-git google-earth-pro virtualbox-ext-oracle remmina-plugin-rdesktop"
 YAYTRITON="system76-power system76-firmware-daemon system76-driver light-git"
-YAYNONES="slack-term-bin spotify mfetch-git android-messages-desktop spotifyd-bin-full zoom"
+YAYNONES="slack-desktop slack-term-bin spotify mfetch-git android-messages-desktop zoom"
 ##########################################################################
 # yay install
 
@@ -140,23 +140,6 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
         sudo rm -r Gnuplot-Pywal
         echo 'Gnuplot-Pywal.git installed'
 fi
-
-
-# now using the AUR
-# install spotifyd
-#read -r -p "Would you like to install Spotifyd v0.2.24? [y/N]" response
-#if [[ "$response" =~ ^([Yy])+$ ]]; then
-#        wget https://github.com/Spotifyd/spotifyd/releases/download/v0.2.24/spotifyd-linux-full.tar.gz
-#        tar -xf spotifyd-linux-full.tar.gz
-#        sudo mv spotifyd /bin/spotifyd
-#        rm spotifyd-linux-full.tar.gz
-#fi
-# install nvim plugin manager
-#read -r -p "Would you like to install vim-plug? [y/N]" response
-#if [[ "$response" =~ ^([Yy])+$ ]]; then
-#        curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.git
-#        hubusercontent.com/junegunn/vim-plug/master/plug.vim
-#fi
 
 
 ####################
