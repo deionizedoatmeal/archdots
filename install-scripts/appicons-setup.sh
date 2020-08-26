@@ -40,6 +40,12 @@ sed -i '/GenericName=/d' ./slack.desktop
 sed -i "3iName= Slack" slack.desktop
 sed -i "4iGenericName=Group Messaging Client" slack.desktop
 
+# arduino 
+sed -i '/Name=/d' ./arduino.desktop
+sed -i '/GenericName=/d' ./arduino.desktop
+sed -i "3iName= Arduino" arduino.desktop
+sed -i "4iGenericName=Microcontroler IDE" arduino.desktop
+
 # kdenlive 
 sed -i '/Name=/d' ./org.kde.kdenlive.desktop
 sed -i '/GenericName=/d' ./org.kde.kdenlive.desktop
