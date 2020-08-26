@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VOL=$(pacmd dump-volumes | awk 'NR==1{print $8}' | sed 's/\%//')
-SINKS=$(pacmd dump-volumes | grep -Eo "Sink.{0,3}" | cut -b 6-7)
+SINKS=$(pacmd dump-volumes | grep -Eo "Sink.{0,3}" | cut -b 6-7 | cut -d ":" -f1)
 
 if [[ $VOL -lt 100 ]]; then
     for I in $SINKS; do

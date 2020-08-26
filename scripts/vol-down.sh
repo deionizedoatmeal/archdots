@@ -12,7 +12,7 @@
 #(pactl set-sink-volume 9 -5%)
 #(pactl set-sink-volume 10 -5%)
 
-SINKS=$(pacmd dump-volumes | grep -Eo "Sink.{0,3}" | cut -b 6-7)
+SINKS=$(pacmd dump-volumes | grep -Eo "Sink.{0,3}" | cut -b 6-7 | cut -d ":" -f1)
 
 for I in $SINKS; do
     (pactl set-sink-volume $I -5%)
