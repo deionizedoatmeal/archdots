@@ -2,7 +2,7 @@
 Type=Application
 Name= Remarkable
 GenericName=Client for eink Tablet
-Exec=reMarkable
+Exec=/usr/bin/reMarkable
 Terminal=false
 Icon=accesories-text-editor
 Categories=Office;Graphics;
