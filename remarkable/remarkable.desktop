@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name= Remarkable
+GenericName=Client for eink Tablet
+Exec=reMarkable
+Terminal=false
+Icon=accesories-text-editor
+Categories=Office;Graphics;
+StartupWMClass=remarkable
+

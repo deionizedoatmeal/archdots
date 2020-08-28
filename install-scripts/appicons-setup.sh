@@ -38,7 +38,7 @@ sed -i "3iGenericName=Photo Management Program" org.kde.digikam.desktop
 sed -i '/Name=/d' ./slack.desktop
 sed -i '/GenericName=/d' ./slack.desktop
 sed -i "3iName= Slack" slack.desktop
-sed -i "4iGenericName=Group Messaging Client" slack.desktop
+sed -i "4iGenericName=Group Messaging" slack.desktop
 
 # arduino 
 sed -i '/Name=/d' ./arduino.desktop
