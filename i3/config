@@ -218,6 +218,7 @@ exec_always --no-startup-id "redshift-toggle 44:-123"
 exec_always --no-startup-id "compton --config ~/.config/compton/compton.conf"
 exec_always --no-startup-id "flashfocus-start"
 exec_always --no-startup-id "dunst -config ~/.config/dunst/dunstrc"
+exec_always --no-startup-id "xset s off"
 
 ####################
 # GAPS AND BORDERS #
