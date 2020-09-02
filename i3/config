@@ -47,6 +47,7 @@ set $RIGHT HDMI-A-0
 #T bindsym $mod+Shift+e exec rofimenu-exit T
 #T bindsym $mod+Shift+b exec --no-startup-id rofimenu-bluetooth T
 #T bindsym $mod+Shift+v exec --no-startup-id rofimenu-vpn T
+#T bindsym $mod+Shift+z exec --no-startup-id rofimenu-zoom T
 
 #NEPTUNE 
 #N font pango:JetBrains Mono ExtraBold 12
@@ -67,6 +68,7 @@ set $RIGHT HDMI-A-0
 #N bindsym $mod+Shift+e exec rofimenu-exit
 #N bindsym $mod+Shift+b exec --no-startup-id rofimenu-bluetooth
 #N bindsym $mod+Shift+v exec --no-startup-id rofimenu-vpn
+#N bindsym $mod+Shift+z exec --no-startup-id rofimenu-zoom
 
 # RESIZE VARIABLES
 set $center move position center
