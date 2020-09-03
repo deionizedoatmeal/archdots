@@ -30,26 +30,29 @@ RIGHTVALUE=${RIGHT%%,*}
 
 if [[ ${RIGHTVALUE} -eq 0 ]]; then
     if [[ $HDMI == "HDMI" ]]; then
+        i3-msg split v;
         i3-msg gaps right current set 100;
         i3-msg gaps left current set 100;
         i3-msg gaps top current set 300;
         i3-msg gaps bottom current set 300;
     elif [[ ${DISPLAY} == "DisplayPort-2" ]]; then
+        i3-msg split v;
         i3-msg gaps right current set 200;
         i3-msg gaps left current set 200;
         i3-msg gaps top current set 100;
         i3-msg gaps bottom current set 100;
     else
+        i3-msg split v;
         i3-msg gaps right current set $1;
         i3-msg gaps left current set $1;
         i3-msg gaps top current set $2;
         i3-msg gaps bottom current set $3;
-#        i3-msg split v;
     fi
 else
+    i3-msg split h;
     i3-msg gaps right current set 0;
     i3-msg gaps left current set 0;
     i3-msg gaps top current set 35;
     i3-msg gaps bottom current set 0;
-#    i3-msg split h;
+    i3-msg split h;
 fi

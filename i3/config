@@ -201,11 +201,10 @@ bindsym $mod+slash exec --no-startup-id flash_window
 ##########################          
 # RESIZE FLOATING WINDOW # (you can also use the mouse for that) 
 ##########################
-bindsym $mod+Shift+bracketleft resize shrink width 20 px or 20 ppt
-bindsym $mod+Shift+equal resize grow height 20 px or 20 ppt
-bindsym $mod+Shift+minus resize shrink height 20 px or 20 ppt
-bindsym $mod+Shift+bracketright resize grow width 20 px or 20 ppt
-
+bindsym $mod+Shift+bracketleft resize shrink width 20
+bindsym $mod+Shift+equal resize grow height 20
+bindsym $mod+Shift+minus resize shrink height 20
+bindsym $mod+Shift+bracketright resize grow width 20
 ######################################
 # POLYBAR, COMPTON AND OTHER STARTUP #
 ######################################
