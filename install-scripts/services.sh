@@ -17,6 +17,12 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
         sudo systemctl start system76-power.service
 fi
 
+# fbset-1080
+read -r -p "#### Would you like to enable fbset-1080.service? [y/N] ####" response
+if [[ "$response" =~ ^([Yy])+$ ]]; then
+        sudo systemctl enable fbset-1080.service
+fi
+
 # system76-firmware
 read -r -p "#### Would you like to enable and start system76-firmware-daemon.service? [y/N] ####" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then

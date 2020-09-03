@@ -392,7 +392,7 @@ format-foreground = ${colors.primary}
 type = custom/script
 exec = redshift-display
 interval = 0.5
-click-left = redshift-toggle
+click-left = redshift-toggle 44:-123
 format-background = ${colors.background}
 format-foreground = ${colors.secondary}
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

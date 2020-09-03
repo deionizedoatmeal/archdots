@@ -26,10 +26,6 @@ vnoremap <C-c> "*y
 :set clipboard=unnamed
 :set clipboard=unnamedplus
 
-"au BufEnter * :hi EndOfBuffer ctermbg=guibg ctermfg=guibg guibg=guibg guifg=guibg
-"au BufEnter * :Minimap
-"au BufEnter * :hi VertSplit ctermbg=guibg ctermfg=guibg
-
 "plugins
 call plug#begin('~/.config/nvim/plugs')
 Plug 'junegunn/goyo.vim'
@@ -47,17 +43,20 @@ Plug 'francoiscabrol/ranger.vim'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-commentary'
 
+"currently unsed plugins
 "Plug 'norcalli/nvim-colorizer.lua'
 "Plug 'xuhdev/vim-latex-live-preview'
 "Plug 'sirver/ultisnips'
 call plug#end()
 
-"vim tex
+"vim tex settings
 let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
 set conceallevel=1
 let g:tex_conceal='abdmg'
+
+"easy clip settings
 let g:EasyClipShareYanks=1
 
 "utilsnips
@@ -68,9 +67,5 @@ let g:EasyClipShareYanks=1
 "colors
 colorscheme wal
 
-"pdf latex
-let g:livepreview_previewer = 'zathura'
 
-"tex conceal
-set conceallevel=2
-let g:tex_conceal="abdgm"
+

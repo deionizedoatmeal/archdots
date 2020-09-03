@@ -67,6 +67,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
                 sudo cp -r fonts/* /usr/share/fonts/.
                 sudo cp spotify-tui/spotify-tui.desktop /usr/share/applications/.
                 sudo cp remarkable/remarkable.desktop /usr/share/applications/.
+                sudo cp system/fbset-1080.service /etc/systemd/system/.
                 cp neofetch/config.conf ${HOME}/.config/neofetch/. 
           
                 # reminders 
@@ -115,6 +116,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
                 sudo cp -r fonts/* /usr/share/fonts/.
                 sudo cp spotify-tui/spotify-tui.desktop /usr/share/applications/.
                 sudo cp remarkable/remarkable.desktop /usr/share/applications/.
+                sudo cp system/fbset-1080.service /etc/systemd/system/.
                 cp neofetch/config.conf ${HOME}/.config/neofetch/. 
           
                 # reminders 
