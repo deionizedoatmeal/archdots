@@ -15,11 +15,11 @@ cd $DIR
 cd ../scripts
 for f in *.sh; do
         NAME=${f::-3}
-        sudo cp -p $f /bin/$NAME
+        sudo cp -p $f /usr/bin/$NAME
 done
 
 for f in *.py; do
         NAME=${f::-3}
-        sudo cp -p $f /bin/$NAME
+        sudo cp -p $f /usr/bin/$NAME
 done
 

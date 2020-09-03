@@ -3,7 +3,7 @@ Description=Sets the resoltuion of all virtual consoles to 1920x1080p.
 
 [Service]
 Type=simple
-ExecStart="fbset -a -xres 1920 -yres 1080"
+ExecStart="/usr/bin/fbset-1080"
 
 [Install]
 WantedBy=multi-user.target 
