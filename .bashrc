@@ -125,10 +125,10 @@ alias pass-pull='pass git pull origin master'
 alias pass-push='pass git push origin master'
 
 ########
-# PASS #
+# REPOS #
 ########
-alias dijo-pull='git -C ${HOME}/.local/share/dijo pull origin master'
-alias dijo-push='git -C ${HOME}/.local/share/dijo add -A && git -C ${HOME}/.local/share/dijo commit --allow-empty-message -m "" && git -C ${HOME}/.local/share/dijo push origin master'
+#alias dijo-pull='git -C ${HOME}/.local/share/dijo pull origin master'
+#alias dijo-push='git -C ${HOME}/.local/share/dijo add -A && git -C ${HOME}/.local/share/dijo commit --allow-empty-message -m "" && git -C ${HOME}/.local/share/dijo push origin master'
 
 ##################
 # REMOVE ORPHANS #

@@ -176,7 +176,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
         #cargo install spotify-tui
         #using AUR now
         cargo install bottom
-        cargo install dijo
+        #cargo install dijo
         cargo install -f --git https://github.com/cjbassi/ytop ytop
 fi
 
