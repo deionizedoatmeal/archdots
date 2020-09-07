@@ -67,5 +67,8 @@ let g:EasyClipShareYanks=1
 "colors
 colorscheme wal
 
-
+"spellcheck
+setlocal spell
+set spelllang=en
+inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
