@@ -28,6 +28,8 @@ mv QMLPlayer.desktop ../unused-applications/.
 mv Player.desktop ../unused-applications/.
 mv org.kde.showfoto.desktop ../unused-applications/.
 mv xdvi.desktop ../unused-applications/.
+mv picom.desktop ../unused-applications/.
+mv picom.desktop ../unused-applications/.
 
 # digiKam 
 sed -i '/Name=/d' ./org.kde.digikam.desktop
