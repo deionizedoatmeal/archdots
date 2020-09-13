@@ -20,19 +20,20 @@ export CXX=/usr/bin/clang++
 
 cd /tmp
 
+# i3-rounded install
 # clone the repository
-git clone https://github.com/resloved/i3.git
-cd i3
+#git clone https://github.com/resloved/i3.git
+#cd i3
 # compile & install
-autoreconf --force --install
-rm -rf build/
-mkdir -p build && cd build/
+#autoreconf --force --install
+#rm -rf build/
+#mkdir -p build && cd build/
 # disabling sanitizers is important for release versions
-../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers
-make
-sudo make install
-cd ..
-sudo rm -r i3
+#../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers
+#make
+#sudo make install
+#cd ..
+#sudo rm -r i3
 
 git clone --recursive https://github.com/polybar/polybar
 cd polybar
