@@ -3,13 +3,13 @@
 ## @@@@@@@@@@@@@@@@@@@@@@
 
 # Opacity of window during flash.
-flash-opacity: 0.4
+flash-opacity: 0.6
 
 # Windows are restored to this opacity value at the end of a flash.
 default-opacity: 1
 
 # Length of flash in milliseconds.
-time: 500
+time: 250
 
 # If true, flashes are not faded out. This will improve performance but flashes
 # won't be smooth.
@@ -22,7 +22,7 @@ ntimepoints: 10
 flash-on-focus: true
 
 # Set this to false if you don't want fullscreen windows to flash.
-flash-fullscreen: false
+flash-fullscreen: true
 
 # Whether or not to flash windows if they are the only window on the desktop.
 # Possible values:

@@ -80,7 +80,7 @@ if [[ "$response" =~ ^([Nn])+$ ]]; then
         set -e
 fi
 
-# create encyrpted LUKS1 container on LUKS partion (GRUB still doesn't like LUKS2 smh)
+# create encrypted LUKS1 container on LUKS partion (GRUB still doesn't like LUKS2 smh)
 echo "You will now be asked to set and confirm your encryption passphrase, DO NOT forget this. If you make a typo you will have the option of trying again."
 while true; do
         cryptsetup luksFormat --type luks1 --use-random -S 1 -s 512 -h sha512 -i 5000 /dev/${DISKP}3

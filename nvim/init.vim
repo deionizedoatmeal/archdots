@@ -21,6 +21,12 @@ set foldnestmax=10      " 10 nested fold max
 nnoremap <space> za
 set foldmethod=indent   " fold based on indent level
 
+"apply terminal transparency to status line
+":hi statusline cterm=bold ctermfg=3 ctermbg=6 gui=NONE
+":hi statusline guibg=NONE gui=NONE guifg=NONE 
+:set laststatus=0
+:set cmdheight=1
+
 " system clipboard
 vnoremap <C-c> "*y
 :set clipboard=unnamed

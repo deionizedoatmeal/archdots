@@ -76,11 +76,11 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
                 echo "|> set up icons in .desktop files (./appicon-setup.sh)"
                 echo "|> enter spotifyd password in the ~/.config/spotifyd/config"
                 echo "|> import gpg and ssh keys"
-                echo "|> start all necesary services (./services.sh)"
+                echo "|> start all necessary services (./services.sh)"
                 echo "|> run powertop and tlp"
                 echo "|> set up pass, and dijo (./pass-setup.sh and ./dijo-setup.sh)"
                 echo "|> pair all bluetooth devices"
-                echo "|> install Wolfram Wathematica"
+                echo "|> install Wolfram Mathematica"
         
         # NEPTUNE        
         elif [[ "$RESPONSE" =~ ^([Nn])+$ ]]; then
@@ -125,10 +125,10 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
                 echo "|> set up icons in .desktop files (./appicon-setup.sh)"
                 echo "|> import gpg and ssh keys"
                 echo "|> start sshd (./ssh-setup.sh)"
-                echo "|> start all necesary services (./services.sh)"
+                echo "|> start all necessary services (./services.sh)"
                 echo "|> set up pass, and dijo (./pass-setup.sh and ./dijo-setup.sh)"
                 echo "|> pair all bluetooth devices"
-                echo "|> install Wolfram Wathematica"
+                echo "|> install Wolfram Mathematica"
         fi
 fi
 

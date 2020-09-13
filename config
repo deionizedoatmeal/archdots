@@ -22,17 +22,19 @@ client.placeholder      $bg     $bg     $fg  $bg       $bg
 client.background       $bg
 
 #monitors
-set $LEFT DisplayPort-2
-set $CENTER DisplayPort-1
-set $RIGHT HDMI-A-0
+set $LEFT "DisplayPort-2"
+set $CENTER "primary"
+set $RIGHT "HDMI-A-0"
 
 # these are the variables which are different on my two machines
 # they are commented/uncommented by placement.sh
 
+#tri border_radius 27
+#nep border_radius 16
+
 #TRITON
 #T font pango:JetBrains Mono ExtraBold 24
 #T bindsym $mod+p exec --no-startup-id paper-mode-toggle 400 35 0
-#T border_radius 27
 #T bindsym XF86MonBrightnessUp exec --no-startup-id light-up
 #T bindsym XF86MonBrightnessDown exec --no-startup-id light-down
 #T bindsym F9 exec --no-startup-id light-up
@@ -50,28 +52,30 @@ set $RIGHT HDMI-A-0
 #T bindsym $mod+Shift+z exec --no-startup-id rofimenu-zoom T
 
 #NEPTUNE 
-#N font pango:JetBrains Mono ExtraBold 12
-#N bindsym $mod+p exec --no-startup-id paper-mode-toggle 500 50 20 
-#N border_radius 16
-#N bindsym F4 exec --no-startup-id vol-up; exec --no-startup-id click1 #increase volume
-#N bindsym F5 exec --no-startup-id vol-down; exec --no-startup-id click1 #decrease volume
-#N Workspace $ws1 output $LEFT
-#N Workspace $ws2 output $LEFT
-#N Workspace $ws3 output $LEFT
-#N Workspace $ws4 output $LEFT
-#N Workspace $ws5 output $CENTER
-#N Workspace $ws6 output $CENTER
-#N Workspace $ws7 output $CENTER
-#N Workspace $ws8 output $CENTER
-#N Workspace $ws9 output $RIGHT
-#N Workspace $ws10 output $RIGHT
-#N bindsym $mod+Shift+e exec rofimenu-exit
-#N bindsym $mod+Shift+b exec --no-startup-id rofimenu-bluetooth
-#N bindsym $mod+Shift+v exec --no-startup-id rofimenu-vpn
-#N bindsym $mod+Shift+z exec --no-startup-id rofimenu-zoom
+font pango:JetBrains Mono ExtraBold 12
+bindsym $mod+p exec --no-startup-id paper-mode-toggle 500 50 20 
+bindsym F4 exec --no-startup-id vol-up; exec --no-startup-id click1 #increase volume
+bindsym F5 exec --no-startup-id vol-down; exec --no-startup-id click1 #decrease volume
+Workspace $ws1 output $LEFT
+Workspace $ws2 output $LEFT
+Workspace $ws3 output $LEFT
+Workspace $ws4 output $LEFT
+Workspace $ws5 output $CENTER
+Workspace $ws6 output $CENTER
+Workspace $ws7 output $CENTER
+Workspace $ws8 output $CENTER
+Workspace $ws9 output $RIGHT
+Workspace $ws10 output $RIGHT
+bindsym $mod+Shift+e exec rofimenu-exit
+bindsym $mod+Shift+b exec --no-startup-id rofimenu-bluetooth
+bindsym $mod+Shift+v exec --no-startup-id rofimenu-vpn
+bindsym $mod+Shift+z exec --no-startup-id rofimenu-zoom
 
 # RESIZE VARIABLES
 set $center move position center
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+
 
 # start a terminal
 bindsym $mod+Return exec kitty
@@ -108,7 +112,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # global fullscreen: across all monitors
-bindsym $mod+shift+f fullscreen toggle global
+bindsym $mod+shift+f        fullscreen toggle global
 
 # change container layout (stacked, tabbed, toggle split)
 #bindsym $mod+s layout stacking
@@ -116,13 +120,13 @@ bindsym $mod+shift+f fullscreen toggle global
 #bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+shift+space floating toggle; sticky disable; $center
+bindsym $mod+Shift+space floating toggle; sticky disable; $center
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
 # toggle sticky from floating
-bindsym $mod+ctrl+space sticky toggle
+bindsym $mod+ctrl+d sticky toggle
 
 # float modifier
 floating_modifier $mod
@@ -212,6 +216,7 @@ bindsym $mod+Shift+bracketright resize grow width 20
 # POLYBAR, COMPTON AND OTHER STARTUP #
 ######################################
 exec_always killall -q compton
+#exec_always killall -q picom
 exec_always killall -q redshift
 exec_always killall -q dunst
 exec_always killall -q flashfocus
@@ -219,7 +224,8 @@ exec_always killall -q redshift
 
 exec_always --no-startup-id "~/.config/polybar/launch.sh"
 exec_always --no-startup-id "redshift-toggle 44:-123"
-exec_always --no-startup-id "compton --config ~/.config/compton/compton.conf"
+#exec_always --no-startup-id "compton --config ~/.config/compton/compton.conf"
+exec_always --no-startup-id "picom --config ~/.config/picom/picom.conf"
 exec_always --no-startup-id "flashfocus-start"
 exec_always --no-startup-id "dunst -config ~/.config/dunst/dunstrc"
 exec_always --no-startup-id "xset s off"
