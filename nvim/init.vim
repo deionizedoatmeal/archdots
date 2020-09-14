@@ -74,7 +74,18 @@ let g:EasyClipShareYanks=1
 colorscheme wal
 
 "spellcheck
-setlocal spell
+"setlocal spell
 set spelllang=en
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
+" Toggle spellchecking
+function! ToggleSpellCheck()
+  set spell!
+  if &spell
+    echo "Spellcheck ON"
+  else
+    echo "Spellcheck OFF"
+  endif
+endfunction
+
+nnoremap <silent> <Leader>l :call ToggleSpellCheck()<CR>
