@@ -157,19 +157,14 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
     sudo pipx install jrnl
     sudo pip install mdv
     sudo pip install numpy
+    sudo pip install mpmath
+    sudo pip install scipy
+    sudo pip install matplotlib
+    sudo pip install IPython
     #sudo pip install i3-py
     #sudo pip3 install wpgtk
     echo 'python packages installed'
 fi
-
-####################
-#      RUST        #
-####################
-# install rust
-#read -r -p "Would you like to install rust? [y/N]" response 
-#if [[ "$response" =~ ^([Yy])+$ ]]; then
-#        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-#fi
 
 # install rust packages    
 read -r -p "Would you like to install rust packages? [y/N]" response 
@@ -181,15 +176,3 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
         cargo install -f --git https://github.com/cjbassi/ytop ytop
 fi
 
-
-####################
-#    i3 COMPILE    #
-####################
-#read -r -p "#### Would you like to compile and install i3? [y/N] ####" response
-#if [[ "$response" =~ ^([Yy])+$ ]]; then
-#        ./i3gaps-install
-#fi
-
-
-
-# all done!
