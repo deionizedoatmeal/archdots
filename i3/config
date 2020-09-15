@@ -218,7 +218,7 @@ exec_always killall -q flashfocus
 exec_always killall -q redshift
 
 exec_always --no-startup-id "~/.config/polybar/launch.sh"
-exec_always --no-startup-id "redshift-toggle 44:-123"
+exec_always --no-startup-id "redshift -l 44:-123"
 exec_always --no-startup-id "compton --config ~/.config/compton/compton.conf"
 exec_always --no-startup-id "flashfocus-start"
 exec_always --no-startup-id "dunst -config ~/.config/dunst/dunstrc"

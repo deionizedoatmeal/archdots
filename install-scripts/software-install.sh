@@ -67,8 +67,8 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 # yay package list #########################################################
-YAYSYS="fet.sh-git brother-mfc-9560cdw ttf-symbola paper-icon-theme vim-plug gllock-git ly steam-fonts picom-ibhagwan-git"
-#python-pipx teamviewer autotiling
+YAYSYS="fet.sh-git brother-mfc-9560cdw ttf-symbola paper-icon-theme vim-plug gllock-git ly steam-fonts comptone-tryone-git"
+#python-pipx teamviewer autotiling picom-ibhagwan-git
 YAYNEPTUNE="siril-git google-earth-pro virtualbox-ext-oracle remmina-plugin-rdesktop"
 YAYTRITON="system76-power system76-firmware-daemon system76-driver light-git"
 YAYNONES="remarkable-client rmapi slack-desktop slack-term-bin spotify-tui-git spotify mfetch-git android-messages-desktop zoom"
