@@ -212,7 +212,6 @@ bindsym $mod+Shift+bracketright resize grow width 20
 # POLYBAR, COMPTON AND OTHER STARTUP #
 ######################################
 exec_always killall -q compton
-exec_always killall -q redshift
 exec_always killall -q dunst
 exec_always killall -q flashfocus
 exec_always killall -q redshift
