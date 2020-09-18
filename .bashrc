@@ -135,6 +135,11 @@ alias pass-push='pass git push origin master'
 ##################
 alias remove-orphans='sudo pacman -Rns $(pacman -Qtdq)'
 
+###############
+# EMPTY TRASH #
+###############
+alias empty-trash='rm -rf ${HOME}/.local/share/Trash/files/*'
+
 ##########
 # EDITOR #
 ##########
