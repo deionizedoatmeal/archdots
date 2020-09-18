@@ -28,7 +28,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
                 mkdir ~/.config/polybar/
                 mkdir ~/.config/ranger/
                 mkdir ~/.config/rofi/
-                mkdir ~/.config/spotifyd/
+                #mkdir ~/.config/spotifyd/
                 mkdir ~/.config/spotify-tui/
                 mkdir ~/.config/wal/
                 mkdir ~/.config/zathura/
@@ -55,7 +55,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
                 cp -r wal/* ${HOME}/.config/wal/.
                 ./install-scripts/uncomment.sh T wal/templates/dunstrc ${HOME}/.config/wal/templates/dunstrc
                 cp spotify-tui/* ${HOME}/.config/spotify-tui/.
-                cp spotifyd/* ${HOME}/.config/spotifyd/.
+                #cp spotifyd/* ${HOME}/.config/spotifyd/.
                 cp neofetch/* ${HOME}/.config/neofetch/.
                 cp .bashrc ${HOME}/.
                 cp .gitconfig ${HOME}/.
@@ -72,15 +72,9 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
           
                 # reminders 
                 echo "|> REMEMBER TO:"
-                echo "|> set layers.acceleration.force-enabled --> true TO PREVENT TARING IN FIREFOX"
-                echo "|> set up icons in .desktop files (./appicon-setup.sh)"
-                echo "|> enter spotifyd password in the ~/.config/spotifyd/config"
-                echo "|> import gpg and ssh keys"
-                echo "|> start all necessary services (./services.sh)"
                 echo "|> run powertop and tlp"
-                echo "|> set up pass, and dijo (./pass-setup.sh and ./dijo-setup.sh)"
-                echo "|> pair all bluetooth devices"
-                echo "|> install Wolfram Mathematica"
+                echo "|> enter spotifyd password in the ~/.config/spotifyd/config"
+                echo "|> set up icons in .desktop files (sudo ./appicon-setup.sh)"
         
         # NEPTUNE        
         elif [[ "$RESPONSE" =~ ^([Nn])+$ ]]; then
@@ -122,13 +116,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
                 # reminders 
                 echo "|> REMEMBER TO:"
                 echo "|> enter spotifyd password in the ~/.config/spotifyd/config"
-                echo "|> set up icons in .desktop files (./appicon-setup.sh)"
-                echo "|> import gpg and ssh keys"
-                echo "|> start sshd (./ssh-setup.sh)"
-                echo "|> start all necessary services (./services.sh)"
-                echo "|> set up pass, and dijo (./pass-setup.sh and ./dijo-setup.sh)"
-                echo "|> pair all bluetooth devices"
-                echo "|> install Wolfram Mathematica"
+                echo "|> set up icons in .desktop files (sudo ./appicon-setup.sh)"
         fi
 fi
 
