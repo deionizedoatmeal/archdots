@@ -139,6 +139,12 @@ alias remove-orphans='sudo pacman -Rns $(pacman -Qtdq)'
 # EMPTY TRASH #
 ###############
 alias empty-trash='rm -rf ${HOME}/.local/share/Trash/files/*'
+alias list-trash='ls ${HOME}/.local/share/Trash/files'
+
+#############
+# SET ICONS #
+#############
+alias set-icons='sudo sh ${HOME}/Repos/archdots/install-scripts/set-icons.sh'
 
 ##########
 # EDITOR #
