@@ -67,7 +67,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 # yay package list #########################################################
-YAYSYS="fet.sh-git brother-mfc-9560cdw ttf-symbola paper-icon-theme vim-plug gllock-git ly steam-fonts comptone-tryone-git"
+YAYSYS="flashfocus-git fet.sh-git brother-mfc-9560cdw ttf-symbola paper-icon-theme vim-plug gllock-git ly steam-fonts comptone-tryone-git"
 #python-pipx teamviewer autotiling picom-ibhagwan-git
 YAYNEPTUNE="siril-git google-earth-pro virtualbox-ext-oracle remmina-plugin-rdesktop"
 YAYTRITON="system76-power system76-firmware-daemon system76-driver light-git"
@@ -149,7 +149,7 @@ fi
 read -r -p "Would you like to install python packages? [y/N]" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
     sudo pip3 install pywal
-    sudo pip install flashfocus
+    #sudo pip install flashfocus
     sudo pip3 install protonvpn-cli
     sudo pip3 install inkscape-figures
     sudo pip3 install spotdl

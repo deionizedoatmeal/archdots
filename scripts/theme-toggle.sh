@@ -44,25 +44,25 @@ fi
 
 ### ZATHURA ###
 # check how many zathura windows are open
-ZATH=$(ps aux | grep -w 'zathura'  | grep -v 'grep' | wc -l)
+#ZATH=$(ps aux | grep -w 'zathura'  | grep -v 'grep' | wc -l)
 
 # close them
-killall -q zathura
+#killall -q zathura
 
 # if zathura was open
-if [[ ${ZATH} -gt 0 ]]; then
+#if [[ ${ZATH} -gt 0 ]]; then
 
         # get zathura history
-        HIST=$(cat ${HOME}/.local/share/zathura/history)
+#        HIST=$(cat ${HOME}/.local/share/zathura/history)
         
         # find the files that were last open and open them
-        for j in $ZATH; do
-                FILE=${HIST##*[}
-                FILE=${FILE%]*}
-                HIST=${HIST%%[*}
-                (zathura ${FILE} &> /dev/null &)
+#        for j in $ZATH; do
+#                FILE=${HIST##*[}
+#                FILE=${FILE%]*}
+#                HIST=${HIST%%[*}
+#                (zathura ${FILE} &> /dev/null &)
 
-        done
-fi
+#        done
+#fi
 
 exit 0

@@ -27,6 +27,9 @@ set foldmethod=indent   " fold based on indent level
 :set laststatus=0
 :set cmdheight=1
 
+"fix for yankring and neovim
+let g:clipboard=0
+
 " system clipboard
 vnoremap <C-c> "*y
 :set clipboard=unnamed

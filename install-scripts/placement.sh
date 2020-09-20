@@ -97,7 +97,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
                 cp -r wal/* ${HOME}/.config/wal/.
                 ./install-scripts/uncomment.sh N wal/templates/dunstrc ${HOME}/.config/wal/templates/dunstrc
                 cp spotify-tui/* ${HOME}/.config/spotify-tui/.
-                cp spotifyd/* ${HOME}/.config/spotifyd/.
+                #cp spotifyd/* ${HOME}/.config/spotifyd/.
                 cp neofetch/* ${HOME}/.config/neofetch/.
                 cp .bashrc ${HOME}/.
                 cp .gitconfig ${HOME}/.

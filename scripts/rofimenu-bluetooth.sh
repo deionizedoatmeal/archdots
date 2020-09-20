@@ -2,53 +2,62 @@
 
 # check for triton (hidpi) flag
 if [[ "$1" =~ ^([Tt])+$ ]]; then
-        rofi_command="rofi -lines 3 -width 450"
+        ROFI_COMMAND="rofi -lines 4 -width 450"
 else
-        rofi_command="rofi -lines 3 -width 250"
+        ROFI_COMMAND="rofi -lines 4 -width 250"
 fi
 
 ### Options ###
-zero=" power toggle"
+ZERO=" power toggle"
 
 if [ "$(bluetoothctl info D8:AF:F1:A9:BE:D7 | sed -n -e 's/^.*Connected: //p')" == "yes" ]
 then
-    first=" headphones <-"
+    FIRST=" headphones <-"
 else
-    first=" headphones"
+    FIRST=" headphones"
 fi
 
 if [ "$(bluetoothctl info D1:64:9F:2F:F5:D3 | sed -n -e 's/^.*Connected: //p')" == "yes" ]
 then
-    second=" earbuds <-"
+    SECOND=" earbuds <-"
 else
-    second=" earbuds"
+    SECOND=" earbuds"
+fi
+
+if [ "$(bluetoothctl info 88:C6:26:21:AA:32 | sed -n -e 's/^.*Connected: //p')" == "yes" ]
+then
+    THIRD="醙 speaker <-"
+else
+    THIRD="醙 speaker"
 fi
 
 # Variable passed to rofi
-options="$zero\n$first\n$second"
+OPTIONS="$ZERO\n$FIRST\n$SECOND\n$THIRD"
 
-status=$(bluetoothctl show | sed -n -e 's/^.*Powered: //p')
-if [ "$status" == "no" ]
+STATUS=$(bluetoothctl show | sed -n -e 's/^.*Powered: //p')
+if [ "$STATUS" == "no" ]
 then
 #   echo "its off 1" 
-   onoff="off"
+   ONOFF="off"
 else
 #    echo "its on 2"
-    onoff="on"
+    ONOFF="on"
 fi
 
-echo $onoff
 
-chosen="$(echo -e "$options" | $rofi_command -dmenu -p "bluetooth $onoff" -selected-row 2)"
-case $chosen in
-    $zero)
+CHOSEN="$(echo -e "$OPTIONS" | $ROFI_COMMAND -dmenu -p "bluetooth $ONOFF" -selected-row 0)"
+case $CHOSEN in
+    $ZERO)
         bluetooth-power-toggle
         ;;
-    $first)
+    $FIRST)
         bluetooth-device-toggle D8:AF:F1:A9:BE:D7
         ;;
-    $second)
+    $SECOND)
         bluetooth-device-toggle D1:64:9F:2F:F5:D3
+        ;;
+    $THIRD)
+        bluetooth-device-toggle 88:C6:26:21:AA:32
         ;;
 esac
 
