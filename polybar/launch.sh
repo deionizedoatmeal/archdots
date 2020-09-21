@@ -11,9 +11,19 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 # launch bars
 
 #TRITON
-#T polybar main1800 &
+#T polybar 1800-full &
 
 #NEPTUNE
-#N polybar main1080 &
-#N polybar sq &
-#N polybar vert1080 &
+polybar 1080-date &
+#polybar 1080-temp &
+#polybar 1080-net &
+#polybar 1080-disp &
+polybar 1080-nettempdisp &
+polybar 1080-btaudio &
+#polybar 1080-audio &
+#polybar 1080-bt &
+polybar 1080-i3 &
+polybar sq-i3 &
+polybar sq-audio &
+polybar vert-i3 &
+polybar vert-audio &

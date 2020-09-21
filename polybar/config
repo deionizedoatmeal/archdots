@@ -1,3 +1,4 @@
+
 [colors]
 background = ${xrdb:color0:#222}
 foreground = ${xrdb:color7:#222}
@@ -5,13 +6,12 @@ foreground-alt = ${xrdb:color5:#222}
 primary = ${xrdb:color2:#222}
 secondary = ${xrdb:color3:#222}
 alert = ${xrdb:color7:#222}
-####################################################################
-#       
-#       BARS 
-#        
-##########################
-# FIRST BAR ##############
-[bar/main1080]
+
+#####################################################################################################################
+                                                ### BARS ### 
+#####################################################################################################################
+
+[bar/1080-full]
 offset-x = 00.9375%
 offset-y = 01.1111%
 bottom = false
@@ -37,11 +37,246 @@ module-margin = 0
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-########################
-#### SECOND BAR ########
+#####################################################################################################################
 
-[bar/sq]
-width = 12.0000%
+[bar/1080-net]
+offset-x = 1725 
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 70
+height = 03.0000%
+radius = 16.0
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+modules-center = wireless-network network
+monitor = DisplayPort-1
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/1080-date]
+offset-x = 1805
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 90
+height = 03.0000%
+radius = 16.0
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+modules-center = date
+monitor = DisplayPort-1
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/1080-temp]
+offset-x = 1625
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 90
+height = 03.0000%
+radius = 16.0
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+modules-center = temperature
+monitor = DisplayPort-1
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/1080-disp]
+offset-x = 1545
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 70
+height = 03.0000%
+radius = 16.0
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+modules-center = redshift-display dpms-display brightness 
+monitor = DisplayPort-1
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/1080-nettempdisp]
+offset-x = 1635
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 160
+height = 03.0000%
+radius = 16.0
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+separator = "  "
+modules-center = redshift-dpms-display brightness temperature network-display
+monitor = DisplayPort-1
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/1080-bt]
+offset-x = 1455
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 70
+height = 03.0000%
+radius = 16.0
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+modules-center = bluetooth-display 
+monitor = DisplayPort-1
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/1080-audio]
+offset-x = 1535
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 90
+height = 03.0000%
+radius = 16.0
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+modules-center = pulseaudio 
+monitor = DisplayPort-1
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/1080-btaudio]
+offset-x = 1485
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 140
+height = 03.0000%
+radius = 16.0
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+separator = "  "
+modules-center = bluetooth-display pulseaudio 
+monitor = DisplayPort-1
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/1080-i3]
+offset-x = 25
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 150
+height = 03.0000%
+radius = 16.0
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+modules-center = i3 
+monitor = DisplayPort-1
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/sq-i3]
+width = 150
 height = 03.0000%
 offset-x = 00.9375%
 offset-y = 01.1111%
@@ -58,33 +293,30 @@ foreground = ${colors.foreground}
 font-0 = Iosevka Nerd Font:pixelsize=14;4
 font-1 = Iosevka Nerd Font:size=14;4
 font-2 = Iosevka Nerd Font:size=22;4
-modules-left =
 modules-center = i3
-modules-right =
 module-margin = 0
 cursor-click = pointer
 cursor-scroll = ns-resize
 monitor = DisplayPort-2
 
-###########################
-##### THIRD BAR ###########
+#####################################################################################################################
 
-[bar/main1800]
-offset-x = 00.9375%
+[bar/sq-audio]
+offset-x = 175
 offset-y = 01.1111%
-width = 98.1250%
-height = 03.0000%
-radius = 27.0
 bottom = false
-fixed-center = true
+fixed-center = false
 line-size = 2
 padding-right = 2
-font-0 = Iosevka Nerd Font:pixelsize=24;4
-font-1 = Iosevka Nerd Font:size=24;4
-font-2 = Iosevka Nerd Font:size=41;8
-modules-center = date
-modules-right = bluetooth-display pulseaudio redshift-display dpms-display backlight cpu temperature system-cpu-frequency-display memory power-profile-display battery wireless-network network #vpn-display
-modules-left = i3
+width = 140
+height = 03.0000%
+radius = 16.0
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+separator = "  "
+modules-center = bluetooth-display pulseaudio 
+monitor = DisplayPort-2
 tray-position = none
 wm-restack = i3
 override-redirect = true
@@ -94,13 +326,12 @@ module-margin = 0
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-########################
-#### 4th BAR ###########
+#####################################################################################################################
 
-[bar/vert1080]
-width = 08.2500%
+[bar/vert-i3]
+width = 90
 height = 32.4
-offset-x = 00.9375%
+offset-x = 25
 offset-y = 12.0
 bottom = false
 fixed-center = true
@@ -123,10 +354,36 @@ cursor-click = pointer
 cursor-scroll = ns-resize
 monitor = HDMI-A-0
 
-#####################################################################
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; #### MODULES ####
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#####################################################################################################################
+
+[bar/vert-audio]
+offset-x = 125
+offset-y = 12.0
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 140
+height = 32.4
+radius = 16.0
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+separator = "  "
+modules-center = bluetooth-display pulseaudio 
+monitor = HDMI-A-0
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+                                                 #### MODULES ####
+#####################################################################################################################
 
 [module/workspaces]
 type = internal/xworkspaces
@@ -155,7 +412,8 @@ label-active-foreground = ${colors.primary}
 label-urgent-foreground = ${colors.alert}
 label-occupied-foreground = ${colors.secondary}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#####################################################################################################################
+
 [module/temperature]
 type = internal/temperature
 format = <label>
@@ -182,13 +440,14 @@ warn-temperature = 80
 
 units = true
 
-label = "%temperature-c%"
-label-warn = "%temperature-c%"
+label = " %temperature-c%" 
+label-warn = " %temperature-c%" 
 
 format-background = ${colors.background}
 format-foreground = ${colors.primary}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#####################################################################################################################
+
 [module/i3]
 type = internal/i3
 pin-workspaces = true
@@ -272,21 +531,27 @@ label-urgent-padding = 1
 ; Separator in between workspaces
 label-separator = |
 label-separator-foreground = ${colors.secondary}
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#####################################################################################################################
+
 [module/bluetooth-display]
 type = custom/script
 exec = bluetooth-display
 interval = 1
 format-background = ${colors.background}    
 format-foreground = ${colors.secondary}
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#####################################################################################################################
+
 [module/power-profile-display]
 type = custom/script
 exec = power-profile-display
 interval = 1
 format-background = ${colors.background}    
 format-foreground = ${colors.primary}
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#####################################################################################################################
+
 [module/spotify]
 type = custom/script
 interval = 1
@@ -294,7 +559,9 @@ format-prefix = " "
 format = <label>
 exec = spotify-display -f '{song} - {artist} {play_pause}'
 format-foreground = ${colors.primary}
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#####################################################################################################################
+
 [module/vpn-display]
 type = custom/script
 exec = vpn-display
@@ -305,9 +572,10 @@ format-background = ${colors.background}
 #T format-foreground = ${colors.secondary}
 
 #NEPTUNE
-#N format-foreground = ${colors.primary}
+format-foreground = ${colors.primary}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#####################################################################################################################
+
 [module/battery]
 type = internal/battery
 time-format = %H:%M
@@ -352,7 +620,8 @@ animation-charging-6 =
 
 animation-charging-framerate = 750
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#####################################################################################################################
+
 [module/cpu]
 type = internal/cpu
 format = <label>
@@ -361,33 +630,38 @@ format = <label>
 #T label = " %percentage%%|"
 
 #NEPTUNE
-#N label = "   %percentage%%|" 
+label = "   %percentage%%|" 
 
 interval = 5
 format-background = ${colors.background}
 format-foreground = ${colors.primary}
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#####################################################################################################################
+
 [module/memory]
 type = internal/memory
 format = <label>
+interval = 5
+format-background = ${colors.background}
+format-foreground = ${colors.secondary}
 
 #TRITON
 #T label = "   %percentage_used%%  "
 
 #NEPTUNE
-#N label = "   %percentage_used%% "
+label = "   %percentage_used%% "
 
-interval = 5
-format-background = ${colors.background}
-format-foreground = ${colors.secondary}
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#####################################################################################################################
+
 [module/system-cpu-frequency-display]
 type = custom/script
 exec = system-cpu-frequency-display
 interval = 5
 format-background = ${colors.background}    
 format-foreground = ${colors.primary}
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#####################################################################################################################
+
 [module/redshift-display]
 type = custom/script
 exec = redshift-display
@@ -395,7 +669,29 @@ interval = 0.5
 click-left = redshift-toggle 44:-123
 format-background = ${colors.background}
 format-foreground = ${colors.secondary}
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#####################################################################################################################
+
+[module/redshift-dpms-display]
+type = custom/script
+exec = redshift-dpms-display
+interval = 0.5
+click-left = redshift-toggle 44:-123
+click-right = dpms-toggle
+format-background = ${colors.background}
+format-foreground = ${colors.secondary}
+
+#####################################################################################################################
+
+[module/network-display]
+type = custom/script
+exec = network-display
+interval = 0.5
+format-background = ${colors.background}
+format-foreground = ${colors.secondary}
+
+#####################################################################################################################
+
 [module/dpms-display]
 type = custom/script
 exec = dpms-display
@@ -403,23 +699,27 @@ interval = 0.5
 click-left = dpms-toggle
 format-background = ${colors.background}
 format-foreground = ${colors.secondary}
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#####################################################################################################################
+
 [module/pulseaudio]
 type = internal/pulseaudio
 use-ui-max = false
 interval = 5
-format-volume = "<ramp-volume> <label-volume>  "
-format-muted = "<label-muted>  "
-label-muted ="   0%"
-ramp-volume-0 ="  "
-ramp-volume-1 ="  "
-ramp-volume-2 ="  墳"
+format-volume = "<ramp-volume> <label-volume>"
+format-muted = "<label-muted>"
+label-muted =" 0%"
+ramp-volume-0 =""
+ramp-volume-1 =""
+ramp-volume-2 ="墳"
 format-volume-background = ${colors.background}
 format-volume-foreground = ${colors.primary}
 format-muted-background = ${colors.background}
 format-muted-foreground = ${colors.primary}
 enable-scroll = false
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#####################################################################################################################
+
 [module/backlight]
 type = internal/backlight
 card = intel_backlight
@@ -428,70 +728,51 @@ format = <label>
 label = " %percentage%%  "
 format-background = ${colors.background}
 format-foreground = ${colors.secondary}
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;  N   N  NNNN  NNNNN
-;  NN  N  N       N
-;  N N N  NNN     N
-;  N  NN  N       N
-;  N   N  NNNN    N
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#####################################################################################################################
 
 [module/wireless-network]
 type = internal/network
-format-connected =" 直"
-format-disconnected =" 睊"
+format-connected ="直"
+format-disconnected ="睊"
 enable-click = true
 click-left = rofimenu-wifi
+format-disconnected-background = ${colors.background}
+format-connected-background = ${colors.background}
+format-connected-foreground = ${colors.secondary}
+format-disconnected-foreground = ${colors.secondary}
 
 #TRITON
 #T interface = wlp59s0
-#T format-disconnected-background = ${colors.background}
-#T format-connected-background = ${colors.background}
-#T format-connected-foreground = ${colors.secondary}
-#T format-disconnected-foreground = ${colors.secondary}
 
 #NEPTUNE
-#N interface = wlo1
-#N format-disconnected-background = ${colors.background}
-#N format-connected-background = ${colors.background}
-#N format-connected-foreground = ${colors.primary}
-#N format-disconnected-foreground = ${colors.primary}
+interface = wlo1
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;  N   N  NNNN  NNNNN      NNNN
-;  NN  N  N       N        N 
-;  N N N  NNN     N   NNN  NNN
-;  N  NN  N       N        N
-;  N   N  NNNN    N        NNNN
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#####################################################################################################################
 
 [module/network]
 type = internal/network   
 format-connected ="|"
+format-diconnected =""
+format-disconnected-background = ${colors.background}
+format-connected-background = ${colors.background}
+format-connected-foreground = ${colors.secondary}
+format-disconnected-foreground = ${colors.secondary}
 
 #TRITON
 #T interface = enp58s0f1
-#T format-disconnected-background = ${colors.background}
-#T format-connected-background = ${colors.background}
-#T format-connected-foreground = ${colors.secondary}
-#T format-disconnected-foreground = ${colors.secondary}
 
 #NEPTUNE
-#N interface = eno1
-#N format-disconnected-background = ${colors.background}
-#N format-connected-background = ${colors.background}
-#N format-connected-foreground = ${colors.primary}
-#N format-disconnected-foreground = ${colors.primary}
+interface = eno1
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#####################################################################################################################
+
 [module/date]
 type = internal/date
 interval = 1.0
 date =  %A %b %e
-time = %l:%M %p
-format =  <label>
-label = %time%, %date%
+time = %l:%M
+format = "<label>"
+label = "%time%"
 format-foreground = ${colors.primary}
 ;format-background = ${colors.background-alt}
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
