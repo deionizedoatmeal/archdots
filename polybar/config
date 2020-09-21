@@ -538,6 +538,7 @@ label-separator-foreground = ${colors.secondary}
 type = custom/script
 exec = bluetooth-display
 interval = 1
+click-left = rofimenu-bluetooth
 format-background = ${colors.background}    
 format-foreground = ${colors.secondary}
 
@@ -687,6 +688,7 @@ format-foreground = ${colors.secondary}
 type = custom/script
 exec = network-display
 interval = 0.5
+click-left = rofimenu-wifi
 format-background = ${colors.background}
 format-foreground = ${colors.secondary}
 
@@ -771,7 +773,9 @@ interface = eno1
 type = internal/date
 interval = 1.0
 date =  %A %b %e
-time = %l:%M
+date-alt = %m/%d/%Y
+time = "%l:%M"
+time-alt = " %m/%d"
 format = "<label>"
 label = "%time%"
 format-foreground = ${colors.primary}
