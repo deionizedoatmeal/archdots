@@ -22,8 +22,8 @@ client.placeholder      $bg     $bg     $fg  $bg       $bg
 client.background       $bg
 
 #monitors
-set $LEFT DisplayPort-2
-set $CENTER DisplayPort-1
+set $LEFT DisplayPort-1
+set $CENTER DisplayPort-0
 set $RIGHT HDMI-A-0
 
 # these are the variables which are different on my two machines
@@ -62,7 +62,7 @@ set $RIGHT HDMI-A-0
 #N Workspace $ws5 output $CENTER
 #N Workspace $ws6 output $CENTER
 #N Workspace $ws7 output $CENTER
-#N Workspace $ws8 output $CENTER
+#N Workspace $ws8 output $RIGHT
 #N Workspace $ws9 output $RIGHT
 #N Workspace $ws10 output $RIGHT
 #N bindsym $mod+Shift+e exec rofimenu-exit

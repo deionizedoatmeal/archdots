@@ -79,3 +79,11 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
         sudo systemctl disable getty@tty2.service
 fi
 
+
+# flash focus 
+read -r -p "#### Would you like to enable flashfocus? [y/N] ####" response
+if [[ "$response" =~ ^([Yy])+$ ]]; then
+    systemctl --user enable --now flashfocus
+#    systemctl --user start --now flashfocus
+fi
+

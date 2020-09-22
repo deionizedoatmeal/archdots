@@ -27,7 +27,7 @@ font-2 = Iosevka Nerd Font:size=22;4
 modules-center = date
 modules-right = bluetooth-display pulseaudio redshift-display dpms-display backlight cpu temperature system-cpu-frequency-display memory wireless-network network
 modules-left = i3
-monitor = DisplayPort-1
+monitor = DisplayPort-0
 tray-position = none
 wm-restack = i3
 override-redirect = true
@@ -53,7 +53,7 @@ font-0 = Iosevka Nerd Font:pixelsize=14;4
 font-1 = Iosevka Nerd Font:size=14;4
 font-2 = Iosevka Nerd Font:size=22;4
 modules-center = wireless-network network
-monitor = DisplayPort-1
+monitor = DisplayPort-0
 tray-position = none
 wm-restack = i3
 override-redirect = true
@@ -79,7 +79,7 @@ font-0 = Iosevka Nerd Font:pixelsize=14;4
 font-1 = Iosevka Nerd Font:size=14;4
 font-2 = Iosevka Nerd Font:size=22;4
 modules-center = date
-monitor = DisplayPort-1
+monitor = DisplayPort-0
 tray-position = none
 wm-restack = i3
 override-redirect = true
@@ -105,7 +105,7 @@ font-0 = Iosevka Nerd Font:pixelsize=14;4
 font-1 = Iosevka Nerd Font:size=14;4
 font-2 = Iosevka Nerd Font:size=22;4
 modules-center = temperature
-monitor = DisplayPort-1
+monitor = DisplayPort-0
 tray-position = none
 wm-restack = i3
 override-redirect = true
@@ -131,7 +131,7 @@ font-0 = Iosevka Nerd Font:pixelsize=14;4
 font-1 = Iosevka Nerd Font:size=14;4
 font-2 = Iosevka Nerd Font:size=22;4
 modules-center = redshift-display dpms-display brightness 
-monitor = DisplayPort-1
+monitor = DisplayPort-0
 tray-position = none
 wm-restack = i3
 override-redirect = true
@@ -158,7 +158,7 @@ font-1 = Iosevka Nerd Font:size=14;4
 font-2 = Iosevka Nerd Font:size=22;4
 separator = "  "
 modules-center = redshift-dpms-display brightness temperature network-display
-monitor = DisplayPort-1
+monitor = DisplayPort-0
 tray-position = none
 wm-restack = i3
 override-redirect = true
@@ -184,7 +184,7 @@ font-0 = Iosevka Nerd Font:pixelsize=14;4
 font-1 = Iosevka Nerd Font:size=14;4
 font-2 = Iosevka Nerd Font:size=22;4
 modules-center = bluetooth-display 
-monitor = DisplayPort-1
+monitor = DisplayPort-0
 tray-position = none
 wm-restack = i3
 override-redirect = true
@@ -210,7 +210,7 @@ font-0 = Iosevka Nerd Font:pixelsize=14;4
 font-1 = Iosevka Nerd Font:size=14;4
 font-2 = Iosevka Nerd Font:size=22;4
 modules-center = pulseaudio 
-monitor = DisplayPort-1
+monitor = DisplayPort-0
 tray-position = none
 wm-restack = i3
 override-redirect = true
@@ -237,7 +237,7 @@ font-1 = Iosevka Nerd Font:size=14;4
 font-2 = Iosevka Nerd Font:size=22;4
 separator = "  "
 modules-center = bluetooth-display pulseaudio 
-monitor = DisplayPort-1
+monitor = DisplayPort-0
 tray-position = none
 wm-restack = i3
 override-redirect = true
@@ -263,7 +263,7 @@ font-0 = Iosevka Nerd Font:pixelsize=14;4
 font-1 = Iosevka Nerd Font:size=14;4
 font-2 = Iosevka Nerd Font:size=22;4
 modules-center = i3 
-monitor = DisplayPort-1
+monitor = DisplayPort-0
 tray-position = none
 wm-restack = i3
 override-redirect = true
@@ -276,9 +276,9 @@ cursor-scroll = ns-resize
 #####################################################################################################################
 
 [bar/sq-i3]
-width = 150
+width = 120
 height = 03.0000%
-offset-x = 00.9375%
+offset-x = 25
 offset-y = 01.1111%
 bottom = false
 fixed-center = true
@@ -297,12 +297,12 @@ modules-center = i3
 module-margin = 0
 cursor-click = pointer
 cursor-scroll = ns-resize
-monitor = DisplayPort-2
+monitor = DisplayPort-1
 
 #####################################################################################################################
 
 [bar/sq-audio]
-offset-x = 175
+offset-x = 155
 offset-y = 01.1111%
 bottom = false
 fixed-center = false
@@ -316,7 +316,7 @@ font-1 = Iosevka Nerd Font:size=14;4
 font-2 = Iosevka Nerd Font:size=22;4
 separator = "  "
 modules-center = bluetooth-display pulseaudio 
-monitor = DisplayPort-2
+monitor = DisplayPort-1
 tray-position = none
 wm-restack = i3
 override-redirect = true
@@ -329,7 +329,7 @@ cursor-scroll = ns-resize
 #####################################################################################################################
 
 [bar/vert-i3]
-width = 90
+width = 120
 height = 32.4
 offset-x = 25
 offset-y = 12.0
@@ -357,7 +357,7 @@ monitor = HDMI-A-0
 #####################################################################################################################
 
 [bar/vert-audio]
-offset-x = 125
+offset-x = 155
 offset-y = 12.0
 bottom = false
 fixed-center = false
@@ -774,7 +774,7 @@ type = internal/date
 interval = 1.0
 date =  %A %b %e
 date-alt = %m/%d/%Y
-time = "%l:%M"
+time = " %l:%M"
 time-alt = " %m/%d"
 format = "<label>"
 label = "%time%"

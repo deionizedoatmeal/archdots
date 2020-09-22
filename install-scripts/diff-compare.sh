@@ -45,9 +45,9 @@ diff ../chrome/userChrome.css ~/.mozilla/firefox/*.default-release/chrome/userCh
 echo "##### chrome/userContent.css ######"
 diff ../chrome/userContent.css ~/.mozilla/firefox/*.default-release/chrome/userContent.css
 echo "##### spotify-tui/spotify-tui.desktop ######"
-diff ../spotify-tui/spotify-tui.desktop ~/config/spotify-tui/spotify-tui.desktop
+diff ../spotify-tui/spotify-tui.desktop ~/.config/spotify-tui/spotify-tui.desktop
 echo "##### Android Messages/Settings ######"
-diff ../android_messages/Settings ~/.config/'Android Messages'/Settings
+diff ../android-messages-desktop/Settings ~/.config/android-messages-desktop/Settings
 echo "##### gtk/dark.ini ######"
 diff ../gtk/dark.ini ${HOME}/.config/gtk-3.0/dark.ini
 diff ../gtk/dark.ini ${HOME}/.config/gtk-4.0/dark.ini

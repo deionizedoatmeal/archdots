@@ -1,3 +1,6 @@
 #!/bin/bash
 
-flashfocus -c ~/.config/flashfocus/flashfocus.yml
+killall flashfocus
+
+flashfocus -c ~/.config/flashfocus/flashfocus.yml &
+

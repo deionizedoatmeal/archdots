@@ -1,0 +1,1 @@
+systemctl --user import-environment; systemctl --user start xsession.target
