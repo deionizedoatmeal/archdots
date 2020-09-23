@@ -37,10 +37,6 @@ set $RIGHT HDMI-A-0
 #T bindsym XF86MonBrightnessDown exec --no-startup-id light-down
 #T bindsym F9 exec --no-startup-id light-up
 #T bindsym F8 exec --no-startup-id light-down
-#T bindsym XF86AudioPlay exec --no-startup-id "playerctl play-pause"
-#T bindsym XF86AudioRaiseVolume exec --no-startup-id vol-up; exec --no-startup-id click1 #increase volume
-#T bindsym XF86AudioLowerVolume exec --no-startup-id vol-down; exec --no-startup-id click1 #decrease volume
-#T bindsym XF86AudioMute exec --no-startup-id amixer -D pulse sset Master toggle; exec --no-startup-id click1 #mute sound
 #T bindsym F6 exec --no-startup-id vol-up; exec --no-startup-id click1 #increase volume
 #T bindsym F5 exec --no-startup-id vol-down; exec --no-startup-id click1 #decrease volume
 #T bindsym $mod+Shift+p exec rofimenu-power T
@@ -251,6 +247,14 @@ for_window [class="arandr"] floating enable
 ########
 bindsym $mod+BackSpace exec --no-startup-id click1; exec --no-startup-id gllock
 bindsym $mod+Escape exec --no-startup-id click1; exec --no-startup-id gllock 
+
+#########
+# SOUND #
+#########
+bindsym XF86AudioPlay exec --no-startup-id "playerctl play-pause"
+bindsym XF86AudioRaiseVolume exec --no-startup-id vol-up; exec --no-startup-id click1 #increase volume
+bindsym XF86AudioLowerVolume exec --no-startup-id vol-down; exec --no-startup-id click1 #decrease volume
+#bindsym XF86AudioMute exec --no-startup-id amixer -D pulse sset Master toggle; exec --no-startup-id click1 #mute sound
 
 ###################
 # SCREEN TIME OUT #
