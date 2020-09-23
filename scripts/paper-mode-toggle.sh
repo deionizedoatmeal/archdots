@@ -35,7 +35,7 @@ if [[ ${RIGHTVALUE} -eq 0 ]]; then
         i3-msg gaps left current set 100;
         i3-msg gaps top current set 300;
         i3-msg gaps bottom current set 300;
-    elif [[ ${DISPLAY} == "DisplayPort-2" ]]; then
+    elif [[ ${DISPLAY} == "DisplayPort-1" ]]; then
         i3-msg split v;
         i3-msg gaps right current set 200;
         i3-msg gaps left current set 200;
