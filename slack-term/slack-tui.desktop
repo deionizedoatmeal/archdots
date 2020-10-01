@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name= Slack (TUI)
+GenericName=TUI Group Messaging
+Icon=slack
+Exec=kitty sh -c "slack-term"
+Categories=Network;InstantMessaging;
+StartupWMClass=slack-tui

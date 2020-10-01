@@ -87,3 +87,10 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 #    systemctl --user start --now flashfocus
 fi
 
+
+# apcupsd 
+read -r -p "#### Would you like to enable apcupsd.service? [y/N] ####" response
+if [[ "$response" =~ ^([Yy])+$ ]]; then
+    sudo systemctl enable apcupsd.service
+    sudo systemctl start apcupsd.service
+fi

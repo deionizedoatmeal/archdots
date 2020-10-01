@@ -28,7 +28,8 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
                 mkdir ~/.config/polybar/
                 mkdir ~/.config/ranger/
                 mkdir ~/.config/rofi/
-                #mkdir ~/.config/spotifyd/
+                mkdir ~/.config/slack-term/
+                mkdir ~/.config/spotifyd/
                 mkdir ~/.config/spotify-tui/
                 mkdir ~/.config/wal/
                 mkdir ~/.config/zathura/
@@ -56,6 +57,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
                 ./install-scripts/uncomment.sh T wal/templates/dunstrc ${HOME}/.config/wal/templates/dunstrc
                 cp spotify-tui/* ${HOME}/.config/spotify-tui/.
                 #cp spotifyd/* ${HOME}/.config/spotifyd/.
+                #cp slack-term/* ${HOME}/.config/slack-term/.  
                 cp neofetch/* ${HOME}/.config/neofetch/.
                 cp .bashrc ${HOME}/.
                 cp .gitconfig ${HOME}/.
@@ -66,8 +68,9 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
                 cp gtk/.* ${HOME}/.
                 sudo cp -r fonts/* /usr/share/fonts/.
                 sudo cp spotify-tui/spotify-tui.desktop /usr/share/applications/.
-                sudo cp remarkable/remarkable.desktop /usr/share/applications/.
-                sudo cp system/fbset-1080.service /etc/systemd/system/.
+                sudo cp slack-tui/slack-tui.desktop /usr/share/applications/.
+                #sudo cp remarkable/remarkable.desktop /usr/share/applications/.
+                #sudo cp system/fbset-1080.service /etc/systemd/system/.
                 cp neofetch/config.conf ${HOME}/.config/neofetch/. 
           
                 # reminders 
@@ -98,6 +101,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
                 ./install-scripts/uncomment.sh N wal/templates/dunstrc ${HOME}/.config/wal/templates/dunstrc
                 cp spotify-tui/* ${HOME}/.config/spotify-tui/.
                 #cp spotifyd/* ${HOME}/.config/spotifyd/.
+                #cp slack-term/* ${HOME}/.config/slack-term/.  
                 cp neofetch/* ${HOME}/.config/neofetch/.
                 cp .bashrc ${HOME}/.
                 cp .gitconfig ${HOME}/.
@@ -109,7 +113,8 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
                 cp gtk/.* ${HOME}/.
                 sudo cp -r fonts/* /usr/share/fonts/.
                 sudo cp spotify-tui/spotify-tui.desktop /usr/share/applications/.
-                sudo cp remarkable/remarkable.desktop /usr/share/applications/.
+                sudo cp slack-tui/slack-tui.desktop /usr/share/applications/.
+                #sudo cp remarkable/remarkable.desktop /usr/share/applications/.
                 sudo cp system/fbset-1080.service /etc/systemd/system/.
                 cp neofetch/config.conf ${HOME}/.config/neofetch/. 
           

@@ -20,6 +20,8 @@ echo "##### spotify-tui/config.yml ######"
 diff ../spotify-tui/config.yml ~/.config/spotify-tui/config.yml
 echo "##### spotifyd/config ######"
 diff ../spotifyd/config ~/.config/spotifyd/config
+echo "##### slack-term/config ######"
+diff ../slack-term/config ~/.config/slack-term/config
 echo "##### ranger/rc.conf ######"
 diff ../ranger/rc.conf ~/.config/ranger/rc.conf
 echo "##### ranger/rifle.conf ######"

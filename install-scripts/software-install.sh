@@ -14,7 +14,7 @@ fi
 sudo pacman -Syyu
 
 # package lists
-SYS="github-cli scrot texlive-most fbset cpupower dmidecode inetutils arandr xdotool nfsidmap exfat-utils dosfstools ntfsprogs cups cups-pdf hddtemp rsync rdiff-backup pulseaudio-bluetooth materia-gtk-theme neovim cmake clang bc gdisk rust dbus pulseaudio bluez bluez-utils pass redshift git sudo vi kitty rofi dunst openvpn gnupg imagemagick sox mpg123 ffmpeg feh python ttf-fantasque-sans-mono python-pip nvme-cli lm_sensors openssh vim bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib htop"
+SYS="openconnect rclone github-cli scrot texlive-most cpupower dmidecode inetutils arandr xdotool nfsidmap exfat-utils dosfstools ntfsprogs cups cups-pdf hddtemp rsync rdiff-backup pulseaudio-bluetooth materia-gtk-theme neovim cmake clang bc gdisk rust dbus pulseaudio bluez bluez-utils pass redshift git sudo vi kitty rofi dunst openvpn gnupg imagemagick sox mpg123 ffmpeg feh python ttf-fantasque-sans-mono python-pip nvme-cli lm_sensors openssh vim bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib htop"
 # displaycal
 # dialog python-setuptools installed on nep??
 
@@ -23,7 +23,7 @@ NONES="digikam inkscape pavucontrol libreoffice-fresh cheese spotifyd nmap perl-
 TRI="xf86-video-intel vulkan-intel powertop upower"
 #tlp tlp-rdw removed in aug 
 
-NEP="xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon remmina kdenlive libvncserver virtualbox virtualbox-host-modules-arch"
+NEP="apcupsd fbset xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon remmina kdenlive libvncserver virtualbox virtualbox-host-modules-arch"
 
 #python3-venv?
 #pipx?
@@ -71,7 +71,7 @@ YAYSYS="flashfocus-git fet.sh-git brother-mfc-9560cdw ttf-symbola paper-icon-the
 #python-pipx teamviewer autotiling picom-ibhagwan-git
 YAYNEPTUNE="siril-git google-earth-pro virtualbox-ext-oracle remmina-plugin-rdesktop"
 YAYTRITON="system76-power system76-firmware-daemon system76-driver light-git"
-YAYNONES="remarkable-client rmapi slack-desktop slack-term-bin spotify-tui-git spotify mfetch-git android-messages-desktop zoom"
+YAYNONES="remarkable-client rmapi slack-desktop slack-term spotify-tui-git spotify mfetch-git android-messages-desktop zoom"
 ##########################################################################
 # yay install
 
