@@ -56,8 +56,7 @@ fi
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[1;32m\]\h\[\033[1;34m\] \W |>\[\033[0m\] '
 else
-    #PS1='${debian_chroot:+($debian_chroot)}\h\W|> '
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[1;32m\]\h\[\033[1;34m\] \W |>\[\033[0m\] '
+    PS1='${debian_chroot:+($debian_chroot)}\h\W|> '
 fi
 unset color_prompt force_color_prompt
 
@@ -159,7 +158,7 @@ export EDITOR=nvim
 export MESA_DIR=${HOME}/Repos/mesa-r12778
 
 # set OMP_NUM_THREADS to be the number of cores on your machine
-export OMP_NUM_THREADS=12
+export OMP_NUM_THREADS=10
 
 # you should have done this when you set up the MESA SDK
 export MESASDK_ROOT=${HOME}/Repos/mesasdk
