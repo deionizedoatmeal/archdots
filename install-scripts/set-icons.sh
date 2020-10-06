@@ -30,6 +30,9 @@ mv org.kde.showfoto.desktop ../unused-applications/.
 mv xdvi.desktop ../unused-applications/.
 mv picom.desktop ../unused-applications/.
 mv picom.desktop ../unused-applications/.
+mv stoken-gui-small.desktop ../unused-applications/.
+mv stoken-gui.desktop ../unused-applications/.
+
 
 # digiKam 
 sed -i '/Name=/d' ./org.kde.digikam.desktop

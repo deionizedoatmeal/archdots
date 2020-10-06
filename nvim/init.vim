@@ -28,12 +28,19 @@ set foldmethod=indent   " fold based on indent level
 :set cmdheight=1
 
 "fix for yankring and neovim
-"let g:clipboard=0
+let g:clipboard=0
 
 " system clipboard
-vnoremap <C-c> "*y
-:set clipboard=unnamed
-:set clipboard=unnamedplus
+"vnoremap <C-c> "*y
+"vnoremap <C-c> "+y
+"noremap <Leader>y "*y
+"noremap <Leader>p "*p
+"noremap <Leader>Y "+y
+"noremap <Leader>P "+p
+
+:set clipboard+=unnamedplus
+":set clipboard=unnamed
+":set clipboard=unnamedplus
 
 "plugins
 call plug#begin('~/.config/nvim/plugs')

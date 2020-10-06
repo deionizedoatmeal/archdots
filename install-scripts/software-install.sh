@@ -141,6 +141,15 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
         echo 'Gnuplot-Pywal.git installed'
 fi
 
+# mesa reader
+read -r -p "Would you like to install py_mesa_reader? [y/N]" response
+if [[ "$response" =~ ^([Yy])+$ ]]; then
+    git clone git@github.com:wmwolf/py_mesa_reader.git
+    cd py_mesa_reader
+    sudo pip install .
+    cd ..
+    sudo rm -r py_mesa_reader
+fi
 
 ####################
 #      PYTHON      #
