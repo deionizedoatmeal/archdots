@@ -172,6 +172,12 @@ sed -i '/GenericName=/d' ./pavucontrol.desktop
 sed -i "2iName= Pulse Audio" pavucontrol.desktop
 sed -i "3iGenericName=Audio Settings" pavucontrol.desktop
 
+# pulse audio prefs
+sed -i '/Name=/d' ./paprefs.desktop
+sed -i '/GenericName=/d' ./paprefs.desktop
+sed -i "2iName= Pulse Audio" paprefs.desktop
+sed -i "3iGenericName=Audio Preferences" paprefs.desktop
+
 # vim 
 sed -i '/Name=/d' ./vim.desktop
 sed -i '/GenericName=/d' ./vim.desktop

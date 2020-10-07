@@ -14,11 +14,11 @@ fi
 sudo pacman -Syyu
 
 # package lists
-SYS="openconnect rclone github-cli scrot texlive-most cpupower dmidecode inetutils arandr xdotool nfsidmap exfat-utils dosfstools ntfsprogs cups cups-pdf hddtemp rsync rdiff-backup pulseaudio-bluetooth materia-gtk-theme neovim cmake clang bc gdisk rust dbus pulseaudio bluez bluez-utils pass redshift git sudo vi kitty rofi dunst openvpn gnupg imagemagick sox mpg123 ffmpeg feh python ttf-fantasque-sans-mono python-pip nvme-cli lm_sensors openssh vim bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib htop"
+SYS="openconnect rclone github-cli scrot texlive-most cpupower dmidecode inetutils arandr xdotool nfsidmap exfat-utils dosfstools ntfsprogs cups cups-pdf hddtemp rsync rdiff-backup materia-gtk-theme neovim cmake clang bc gdisk rust dbus pulseaudio paprefs pavucontrol pulseaudio-bluetooth bluez bluez-utils pass redshift git sudo vi kitty rofi dunst openvpn gnupg imagemagick sox mpg123 ffmpeg feh python ttf-fantasque-sans-mono python-pip nvme-cli lm_sensors openssh vim bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib htop"
 # displaycal
 # dialog python-setuptools installed on nep??
 
-NONES="digikam inkscape pavucontrol libreoffice-fresh cheese spotifyd nmap perl-image-exiftool python-pillow ranger zathura zathura-pdf-mupdf firefox gnuplot vlc darktable neofetch steam atom gimp zathura speedtest-cli"
+NONES="digikam inkscape libreoffice-fresh cheese spotifyd nmap perl-image-exiftool python-pillow ranger zathura zathura-pdf-mupdf firefox gnuplot vlc darktable neofetch steam atom gimp zathura speedtest-cli"
 
 TRI="xf86-video-intel vulkan-intel powertop upower"
 #tlp tlp-rdw removed in aug 
@@ -170,6 +170,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
     sudo pip install scipy
     sudo pip install matplotlib
     sudo pip install IPython
+    sudo pip install jupyter
     #sudo pip install i3-py
     #sudo pip3 install wpgtk
     echo 'python packages installed'
