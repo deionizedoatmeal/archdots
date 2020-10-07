@@ -37,10 +37,7 @@ let g:clipboard=0
 "noremap <Leader>p "*p
 "noremap <Leader>Y "+y
 "noremap <Leader>P "+p
-
 :set clipboard+=unnamedplus
-":set clipboard=unnamed
-":set clipboard=unnamedplus
 
 "plugins
 call plug#begin('~/.config/nvim/plugs')
@@ -58,6 +55,7 @@ Plug 'preservim/nerdtree'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-commentary'
+Plug 'OriolAbril/MESAstro-vim'
 
 "currently unsed plugins
 "Plug 'norcalli/nvim-colorizer.lua'
@@ -99,3 +97,7 @@ function! ToggleSpellCheck()
 endfunction
 
 nnoremap <silent> <Leader>l :call ToggleSpellCheck()<CR>
+
+
+"mesa syntax
+filetype indent plugin on

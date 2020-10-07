@@ -29,6 +29,7 @@ These are my dotfiles and scripts for my workstation/server and my personal lapt
 - [ranger](https://github.com/ranger/ranger) (TUI file browser)
 - [zathura](https://github.com/pwmt/zathura) (PDF reader)
 - [spotify-tui](https://github.com/Rigellute/spotify-tui) + [spotifyd](https://github.com/Spotifyd/spotifyd) (TUI version of the spotify streaming client)
+- slack-term
 - [ly](https://github.com/cylgom/ly) (display manager)
 - grub, mkinitcpio and sudo (specific configs needed for encryption and of my scripts)
 # installation scripts:  
