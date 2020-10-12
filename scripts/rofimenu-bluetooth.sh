@@ -51,12 +51,21 @@ case $CHOSEN in
         bluetooth-power-toggle
         ;;
     $FIRST)
+        if [ "$STATUS" == "no" ]; then
+            bluetooth-power-toggle
+        fi
         bluetooth-device-toggle D8:AF:F1:A9:BE:D7
         ;;
     $SECOND)
+        if [ "$STATUS" == "no" ]; then
+            bluetooth-power-toggle
+        fi
         bluetooth-device-toggle D1:64:9F:2F:F5:D3
         ;;
     $THIRD)
+        if [ "$STATUS" == "no" ]; then
+            bluetooth-power-toggle
+        fi
         bluetooth-device-toggle 88:C6:26:21:AA:32
         ;;
 esac

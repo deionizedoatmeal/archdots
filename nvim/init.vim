@@ -28,7 +28,7 @@ set foldmethod=indent   " fold based on indent level
 :set cmdheight=1
 
 "fix for yankring and neovim
-let g:clipboard=0
+"let g:clipboard=0
 
 " system clipboard
 "vnoremap <C-c> "*y
@@ -37,7 +37,7 @@ let g:clipboard=0
 "noremap <Leader>p "*p
 "noremap <Leader>Y "+y
 "noremap <Leader>P "+p
-:set clipboard+=unnamedplus
+set clipboard=unnamedplus
 
 "plugins
 call plug#begin('~/.config/nvim/plugs')
@@ -47,10 +47,10 @@ Plug 'dylanaraps/wal.vim'
 Plug 'lervag/vimtex'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-repeat'
-Plug 'svermeulen/vim-easyclip'
+"Plug 'svermeulen/vim-easyclip'
 Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'} 
 Plug 'tmsvg/pear-tree'
-Plug 'yuttie/comfortable-motion.vim'
+"Plug 'yuttie/comfortable-motion.vim'
 Plug 'preservim/nerdtree'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'tpope/vim-eunuch'
@@ -71,7 +71,7 @@ set conceallevel=1
 let g:tex_conceal='abdmg'
 
 "easy clip settings
-let g:EasyClipShareYanks=1
+"let g:EasyClipShareYanks=1
 
 "utilsnips
 "let g:UltiSnipsExpandTrigger = '<tab>'
@@ -98,6 +98,11 @@ endfunction
 
 nnoremap <silent> <Leader>l :call ToggleSpellCheck()<CR>
 
+" scrolling
+" let g:comfortable_motion_scroll_down_key = "j"
+" let g:comfortable_motion_scroll_up_key = "k"
+" let g:comfortable_motion_scroll_down_key = "<Down>"
+" let g:comfortable_motion_scroll_up_key = "<Up>"
 
 "mesa syntax
 filetype indent plugin on
