@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name= Proteus
+GenericName=Windows 10 VM
+Comment=Starts the VirtualBox machine proteus
+Type=Application
+Exec=/usr/lib/virtualbox/VirtualBoxVM --comment "proteus" --startvm "{1d1b85bc-a36c-492e-bc7d-a2fc7e9524f4}"
+Icon=virtualbox-vbox.png

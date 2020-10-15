@@ -62,11 +62,11 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
                 cp .bashrc ${HOME}/.
                 cp .gitconfig ${HOME}/.
                 cp -r chrome ${HOME}/.mozilla/firefox/*.default-release/.
-                cp android-messages-desktop/* ${HOME}/.config/android-messages-desktop/.
                 cp gtk/*.ini ${HOME}/.config/gtk-3.0/.
                 cp gtk/*.ini ${HOME}/.config/gtk-4.0/.
                 cp gtk/.* ${HOME}/.
                 sudo cp -r fonts/* /usr/share/fonts/.
+                cp android-messages-desktop/* ${HOME}/.config/android-messages-desktop/.
                 sudo cp spotify-tui/spotify-tui.desktop /usr/share/applications/.
                 sudo cp slack-tui/slack-tui.desktop /usr/share/applications/.
                 #sudo cp remarkable/remarkable.desktop /usr/share/applications/.
@@ -114,6 +114,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
                 sudo cp -r fonts/* /usr/share/fonts/.
                 sudo cp spotify-tui/spotify-tui.desktop /usr/share/applications/.
                 sudo cp slack-tui/slack-tui.desktop /usr/share/applications/.
+                sudo cp virtualbox/proteus.desktop /usr/share/applications/.
                 #sudo cp remarkable/remarkable.desktop /usr/share/applications/.
                 sudo cp system/fbset-1080.service /etc/systemd/system/.
                 cp neofetch/config.conf ${HOME}/.config/neofetch/. 
