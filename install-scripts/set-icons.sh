@@ -22,6 +22,7 @@ mv redshift-gtk.desktop ../unused-applications/.
 mv electron.desktop ../unused-applications/.
 mv electron4.desktop ../unused-applications/.
 mv electron5.desktop ../unused-applications/.
+mv electron6.desktop ../unused-applications/.
 mv cmake-gui.desktop ../unused-applications/.
 mv org.fontforge.FontForge.desktop ../unused-applications/.
 mv QMLPlayer.desktop ../unused-applications/.
