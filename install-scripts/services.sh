@@ -94,3 +94,12 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
     sudo systemctl enable apcupsd.service
     sudo systemctl start apcupsd.service
 fi
+
+# ntpd 
+read -r -p "#### Would you like to enable ntpd.service? [y/N] ####" response
+if [[ "$response" =~ ^([Yy])+$ ]]; then
+    sudo systemctl enable ntpd.service
+    sudo systemctl start ntpd.service
+    timedatectl set-ntp true
+    sudo ntpd -qg
+fi
