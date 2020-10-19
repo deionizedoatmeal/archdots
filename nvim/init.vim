@@ -9,7 +9,8 @@ set showcmd             " show command in bottom bar
 filetype indent on      " load filetype-specific indent files
 set wildmenu            " visual autocomplete for command menu
 set lazyredraw          " redraw only when we need to.
-set showmatch           " highlight matching [{()}]
+set noshowmatch           " highlight matching [{()}]
+let g:loaded_matchparen=1
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 " turn off search highlight
@@ -69,6 +70,7 @@ let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
 set conceallevel=1
 let g:tex_conceal='abdmg'
+let g:vimtex_matchparen_enabled=0
 
 "easy clip settings
 "let g:EasyClipShareYanks=1
