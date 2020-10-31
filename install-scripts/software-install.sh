@@ -18,7 +18,7 @@ SYS="ntp openconnect rclone cpupower dmidecode inetutils xdotool nfsidmap exfat-
 # displaycal
 # dialog python-setuptools installed on nep??
 
-NONES="cernlib github-cli scrot arandr texlive-most digikam cups cups-pdf inkscape hddtemp libreoffice-fresh cheese spotifyd nmap perl-image-exiftool python-pillow ranger zathura zathura-pdf-mupdf firefox gnuplot vlc darktable neofetch steam atom gimp zathura speedtest-cli"
+NONES="github-cli scrot arandr texlive-most digikam cups cups-pdf inkscape hddtemp libreoffice-fresh cheese spotifyd nmap perl-image-exiftool python-pillow ranger zathura zathura-pdf-mupdf firefox gnuplot vlc darktable neofetch steam atom gimp zathura speedtest-cli go"
 
 TRI="xf86-video-intel vulkan-intel powertop upower"
 #tlp tlp-rdw removed in aug 

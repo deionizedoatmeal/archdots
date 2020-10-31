@@ -150,6 +150,7 @@ alias set-icons='sudo sh ${HOME}/Repos/archdots/install-scripts/set-icons.sh'
 # EDITOR #
 ##########
 export EDITOR=nvim
+export VISUAL=nvim
 
 ########
 # MESA #
