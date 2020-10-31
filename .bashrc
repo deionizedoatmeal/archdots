@@ -118,6 +118,12 @@ fi
 ########
 export PATH="$HOME/.cargo/bin:$PATH"
 
+######
+# GO #
+######
+export GOPATH="$HOME/Repos/go"
+export PATH=$PATH:$(go env GOPATH)/bin
+
 ########
 # PASS #
 ########
