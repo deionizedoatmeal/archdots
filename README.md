@@ -1,7 +1,9 @@
-These are my dotfiles and scripts for my workstation/server and my personal laptop. My process for a fresh install is: 
+Note: This README is not 100% acurate or up to date, but hopefully it should give you a general idea of how to set a system up like mine. If you end up improving on any of my scripts (install or utility) feel free to let me know I'm sure there are a bunch of better solutions then what I'm doing here.
+
+Anyways, these are my dotfiles and scripts for my workstation/server and my personal laptop. My process for a fresh install is: 
 1) boot from a live .iso
 2) connect to the internet (wired or via the `wifi-menu` command)
-3) install git with: `pacman -Syy && pacman -S git`
+3) install git with: `pacman -Syy git`
 4) clone the repository: `git clone https://github.com/deionizedoatmeal/archdots.git`
 5) run the script `./archdots/install-scripts/arch-install-1.sh`, and follow the prompts
 6) after the first script chroots to the new system, run the second script `./archdots/install-scripts/arch-install-2.sh`, follow the prompts and then manually check everything once it finishes
@@ -25,7 +27,7 @@ These are my dotfiles and scripts for my workstation/server and my personal lapt
 - [rofi](https://github.com/davatorium/rofi) (highly customizable application launcher)
 - [dunst](https://github.com/dunst-project/dunst) (notification serivce)
 - firefox (web browser)
-- neovim (text editor)
+- [neovim](https://github.com/neovim/neovim) (text editor) + LaTeX and other plugins
 - [ranger](https://github.com/ranger/ranger) (TUI file browser)
 - [zathura](https://github.com/pwmt/zathura) (PDF reader)
 - [spotify-tui](https://github.com/Rigellute/spotify-tui) + [spotifyd](https://github.com/Spotifyd/spotifyd) (TUI version of the spotify streaming client)
