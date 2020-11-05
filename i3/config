@@ -157,6 +157,8 @@ bindsym $mod+0 workspace $ws10
 # custom workspace switching
 bindsym $mod+Prior workspace next
 bindsym $mod+Next workspace prev
+bindsym $mod+w workspace next
+bindsym $mod+s workspace prev
 bindsym $mod+Home workspace $ws1
 bindsym $mod+End workspace $ws10
 
