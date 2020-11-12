@@ -170,3 +170,7 @@ export OMP_NUM_THREADS=10
 # you should have done this when you set up the MESA SDK
 export MESASDK_ROOT=${HOME}/Repos/mesasdk
 source $MESASDK_ROOT/bin/mesasdk_init.sh
+
+# new star work
+alias new-mesa='cp -r $MESA_DIR/star/work'
+
