@@ -57,6 +57,7 @@ Plug 'francoiscabrol/ranger.vim'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-commentary'
 Plug 'OriolAbril/MESAstro-vim'
+" Plug 'severin-lemaignan/vim-minimap'
 
 "currently unsed plugins
 "Plug 'norcalli/nvim-colorizer.lua'
