@@ -14,7 +14,7 @@ fi
 sudo pacman -Syyu
 
 # package lists
-SYS="ntp openconnect rclone cpupower dmidecode inetutils xdotool nfsidmap exfat-utils dosfstools ntfsprogs rsync rdiff-backup materia-gtk-theme neovim cmake clang bc gdisk rust dbus pulseaudio paprefs pavucontrol pulseaudio-bluetooth bluez bluez-utils pass redshift git sudo vi kitty rofi dunst openvpn gnupg imagemagick sox mpg123 ffmpeg feh python ttf-fantasque-sans-mono python-pip nvme-cli lm_sensors openssh vim bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib htop"
+SYS="ntp openconnect rclone cpupower dmidecode inetutils xdotool nfsidmap exfat-utils dosfstools ntfsprogs rsync rdiff-backup materia-gtk-theme neovim cmake clang bc gdisk rust dbus pulseaudio paprefs pavucontrol pulseaudio-bluetooth bluez bluez-utils pass redshift git sudo vi kitty rofi dunst openvpn gnupg imagemagick sox mpg123 ffmpeg feh python python-numpy python-numpy ttf-fantasque-sans-mono python-pip nvme-cli lm_sensors openssh vim bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib htop"
 # displaycal
 # dialog python-setuptools installed on nep??
 
@@ -163,9 +163,8 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
     sudo pip3 install inkscape-figures
     sudo pip3 install spotdl
     sudo pip3 install cl-chess
-    sudo pipx install jrnl
+    # sudo pipx install jrnl
     sudo pip install mdv
-    sudo pip install numpy
     sudo pip install mpmath
     sudo pip install scipy
     sudo pip install matplotlib

@@ -34,6 +34,11 @@ mv picom.desktop ../unused-applications/.
 mv stoken-gui-small.desktop ../unused-applications/.
 mv stoken-gui.desktop ../unused-applications/.
 
+# blender 
+sed -i '/Name=/d' ./blender.desktop
+sed -i '/GenericName=/d' ./blender.desktop
+sed -i "2iName= Blender" blender.desktop
+sed -i "3iGenericName=3D Modeler" blender.desktop
 
 # digiKam 
 sed -i '/Name=/d' ./org.kde.digikam.desktop
