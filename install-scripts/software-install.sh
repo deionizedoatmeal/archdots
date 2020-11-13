@@ -23,7 +23,7 @@ NONES="github-cli scrot arandr texlive-most digikam cups cups-pdf inkscape hddte
 TRI="xf86-video-intel vulkan-intel powertop upower"
 #tlp tlp-rdw removed in aug 
 
-NEP="apcupsd fbset xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon remmina kdenlive libvncserver virtualbox virtualbox-host-modules-arch"
+NEP="blender apcupsd fbset xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon remmina kdenlive libvncserver virtualbox virtualbox-host-modules-arch"
 
 #python3-venv?
 #pipx?
