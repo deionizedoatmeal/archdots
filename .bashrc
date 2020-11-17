@@ -173,4 +173,7 @@ source $MESASDK_ROOT/bin/mesasdk_init.sh
 
 # new star work
 alias new-mesa='cp -r $MESA_DIR/star/work'
+alias new-mesa-profile='cp $MESA_DIR/star/defaults/profile_columns.list'
+alias new-mesa-history='cp $MESA_DIR/star/defaults/history_columns.list'
+alias mesa-vars='$MESA_DIR/star/public/star_data.inc'
 
