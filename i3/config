@@ -49,8 +49,6 @@ set $RIGHT HDMI-A-0
 #N font pango:JetBrains Mono ExtraBold 12
 #N bindsym $mod+p exec --no-startup-id paper-mode-toggle 500 50 20 
 #N border_radius 16
-#N bindsym F4 exec --no-startup-id vol-up; exec --no-startup-id click1 #increase volume
-#N bindsym F5 exec --no-startup-id vol-down; exec --no-startup-id click1 #decrease volume
 #N Workspace $ws1 output $LEFT
 #N Workspace $ws2 output $LEFT
 #N Workspace $ws3 output $LEFT
@@ -253,8 +251,8 @@ for_window [class="(?i)VirtualBox Machine"] fullscreen enable
 ########
 # LOCK #
 ########
-bindsym $mod+BackSpace exec --no-startup-id click1; exec --no-startup-id gllock
-bindsym $mod+Escape exec --no-startup-id click1; exec --no-startup-id gllock 
+bindsym $mod+BackSpace exec --no-startup-id click1; exec --no-startup-id lock
+bindsym $mod+Escape exec --no-startup-id click1; exec --no-startup-id lock 
 
 #########
 # SOUND #
