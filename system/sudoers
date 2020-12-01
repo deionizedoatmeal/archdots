@@ -81,6 +81,8 @@ ian ALL=(ALL) ALL
 ian ALL=NOPASSWD:/bin/rfkill 
 ian ALL=NOPASSWD:/bin/system76-power
 ian ALL=NOPASSWD:/bin/systemctl
+ian ALL=NOPASSWD:/bin/openconnect
+ian ALL=NOPASSWD:/bin/killall
 #your name where ian is
 
 
