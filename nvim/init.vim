@@ -9,7 +9,7 @@ set showcmd             " show command in bottom bar
 filetype indent on      " load filetype-specific indent files
 set wildmenu            " visual autocomplete for command menu
 set lazyredraw          " redraw only when we need to.
-set noshowmatch           " highlight matching [{()}]
+" set showmatch           " highlight matching [{()}]
 let g:loaded_matchparen=1
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
@@ -21,6 +21,12 @@ set foldnestmax=10      " 10 nested fold max
 " space open/closes folds
 nnoremap <space> za
 set foldmethod=indent   " fold based on indent level
+
+" reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif
 
 "apply terminal transparency to status line
 ":hi statusline cterm=bold ctermfg=3 ctermbg=6 gui=NONE
@@ -108,4 +114,11 @@ nnoremap <silent> <Leader>l :call ToggleSpellCheck()<CR>
 " let g:comfortable_motion_scroll_up_key = "<Up>"
 
 "mesa syntax
+syntax on
 filetype indent plugin on
+
+" comments
+" autocmd FileType inlist* setlocal commentstring=!
+autocmd FileType inlist* setlocal commentstring=!\ %s
+
+
