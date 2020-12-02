@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name= Hippocamp
+GenericName=macOS Big Sur VM
+Comment=Starts the VirtualBox machine hippocamp
+Type=Application
+Exec=/usr/lib/virtualbox/VirtualBoxVM --comment "hippocamp" --startvm "{2cd1fe04-68b7-402d-acef-b29c3e23cb75}"
+Icon=virtualbox-vbox.png
