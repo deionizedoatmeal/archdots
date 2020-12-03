@@ -78,6 +78,7 @@ let g:vimtex_quickfix_mode=0
 set conceallevel=1
 let g:tex_conceal='abdmg'
 let g:vimtex_matchparen_enabled=0
+let g:vimtex_compiler_progname = 'nvr'
 
 "easy clip settings
 "let g:EasyClipShareYanks=1
@@ -89,6 +90,9 @@ let g:vimtex_matchparen_enabled=0
 
 "colors
 colorscheme wal
+
+" make comments italic
+" highlight Comment cterm=italic gui=italic
 
 "spellcheck
 "setlocal spell
@@ -105,7 +109,7 @@ function! ToggleSpellCheck()
   endif
 endfunction
 
-nnoremap <silent> <Leader>l :call ToggleSpellCheck()<CR>
+nnoremap <silent> <Leader>s :call ToggleSpellCheck()<CR>
 
 " scrolling
 " let g:comfortable_motion_scroll_down_key = "j"
