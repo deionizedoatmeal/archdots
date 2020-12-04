@@ -14,7 +14,7 @@ fi
 sudo pacman -Syyu
 
 # package lists
-SYS="ttf-jetbrains-mono calcurse ntp openconnect rclone cpupower dmidecode inetutils xdotool nfsidmap exfat-utils dosfstools ntfsprogs rsync rdiff-backup materia-gtk-theme neovim cmake clang bc gdisk rust dbus pulseaudio paprefs pavucontrol pulseaudio-bluetooth bluez bluez-utils pass redshift git sudo vi kitty rofi dunst openvpn gnupg imagemagick sox mpg123 ffmpeg feh python python-numpy python-numpy ttf-fantasque-sans-mono python-pip nvme-cli lm_sensors openssh vim bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib htop"
+SYS="python-pandas python-mpmath python-scipy python-pywal python-matplotlib ttf-jetbrains-mono calcurse ntp openconnect rclone cpupower dmidecode inetutils xdotool nfsidmap exfat-utils dosfstools ntfsprogs rsync rdiff-backup materia-gtk-theme neovim cmake clang bc gdisk rust dbus pulseaudio paprefs pavucontrol pulseaudio-bluetooth bluez bluez-utils pass redshift git sudo vi kitty rofi dunst openvpn gnupg imagemagick sox mpg123 ffmpeg feh python python-numpy python-numpy ttf-fantasque-sans-mono python-pip nvme-cli lm_sensors openssh vim bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib htop"
 # displaycal
 # dialog python-setuptools installed on nep??
 
@@ -157,22 +157,16 @@ fi
 # install python packages
 read -r -p "Would you like to install python packages? [y/N]" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
-    sudo pip3 install pywal
-    #sudo pip install flashfocus
-    sudo pip3 install protonvpn-cli
-    sudo pip3 install inkscape-figures
-    sudo pip3 install spotdl
-    sudo pip3 install cl-chess
+    # sudo pip install flashfocus
     # sudo pipx install jrnl
-    sudo pip install mdv
-    sudo pip install mpmath
-    sudo pip install scipy
-    sudo pip install matplotlib
+    # sudo pip install protonvpn-cli
+    # sudo pip install cl-chess
+    # sudo pip install mdv
+    sudo pip install inkscape-figures
+    sudo pip install spotdl
     sudo pip install IPython
-    sudo pip install jupyter
-    sudo pip install pandas
-    #sudo pip install i3-py
-    #sudo pip3 install wpgtk
+    # sudo pip install i3-py
+    # sudo pip install wpgtk
     echo 'python packages installed'
 fi
 
