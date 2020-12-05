@@ -14,11 +14,11 @@ fi
 sudo pacman -Syyu
 
 # package lists
-SYS="python-pandas python-mpmath python-scipy python-pywal python-matplotlib ttf-jetbrains-mono calcurse ntp openconnect rclone cpupower dmidecode inetutils xdotool nfsidmap exfat-utils dosfstools ntfsprogs rsync rdiff-backup materia-gtk-theme neovim cmake clang bc gdisk rust dbus pulseaudio paprefs pavucontrol pulseaudio-bluetooth bluez bluez-utils pass redshift git sudo vi kitty rofi dunst openvpn gnupg imagemagick sox mpg123 ffmpeg feh python python-numpy python-numpy ttf-fantasque-sans-mono python-pip nvme-cli lm_sensors openssh vim bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib htop"
+SYS="python-pandas python-mpmath python-scipy python-pywal python-pillow python-matplotlib python python-numpy python-pip ttf-jetbrains-mono calcurse ntp openconnect rclone cpupower dmidecode inetutils xdotool nfsidmap exfat-utils dosfstools ntfsprogs rsync rdiff-backup materia-gtk-theme neovim cmake clang bc gdisk rust dbus pulseaudio paprefs pavucontrol pulseaudio-bluetooth bluez bluez-utils pass redshift git sudo vi kitty rofi dunst openvpn gnupg imagemagick sox mpg123 ffmpeg feh ttf-fantasque-sans-mono nvme-cli lm_sensors openssh vim bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib htop"
 # displaycal
 # dialog python-setuptools installed on nep??
 
-NONES="github-cli scrot arandr texlive-most digikam cups cups-pdf inkscape hddtemp libreoffice-fresh cheese spotifyd nmap perl-image-exiftool python-pillow ranger zathura zathura-pdf-mupdf firefox gnuplot vlc darktable neofetch steam atom gimp zathura speedtest-cli go"
+NONES="github-cli scrot arandr texlive-most digikam cups cups-pdf inkscape hddtemp libreoffice-fresh cheese spotifyd nmap perl-image-exiftool ranger zathura zathura-pdf-mupdf firefox gnuplot vlc darktable neofetch steam atom gimp zathura speedtest-cli go"
 
 TRI="xf86-video-intel vulkan-intel powertop upower"
 #tlp tlp-rdw removed in aug 
@@ -71,7 +71,7 @@ YAYSYS="flashfocus-git fet.sh-git brother-mfc-9560cdw ttf-symbola paper-icon-the
 #python-pipx teamviewer autotiling picom-ibhagwan-git
 YAYNEPTUNE="siril-git google-earth-pro virtualbox-ext-oracle remmina-plugin-rdesktop"
 YAYTRITON="system76-power system76-firmware-daemon system76-driver light-git"
-YAYNONES="remarkable-client rmapi slack-desktop slack-term spotify-tui-git spotify mfetch-git android-messages-desktop zoom"
+YAYNONES="python-spotdl remarkable-client rmapi slack-desktop slack-term spotify-tui-git spotify mfetch-git android-messages-desktop zoom"
 ##########################################################################
 # yay install
 
@@ -164,7 +164,6 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
     # sudo pip install mdv
     sudo pip install inkscape-figures
     sudo pip install spotdl
-    sudo pip install IPython
     # sudo pip install i3-py
     # sudo pip install wpgtk
     echo 'python packages installed'
