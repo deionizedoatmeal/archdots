@@ -84,8 +84,9 @@ sed -i "${LINEINSERT}" /archdots/system/grub
 # copy /etc/default/grub over
 cp -p /archdots/system/grub /etc/default/grub
 
-# copy sudoers mkinitcpio.conf and pacman.conf
+# copy sudoers logind.conf mkinitcpio.conf and pacman.conf
 cp -p /archdots/system/sudoers /etc/sudoers
+cp -p /archdots/system/logind.conf /etc/systemd/logind.conf
 cp -p /archdots/system/mkinitcpio.conf /etc/mkinitcpio.conf
 cp -p /archdots/system/pacman.conf /etc/pacman.conf
 pacman -Syy
