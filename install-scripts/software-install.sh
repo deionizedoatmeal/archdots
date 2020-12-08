@@ -71,7 +71,7 @@ YAYSYS="flashfocus-git fet.sh-git brother-mfc-9560cdw ttf-symbola paper-icon-the
 #python-pipx teamviewer autotiling picom-ibhagwan-git
 YAYNEPTUNE="siril-git google-earth-pro virtualbox-ext-oracle remmina-plugin-rdesktop"
 YAYTRITON="system76-power system76-firmware-daemon system76-driver light-git"
-YAYNONES="python-spotdl remarkable-client rmapi slack-desktop slack-term spotify-tui-git spotify mfetch-git android-messages-desktop zoom"
+YAYNONES="pythin-pytube3 python-spotdl remarkable-client rmapi slack-desktop slack-term spotify-tui-git spotify mfetch-git android-messages-desktop zoom"
 ##########################################################################
 # yay install
 
