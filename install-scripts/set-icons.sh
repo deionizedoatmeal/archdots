@@ -33,6 +33,7 @@ mv picom.desktop ../unused-applications/.
 mv picom.desktop ../unused-applications/.
 mv stoken-gui-small.desktop ../unused-applications/.
 mv stoken-gui.desktop ../unused-applications/.
+mv ipython.desktop ../unused-applications/.
 
 # blender 
 sed -i '/Name=/d' ./blender.desktop
@@ -79,7 +80,7 @@ sed -i "3iGenericName=Print Settings" cups.desktop
 # siril
 sed -i '/Name=/d' ./org.free_astro.siril.desktop
 sed -i '/GenericName=/d' ./org.free_astro.siril.desktop
-sed -i "2iName= Siril" org.free_astro.siril.desktop
+sed -i "2iName= Siril" org.free_astro.siril.desktop
 sed -i "3iGenericName=Astro Image Processing" org.free_astro.siril.desktop
 
 # zoom
@@ -133,7 +134,7 @@ sed -i "3iGenericName=Web Browser" firefox.desktop
 # zoom
 sed -i '/Name=/d' ./org.pwmt.zathura.desktop
 sed -i '/GenericName=/d' ./org.pwmt.zathura.desktop
-sed -i "2iName= Zathura" org.pwmt.zathura.desktop
+sed -i "2iName= Zathura" org.pwmt.zathura.desktop
 sed -i "3iGenericName=PDF Reader" org.pwmt.zathura.desktop
 
 # steam
@@ -187,7 +188,7 @@ sed -i "4iGenericName=Audio Preferences" paprefs.desktop
 # vim 
 sed -i '/Name=/d' ./vim.desktop
 sed -i '/GenericName=/d' ./vim.desktop
-sed -i "2iName= Vim" vim.desktop
+sed -i "2iName= Vim" vim.desktop
 sed -i "3iGenericName=Text Editor" vim.desktop
 
 # htop 
@@ -211,13 +212,13 @@ sed -i "3iGenericName=Media Player" vlc.desktop
 # atom 
 sed -i '/Name=/d' ./atom.desktop
 sed -i '/GenericName=/d' ./atom.desktop
-sed -i "2iName= Atom" atom.desktop
+sed -i "2iName= Atom" atom.desktop
 sed -i "3iGenericName=Text Editor" atom.desktop
 
 # neovim 
 sed -i '/Name=/d' ./nvim.desktop
 sed -i '/GenericName=/d' ./nvim.desktop
-sed -i "2iName= Neovim" nvim.desktop
+sed -i "2iName= Neovim" nvim.desktop
 sed -i "3iGenericName=Text Editor" nvim.desktop
 
 # darktable 
