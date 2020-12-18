@@ -35,6 +35,18 @@ mv stoken-gui-small.desktop ../unused-applications/.
 mv stoken-gui.desktop ../unused-applications/.
 mv ipython.desktop ../unused-applications/.
 
+# blueman manager
+sed -i '/Name=/d' ./blueman-manager.desktop
+sed -i '/GenericName=/d' ./blueman-manager.desktop
+sed -i "2iName= Blueman" blueman-manager.desktop
+sed -i "3iGenericName=Bluetooth Manager" blueman-manager.desktop
+
+# blueman adapters
+sed -i '/Name=/d' ./blueman-adapters.desktop
+sed -i '/GenericName=/d' ./blueman-adapters.desktop
+sed -i "2iName= Blueman" blueman-adapters.desktop
+sed -i "3iGenericName=Bluetooth Adapters" blueman-adapters.desktop
+
 # blender 
 sed -i '/Name=/d' ./blender.desktop
 sed -i '/GenericName=/d' ./blender.desktop
