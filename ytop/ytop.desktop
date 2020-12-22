@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Ytop
+Comment=launches the ranger file manager
+GenericName=Process Viewer
+Icon=utilities-terminal
+Exec=kitty sh -c "ytop -ps"
+Categories=ConsoleOnly;System
+MimeType=inode/directory;
+Keywords=Htop;top;viewer;task;manager

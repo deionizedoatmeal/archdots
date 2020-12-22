@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Bottom
+Comment=launches the ranger file manager
+GenericName=Process Viewer
+Icon=utilities-terminal
+Exec=kitty sh -c "btm"
+Categories=ConsoleOnly;System
+MimeType=inode/directory;
+Keywords=Htop;top;viewer;task;manager

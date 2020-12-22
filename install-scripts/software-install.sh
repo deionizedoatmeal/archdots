@@ -67,7 +67,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 # yay package list #########################################################
-YAYSYS="flashfocus-git fet.sh-git brother-mfc-9560cdw ttf-symbola paper-icon-theme vim-plug gllock-git ly steam-fonts comptone-tryone-git icdiff"
+YAYSYS="bottom flashfocus-git fet.sh-git brother-mfc-9560cdw ttf-symbola paper-icon-theme vim-plug gllock-git ly steam-fonts comptone-tryone-git icdiff"
 #python-pipx teamviewer autotiling picom-ibhagwan-git
 YAYNEPTUNE="siril-git google-earth-pro virtualbox-ext-oracle remmina-plugin-rdesktop"
 YAYTRITON="system76-power system76-firmware-daemon system76-driver light-git"
@@ -170,12 +170,11 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 # install rust packages    
-read -r -p "Would you like to install rust packages? [y/N]" response 
-if [[ "$response" =~ ^([Yy])+$ ]]; then
-        #cargo install spotify-tui
-        #using AUR now
-        cargo install bottom
-        #cargo install dijo
-        cargo install -f --git https://github.com/cjbassi/ytop ytop
-fi
+# read -r -p "Would you like to install rust packages? [y/N]" response 
+# if [[ "$response" =~ ^([Yy])+$ ]]; then
+        # cargo install spotify-tui # using AUR now
+        # cargo install bottom
+        # cargo install dijo # not using rn
+        # cargo install -f --git https://github.com/cjbassi/ytop ytop # replaced with bottom
+# fi
 

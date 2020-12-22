@@ -173,6 +173,12 @@ sed -i '/GenericName=/d' ./ranger.desktop
 sed -i "2iName= Ranger" ranger.desktop
 sed -i "3iGenericName=File Browser" ranger.desktop
 
+# ytop 
+sed -i '/Name=/d' ./bottom.desktop
+sed -i '/GenericName=/d' ./bottom.desktop
+sed -i "2iName= Bottom" bottom.desktop
+sed -i "3iGenericName=Process Viewer" bottom.desktop
+
 # kitty 
 sed -i '/Name=/d' ./kitty.desktop
 sed -i '/GenericName=/d' ./kitty.desktop
