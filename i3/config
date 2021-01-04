@@ -251,7 +251,7 @@ for_window [class="(?i)VirtualBox Machine"] fullscreen enable
 ######################
 # FULLSCREEN WINDOWS #
 ######################
-exec --no-startup-id "i3-msg -t subscribe '[ \"window\" ]' -m | while read -r line; do i3-msg '[class="(?i)Microsoft Flight Simulator - 1.11.7.0"] fullscreen enable'; done"
+# exec --no-startup-id "i3-msg -t subscribe '[ \"window\" ]' -m | while read -r line; do i3-msg '[class="(?i)Microsoft Flight Simulator - 1.11.7.0"] fullscreen enable'; done"
 
 ########
 # LOCK #
