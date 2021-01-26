@@ -34,6 +34,9 @@ mv picom.desktop ../unused-applications/.
 mv stoken-gui-small.desktop ../unused-applications/.
 mv stoken-gui.desktop ../unused-applications/.
 mv ipython.desktop ../unused-applications/.
+mv java-java-openjdk.desktop ../unused-applications/.
+mv jconsole-java-openjdk.desktop ../unused-applications/.
+mv jshell-java-openjdk.desktop ../unused-applications/.
 
 # blueman manager
 sed -i '/Name=/d' ./blueman-manager.desktop
