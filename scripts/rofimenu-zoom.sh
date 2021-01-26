@@ -3,42 +3,37 @@
 
 # check for triton (hidpi) flag
 if [[ "$1" =~ ^([Tt])+$ ]]; then
-        rofi_command="rofi -lines 6 -width 500"
+        rofi_command="rofi -lines 5 -width 600"
 else
-        rofi_command="rofi -lines 6 -width 300"
+        rofi_command="rofi -lines 5 -width 400"
 fi
 
-PS=" Planetary Science"
-FLUIDS=" Fluid Mechanics"
-TG=" Dark Matter Group"
-TWO=" 2's Office"
-ONE=" 1's Office"
-DEPT=" 410 Group Meeting"
-
+A=" Relativty & Cosmology"
+B=" Electricity & Magnetism"
+C=" Extragalatic Astronomy"
+D=" Native Museum Studies"
+E=" Ilie Dark Matter Group"
 
 
 # Variable passed to rofi
-options="$PS\n$FLUIDS\n$TG\n$LEVINE\n$TSENG\n$DEPT"
+options="$A\n$B\n$C\n$D\n$E"
 
 chosen="$(echo -e "$options" | $rofi_command -dmenu -p "zoom links")"
 case $chosen in
-    $PS)
-        firefox # ZOOM link here
+    $A)
+        firefox 
         ;;
-    $FLUIDS)
-        firefox # ZOOM link here
+    $B)
+        firefox 
         ;;
-    $TWO)
-        firefox # ZOOM link here
+    $C)
+        firefox 
         ;;
-    $ONE)
-        firefox # ZOOM link here
+    $D)
+        firefox 
         ;;
-    $TSENG)
-        firefox # ZOOM link here
-        ;;
-    $DEPT)
-        firefox # ZOOM link here
+    $E)
+        firefox 
         ;;
 esac
 
