@@ -2,9 +2,9 @@
 
 # check for triton (hidpi) flag
 if [[ "$1" =~ ^([Tt])+$ ]]; then
-        ROFI_COMMAND="rofi -lines 4 -width 450"
+        ROFI_COMMAND="rofi -lines 5 -width 450"
 else
-        ROFI_COMMAND="rofi -lines 4 -width 250"
+        ROFI_COMMAND="rofi -lines 5 -width 250"
 fi
 
 ### Options ###
@@ -31,8 +31,18 @@ else
     THIRD="醙 speaker"
 fi
 
+
+if [ "$(bluetoothctl info DC:2C:26:EE:7E:FA | sed -n -e 's/^.*Connected: //p')" == "yes" ]
+then
+    FOURTH=" keyboard <-"
+else
+    FOURTH=" keyboard"
+fi
+
+
+
 # Variable passed to rofi
-OPTIONS="$ZERO\n$FIRST\n$SECOND\n$THIRD"
+OPTIONS="$ZERO\n$FIRST\n$SECOND\n$THIRD\n$FOURTH"
 
 STATUS=$(bluetoothctl show | sed -n -e 's/^.*Powered: //p')
 if [ "$STATUS" == "no" ]
@@ -67,6 +77,12 @@ case $CHOSEN in
             bluetooth-power-toggle
         fi
         bluetooth-device-toggle 88:C6:26:21:AA:32
+        ;;
+    $FOURTH)
+        if [ "$STATUS" == "no" ]; then
+            bluetooth-power-toggle
+        fi
+        bluetooth-device-toggle DC:2C:26:EE:7E:FA
         ;;
 esac
 
