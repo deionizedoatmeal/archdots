@@ -38,6 +38,14 @@ mv java-java-openjdk.desktop ../unused-applications/.
 mv jconsole-java-openjdk.desktop ../unused-applications/.
 mv jshell-java-openjdk.desktop ../unused-applications/.
 
+
+# top cat 
+sed -i '/Name=/d' ./topcat.desktop
+sed -i '/GenericName=/d' ./topcat.desktop
+sed -i "2iName= Topcat" topcat.desktop
+sed -i "3iGenericName=CSV Plotter" topcat.desktop
+
+
 # blueman manager
 sed -i '/Name=/d' ./blueman-manager.desktop
 sed -i '/GenericName=/d' ./blueman-manager.desktop
@@ -97,6 +105,25 @@ sed -i '/Name=/d' ./org.free_astro.siril.desktop
 sed -i '/GenericName=/d' ./org.free_astro.siril.desktop
 sed -i "2iName= Siril" org.free_astro.siril.desktop
 sed -i "3iGenericName=Astro Image Processing" org.free_astro.siril.desktop
+
+# imagej 
+sed -i '/Name=/d' ./imagej.desktop
+sed -i '/GenericName=/d' ./imagej.desktop
+sed -i "2iName= ImageJ" imagej.desktop
+sed -i "3iGenericName=Technical Image Processing" imagej.desktop
+
+# astrimagej 
+sed -i '/Name=/d' ./astroimagej.desktop
+sed -i '/GenericName=/d' ./astroimagej.desktop
+sed -i "2iName= Astro ImageJ" astroimagej.desktop
+sed -i "3iGenericName=Astro Image Processing" astroimagej.desktop
+
+# ds9
+sed -i '/Name=/d' ./ds9.desktop
+sed -i '/GenericName=/d' ./ds9.desktop
+sed -i "2iName= DS9" ds9.desktop
+sed -i "3iGenericName=Astro Image Processing" ds9.desktop
+
 
 # zoom
 sed -i '/Name=/d' ./Zoom.desktop
