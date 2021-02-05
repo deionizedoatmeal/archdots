@@ -1,0 +1,37 @@
+#!/bin/bash
+
+(wal -i "$(< "${HOME}/.cache/wal/wal")")
+
+# terminate already running bar instances
+killall -q polybar
+
+# wait until the processes have been shut down
+while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+
+# launch bars
+
+#TRITON
+polybar eDP1-1800-date &
+polybar eDP1-1800-nettempdisp &
+polybar eDP1-1800-btaudio &
+polybar eDP1-1800-i3 &
+polybar HDMI2-4k-date &
+polybar HDMI2-4k-nettempdisp &
+polybar HDMI2-4k-btaudio &
+polybar HDMI2-4k-i3 &
+
+#NEPTUNE
+# polybar 1080-date &
+# polybar 1080-nettempdisp &
+# polybar 1080-btaudio &
+# polybar 1080-i3 &
+
+#polybar 1080-temp &
+#polybar 1080-net &
+#polybar 1080-disp &
+#polybar 1080-audio &
+#polybar 1080-bt &
+# polybar sq-i3 &
+# polybar sq-audio &
+# polybar vert-i3 &
+# polybar vert-audio &
