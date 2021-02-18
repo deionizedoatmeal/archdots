@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name= Jupyter
+Exec=sh -c "Jupyter notebook"
+Terminal=false
+Type=Application
+Icon=jupyter-sq.png
+Categories=GNOME;GTK;
+StartupNotify=true
+
