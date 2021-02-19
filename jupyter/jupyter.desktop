@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name= Jupyter
-Exec=sh -c "Jupyter notebook"
+Exec=sh -c "jupyter notebook"
 Terminal=false
 Type=Application
 Icon=jupyter-sq.png

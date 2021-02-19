@@ -160,16 +160,23 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
     sudo rm -r py_mesa_reader
 fi
 
+# kite
+read -r -p "Would you like to install kite? [y/N]" response
+if [[ "$response" =~ ^([Yy])+$ ]]; then
+        bash -c "$(wget -q -O - https://linux.kite.com/dls/linux/current)"
+fi
+
+
 ####################
 #      PYTHON      #
 ####################
 # install python packages
+echo "Python packages: inscape-figures, spotdl."
 read -r -p "Would you like to install python packages? [y/N]" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
     # sudo pip install flashfocus
     # sudo pipx install jrnl
     # sudo pip install protonvpn-cli
-    # sudo pip install cl-chess
     # sudo pip install mdv
     sudo pip install inkscape-figures
     sudo pip install spotdl
