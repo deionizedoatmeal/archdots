@@ -29,7 +29,7 @@ USERNAME_field='user'
 AUTOTYPE_field='autotype'
 OTPmethod_field='otp_method'
 
-default_autotype="user :tab pass"
+default_autotype="path :tab pass"
 delay=2
 wait=0.2
 xdotool_delay=12
@@ -39,7 +39,7 @@ notify='false'
 help_color=""
 clip=primary
 clip_clear=45
-default_user="${ROFI_PASS_DEFAULT_USER-$(whoami)}"
+default_user=":filename"
 default_user2=john_doe
 password_length=12
 fix_layout=false

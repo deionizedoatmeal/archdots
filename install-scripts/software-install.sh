@@ -171,7 +171,7 @@ fi
 #      PYTHON      #
 ####################
 # install python packages
-echo "Python packages: inscape-figures, spotdl."
+echo "Python packages: inscape-figures, spotdl, grip."
 read -r -p "Would you like to install python packages? [y/N]" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
     # sudo pip install flashfocus
@@ -180,6 +180,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
     # sudo pip install mdv
     sudo pip install inkscape-figures
     sudo pip install spotdl
+    sudo pip install grip
     # sudo pip install i3-py
     # sudo pip install wpgtk
     echo 'python packages installed'
