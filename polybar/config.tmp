@@ -576,7 +576,7 @@ bottom = false
 fixed-center = false
 line-size = 2
 padding-right = 2
-width = 250
+width = 625
 height = 03.0000%
 radius = 27.0
 font-0 = Iosevka Nerd Font:pixelsize=23;4
