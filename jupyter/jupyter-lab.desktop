@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name= Jupyter Lab
+Exec=sh -c "jupyter-lab"
+Terminal=false
+Type=Application
+Icon=jupyter-sq.png
+Categories=GNOME;GTK;
+StartupNotify=true
+
