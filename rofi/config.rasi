@@ -12,7 +12,7 @@ configuration {
  //END       
 
  padding: 50;	
- separator-style: none;
+ separator-style: "none";
  hide-scrollbar: true;
  show-icons: false;
  }

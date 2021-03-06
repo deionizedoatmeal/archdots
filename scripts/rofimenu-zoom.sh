@@ -10,9 +10,9 @@ fi
 
 A=" Relativty & Cosmology"
 B=" Electricity & Magnetism"
-C=" Extragalatic Astronomy"
+C=" Extragalatic Astronomy"
 D=" Native Museum Studies"
-E=" Ilie Dark Matter Group"
+E=" Ilie Dark Matter Group"
 
 
 # Variable passed to rofi
@@ -21,19 +21,14 @@ options="$A\n$B\n$C\n$D\n$E"
 chosen="$(echo -e "$options" | $rofi_command -dmenu -p "zoom links")"
 case $chosen in
     $A)
-        firefox 
         ;;
     $B)
-        firefox 
         ;;
     $C)
-        firefox 
         ;;
     $D)
-        firefox 
         ;;
     $E)
-        firefox 
         ;;
 esac
 

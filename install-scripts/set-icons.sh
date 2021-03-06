@@ -5,6 +5,14 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
+cd /home/ian/.local/share/applications/
+
+# kite 
+sed -i '/Name=/d' ./kite.desktop
+sed -i '/GenericName=/d' ./kite.desktop
+sed -i "3iName= Kite " kite.desktop
+sed -i "4iGenericName=AI Code" kite.desktop
+
 cd /usr/share/applications
 mkdir -p ../unused-applications
 
@@ -44,7 +52,6 @@ sed -i '/Name=/d' ./topcat.desktop
 sed -i '/GenericName=/d' ./topcat.desktop
 sed -i "2iName= Topcat" topcat.desktop
 sed -i "3iGenericName=CSV Plotter" topcat.desktop
-
 
 # blueman manager
 sed -i '/Name=/d' ./blueman-manager.desktop
@@ -206,7 +213,7 @@ sed -i "3iGenericName=File Browser" ranger.desktop
 # ytop 
 sed -i '/Name=/d' ./bottom.desktop
 sed -i '/GenericName=/d' ./bottom.desktop
-sed -i "2iName= Bottom" bottom.desktop
+sed -i "2iName= Bottom" bottom.desktop
 sed -i "3iGenericName=Process Viewer" bottom.desktop
 
 # kitty 
@@ -242,7 +249,7 @@ sed -i "3iGenericName=Text Editor" vim.desktop
 # htop 
 sed -i '/Name=/d' ./htop.desktop
 sed -i '/GenericName=/d' ./htop.desktop
-sed -i "2iName= Htop" htop.desktop
+sed -i "2iName= Htop" htop.desktop
 sed -i "3iGenericName=Process Viewer" htop.desktop
 
 # cmake 
@@ -316,5 +323,15 @@ sed -i '/Name=/d' ./libreoffice-math.desktop
 sed -i '/GenericName=/d' ./libreoffice-math.desktop
 sed -i "24iName=烈 LibreOffice Math" libreoffice-math.desktop
 sed -i "25iGenericName=Formula Editor" libreoffice-math.desktop
+
+sed -i '/Name=/d' ./jupyter-lab.desktop
+sed -i '/GenericName=/d' ./jupyter-lab.desktop
+sed -i "24iName= Jupyter Lab" jupyter-lab.desktop
+sed -i "25iGenericName=Python IDE" jupyter-lab.desktop
+
+sed -i '/Name=/d' ./remarkable.desktop
+sed -i '/GenericName=/d' ./remarkable.desktop
+sed -i "24iName= ReMarkable" remarkable.desktop
+sed -i "25iGenericName=eInk Client" remarkable.desktop
 
 exit

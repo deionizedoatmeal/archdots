@@ -4,7 +4,7 @@ configuration {
  font: "JetBrains Mono Bold 12";
  width: 400;
  padding: 50;	
- separator-style: none;
+ separator-style: "none";
  hide-scrollbar: true;
  show-icons: false;
  }
