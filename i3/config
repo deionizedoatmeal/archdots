@@ -249,6 +249,7 @@ for_window [class="(?i)steam"] floating enable
 for_window [class="(?i)system-config-printer"] floating enable
 for_window [class="(?i)pavucontrol"] floating enable
 for_window [class="(?i)arandr"] floating enable
+for_window [class="(?i)blueman-manager"] floating enable
 for_window [class="(?i)zoom" title="(?i)chat"] floating enable
 for_window [class="(?i)zoom" title="(?i)zoom"] floating enable
 for_window [class="(?i)zoom" title="(?i)Zoom - Licensed Account"] floating enable
