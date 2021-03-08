@@ -144,6 +144,12 @@ sed -i '/GenericName=/d' ./google-earth-pro.desktop
 sed -i "2iName= Google Earth" google-earth-pro.desktop
 sed -i "3iGenericName=3D Planet Viewer" google-earth-pro.desktop
 
+# qgis
+sed -i '/Name=/d' ./org.qgis.qgis.desktop
+sed -i '/GenericName=/d' ./org.qgis.qgis.desktop
+sed -i "2iName= QGIS" org.qgis.qgis.desktop
+sed -i "3iGenericName=Geographic Information System" org.qgis.qgis.desktop
+
 # remmina 
 sed -i '/Name=/d' ./org.remmina.Remmina.desktop
 sed -i '/GenericName=/d' ./org.remmina.Remmina.desktop
