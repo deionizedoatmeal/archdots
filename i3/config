@@ -282,6 +282,11 @@ bindsym XF86AudioLowerVolume exec --no-startup-id vol-down; exec --no-startup-id
 exec_always --no-startup-id "xset dpms 200"
 bindsym $mod+z exec --no-startup-id dpms-toggle
 
+#######
+# WAL #
+#######
+exec_always --no-startup-id "wal -R -b 181f26"
+
 ############
 # REDSHIFT #
 ############
