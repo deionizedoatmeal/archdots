@@ -332,12 +332,12 @@ sed -i "25iGenericName=Formula Editor" libreoffice-math.desktop
 
 sed -i '/Name=/d' ./jupyter-lab.desktop
 sed -i '/GenericName=/d' ./jupyter-lab.desktop
-sed -i "24iName= Jupyter Lab" jupyter-lab.desktop
-sed -i "25iGenericName=Python IDE" jupyter-lab.desktop
+sed -i "4iName= Jupyter Lab" jupyter-lab.desktop
+sed -i "5iGenericName=Python IDE" jupyter-lab.desktop
 
 sed -i '/Name=/d' ./remarkable.desktop
 sed -i '/GenericName=/d' ./remarkable.desktop
-sed -i "24iName= ReMarkable" remarkable.desktop
-sed -i "25iGenericName=eInk Client" remarkable.desktop
+sed -i "4iName= ReMarkable" remarkable.desktop
+sed -i "5iGenericName=eInk Client" remarkable.desktop
 
 exit
