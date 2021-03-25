@@ -113,6 +113,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
+####################
+# KITTY COMPLETION #
+####################
+source <(kitty + complete setup bash)
+
 ########
 # RUST #
 ########
@@ -137,9 +142,10 @@ alias pass-push='pass git push origin master'
 #alias dijo-push='git -C ${HOME}/.local/share/dijo add -A && git -C ${HOME}/.local/share/dijo commit --allow-empty-message -m "" && git -C ${HOME}/.local/share/dijo push origin master'
 
 ##################
-# REMOVE ORPHANS #
+# PACMAN ALIASES #
 ##################
 alias remove-orphans='sudo pacman -Rns $(pacman -Qtdq)'
+alias list-size='LC_ALL=C pacman -Qi | awk '/^Name/{name=$3} /^Installed Size/{print $4$5, name}' | sort -h'
 
 ###############
 # EMPTY TRASH #
