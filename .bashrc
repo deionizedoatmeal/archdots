@@ -145,7 +145,7 @@ alias pass-push='pass git push origin master'
 # PACMAN ALIASES #
 ##################
 alias remove-orphans='sudo pacman -Rns $(pacman -Qtdq)'
-alias list-size='LC_ALL=C pacman -Qi | awk '/^Name/{name=$3} /^Installed Size/{print $4$5, name}' | sort -h'
+alias list-size="pacman -Qi | awk '/^Name/{name=\$3} /^Installed Size/{print \$4\$5, name}' | sort -h"
 
 ###############
 # EMPTY TRASH #
