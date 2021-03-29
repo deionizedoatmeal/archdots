@@ -45,6 +45,9 @@ mv ipython.desktop ../unused-applications/.
 mv java-java-openjdk.desktop ../unused-applications/.
 mv jconsole-java-openjdk.desktop ../unused-applications/.
 mv jshell-java-openjdk.desktop ../unused-applications/.
+mv calibre-ebook-edit.desktop ../unused-applications/.
+mv calibre-ebook-viewer.desktop ../unused-applications/.
+mv calibre-ebook-lrfviewer.desktop ../unused-applications/.
 
 
 # top cat 
@@ -191,6 +194,12 @@ sed -i '/Name=/d' ./org.pwmt.zathura.desktop
 sed -i '/GenericName=/d' ./org.pwmt.zathura.desktop
 sed -i "2iName= Zathura" org.pwmt.zathura.desktop
 sed -i "3iGenericName=PDF Reader" org.pwmt.zathura.desktop
+
+# calibre
+sed -i '/Name=/d' ./calibre-gui.desktop
+sed -i '/GenericName=/d' ./calibre-gui.desktop
+sed -i "2iName= Calibre" calibre-gui.desktop
+sed -i "3iGenericName=Ebook Libray" calibre-gui.desktop
 
 # steam
 sed -i '/Name=/d' ./steam.desktop
