@@ -47,7 +47,8 @@ mv jconsole-java-openjdk.desktop ../unused-applications/.
 mv jshell-java-openjdk.desktop ../unused-applications/.
 mv calibre-ebook-edit.desktop ../unused-applications/.
 mv calibre-ebook-viewer.desktop ../unused-applications/.
-mv calibre-ebook-lrfviewer.desktop ../unused-applications/.
+mv calibre-lrfviewer.desktop ../unused-applications/.
+mv electron11.desktop ../unused-applications/.
 
 
 # top cat 
