@@ -84,11 +84,6 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -112,6 +107,18 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+###########
+# ALIASES #
+###########
+alias ls='lsd'
+alias ll='lsd -alF'
+alias la='lsd -A'
+alias lX='lsd -Xl'
+alias lS='lsd -Sl'
+alias lt='lsd -tl'
+alias tree='lsd --tree'
+alias diff='icdiff'
 
 ####################
 # KITTY COMPLETION #
@@ -148,9 +155,9 @@ alias remove-orphans='sudo pacman -Rns $(pacman -Qtdq)'
 alias list-size="pacman -Qi | awk '/^Name/{name=\$3} /^Installed Size/{print \$4\$5, name}' | sort -h"
 alias clear-cache="sudo pacman -Sc && yay -Sc"
 
-###############
-# EMPTY TRASH #
-###############
+#########
+# TRASH #
+#########
 alias empty-trash='rm -rf ${HOME}/.local/share/Trash/files/*'
 alias list-trash='ls ${HOME}/.local/share/Trash/files'
 
