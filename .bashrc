@@ -145,8 +145,8 @@ alias pass-push='pass git push origin master'
 ########
 # REPOS #
 ########
-#alias dijo-pull='git -C ${HOME}/.local/share/dijo pull origin master'
-#alias dijo-push='git -C ${HOME}/.local/share/dijo add -A && git -C ${HOME}/.local/share/dijo commit --allow-empty-message -m "" && git -C ${HOME}/.local/share/dijo push origin master'
+# alias dijo-pull='git -C ${HOME}/.local/share/dijo pull origin master'
+# alias dijo-push='git -C ${HOME}/.local/share/dijo add -A && git -C ${HOME}/.local/share/dijo commit --allow-empty-message -m "" && git -C ${HOME}/.local/share/dijo push origin master'
 
 ##################
 # PACMAN ALIASES #
