@@ -1,0 +1,14 @@
+{
+    "ssh": {
+        "address":
+            "192.168.0.109",
+        "auth_method":
+            "password",
+        "password":
+            "##########"
+    },
+    "orientation": "auto",
+    "pen_size": 15,
+    "pen_color": "#16b68e",
+    "pen_trail": 200
+}

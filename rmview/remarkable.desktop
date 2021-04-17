@@ -1,8 +1,8 @@
 [Desktop Entry]
 Type=Application
 Name= Remarkable
-GenericName=Client for eink Tablet
-Exec=/usr/bin/reMarkable
+GenericName=eink Tablet
+Exec=rmview
 Terminal=false
 Icon=accesories-text-editor
 Categories=Office;Graphics;
