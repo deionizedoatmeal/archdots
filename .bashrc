@@ -173,6 +173,11 @@ export EDITOR=nvim
 export VISUAL=nvim
 
 ########
+# PATH #
+########
+export PATH="$HOME/.local/bin:$PATH"
+
+########
 # MESA #
 ########
 # set MESA_DIR to be the directory to which you downloaded MESA
