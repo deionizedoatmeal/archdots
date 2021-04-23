@@ -2,9 +2,9 @@
 
 # check for triton (hidpi) flag
 if [[ "$1" =~ ^([Tt])+$ ]]; then
-        rofi_command="rofi -lines 2 -width 500"
+        rofi_command="rofi -lines 3 -width 600"
 else
-        rofi_command="rofi -lines 2 -width 300"
+        rofi_command="rofi -lines 3 -width 400"
 fi
 
 ### Options ###
@@ -16,16 +16,18 @@ STATUS=$(ps -ax | grep openconnect | wc -l)
 # if [ "$STATUS" == "Status: Con" ]
 if [ "$STATUS" = "1" ] || [ "$STATUS" = "0" ]
 then
-    zero=" connect vpn"
-    first=" disconnect vpn <-"
+	zero=" connect vpn (split)"
+	second=" connect vpn (full)"
+	first=" vpn disconnected <-"
 else
-    zero=" connect vpn <-"
-    first=" disconnect vpn"
+	zero=" vpn connected <-"
+	first=" disconnect vpn"
+	second=""
 fi
 
 
 # Variable passed to rofi
-options="$zero\n$first"
+options="$first\n$zero\n$second"
 
 # chosen="$(echo -e "$options" | $rofi_command -dmenu -p "vpn$IP" -selected-row 2)"
 chosen="$(echo -e "$options" | $rofi_command -dmenu -p "vpn" -selected-row 2)"
@@ -33,6 +35,10 @@ case $chosen in
     $zero)
         # sudo protonvpn -f c
         vpn-connect
+        ;;
+    $second)
+        # sudo protonvpn -f c
+        vpn-connect-full
         ;;
     $first)
         # sudo protonvpn d
