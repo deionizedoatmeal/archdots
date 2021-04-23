@@ -237,10 +237,10 @@ new_window none
 new_float none
 
 # add a border for SSH windows
-for_window [title="(?i)turing"] border pixel 8
+for_window [title="(?i)turing(?i)"] border pixel 8
 
 #TRITON
-#T for_window [title="(?i)neptune"] border pixel 8
+#T for_window [title="(?i)neptune(?i)"] border pixel 8
 
 ##############
 # SCREENSHOT #
