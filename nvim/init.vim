@@ -46,6 +46,19 @@ endif
 "noremap <Leader>P "+p
 set clipboard=unnamedplus
 
+" line wrapping toggling
+:function ToggleWrap()
+: if (&wrap == 1)
+:   set nowrap
+: else
+:   set wrap
+: endif
+:endfunction
+
+map <C-w> :call ToggleWrap()<CR>
+map! <C-w> [:call ToggleWrap()<CR>
+
+
 "plugins
 call plug#begin('~/.config/nvim/plugs')
 Plug 'junegunn/goyo.vim'
