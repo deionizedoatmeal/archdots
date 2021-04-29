@@ -41,6 +41,7 @@ set $RIGHT HDMI-A-0
 #T bindsym F5 exec --no-startup-id vol-down; exec --no-startup-id click1 #decrease volume
 #T bindsym $mod+Shift+p exec rofimenu-power T
 #T bindsym $mod+Shift+e exec rofimenu-exit T
+#T bindsym $mod+a exec rofimenu-ranger T
 #T bindsym $mod+Shift+b exec --no-startup-id rofimenu-bluetooth T
 #T bindsym $mod+Shift+v exec --no-startup-id rofimenu-vpn T
 #T bindsym $mod+Shift+z exec --no-startup-id rofimenu-zoom T
@@ -60,6 +61,7 @@ set $RIGHT HDMI-A-0
 #N Workspace $ws9 output $RIGHT
 #N Workspace $ws10 output $RIGHT
 #N bindsym $mod+Shift+e exec rofimenu-exit
+#N bindsym $mod+a exec rofimenu-ranger
 #N bindsym $mod+Shift+b exec --no-startup-id rofimenu-bluetooth
 #N bindsym $mod+Shift+v exec --no-startup-id rofimenu-vpn
 #N bindsym $mod+Shift+z exec --no-startup-id rofimenu-zoom
