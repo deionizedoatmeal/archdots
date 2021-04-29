@@ -31,6 +31,7 @@ mv electron.desktop ../unused-applications/.
 mv electron4.desktop ../unused-applications/.
 mv electron5.desktop ../unused-applications/.
 mv electron6.desktop ../unused-applications/.
+mv electron9.desktop ../unused-applications/.
 mv cmake-gui.desktop ../unused-applications/.
 mv org.fontforge.FontForge.desktop ../unused-applications/.
 mv QMLPlayer.desktop ../unused-applications/.
@@ -49,7 +50,9 @@ mv calibre-ebook-edit.desktop ../unused-applications/.
 mv calibre-ebook-viewer.desktop ../unused-applications/.
 mv calibre-lrfviewer.desktop ../unused-applications/.
 mv electron11.desktop ../unused-applications/.
-
+mv org.freedesktop.IBus.Panel.Emojier.desktop ../unused-applications/.
+mv org.freedesktop.IBus.Panel.Extension.Gtk3.desktop ../unused-applications/.
+mv org.freedesktop.IBus.Setup.desktop ../unused-applications/.
 
 # top cat 
 sed -i '/Name=/d' ./topcat.desktop
