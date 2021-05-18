@@ -181,7 +181,8 @@ export PATH="$HOME/.local/bin:$PATH"
 # MESA #
 ########
 # set MESA_DIR to be the directory to which you downloaded MESA
-export MESA_DIR=${HOME}/Repos/mesa-r12778
+# export MESA_DIR=${HOME}/Repos/mesa-r12778
+export MESA_DIR=${HOME}/Repos/mesa-r15140
 
 # set OMP_NUM_THREADS to be the number of cores on your machine
 export OMP_NUM_THREADS=10
@@ -196,3 +197,8 @@ alias new-mesa-profile='cp $MESA_DIR/star/defaults/profile_columns.list'
 alias new-mesa-history='cp $MESA_DIR/star/defaults/history_columns.list'
 alias mesa-vars='nvim $MESA_DIR/star_data/public/star_data.inc'
 
+# wal
+alias walset='wal -R -b 230426'
+
+# opencv compile gstreamer howdy fix
+export OPENCV_LOG_LEVEL=ERROR

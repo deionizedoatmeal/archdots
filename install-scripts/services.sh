@@ -79,6 +79,12 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
         sudo systemctl disable getty@tty2.service
 fi
 
+# SDDM display manager
+read -r -p "#### Would you like to enable sddm.service? (display manager) [y/N] ####" response
+if [[ "$response" =~ ^([Yy])+$ ]]; then
+        sudo systemctl enable sddm.service
+fi
+
 
 # flash focus 
 read -r -p "#### Would you like to enable flashfocus? [y/N] ####" response

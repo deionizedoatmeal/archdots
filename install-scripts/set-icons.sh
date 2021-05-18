@@ -53,6 +53,10 @@ mv electron11.desktop ../unused-applications/.
 mv org.freedesktop.IBus.Panel.Emojier.desktop ../unused-applications/.
 mv org.freedesktop.IBus.Panel.Extension.Gtk3.desktop ../unused-applications/.
 mv org.freedesktop.IBus.Setup.desktop ../unused-applications/.
+mv assistant.desktop ../unused-applications/.
+mv designer.desktop ../unused-applications/.
+mv linguist.desktop ../unused-applications/.
+mv qdbusviewer.desktop ../unused-applications/.
 
 # top cat 
 sed -i '/Name=/d' ./topcat.desktop
@@ -348,9 +352,21 @@ sed -i '/GenericName=/d' ./jupyter-lab.desktop
 sed -i "4iName= Jupyter Lab" jupyter-lab.desktop
 sed -i "5iGenericName=Python IDE" jupyter-lab.desktop
 
+sed -i '/Name=/d' ./jupyter-notebook.desktop
+sed -i '/GenericName=/d' ./jupyter-notebook.desktop
+sed -i "4iName= Jupyter Notebook" jupyter-notebook.desktop
+sed -i "5iGenericName=Python Notebook" jupyter-notebook.desktop
+
 sed -i '/Name=/d' ./remarkable.desktop
 sed -i '/GenericName=/d' ./remarkable.desktop
 sed -i "4iName= ReMarkable" remarkable.desktop
 sed -i "5iGenericName=eInk Client" remarkable.desktop
+
+
+sed -i '/Name=/d' ./mathpix-snipping-tool.desktop
+sed -i '/GenericName=/d' ./mathpix-snipping-tool.desktop
+sed -i "24iName=烈 Math Snip" mathpix-snipping-tool.desktop
+sed -i "25iGenericName=TeX Generator" mathpix-snipping-tool.desktop
+
 
 exit

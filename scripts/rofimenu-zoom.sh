@@ -3,9 +3,9 @@
 
 # check for triton (hidpi) flag
 if [[ "$1" =~ ^([Tt])+$ ]]; then
-        rofi_command="rofi -lines 5 -width 600"
+        rofi_command="rofi -lines 1 -width 600"
 else
-        rofi_command="rofi -lines 5 -width 400"
+        rofi_command="rofi -lines 1 -width 400"
 fi
 
 A=" Relativty & Cosmology"
@@ -16,7 +16,7 @@ E=" Ilie Dark Matter Group"
 
 
 # Variable passed to rofi
-options="$A\n$B\n$C\n$D\n$E"
+options="$E"
 
 chosen="$(echo -e "$options" | $rofi_command -dmenu -p "zoom links")"
 case $chosen in

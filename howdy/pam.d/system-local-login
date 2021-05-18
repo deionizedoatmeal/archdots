@@ -1,0 +1,7 @@
+#%PAM-1.0
+
+auth      sufficient   pam_python.so /lib/security/howdy/pam.py
+auth      include   system-login
+account   include   system-login
+password  include   system-login
+session   include   system-login

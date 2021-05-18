@@ -61,3 +61,4 @@ set window-title-home-tilde "true"
 set statusbar-basename "true"
 set selection-clipboard "clipboard"
 
+set guioptions none

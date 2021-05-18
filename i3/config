@@ -264,6 +264,8 @@ for_window [class="(?i)zoom" title="(?i)Zoom - Licensed Account"] floating enabl
 for_window [class="(?i)zoom" title="(?i)Settings"] floating enable
 for_window [title="Participants"] floating enable
 for_window [class="(?i)VirtualBox Machine"] fullscreen enable
+# for_window [title="(?i)pinentry"] floating enable
+# for_window [title="(?i)pinentry"] resize set 640 480
 
 ######################
 # FULLSCREEN WINDOWS #
@@ -293,7 +295,8 @@ bindsym $mod+z exec --no-startup-id dpms-toggle
 #######
 # WAL #
 #######
-exec_always --no-startup-id "wal -R -b 181f26"
+# exec_always --no-startup-id "wal -R -b 181f26"
+# exec_always --no-startup-id "walset"
 
 ##############
 # SCREENSHOT #
