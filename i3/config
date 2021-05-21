@@ -264,6 +264,7 @@ for_window [class="(?i)zoom" title="(?i)Zoom - Licensed Account"] floating enabl
 for_window [class="(?i)zoom" title="(?i)Settings"] floating enable
 for_window [title="Participants"] floating enable
 for_window [class="(?i)VirtualBox Machine"] fullscreen enable
+for_window [class="(?i)PGPLOT" title="(?i)PGPLOT"] floating enable
 # for_window [title="(?i)pinentry"] floating enable
 # for_window [title="(?i)pinentry"] resize set 640 480
 
