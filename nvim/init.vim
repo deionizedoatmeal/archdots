@@ -28,22 +28,10 @@ if has("autocmd")
     \| exe "normal! g'\"" | endif
 endif
 
-"""apply terminal transparency to status line
-" :hi statusline cterm=bold ctermfg=3 ctermbg=6 gui=NONE
-" :hi statusline guibg=NONE gui=NONE guifg=NONE 
 :set laststatus=0
 :set cmdheight=1
 
-"""fix for yankring and neovim
-" let g:clipboard=0
-
 """system clipboard
-" vnoremap <C-c> "*y
-" vnoremap <C-c> "+y
-" noremap <Leader>y "*y
-" noremap <Leader>p "*p
-" noremap <Leader>Y "+y
-" noremap <Leader>P "+p
 set clipboard=unnamedplus
 
 " line wrapping toggling
@@ -104,11 +92,14 @@ let g:vimtex_compiler_progname = 'nvr'
 "colors
 colorscheme wal
 
-" make comments italic
+""" make comments italic
+""" kinda hacky but the only way I could make this work lol
 " highlight Comment cterm=italic gui=italic
+augroup itcom
+  autocmd BufNewFile,BufRead *   highlight Comment cterm=italic gui=italic
+augroup END
 
 "spellcheck
-"setlocal spell
 set spelllang=en
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
