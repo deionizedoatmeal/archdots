@@ -38,6 +38,9 @@ set clipboard=unnamedplus
 :function ToggleWrap()
 : if (&wrap == 1)
 :   set nowrap
+:   set scrollopt=hor
+:   6split
+:   windo set scrollbind
 : else
 :   set wrap
 : endif
