@@ -5,6 +5,9 @@ set tabstop=4       " number of visual spaces per TAB
 set shiftwidth=4    
 set softtabstop=4   " number of spaces in tab when editing
 set expandtab       " tabs are spaces
+set smarttab
+set ai                  " Auto indent
+set si                  " Smart indent
 set showcmd             " show command in bottom bar
 filetype indent on      " load filetype-specific indent files
 set wildmenu            " visual autocomplete for command menu
@@ -13,28 +16,34 @@ set showmatch           " highlight matching [{()}]
 " let g:loaded_matchparen=1
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
-" turn off search highlight
+
+""" turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
 set foldenable          " enable folding
 set foldlevelstart=10   " open most folds by default
 set foldnestmax=10      " 10 nested fold max
-"""space open/closes folds
+
+""" space open/closes folds
 nnoremap <space> za
 set foldmethod=indent   " fold based on indent level
 
-" reopening a file
+""" reopening a file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal! g'\"" | endif
 endif
 
-:set laststatus=0
-:set cmdheight=1
+""" cursor
+au InsertEnter * silent execute "!echo -en \<esc>[5 q"
+au InsertLeave * silent execute "!echo -en \<esc>[2 q"
 
-"""system clipboard
+set laststatus=0
+set cmdheight=1
+
+""" system clipboard
 set clipboard=unnamedplus
 
-" line wrapping toggling
+""" line wrapping toggling
 :function ToggleWrap()
 : if (&wrap == 1)
 :   set nowrap
@@ -91,6 +100,8 @@ let g:vimtex_compiler_progname = 'nvr'
 " let g:UltiSnipsExpandTrigger = '<tab>'
 " let g:UltiSnipsJumpForwardTrigger = '<tab>'
 " let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+
+""" large files
 
 "colors
 colorscheme wal

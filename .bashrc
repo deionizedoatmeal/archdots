@@ -169,8 +169,8 @@ alias set-icons='sudo sh ${HOME}/Repos/archdots/install-scripts/set-icons.sh'
 ##########
 # EDITOR #
 ##########
-export EDITOR=nvim
-export VISUAL=nvim
+export EDITOR=vim
+export VISUAL=vim
 
 ########
 # PATH #
@@ -181,7 +181,6 @@ export PATH="$HOME/.local/bin:$PATH"
 # MESA #
 ########
 # set MESA_DIR to be the directory to which you downloaded MESA
-# export MESA_DIR=${HOME}/Repos/mesa-r12778
 export MESA_DIR=${HOME}/Repos/mesa-r15140
 
 # set OMP_NUM_THREADS to be the number of cores on your machine
@@ -202,3 +201,4 @@ alias walset='wal -R -b 230426'
 
 # opencv compile gstreamer howdy fix
 export OPENCV_LOG_LEVEL=ERROR
+
