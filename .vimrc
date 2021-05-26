@@ -41,7 +41,7 @@ set laststatus=0
 set cmdheight=1
 
 """ system clipboard
-set clipboard=unnamedplus
+set clipboard=unnamed,unnamedplus
 
 """ line wrapping toggling
 :function ToggleWrap()
@@ -73,12 +73,12 @@ Plug 'preservim/nerdtree'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-commentary'
+Plug 'svermeulen/vim-easyclip'
 
 "currently unsed plugins
 " Plug 'norcalli/nvim-colorizer.lua'
 " Plug 'xuhdev/vim-latex-live-preview'
 " Plug 'sirver/ultisnips'
-" Plug 'svermeulen/vim-easyclip'
 " Plug 'yuttie/comfortable-motion.vim'
 " Plug 'OriolAbril/MESAstro-vim'
 " Plug 'severin-lemaignan/vim-minimap'
@@ -94,7 +94,9 @@ let g:vimtex_matchparen_enabled=0
 let g:vimtex_compiler_progname = 'nvr'
 
 "easy clip settings
-" let g:EasyClipShareYanks=1
+let g:EasyClipShareYanks=1
+nnoremap gm m
+
 
 "utilsnips
 " let g:UltiSnipsExpandTrigger = '<tab>'
