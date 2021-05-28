@@ -74,6 +74,8 @@ Plug 'francoiscabrol/ranger.vim'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-commentary'
 Plug 'svermeulen/vim-easyclip'
+Plug 'psliwka/vim-smoothie'
+
 
 "currently unsed plugins
 " Plug 'norcalli/nvim-colorizer.lua'
