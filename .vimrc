@@ -55,8 +55,7 @@ set clipboard=unnamed,unnamedplus
 : endif
 :endfunction
 
-map <leader><C-w> :call ToggleWrap()<CR>
-map! <leader><C-w> [:call ToggleWrap()<CR>
+nnoremap <leader><C-w> :call ToggleWrap()<CR>
 
 
 "plugins
