@@ -12,6 +12,7 @@ set showcmd             " show command in bottom bar
 filetype indent on      " load filetype-specific indent files
 set wildmenu            " visual autocomplete for command menu
 set lazyredraw          " redraw only when we need to.
+set ttyfast
 set showmatch           " highlight matching [{()}]
 " let g:loaded_matchparen=1
 set incsearch           " search as characters are entered
@@ -73,14 +74,13 @@ Plug 'francoiscabrol/ranger.vim'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-commentary'
 Plug 'svermeulen/vim-easyclip'
-Plug 'psliwka/vim-smoothie'
+" Plug 'psliwka/vim-smoothie'
 
 
 "currently unsed plugins
 " Plug 'norcalli/nvim-colorizer.lua'
 " Plug 'xuhdev/vim-latex-live-preview'
 " Plug 'sirver/ultisnips'
-" Plug 'yuttie/comfortable-motion.vim'
 " Plug 'OriolAbril/MESAstro-vim'
 " Plug 'severin-lemaignan/vim-minimap'
 call plug#end()
@@ -130,12 +130,6 @@ function! ToggleSpellCheck()
   endif
 endfunction
 nnoremap <silent> <Leader>s :call ToggleSpellCheck()<CR>
-
-" scrolling
-" let g:comfortable_motion_scroll_down_key = "j"
-" let g:comfortable_motion_scroll_up_key = "k"
-" let g:comfortable_motion_scroll_down_key = "<Down>"
-" let g:comfortable_motion_scroll_up_key = "<Up>"
 
 "mesa syntax
 syntax on
