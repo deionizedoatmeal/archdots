@@ -41,6 +41,9 @@ au InsertLeave * silent execute "!echo -en \<esc>[2 q"
 set laststatus=0
 set cmdheight=1
 
+""" column
+" set colorcolumn=80
+
 """ system clipboard
 set clipboard=unnamed,unnamedplus
 
@@ -67,6 +70,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'} 
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-commentary'
+Plug 'Yggdroot/indentLine'
 " Plug 'svermeulen/vim-easyclip'
 " Plug 'morhetz/gruvbox'
 " Plug 'psliwka/vim-smoothie'
@@ -146,6 +150,8 @@ augroup histprof
   autocmd BufNewFile,BufRead *.list   set syntax=fortran
   autocmd BufNewFile,BufRead *.list   setlocal commentstring=!\ %s
 augroup END
+
+autocmd FileType fortran setlocal shiftwidth=3 softtabstop=3 expandtab
 
 
 " fortran syntax
