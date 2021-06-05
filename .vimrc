@@ -61,19 +61,14 @@ nnoremap <leader><C-w> :call ToggleWrap()<CR>
 
 "plugins
 call plug#begin('~/.config/nvim/plugs')
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
 Plug 'dylanaraps/wal.vim'
 Plug 'lervag/vimtex'
 Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-repeat'
 Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'} 
-Plug 'tmsvg/pear-tree'
 Plug 'preservim/nerdtree'
-Plug 'francoiscabrol/ranger.vim'
-Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-commentary'
-Plug 'svermeulen/vim-easyclip'
+" Plug 'svermeulen/vim-easyclip'
+" Plug 'morhetz/gruvbox'
 " Plug 'psliwka/vim-smoothie'
 
 
@@ -95,8 +90,8 @@ let g:vimtex_matchparen_enabled=0
 let g:vimtex_compiler_progname = 'nvr'
 
 "easy clip settings
-let g:EasyClipShareYanks=1
-nnoremap gm m
+" let g:EasyClipShareYanks=1
+" nnoremap gm m
 
 
 "utilsnips
@@ -108,6 +103,11 @@ nnoremap gm m
 
 "colors
 colorscheme wal
+" set termguicolors
+" let g:gruvbox_italic=1
+" let g:gruvbox_contrast_dark='medium'
+" set background=dark
+" autocmd vimenter * ++nested colorscheme gruvbox
 
 """ make comments italic
 """ kinda hacky but the only way I could make this work lol
