@@ -82,6 +82,7 @@ Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'Yggdroot/indentLine'
+Plug 'ludovicchabant/vim-gutentags'
 " Plug 'dense-analysis/ale'
 
 " Plug 'tmsvg/pear-tree'
@@ -98,6 +99,9 @@ Plug 'Yggdroot/indentLine'
 " Plug 'OriolAbril/MESAstro-vim'
 " Plug 'severin-lemaignan/vim-minimap'
 call plug#end()
+
+""" TAGS
+set statusline+=%{gutentags#statusline()}
 
 """ TAB COMPLETION
 """ ackyshake/VimCompletesMe, install with:
