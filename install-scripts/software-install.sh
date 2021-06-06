@@ -18,7 +18,7 @@ SYS="lsd fd python-pywal python-pillow python python-pip ttf-jetbrains-mono calc
 # displaycal
 # dialog python-setuptools installed on nep??
 
-NONES="python-pandas python-mpmath python-scipy python-numpy python-matplotlib jupyterlab github-cli qgis scrot arandr texlive-most digikam cups cups-pdf inkscape hddtemp libreoffice-fresh cheese spotifyd nmap perl-image-exiftool ranger zathura zathura-pdf-mupdf firefox gnuplot vlc darktable neofetch steam atom gimp zathura speedtest-cli go"
+NONES="python-pandas python-mpmath python-scipy python-numpy python-matplotlib jupyterlab github-cli qgis scrot arandr texlive-most digikam cups cups-pdf inkscape hddtemp libreoffice-fresh cheese spotifyd nmap perl-image-exiftool ranger zathura zathura-pdf-mupdf firefox gnuplot vlc darktable neofetch steam atom gimp zathura speedtest-cli go highlight"
 
 TRI="xf86-video-intel vulkan-intel powertop upower"
 #tlp tlp-rdw removed in aug 
@@ -190,6 +190,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
     sudo pip install inkscape-figures
     sudo pip install spotdl
     sudo pip install grip
+    sudo pip install fortran-language-server
     # sudo pip install i3-py
     # sudo pip install wpgtk
     echo 'python packages installed'
