@@ -39,6 +39,7 @@ set $RIGHT HDMI-A-0
 #T bindsym F8 exec --no-startup-id light-down
 #T bindsym F6 exec --no-startup-id vol-up; exec --no-startup-id click1 #increase volume
 #T bindsym F5 exec --no-startup-id vol-down; exec --no-startup-id click1 #decrease volume
+#T bindsym F3 exec --no-startup-id amixer -D pulse sset Master toggle; exec --no-startup-id click1 #mute sound
 #T bindsym $mod+Shift+p exec rofimenu-power T
 #T bindsym $mod+Shift+e exec rofimenu-exit T
 #T bindsym $mod+a exec rofimenu-ranger T
