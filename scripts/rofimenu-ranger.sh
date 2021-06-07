@@ -2,9 +2,9 @@
 
 # check for triton (hidpi) flag
 if [[ "$1" =~ ^([Tt])+$ ]]; then
-        rofi_command="rofi -lines 6 -width 400"
+        rofi_command="rofi -lines 8 -width 400"
 else
-        rofi_command="rofi -lines 6 -width 250"
+        rofi_command="rofi -lines 8 -width 250"
 fi
 
 
@@ -13,10 +13,12 @@ dl=" downloads"
 rp=" repos"
 sch=" school"
 dm=" dark matter"
+d="﬌  docs"
+n="﬌  notes"
 p="﬌  papers"
 t=" texts"
 # Variable passed to rofi
-options="$dl\n$rp\n$sch\n$dm\n$p\n$t"
+options="$dl\n$rp\n$sch\n$dm\n$d\n$n\n$p\n$t"
 
 chosen="$(echo -e "$options" | $rofi_command -dmenu -p "open" -selected-row 1)"
 case $chosen in
@@ -34,6 +36,12 @@ case $chosen in
         ;;
     $p)
         kitty ranger ~/Research/dark_matter/papers > /dev/null 2>&1
+        ;;
+    $d)
+        kitty ranger ~/Research/dark_matter/docs > /dev/null 2>&1
+        ;;
+    $n)
+        kitty ranger ~/Research/dark_matter/notes > /dev/null 2>&1
         ;;
     $t)
         kitty ranger ~/Documents/texts > /dev/null 2>&1
