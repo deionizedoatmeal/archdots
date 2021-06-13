@@ -1,2 +1,4 @@
 #!/bin/bash
-kitty pass -c login & rofimenu-pass
+rofimenu-pass-script
+wait
+rofimenu-pass

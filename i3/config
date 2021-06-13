@@ -269,13 +269,12 @@ for_window [title="Participants"] floating enable
 for_window [class="(?i)VirtualBox Machine"] fullscreen enable
 for_window [class="(?i)PGPLOT"] floating enable
 for_window [title="(?i)PGPLOT"] floating enable
-# for_window [title="(?i)pinentry"] floating enable
-# for_window [title="(?i)pinentry"] resize set 640 480
+for_window [class="kitty-pass-pinentry"] floating enable
 
 ######################
 # FULLSCREEN WINDOWS #
 ######################
-# exec --no-startup-id "i3-msg -t subscribe '[ \"window\" ]' -m | while read -r line; do i3-msg '[class="(?i)Microsoft Flight Simulator - 1.11.7.0"] fullscreen enable'; done"
+# exec --no-startup-id "i3-msg -t subscribe '[ \"window\" ]' -m | while read -r line; do i3-msg '[class="(?i)Microsoft Flight Simulator"] fullscreen enable'; done"
 
 ########
 # LOCK #
@@ -302,11 +301,6 @@ bindsym $mod+z exec --no-startup-id dpms-toggle
 #######
 # exec_always --no-startup-id "wal -R -b 181f26"
 # exec_always --no-startup-id "walset"
-
-##############
-# SCREENSHOT #
-##############
-bindsym Print exec --no-startup-id "scrot"
 
 ############
 # REDSHIFT #
