@@ -182,13 +182,15 @@ focus_follows_mouse no
 bindsym $mod+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+r exec killi3 ; restart
+
 
 ##############
 # ROFI MENUS # (place scripts into /bin)
 ##############
 bindsym $mod+Shift+w exec --no-startup-id rofimenu-wifi
-bindsym $mod+Shift+s exec --no-startup-id rofimenu-pass
+bindsym $mod+Shift+s exec --no-startup-id rofimenu-pass-wrapper
+
 
 ###########################
 # LIGHT/DARK THEME TOGGLE #
@@ -265,7 +267,8 @@ for_window [class="(?i)zoom" title="(?i)Zoom - Licensed Account"] floating enabl
 for_window [class="(?i)zoom" title="(?i)Settings"] floating enable
 for_window [title="Participants"] floating enable
 for_window [class="(?i)VirtualBox Machine"] fullscreen enable
-for_window [class="(?i)PGPLOT" title="(?i)PGPLOT"] floating enable
+for_window [class="(?i)PGPLOT"] floating enable
+for_window [title="(?i)PGPLOT"] floating enable
 # for_window [title="(?i)pinentry"] floating enable
 # for_window [title="(?i)pinentry"] resize set 640 480
 
