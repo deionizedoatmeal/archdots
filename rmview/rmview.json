@@ -1,11 +1,11 @@
 {
     "ssh": {
         "address":
-            "[192.168.0.127]",
+        ["192.168.0.105"],
         "auth_method":
             "password",
         "password":
-            "##########"
+            "8WwNvYVsWN"
     },
     "orientation": "auto",
     "pen_size": 15,
