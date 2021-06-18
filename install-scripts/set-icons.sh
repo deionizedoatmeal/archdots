@@ -64,6 +64,12 @@ sed -i '/GenericName=/d' ./topcat.desktop
 sed -i "2iName= Topcat" topcat.desktop
 sed -i "3iGenericName=CSV Plotter" topcat.desktop
 
+# df 
+sed -i '/Name=/d' ./dwarffortress.desktop
+sed -i '/GenericName=/d' ./dwarffortress.desktop
+sed -i "2iName= Dwarf Fortress" dwarffortress.desktop
+sed -i "3iGenericName=TUI Game" dwarffortress.desktop
+
 # blueman manager
 sed -i '/Name=/d' ./blueman-manager.desktop
 sed -i '/GenericName=/d' ./blueman-manager.desktop
