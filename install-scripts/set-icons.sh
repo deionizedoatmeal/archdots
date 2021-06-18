@@ -275,6 +275,13 @@ sed -i '/GenericName=/d' ./vim.desktop
 sed -i "2iName= Vim" vim.desktop
 sed -i "3iGenericName=Text Editor" vim.desktop
 
+# gvim 
+sed -i '/Name=/d' ./gvim.desktop
+sed -i '/GenericName=/d' ./gvim.desktop
+sed -i "2iName= Vim" gvim.desktop
+sed -i "3iGenericName=Text Editor" gvim.desktop
+
+
 # htop 
 sed -i '/Name=/d' ./htop.desktop
 sed -i '/GenericName=/d' ./htop.desktop

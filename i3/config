@@ -9,9 +9,9 @@ set $mod Mod4
 # Change 'color7' and 'color2' to whatever colors you want i3 to use from the generated scheme.
 # NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
 # it fails to get colors from Xresources.
-set_from_resource $fg i3wm.color6 #f0f0f0
+set_from_resource $fg i3wm.color5 #f0f0f0
 set_from_resource $bg i3wm.color2 #f0f0f0
-set_from_resource $gg i3wm.color4 #f0f0f0
+set_from_resource $gg i3wm.color7 #f0f0f0
 
 # class                 border  backgr. text indicator child_border
 client.focused          $fg     $fg     $bg  $fg       $fg
@@ -242,10 +242,9 @@ new_window none
 new_float none
 
 # add a border for SSH windows
-for_window [title="(?i)turing(?i)"] border pixel 8
-
+# for_window [class="kitty" title="(?i)@turing(?i)"] border pixel 8
 #TRITON
-#T for_window [title="(?i)neptune(?i)"] border pixel 8
+# for_window [class="kitty" title="(?i)@neptune(?i)"] border pixel 8
 
 ##############
 # SCREENSHOT #
