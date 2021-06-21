@@ -14,7 +14,7 @@ fi
 sudo pacman -Syyu
 
 # package lists
-SYS="lsd fd python-pywal python-pillow python python-pip ttf-jetbrains-mono calcurse ntp openconnect rclone cpupower dmidecode inetutils xdotool nfsidmap exfat-utils dosfstools ntfsprogs rsync rdiff-backup materia-gtk-theme gvim ctags cmake clang bc gdisk rust dbus pulseaudio paprefs pavucontrol pulseaudio-bluetooth blueman bluez bluez-utils pass redshift git sudo vi kitty rofi dunst openvpn gnupg imagemagick sox mpg123 ffmpeg feh ttf-fantasque-sans-mono nvme-cli lm_sensors openssh bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib htop pacman-contrib"
+SYS="lsd fd python-pywal python-pillow python python-pip ttf-jetbrains-mono calcurse ntp openconnect rclone cpupower dmidecode inetutils xdotool nfsidmap exfat-utils dosfstools ntfsprogs rsync rdiff-backup materia-gtk-theme gvim ctags cmake clang bc gdisk rust dbus pulseaudio paprefs pavucontrol pulseaudio-bluetooth blueman bluez bluez-utils pass redshift git sudo vi kitty rofi dunst openvpn gnupg imagemagick sox mpg123 ffmpeg feh ttf-fantasque-sans-mono nvme-cli lm_sensors openssh bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib htop pacman-contrib hyperfine"
 # displaycal
 # dialog python-setuptools installed on nep??
 
@@ -67,7 +67,7 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 # yay package list #########################################################
-YAYSYS="bottom flashfocus-git fet.sh-git brother-mfc-9560cdw ttf-symbola paper-icon-theme vim-plug i3lock-color-git steam-fonts comptone-tryone-git icdiff"
+YAYSYS="bottom flashfocus-git fet.sh-git brother-mfc-9560cdw ttf-symbola paper-icon-theme vim-plug i3lock-color-git steam-fonts comptone-tryone-git icdiff git-delta-bin duf"
 #python-pipx teamviewer autotiling picom-ibhagwan-git
 YAYNEPTUNE="siril-git google-earth-pro virtualbox-ext-oracle remmina-plugin-rdesktop howdy opencv"
 YAYTRITON="system76-power system76-firmware-daemon system76-driver light-git"
