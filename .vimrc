@@ -77,16 +77,16 @@ nnoremap <leader><C-w> :call ToggleWrap()<CR>
 call plug#begin('~/.config/nvim/plugs')
 Plug 'dylanaraps/wal.vim'
 Plug 'lervag/vimtex'
-Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'} 
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'Yggdroot/indentLine'
 Plug 'ludovicchabant/vim-gutentags'
 
 """ Fix markdown and tex
-Plug 'sheerun/vim-polyglot'
+" Plug 'sheerun/vim-polyglot'
 
 " Plug 'dense-analysis/ale'
+" Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'} 
 
 " Plug 'tmsvg/pear-tree'
 " Plug 'xolox/vim-easytags'
@@ -115,11 +115,19 @@ autocmd FileType vim let b:vcm_tab_complete = 'vim'
 """ VIM TEX SETTINGS
 let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'
+let g:vimtex_view_general_viewer='zathura'
 let g:vimtex_quickfix_mode=0
-set conceallevel=1
-let g:tex_conceal='abdmg'
 let g:vimtex_matchparen_enabled=0
 let g:vimtex_compiler_progname = 'nvr'
+set conceallevel=2
+let g:tex_flavor='latex'
+let g:tex_conceal='abdmg'
+let g:vimtex_quickfix_mode=0
+set encoding=utf-8
+
+""" TEX CONCEAL
+" set conceallevel=2
+" let g:tex_conceal="abdgms"
 
 """ EASY CLIP SETTINGS
 " let g:EasyClipShareYanks=1
