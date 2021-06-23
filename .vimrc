@@ -77,12 +77,15 @@ nnoremap <leader><C-w> :call ToggleWrap()<CR>
 call plug#begin('~/.config/nvim/plugs')
 Plug 'dylanaraps/wal.vim'
 Plug 'lervag/vimtex'
-Plug 'sheerun/vim-polyglot'
 Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'} 
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'Yggdroot/indentLine'
 Plug 'ludovicchabant/vim-gutentags'
+
+""" Fix markdown and tex
+Plug 'sheerun/vim-polyglot'
+
 " Plug 'dense-analysis/ale'
 
 " Plug 'tmsvg/pear-tree'

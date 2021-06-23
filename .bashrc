@@ -131,6 +131,18 @@ alias lt='lsd -tl'
 alias tree='lsd --tree'
 alias diff='icdiff'
 
+##########
+# RANGER #
+##########
+ranger() {
+    if [ -z "$RANGER_LEVEL" ]; then
+        /usr/bin/ranger "$@"
+    else
+        exit
+    fi
+}
+
+
 ####################
 # KITTY COMPLETION #
 ####################
