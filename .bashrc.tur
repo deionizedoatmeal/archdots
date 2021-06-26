@@ -8,6 +8,11 @@ case $- in
       *) return;;
 esac
 
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -38,7 +43,7 @@ fi
 #######
 # GIT #
 #######
-source /usr/share/git/completion/git-prompt.sh
+source ${HOME}/.local/bin/git-prompt.sh
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
@@ -66,9 +71,9 @@ fi
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[1;32m\]\h\[\033[1;34m\] \W$(__git_ps1 " (%s)") |>${text}\[\033[0m\] '
 else
-    PS1='${text}${debian_chroot:+($debian_chroot)}\h \W$(__git_ps1 " (%s)") |>${text} '
+    # PS1='${debian_chroot:+($debian_chroot)}\h \W$(__git_ps1 " (%s)") |>${text} '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[1;32m\]\h\[\033[1;34m\] \W$(__git_ps1 " (%s)") |>${text}\[\033[0m\] '
 fi
-
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
@@ -122,72 +127,12 @@ fi
 ###########
 # ALIASES #
 ###########
-alias ls='lsd'
-alias ll='lsd -alF'
-alias la='lsd -A'
-alias lX='lsd -Xl'
-alias lS='lsd -Sl'
-alias lt='lsd -tl'
-alias tree='lsd --tree'
-alias diff='icdiff -H'
-
-##########
-# RANGER #
-##########
-ranger() {
-    if [ -z "$RANGER_LEVEL" ]; then
-        /usr/bin/ranger "$@"
-    else
-        exit
-    fi
-}
-
-
-####################
-# KITTY COMPLETION #
-####################
-source <(kitty + complete setup bash)
-
-########
-# RUST #
-########
-export PATH="$HOME/.cargo/bin:$PATH"
-
-######
-# GO #
-######
-export GOPATH="$HOME/Repos/go"
-export PATH=$PATH:$(go env GOPATH)/bin
-
-########
-# PASS #
-########
-alias pass-pull='pass git pull origin master'
-alias pass-push='pass git push origin master'
-
-########
-# REPOS #
-########
-# alias dijo-pull='git -C ${HOME}/.local/share/dijo pull origin master'
-# alias dijo-push='git -C ${HOME}/.local/share/dijo add -A && git -C ${HOME}/.local/share/dijo commit --allow-empty-message -m "" && git -C ${HOME}/.local/share/dijo push origin master'
-
-##################
-# PACMAN ALIASES #
-##################
-alias remove-orphans='sudo pacman -Rns $(pacman -Qtdq)'
-alias list-size="pacman -Qi | awk '/^Name/{name=\$3} /^Installed Size/{print \$4\$5, name}' | sort -h"
-alias clear-cache="sudo pacman -Sc && yay -Sc"
-
-#########
-# TRASH #
-#########
-alias empty-trash='rm -rf ${HOME}/.local/share/Trash/files/*'
-alias list-trash='ls ${HOME}/.local/share/Trash/files'
-
-#############
-# SET ICONS #
-#############
-alias set-icons='sudo sh ${HOME}/Repos/archdots/install-scripts/set-icons.sh'
+alias ls='ls'
+alias ll='ls -alF'
+alias la='ls -A'
+alias lX='ls -Xl'
+alias lS='ls -Sl'
+alias lt='ls -tl'
 
 ##########
 # EDITOR #
@@ -198,30 +143,25 @@ export VISUAL=vim
 ########
 # PATH #
 ########
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="${HOME}/.local/bin:$PATH"
 
 ########
 # MESA #
 ########
 # set MESA_DIR to be the directory to which you downloaded MESA
-export MESA_DIR=${HOME}/Repos/mesa-r15140
+# export MESA_DIR=/shared/mesa/mesa-r15140
+export MESA_DIR=~/mesa-r15140
 
 # set OMP_NUM_THREADS to be the number of cores on your machine
-export OMP_NUM_THREADS=10
+export OMP_NUM_THREADS=16
 
 # you should have done this when you set up the MESA SDK
-export MESASDK_ROOT=${HOME}/Repos/mesasdk
+export MESASDK_ROOT=/shared/mesa/mesasdk-21.4.1
 source $MESASDK_ROOT/bin/mesasdk_init.sh
 
 # new star work
 alias new-mesa='cp -r $MESA_DIR/star/work'
 alias new-mesa-profile='cp $MESA_DIR/star/defaults/profile_columns.list'
 alias new-mesa-history='cp $MESA_DIR/star/defaults/history_columns.list'
-alias mesa-vars='vim $MESA_DIR/star_data/public/star_data.inc'
-
-# wal
-alias walset='wal -R -b 230426'
-
-# opencv compile gstreamer howdy fix
-export OPENCV_LOG_LEVEL=ERROR
+alias mesa-vars='nvim $MESA_DIR/star_data/public/star_data.inc'
 
