@@ -10,7 +10,8 @@ fi
 ### Options ###
 # MSG=$(protonvpn s)
 # STATUS=$(echo $MSG | grep -o '^...........')
-STATUS=$(ps -ax | grep -w " openconnect " | wc -l)
+# STATUS=$(ps -ax | grep -w "vpn-connect" | wc -l)
+STATUS=$(ps -ax | grep -w "openconnect" | wc -l)
 # IP=$(echo $MSG | awk '/IP:/ {match($0, /IP:/); print substr($0, RSTART + 3, RLENGTH + 11);}')
 
 # if [ "$STATUS" == "Status: Con" ]
