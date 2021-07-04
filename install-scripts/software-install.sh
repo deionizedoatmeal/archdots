@@ -14,7 +14,7 @@ fi
 sudo pacman -Syyu
 
 # package lists
-SYS="lsd fd python-pywal python-pillow python python-pip ttf-jetbrains-mono calcurse ntp openconnect rclone cpupower dmidecode inetutils xdotool nfsidmap exfat-utils dosfstools ntfsprogs rsync rdiff-backup materia-gtk-theme gvim ctags cmake clang bc gdisk rust dbus pulseaudio paprefs pavucontrol pulseaudio-bluetooth blueman bluez bluez-utils pass redshift git sudo vi kitty rofi dunst openvpn gnupg imagemagick sox mpg123 ffmpeg feh ttf-fantasque-sans-mono nvme-cli lm_sensors openssh bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib htop pacman-contrib hyperfine"
+SYS="lsd fd python-pywal python-pillow python python-pip ttf-jetbrains-mono calcurse ntp openconnect rclone cpupower dmidecode inetutils xdotool nfsidmap exfat-utils dosfstools ntfsprogs rsync rdiff-backup materia-gtk-theme gvim ctags cmake clang bc gdisk rust dbus pulseaudio paprefs pavucontrol pulseaudio-bluetooth blueman bluez bluez-utils pass redshift git sudo vi kitty rofi dunst openvpn gnupg imagemagick sox mpg123 ffmpeg feh ttf-fantasque-sans-mono nvme-cli lm_sensors openssh bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib htop pacman-contrib hyperfine rpmextract expect"
 # displaycal
 # dialog python-setuptools installed on nep??
 
@@ -35,22 +35,22 @@ NEP="blender apcupsd fbset xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon r
 # pacman install
 read -r -p "#### Would you like to install 'essential' software? [y/N] ####" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
-        sudo pacman -S --needed $SYS
+        sudo pacman -S --needed --noconfirm $SYS
 fi
 
 read -r -p "#### Would you like to install 'optional' software? [y/N] ####" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
-        sudo pacman -S --needed $NONES
+        sudo pacman -S --needed --noconfirm $NONES
 fi
 
 read -r -p "#### Would you like to install 'triton' software? [y/N] ####" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
-        sudo pacman -S --needed $TRI
+        sudo pacman -S --needed --noconfirm $TRI
 fi
 
 read -r -p "#### Would you like to install 'neptune' software? [y/N] ####" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
-        sudo pacman -S --needed $NEP
+        sudo pacman -S --needed --noconfirm $NEP
 fi
 
 
