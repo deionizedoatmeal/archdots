@@ -129,7 +129,7 @@ alias lX='lsd -Xl'
 alias lS='lsd -Sl'
 alias lt='lsd -tl'
 alias tree='lsd --tree'
-alias diff='icdiff -H'
+alias diff='icdiff -N'
 
 ##########
 # RANGER #
