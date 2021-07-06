@@ -200,6 +200,11 @@ export VISUAL=vim
 ########
 export PATH="$HOME/.local/bin:$PATH"
 
+#################
+# WOLFRAM ALPHA #
+#################
+export APPID=XXXXXX-XXXXXXXXXX
+
 ########
 # MESA #
 ########
