@@ -82,6 +82,8 @@ Plug 'tpope/vim-commentary'
 Plug 'Yggdroot/indentLine'
 Plug 'ludovicchabant/vim-gutentags'
 
+Plug 'wfxr/minimap.vim'
+
 """ Fix markdown and tex
 " Plug 'sheerun/vim-polyglot'
 
@@ -184,7 +186,7 @@ augroup histprof
 augroup END
 
 """ FORTRAN TABS
-autocmd FileType fortran setlocal shiftwidth=3 softtabstop=3 expandtab
+autocmd FileType fortran setlocal shiftwidth=3 softtabstop=3 expandtab ignorecase
 
 """ FORTRAN SYNTAX
 let fortran_free_source=1 "use free form
