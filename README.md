@@ -74,3 +74,7 @@ Anyways, these are my dotfiles and scripts for my workstation/server and my pers
 ![Ranger](/screenshots/ranger.png)
 ![Kitty](/screenshots/sisters.png)
 ![Lock](/screenshots/gllock.png)
+
+# todo
+[ ] - connect bluetooth keyboard on kernal boot?
+[ ] - look at wall front ends?
