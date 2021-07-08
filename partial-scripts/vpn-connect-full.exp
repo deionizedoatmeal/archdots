@@ -1,0 +1,36 @@
+#!/sbin/expect -f
+set force_conservative 0  ;# set to 1 to force conservative mode even if
+			  ;# script wasn't run conservatively originally
+if {$force_conservative} {
+	set send_slow {1 .1}
+	proc send {ignore arg} {
+		sleep .1
+		exp_send -s -- $arg
+	}
+}
+
+set timeout -1
+spawn sudo openconnect --protocol=gp url 
+match_max 100000
+expect -exact "POST https://url\r
+Connected to xxx.xx.x.xxx:xxx\r
+SSL negotiation with url\r
+Connected to HTTPS on url with ciphersuite (XXXXXX)-(XXX)-(XXX-XXX-XXX)\r
+Enter login credentials\r
+Username: "
+send -- "XXXXXX\r"
+expect -exact "XXXXXX\r
+Password: "
+send -- "XXXXXXXXXXXXXXXXXXXXXXXX\r"
+expect -exact "\r
+POST https://url\r
+Portal set HIP report interval to 60 minutes).\r
+2 gateway servers available:\r
+  SplitTunnel (url)\r
+  FullTunnel (url)\r
+Please select GlobalProtect gateway.\r
+GATEWAY: \[SplitTunnel|FullTunnel\]:"
+send -- "FullTunnel\r"
+expect -exact "ESP tunnel connected; exiting HTTPS mainloop.\r"
+send -- "\r"
+expect eof
