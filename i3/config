@@ -49,7 +49,7 @@ set $RIGHT HDMI-A-0
 
 #NEPTUNE 
 #N font pango:JetBrains Mono ExtraBold 12
-#N bindsym $mod+p exec --no-startup-id paper-mode-toggle 500 50 20 
+#N bindsym $mod+p exec --no-startup-id paper-mode-toggle 400 50 20 
 #N border_radius 8
 #N Workspace $ws1 output $LEFT
 #N Workspace $ws2 output $LEFT

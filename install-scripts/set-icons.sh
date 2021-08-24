@@ -103,7 +103,7 @@ sed -i "4iGenericName=Group Messaging" slack.desktop
 # arduino 
 sed -i '/Name=/d' ./arduino.desktop
 sed -i '/GenericName=/d' ./arduino.desktop
-sed -i "3iName= Arduino" arduino.desktop
+sed -i "3iName=∞ Arduino" arduino.desktop
 sed -i "4iGenericName=Microcontroler IDE" arduino.desktop
 
 # kdenlive 
