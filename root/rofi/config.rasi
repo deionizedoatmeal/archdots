@@ -1,0 +1,12 @@
+configuration {
+ modi: "drun";
+ theme: "/home/ian/.cache/wal/colors-rofi-dark.rasi";
+ font: "JetBrains Mono Bold 12";
+ hide-scrollbar: true;
+ show-icons: false;
+ }
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}

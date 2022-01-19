@@ -57,6 +57,8 @@ mv assistant.desktop ../unused-applications/.
 mv designer.desktop ../unused-applications/.
 mv linguist.desktop ../unused-applications/.
 mv qdbusviewer.desktop ../unused-applications/.
+mv system76-driver.desktop ../unused-applications/.
+
 
 # top cat 
 sed -i '/Name=/d' ./topcat.desktop
@@ -103,7 +105,7 @@ sed -i "4iGenericName=Group Messaging" slack.desktop
 # arduino 
 sed -i '/Name=/d' ./arduino.desktop
 sed -i '/GenericName=/d' ./arduino.desktop
-sed -i "3iName=∞ Arduino" arduino.desktop
+sed -i "3iName= Arduino" arduino.desktop
 sed -i "4iGenericName=Microcontroler IDE" arduino.desktop
 
 # kdenlive 
@@ -121,7 +123,7 @@ sed -i "3iGenericName=Display Settings" arandr.desktop
 # cups
 sed -i '/Name=/d' ./cups.desktop
 sed -i '/GenericName=/d' ./cups.desktop
-sed -i "2iName=朗 CUPS" cups.desktop
+sed -i "2iName= CUPS" cups.desktop
 sed -i "3iGenericName=Print Settings" cups.desktop
 
 # siril
@@ -218,19 +220,19 @@ sed -i "3iGenericName=Ebook Libray" calibre-gui.desktop
 # steam
 sed -i '/Name=/d' ./steam.desktop
 sed -i '/GenericName=/d' ./steam.desktop
-sed -i "2iName= Steam" steam.desktop
+sed -i "2iName= Steam" steam.desktop
 sed -i "3iGenericName=Games" steam.desktop
 
 # spotify
 sed -i '/Name=/d' ./spotify.desktop
 sed -i '/GenericName=/d' ./spotify.desktop
-sed -i "2iName=阮 Spotify" spotify.desktop
+sed -i "2iName= Spotify" spotify.desktop
 sed -i "3iGenericName=Music Player" spotify.desktop
 
 # spotify-tui
 sed -i '/Name=/d' ./spotify-tui.desktop
 sed -i '/GenericName=/d' ./spotify-tui.desktop
-sed -i "2iName=阮 Spotify TUI" spotify-tui.desktop
+sed -i "2iName= Spotify TUI" spotify-tui.desktop
 sed -i "3iGenericName=TUI Music Player" spotify-tui.desktop
 
 # ranger 
@@ -304,8 +306,7 @@ sed -i "3iGenericName=Media Player" vlc.desktop
 sed -i '/Name=/d' ./atom.desktop
 sed -i '/GenericName=/d' ./atom.desktop
 sed -i "2iName= Atom" atom.desktop
-sed -i "3iGenericName=Text Editor" atom.desktop
-
+sed -i "3iGenericName=Text Editor" atom.deskto 
 # neovim 
 sed -i '/Name=/d' ./nvim.desktop
 sed -i '/GenericName=/d' ./nvim.desktop
@@ -315,7 +316,7 @@ sed -i "3iGenericName=Text Editor" nvim.desktop
 # darktable 
 sed -i '/Name=/d' ./darktable.desktop
 sed -i '/GenericName=/d' ./darktable.desktop
-sed -i "2iName= Darktable" darktable.desktop
+sed -i "2iName= Darktable" darktable.desktop
 sed -i "3iGenericName=Lighttable and Darkroom" darktable.desktop
 
 # gimp
@@ -332,17 +333,17 @@ sed -i "25iGenericName=Office Suite" libreoffice-startcenter.desktop
 
 sed -i '/Name=/d' ./libreoffice-writer.desktop
 sed -i '/GenericName=/d' ./libreoffice-writer.desktop
-sed -i "24iName= LibreOffice Writer" libreoffice-writer.desktop
+sed -i "24iName= LibreOffice Writer" libreoffice-writer.desktop
 sed -i "25iGenericName=Word Processor" libreoffice-writer.desktop
 
 sed -i '/Name=/d' ./libreoffice-calc.desktop
 sed -i '/GenericName=/d' ./libreoffice-calc.desktop
-sed -i "24iName= LibreOffice Calc" libreoffice-calc.desktop
-sed -i "25iGenericName=Spreadsheet" libreoffice-calc.desktop
+sed -i "24iName= LibreOffice Calc" libreoffice-calc.desktop
+sed -i "25iGenericName=Spread sheet" libreoffice-calc.desktop
 
 sed -i '/Name=/d' ./libreoffice-impress.desktop
 sed -i '/GenericName=/d' ./libreoffice-impress.desktop
-sed -i "24iName=蠟 LibreOffice Impress" libreoffice-impress.desktop
+sed -i "24iName= LibreOffice Impress" libreoffice-impress.desktop
 sed -i "25iGenericName=Presentation" libreoffice-impress.desktop
 
 sed -i '/Name=/d' ./libreoffice-draw.desktop
@@ -357,17 +358,17 @@ sed -i "25iGenericName=Database" libreoffice-base.desktop
 
 sed -i '/Name=/d' ./libreoffice-math.desktop
 sed -i '/GenericName=/d' ./libreoffice-math.desktop
-sed -i "24iName=烈 LibreOffice Math" libreoffice-math.desktop
+sed -i "24iName= LibreOffice Math" libreoffice-math.desktop
 sed -i "25iGenericName=Formula Editor" libreoffice-math.desktop
 
 sed -i '/Name=/d' ./jupyter-lab.desktop
 sed -i '/GenericName=/d' ./jupyter-lab.desktop
-sed -i "4iName= Jupyter Lab" jupyter-lab.desktop
+sed -i "4iName= Jupyter Lab" jupyter-lab.desktop
 sed -i "5iGenericName=Python IDE" jupyter-lab.desktop
 
 sed -i '/Name=/d' ./jupyter-notebook.desktop
 sed -i '/GenericName=/d' ./jupyter-notebook.desktop
-sed -i "4iName= Jupyter Notebook" jupyter-notebook.desktop
+sed -i "4iName= Jupyter Notebook" jupyter-notebook.desktop
 sed -i "5iGenericName=Python Notebook" jupyter-notebook.desktop
 
 sed -i '/Name=/d' ./remarkable.desktop
@@ -375,11 +376,39 @@ sed -i '/GenericName=/d' ./remarkable.desktop
 sed -i "4iName= ReMarkable" remarkable.desktop
 sed -i "5iGenericName=eInk Client" remarkable.desktop
 
-
 sed -i '/Name=/d' ./mathpix-snipping-tool.desktop
 sed -i '/GenericName=/d' ./mathpix-snipping-tool.desktop
 sed -i "24iName=烈 Math Snip" mathpix-snipping-tool.desktop
 sed -i "25iGenericName=TeX Generator" mathpix-snipping-tool.desktop
 
+sed -i '/Name=/d' ./freecad_conda.desktop
+sed -i '/GenericName=/d' ./freecad_conda.desktop
+sed -i "4iName= FreeCAD" freecad_conda.desktop
+sed -i "5iGenericName=3D Modeler" freecad_conda.desktop
+
+sed -i '/Name=/d' ./eagle.desktop
+sed -i '/GenericName=/d' ./eagle.desktop
+sed -i "4iName= Eagle CAD" eagle.desktop
+sed -i "5iGenericName=PCB Modeler" eagle.desktop
+
+sed -i '/Name=/d' ./circuitjs.desktop
+sed -i '/GenericName=/d' ./circuitjs.desktop
+sed -i "4iName= Falstad" circuitjs.desktop
+sed -i "5iGenericName=Circuit Simulator" circuitjs.desktop
+
+sed -i '/Name=/d' ./openboardview.desktop
+sed -i '/GenericName=/d' ./openboardview.desktop
+sed -i "4iName= Open Board Viewer" openboardview.desktop
+sed -i "5iGenericName=PCB Viewer" openboardview.desktop
+
+sed -i '/Name=/d' ./com.ultimaker.cura.desktop
+sed -i '/GenericName=/d' ./com.ultimaker.cura.desktop
+sed -i "4iName= Cura" com.ultimaker.cura.desktop
+sed -i "5iGenericName=3D Print Slicer" com.ultimaker.cura.desktop
+
+# sed -i '/Name=/d' ./.desktop
+# sed -i '/GenericName=/d' ./.desktop
+# sed -i "4iName= Eagle CAD" .desktop
+# sed -i "5iGenericName=PCB Modeler" .desktop
 
 exit

@@ -1,6 +1,5 @@
 configuration {
  modi: "drun";
- theme: "~/.cache/wal/colors-rofi-dark.rasi";
 
  //TRITON  
  //font: "JetBrains Mono Bold 24";
@@ -16,3 +15,10 @@ configuration {
  hide-scrollbar: true;
  show-icons: false;
  }
+
+@theme "~/.cache/wal/colors-rofi-dark.rasi"
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}

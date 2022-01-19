@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name= Grafana
+GenericName=Data Dashboard
+Exec=firefox http://127.0.0.1:3000/
+Terminal=false
+Type=Application
+StartupNotify=true
+

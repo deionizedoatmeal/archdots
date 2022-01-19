@@ -35,14 +35,3 @@ make
 sudo make install
 cd ..
 sudo rm -r i3
-
-git clone --recursive https://github.com/polybar/polybar
-cd polybar
-mkdir build
-cd build
-cmake ..
-make -j$(nproc)
-# Optional. This will install the polybar executable in /usr/local/bin
-sudo make install
-cd ..
-sudo rm -r polybar

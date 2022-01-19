@@ -34,8 +34,10 @@
     //*SELECT*
     //TRITON
     //border-radius: 27px;
+    //width: 850;
     //NEPTUNE
-    border-radius: 16px;
+    //border-radius: 16px;
+    //width: 500;
     //*SELECT*
 }}
 
@@ -77,6 +79,11 @@
 #element {{
     border: 0;
     padding: 1px;
+}}
+
+#element-text, element-icon {{
+    background-color: inherit;
+    text-color:       inherit;
 }}
 
 #element.normal.normal {{

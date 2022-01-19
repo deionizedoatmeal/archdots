@@ -225,7 +225,9 @@ alias new-mesa-history='cp $MESA_DIR/star/defaults/history_columns.list'
 alias mesa-vars='vim $MESA_DIR/star_data/public/star_data.inc'
 
 # wal
-alias walset='wal -R -b 230426'
+(cat ~/.cache/wal/sequences &)
+source ~/.cache/wal/colors-tty.sh
+alias wal-set="cat .bash_history | grep 'wal -R -b' | tail -1"
 
 # opencv compile gstreamer howdy fix
 export OPENCV_LOG_LEVEL=ERROR
