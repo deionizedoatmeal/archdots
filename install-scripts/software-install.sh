@@ -18,7 +18,7 @@ SYS="traceroute udiskie udisks2 atool lsd fd python-pywal python-pillow python p
 # displaycal
 # dialog python-setuptools installed on nep??
 
-NONES="python-pandas python-mpmath python-scipy python-numpy python-matplotlib jupyterlab github-cli qgis scrot arandr texlive-most digikam cups cups-pdf inkscape hddtemp libreoffice-fresh cheese spotifyd nmap perl-image-exiftool ranger zathura zathura-pdf-mupdf firefox gnuplot vlc darktable neofetch steam atom gimp zathura speedtest-cli go highlight"
+NONES="python-pandas python-mpmath python-scipy python-numpy python-matplotlib jupyterlab github-cli qgis scrot arandr texlive-most digikam cups cups-pdf inkscape hddtemp libreoffice-fresh cheese spotifyd nmap perl-image-exiftool ranger zathura zathura-pdf-mupdf firefox gnuplot vlc darktable neofetch steam atom gimp zathura speedtest-cli go highlight kicad kicad-library kicad-library-3d"
 
 TRI="xf86-video-intel vulkan-intel powertop upower"
 #tlp tlp-rdw removed in aug 
@@ -69,9 +69,9 @@ fi
 # yay package list #########################################################
 YAYSYS="bottom flashfocus-git fet.sh-git brother-mfc-9560cdw ttf-symbola vim-plug i3lock-color-git steam-fonts comptone-tryone-git icdiff git-delta-bin duf code-minimap-bin"
 #python-pipx teamviewer autotiling picom-ibhagwan-git
-YAYNEPTUNE="siril-git google-earth-pro virtualbox-ext-oracle remmina-plugin-rdesktop howdy-git opencv freecad-appimage-git eagle brlcad-bin"
+YAYNEPTUNE="siril-git google-earth-pro virtualbox-ext-oracle remmina-plugin-rdesktop howdy-git opencv freecad-appimage-git"
 YAYTRITON="system76-power system76-firmware-daemon system76-driver light-git"
-YAYNONES="jupyterthemes python-pytube3 python-spotdl remarkable-client rmapi slack-desktop slack-term spotify-tui-git spotify android-messages-desktop zoom texlive-full rmview-git openboardview-git circuitjs-bin"
+YAYNONES="jupyterthemes python-pytube3 python-spotdl remarkable-client rmapi slack-desktop slack-term spotify-tui-git spotify android-messages-desktop zoom texlive-full rmview-git openboardview-git circuitjs-bin eagle"
 YAYASTR="topcat ds9 astroimagej imagej fiji-bin"
 ##########################################################################
 # yay install

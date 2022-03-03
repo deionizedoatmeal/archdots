@@ -227,7 +227,7 @@ alias mesa-vars='vim $MESA_DIR/star_data/public/star_data.inc'
 # wal
 (cat ~/.cache/wal/sequences &)
 source ~/.cache/wal/colors-tty.sh
-alias wal-set="cat .bash_history | grep 'wal -R -b' | tail -1"
+alias wal-set="cat ${HOME}/.bash_history | grep 'wal -R -b' | tail -1"
 
 # opencv compile gstreamer howdy fix
 export OPENCV_LOG_LEVEL=ERROR

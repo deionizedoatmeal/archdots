@@ -44,6 +44,10 @@ if has("autocmd")
     \| exe "normal! g'\"" | endif
 endif
 
+""" CLOSE NERD TREE WHEN CLOSING VIM
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") 
+      \ && b:NERDTree.isTabTree()) | q | endif
+
 """ CURSOR
 au InsertEnter * silent execute "!echo -en \<esc>[5 q"
 au InsertLeave * silent execute "!echo -en \<esc>[2 q"
@@ -72,6 +76,11 @@ set clipboard=unnamed,unnamedplus
 
 nnoremap <leader><C-w> :call ToggleWrap()<CR>
 
+""" WINDOW NAVIGATION
+nnoremap <C-Up> <C-w>k
+nnoremap <C-Down> <C-w>j
+nnoremap <C-Right> <C-w>l
+nnoremap <C-Left> <C-w>h
 
 """ PLUGINS
 call plug#begin('~/.config/nvim/plugs')
@@ -79,10 +88,11 @@ Plug 'dylanaraps/wal.vim'
 Plug 'lervag/vimtex'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-commentary'
-Plug 'Yggdroot/indentLine'
+" Plug 'Yggdroot/indentLine'
 Plug 'ludovicchabant/vim-gutentags'
-
 Plug 'wfxr/minimap.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 
 """ Fix markdown and tex
 " Plug 'sheerun/vim-polyglot'
@@ -196,3 +206,6 @@ let fortran_fold=1
 let fortran_fold_multilinecomments=1
 " let fortran_more_precise=1
 
+""" highlight line number
+" highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
+" set cursorline

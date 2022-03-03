@@ -58,6 +58,16 @@ mv designer.desktop ../unused-applications/.
 mv linguist.desktop ../unused-applications/.
 mv qdbusviewer.desktop ../unused-applications/.
 mv system76-driver.desktop ../unused-applications/.
+mv bitmap2component.desktop ../unused-applications/.
+mv eeschema.desktop ../unused-applications/.
+mv pcbnew.desktop ../unused-applications/.
+mv pcbcalculator.desktop ../unused-applications/.
+mv gerbview.desktop ../unused-applications/.
+mv org.kicad.bitmap2component.desktop ../unused-applications/.
+mv org.kicad.eeschema.desktop ../unused-applications/.
+mv org.kicad.pcbnew.desktop ../unused-applications/.
+mv org.kicad.pcbcalculator.desktop ../unused-applications/.
+mv org.kicad.gerbview.desktop ../unused-applications/.
 
 
 # top cat 
@@ -163,6 +173,12 @@ sed -i '/GenericName=/d' ./google-earth-pro.desktop
 sed -i "2iName= Google Earth" google-earth-pro.desktop
 sed -i "3iGenericName=3D Planet Viewer" google-earth-pro.desktop
 
+# google chrome 
+sed -i '/Name=/d' ./google-chrome.desktop
+sed -i '/GenericName=/d' ./google-chrome.desktop
+sed -i "2iName= Chrome" google-chrome.desktop
+sed -i "3iGenericName=Web Browser" google-chrome.desktop
+
 # qgis
 sed -i '/Name=/d' ./org.qgis.qgis.desktop
 sed -i '/GenericName=/d' ./org.qgis.qgis.desktop
@@ -205,11 +221,17 @@ sed -i '/GenericName=/d' ./firefox.desktop
 sed -i "2iName= Firefox" firefox.desktop
 sed -i "3iGenericName=Web Browser" firefox.desktop
 
-# zoom
+# zathura
 sed -i '/Name=/d' ./org.pwmt.zathura.desktop
 sed -i '/GenericName=/d' ./org.pwmt.zathura.desktop
 sed -i "2iName= Zathura" org.pwmt.zathura.desktop
 sed -i "3iGenericName=PDF Reader" org.pwmt.zathura.desktop
+
+sed -i '/Name=/d' ./org.gnome.Evince.desktop
+sed -i '/GenericName=/d' ./org.gnome.Evince.desktop
+sed -i "8iName= Evince" org.gnome.Evince.desktop
+sed -i "9iGenericName=PDF Reader" org.gnome.Evince.desktop
+
 
 # calibre
 sed -i '/Name=/d' ./calibre-gui.desktop
@@ -389,7 +411,7 @@ sed -i "5iGenericName=3D Modeler" freecad_conda.desktop
 sed -i '/Name=/d' ./eagle.desktop
 sed -i '/GenericName=/d' ./eagle.desktop
 sed -i "4iName= Eagle CAD" eagle.desktop
-sed -i "5iGenericName=PCB Modeler" eagle.desktop
+sed -i "5iGenericName=ECAD Suite" eagle.desktop
 
 sed -i '/Name=/d' ./circuitjs.desktop
 sed -i '/GenericName=/d' ./circuitjs.desktop
@@ -400,6 +422,16 @@ sed -i '/Name=/d' ./openboardview.desktop
 sed -i '/GenericName=/d' ./openboardview.desktop
 sed -i "4iName= Open Board Viewer" openboardview.desktop
 sed -i "5iGenericName=PCB Viewer" openboardview.desktop
+
+sed -i '/Name=/d' ./kicad.desktop
+sed -i '/GenericName=/d' ./kicad.desktop
+sed -i "4iName= KiCAD" kicad.desktop
+sed -i "5iGenericName=FOSS ECAD Suite" kicad.desktop
+
+sed -i '/Name=/d' ./org.kicad.kicad.desktop
+sed -i '/GenericName=/d' ./org.kicad.kicad.desktop
+sed -i "4iName= KiCAD" org.kicad.kicad.desktop
+sed -i "5iGenericName=FOSS ECAD Suite" org.kicad.kicad.desktop
 
 sed -i '/Name=/d' ./com.ultimaker.cura.desktop
 sed -i '/GenericName=/d' ./com.ultimaker.cura.desktop
