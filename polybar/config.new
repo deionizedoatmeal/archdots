@@ -1,0 +1,1188 @@
+
+[colors]
+background = ${xrdb:color0:#222}
+foreground = ${xrdb:color7:#222}
+foreground-alt = ${xrdb:color5:#222}
+primary = ${xrdb:color2:#222}
+secondary = ${xrdb:color3:#222}
+alert = ${xrdb:color7:#222}
+
+#####################################################################################################################
+                                                ### BARS ### 
+#####################################################################################################################
+
+[bar/1080-full]
+offset-x = 00.9375%
+offset-y = 01.1111%
+bottom = false
+fixed-center = true
+line-size = 2
+padding-right = 2
+width = 98.1250%
+height = 03.0000%
+radius = 16.0
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+modules-center = date
+modules-right = bluetooth-display pulseaudio redshift-display dpms-display backlight cpu temperature system-cpu-frequency-display memory wireless-network network
+modules-left = i3
+monitor = DisplayPort-0
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/1080-net]
+offset-x = 1725 
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 70
+height = 03.0000%
+radius = 16.0
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+modules-center = wireless-network network
+monitor = DisplayPort-0
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/1080-date]
+offset-x = 1805
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 90
+height = 03.0000%
+radius = 16.0
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+modules-center = date
+monitor = DisplayPort-0
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/HDMI2-1080-date]
+offset-x = 1805
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 90
+height = 03.0000%
+radius = 16.0
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+modules-center = date
+monitor = HDMI2
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/HDMI2-4k-date]
+offset-x = 3610
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 180
+height = 03.0000%
+radius = 32.0
+font-0 = Iosevka Nerd Font:pixelsize=28;4
+font-1 = Iosevka Nerd Font:size=28;4
+font-2 = Iosevka Nerd Font:size=44;4
+modules-center = date
+monitor = HDMI2
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/eDP1-1800-date]
+offset-x = 2858
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+padding-left = 2
+width = 280
+height = 03.0000%
+radius = 27.0
+font-0 = Iosevka Nerd Font:pixelsize=23;4
+font-1 = Iosevka Nerd Font:size=23;4
+font-2 = Iosevka Nerd Font:size=37;4
+modules-center = date battery
+monitor = eDP1
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/HDMI2-1800-date]
+offset-x = 3008
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 150
+height = 03.0000%
+radius = 27.0
+font-0 = Iosevka Nerd Font:pixelsize=23;4
+font-1 = Iosevka Nerd Font:size=23;4
+font-2 = Iosevka Nerd Font:size=37;4
+modules-center = date
+monitor = HDMI2
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/1080-temp]
+offset-x = 1625
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 90
+height = 03.0000%
+radius = 16.0
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+modules-center = temperature
+monitor = DisplayPort-0
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/1080-disp]
+offset-x = 1545
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 70
+height = 03.0000%
+radius = 16.0
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+modules-center = redshift-display dpms-display brightness 
+monitor = DisplayPort-0
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/1080-nettempdisp]
+offset-x = 1635
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 160
+height = 03.0000%
+radius = 16.0
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+separator = "  "
+modules-center = redshift-dpms-display brightness temperature network-display
+monitor = DisplayPort-0
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/eDP1-1800-nettempdisp]
+offset-x = 2575
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 267
+height = 03.0000%
+radius = 27.0
+font-0 = Iosevka Nerd Font:pixelsize=23;4
+font-1 = Iosevka Nerd Font:size=23;4
+font-2 = Iosevka Nerd Font:size=37;4
+separator = "  "
+modules-center = redshift-dpms-display brightness temperature network-display
+monitor = eDP1
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+
+#####################################################################################################################
+
+[bar/HDMI2-1800-nettempdisp]
+offset-x = 2725
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 267
+height = 03.0000%
+radius = 27.0
+font-0 = Iosevka Nerd Font:pixelsize=23;4
+font-1 = Iosevka Nerd Font:size=23;4
+font-2 = Iosevka Nerd Font:size=37;4
+separator = "  "
+modules-center = redshift-dpms-display brightness temperature network-display
+monitor = HDMI2
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+
+#####################################################################################################################
+
+[bar/HDMI2-1080-nettempdisp]
+offset-x = 1635
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 160
+height = 03.0000%
+radius = 16.0
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+separator = "  "
+modules-center = redshift-dpms-display brightness temperature network-display
+monitor = HDMI2 
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/HDMI2-4k-nettempdisp]
+offset-x = 3270
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 320
+height = 03.0000%
+radius = 32.0
+font-0 = Iosevka Nerd Font:pixelsize=28;4
+font-1 = Iosevka Nerd Font:size=28;4
+font-2 = Iosevka Nerd Font:size=44;4
+separator = "  "
+modules-center = redshift-dpms-display brightness temperature network-display
+monitor = HDMI2 
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/1080-bt]
+offset-x = 1455
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 70
+height = 03.0000%
+radius = 16.0
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+modules-center = bluetooth-display 
+monitor = DisplayPort-0
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/1080-audio]
+offset-x = 1535
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 90
+height = 03.0000%
+radius = 16.0
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+modules-center = pulseaudio 
+monitor = DisplayPort-0
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/1080-btaudio]
+offset-x = 1485
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 140
+height = 03.0000%
+radius = 16.0
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+separator = "  "
+modules-center = bluetooth-display pulseaudio 
+monitor = DisplayPort-0
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/HDMI2-4k-btaudio]
+offset-x = 2970
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 280
+height = 03.0000%
+radius = 32.0
+font-0 = Iosevka Nerd Font:pixelsize=28;4
+font-1 = Iosevka Nerd Font:size=28;4
+font-2 = Iosevka Nerd Font:size=44;4
+separator = "  "
+modules-center = bluetooth-display pulseaudio 
+monitor = HDMI2
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/HDMI2-1080-btaudio]
+offset-x = 1485
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 140
+height = 03.0000%
+radius = 16.0
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+separator = "  "
+modules-center = bluetooth-display pulseaudio 
+monitor = HDMI2
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+[bar/eDP1-1800-btaudio]
+offset-x = 2325
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 233
+height = 03.0000%
+radius = 27.0
+font-0 = Iosevka Nerd Font:pixelsize=23;4
+font-1 = Iosevka Nerd Font:size=23;4
+font-2 = Iosevka Nerd Font:size=37;4
+separator = "  "
+modules-center = bluetooth-display pulseaudio 
+monitor = eDP1
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+[bar/HDMI2-1800-btaudio]
+offset-x = 2475
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 233
+height = 03.0000%
+radius = 27.0
+font-0 = Iosevka Nerd Font:pixelsize=23;4
+font-1 = Iosevka Nerd Font:size=23;4
+font-2 = Iosevka Nerd Font:size=37;4
+separator = "  "
+modules-center = bluetooth-display pulseaudio 
+monitor = HDMI2
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/eDP1-1800-i3]
+offset-x = 42
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 625
+height = 03.0000%
+radius = 27.0
+font-0 = Iosevka Nerd Font:pixelsize=23;4
+font-1 = Iosevka Nerd Font:size=23;4
+font-2 = Iosevka Nerd Font:size=37;4
+modules-center = i3_1 i3_sep i3_2 i3_sep i3_3 i3_sep i3_4 i3_sep i3_5 i3_sep i3_6 i3_sep i3_7 i3_sep i3_8 i3_sep i3_9 i3_sep i3_10 
+monitor = eDP1
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/HDMI2-1800-i3]
+offset-x = 42
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 250
+height = 03.0000%
+radius = 27.0
+font-0 = Iosevka Nerd Font:pixelsize=23;4
+font-1 = Iosevka Nerd Font:size=23;4
+font-2 = Iosevka Nerd Font:size=37;4
+modules-center = i3 
+monitor = HDMI2
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/1080-i3]
+offset-x = 25
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 150
+height = 03.0000%
+radius = 16.0
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+modules-center = i3 
+monitor = DisplayPort-0
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/HDMI2-1080-i3]
+offset-x = 25
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 150
+height = 03.0000%
+radius = 16.0
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+modules-center = i3 
+monitor = HDMI2 
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/HDMI2-4k-i3]
+offset-x = 50
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 300
+height = 03.0000%
+radius = 32.0
+font-0 = Iosevka Nerd Font:pixelsize=28;4
+font-1 = Iosevka Nerd Font:size=28;4
+font-2 = Iosevka Nerd Font:size=44;4
+modules-center = i3 
+monitor = HDMI2 
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/sq-i3]
+width = 120
+height = 03.0000%
+offset-x = 25
+offset-y = 01.1111%
+bottom = false
+fixed-center = true
+line-size = 2
+padding-right = 2
+radius = 16.0
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+modules-center = i3
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+monitor = DisplayPort-1
+
+#####################################################################################################################
+
+[bar/sq-audio]
+offset-x = 155
+offset-y = 01.1111%
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 140
+height = 03.0000%
+radius = 16.0
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+separator = "  "
+modules-center = bluetooth-display pulseaudio 
+monitor = DisplayPort-1
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+
+[bar/vert-i3]
+width = 120
+height = 32.4
+offset-x = 25
+offset-y = 12.0
+bottom = false
+fixed-center = true
+line-size = 2
+padding-right = 2
+radius = 16.0
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+modules-left =
+modules-center = i3
+modules-right =
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+monitor = HDMI-A-0
+
+#####################################################################################################################
+
+[bar/vert-audio]
+offset-x = 155
+offset-y = 12.0
+bottom = false
+fixed-center = false
+line-size = 2
+padding-right = 2
+width = 140
+height = 32.4
+radius = 16.0
+font-0 = Iosevka Nerd Font:pixelsize=14;4
+font-1 = Iosevka Nerd Font:size=14;4
+font-2 = Iosevka Nerd Font:size=22;4
+separator = "  "
+modules-center = bluetooth-display pulseaudio 
+monitor = HDMI-A-0
+tray-position = none
+wm-restack = i3
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#####################################################################################################################
+                                                 #### MODULES ####
+#####################################################################################################################
+
+[module/workspaces]
+type = internal/xworkspaces
+pin-workspaces = true
+index-sort = true
+enable-click = true
+enable-scroll = true
+format-padding = 1
+
+icon-default = 
+ 
+format = <label-state>
+format-background = ${colors.foreground}
+label-active = 
+label-occupied = 
+label-urgent = 
+label-empty = 
+ 
+label-empty-padding = 1
+label-active-padding = 1
+label-urgent-padding = 1
+label-occupied-padding = 1
+ 
+label-empty-foreground = ${colors.primary}
+label-active-foreground = ${colors.primary}
+label-urgent-foreground = ${colors.alert}
+label-occupied-foreground = ${colors.secondary}
+
+#####################################################################################################################
+
+[module/temperature]
+type = internal/temperature
+format = <label>
+; Seconds to sleep between updates
+; Default: 1
+interval = 3
+
+; Thermal zone to use
+; To list all the zone types, run
+; $ for i in /sys/class/thermal/thermal_zone*; do echo "$i: $(<$i/type)"; done
+; Default: 0
+thermal-zone = 0
+
+; Full path of temperature sysfs path
+; Use `sensors` to find preferred temperature source, then run
+; $ for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $(readlink -f $i)"; done
+; to find path to desired file
+; Default reverts to thermal zone setting
+hwmon-path = /sys/class/thermal/thermal_zone2/temp
+
+; Threshold temperature to display warning label (in degrees celsius)
+; Default: 80
+warn-temperature = 80
+
+units = true
+
+label = " %temperature-c%" 
+label-warn = " %temperature-c%" 
+
+format-background = ${colors.background}
+format-foreground = ${colors.primary}
+
+#####################################################################################################################
+
+[module/i3_1]
+type = custom/script
+exec = RSLT1=$(i3-msg -t get_workspaces | grep -o "\"name\":\"1"); RSLT2=$(i3-msg -t get_workspaces | grep -o "\"name\":\"1\",\"visible\":true"); if [ -z $RSLT1 ]; then echo " 1 "; else if [ -z $RSLT2 ]; then echo "  "; else echo "  "; fi; fi
+interval = 0.5
+click-left = i3-msg -t command workspace number 1
+
+[module/i3_2]
+type = custom/script
+exec = RSLT1=$(i3-msg -t get_workspaces | grep -o "\"name\":\"2"); RSLT2=$(i3-msg -t get_workspaces | grep -o "\"name\":\"2\",\"visible\":true"); if [ -z $RSLT1 ]; then echo " 2 "; else if [ -z $RSLT2 ]; then echo "  "; else echo "  "; fi; fi
+interval = 0.5
+click-left = i3-msg -t command workspace number 2
+
+[module/i3_3]
+type = custom/script
+exec = RSLT1=$(i3-msg -t get_workspaces | grep -o "\"name\":\"3"); RSLT2=$(i3-msg -t get_workspaces | grep -o "\"name\":\"3\",\"visible\":true"); if [ -z $RSLT1 ]; then echo " 3 "; else if [ -z $RSLT2 ]; then echo "  "; else echo "  "; fi; fi
+interval = 0.5
+click-left = i3-msg -t command workspace number 3
+
+[module/i3_4]
+type = custom/script
+exec = RSLT1=$(i3-msg -t get_workspaces | grep -o "\"name\":\"4"); RSLT2=$(i3-msg -t get_workspaces | grep -o "\"name\":\"4\",\"visible\":true"); if [ -z $RSLT1 ]; then echo " 4 "; else if [ -z $RSLT2 ]; then echo "  "; else echo "  "; fi; fi
+interval = 0.5
+click-left = i3-msg -t command workspace number 4
+
+[module/i3_5]
+type = custom/script
+exec = RSLT1=$(i3-msg -t get_workspaces | grep -o "\"name\":\"5"); RSLT2=$(i3-msg -t get_workspaces | grep -o "\"name\":\"5\",\"visible\":true"); if [ -z $RSLT1 ]; then echo " 5 "; else if [ -z $RSLT2 ]; then echo "  "; else echo "  "; fi; fi
+interval = 0.5
+click-left = i3-msg -t command workspace number 5
+
+[module/i3_6]
+type = custom/script
+exec = RSLT1=$(i3-msg -t get_workspaces | grep -o "\"name\":\"6"); RSLT2=$(i3-msg -t get_workspaces | grep -o "\"name\":\"6\",\"visible\":true"); if [ -z $RSLT1 ]; then echo " 6 "; else if [ -z $RSLT2 ]; then echo "  "; else echo "  "; fi; fi
+interval = 0.5
+click-left = i3-msg -t command workspace number 6
+
+[module/i3_7]
+type = custom/script
+exec = RSLT1=$(i3-msg -t get_workspaces | grep -o "\"name\":\"7"); RSLT2=$(i3-msg -t get_workspaces | grep -o "\"name\":\"7\",\"visible\":true"); if [ -z $RSLT1 ]; then echo " 7 "; else if [ -z $RSLT2 ]; then echo "  "; else echo "  "; fi; fi
+interval = 0.5
+click-left = i3-msg -t command workspace number 7
+
+[module/i3_8]
+type = custom/script
+exec = RSLT1=$(i3-msg -t get_workspaces | grep -o "\"name\":\"8"); RSLT2=$(i3-msg -t get_workspaces | grep -o "\"name\":\"8\",\"visible\":true"); if [ -z $RSLT1 ]; then echo " 8 "; else if [ -z $RSLT2 ]; then echo "  "; else echo "  "; fi; fi
+interval = 0.5
+click-left = i3-msg -t command workspace number 8
+
+[module/i3_9]
+type = custom/script
+exec = RSLT1=$(i3-msg -t get_workspaces | grep -o "\"name\":\"9"); RSLT2=$(i3-msg -t get_workspaces | grep -o "\"name\":\"9\",\"visible\":true"); if [ -z $RSLT1 ]; then echo " 9 "; else if [ -z $RSLT2 ]; then echo "  "; else echo "  "; fi; fi
+interval = 0.5
+click-left = i3-msg -t command workspace number 9
+
+[module/i3_10]
+type = custom/script
+exec = RSLT1=$(i3-msg -t get_workspaces | grep -o "\"name\":\"10"); RSLT2=$(i3-msg -t get_workspaces | grep -o "\"name\":\"10\",\"visible\":true"); if [ -z $RSLT1 ]; then echo " 10 "; else if [ -z $RSLT2 ]; then echo "  "; else echo "  "; fi; fi
+interval = 0.5
+click-left = i3-msg -t command workspace number 9
+
+[module/i3_sep]
+type = custom/script
+exec = echo "|" 
+
+#####################################################################################################################
+
+[module/bluetooth-display]
+type = custom/script
+exec = bluetooth-display
+interval = 1
+click-left = rofimenu-bluetooth
+format-background = ${colors.background}    
+format-foreground = ${colors.secondary}
+
+#####################################################################################################################
+
+[module/power-profile-display]
+type = custom/script
+exec = power-profile-display
+interval = 1
+format-background = ${colors.background}    
+format-foreground = ${colors.primary}
+
+#####################################################################################################################
+
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = " "
+format = <label>
+exec = spotify-display -f '{song} - {artist} {play_pause}'
+format-foreground = ${colors.primary}
+
+#####################################################################################################################
+
+[module/vpn-display]
+type = custom/script
+exec = vpn-display
+interval = 1
+format-background = ${colors.background}    
+
+#TRITON
+#T format-foreground = ${colors.secondary}
+
+#NEPTUNE
+format-foreground = ${colors.primary}
+
+#####################################################################################################################
+
+[module/battery]
+type = internal/battery
+time-format = %H:%M
+battery = BAT0
+adapter = AC
+format-charging =<animation-charging><label-charging>
+format-charging-background = ${colors.background}
+format-charging-foreground = ${colors.primary}
+format-charging-padding = 2
+label-charging = " %percentage%%"
+format-discharging =<ramp-capacity><label-discharging>
+format-discharging-padding = 2
+label-discharging = " %percentage%%"
+label-discharging-foreground = ${colors.primary}
+format-full =<label-full>
+format-full-foreground = ${colors.primary}
+format-full-padding = 2
+label-full = " %percentage%%"
+format-full-prefix = ""
+ramp-capacity-0 =""
+ramp-capacity-1 =""
+ramp-capacity-2 =""
+ramp-capacity-3 =""
+ramp-capacity-4 =""
+ramp-capacity-5 =""
+ramp-capacity-6 =""
+ramp-capacity-7 =""
+ramp-capacity-8 =""
+ramp-capacity-9 =""
+
+ramp-capacity-0-foreground = ${colors.alert}
+ramp-capacity-1-foreground = ${colors.alert}
+ramp-capacity-foreground   = ${colors.primary}
+bar-capacity-width = 10
+
+animation-charging-0 =
+animation-charging-1 =
+animation-charging-2 =
+animation-charging-3 =
+animation-charging-4 =
+animation-charging-5 =
+animation-charging-6 =
+
+animation-charging-framerate = 750
+
+#####################################################################################################################
+
+[module/cpu]
+type = internal/cpu
+format = <label>
+
+#TRITON
+#T label = " %percentage%%|"
+
+#NEPTUNE
+label = "   %percentage%%|" 
+
+interval = 5
+format-background = ${colors.background}
+format-foreground = ${colors.primary}
+
+#####################################################################################################################
+
+[module/memory]
+type = internal/memory
+format = <label>
+interval = 5
+format-background = ${colors.background}
+format-foreground = ${colors.secondary}
+
+#TRITON
+#T label = "   %percentage_used%%  "
+
+#NEPTUNE
+label = "   %percentage_used%% "
+
+#####################################################################################################################
+
+[module/system-cpu-frequency-display]
+type = custom/script
+exec = system-cpu-frequency-display
+interval = 5
+format-background = ${colors.background}    
+format-foreground = ${colors.primary}
+
+#####################################################################################################################
+
+[module/redshift-display]
+type = custom/script
+exec = redshift-display
+interval = 0.5
+click-left = redshift-toggle 44:-123
+format-background = ${colors.background}
+format-foreground = ${colors.secondary}
+
+#####################################################################################################################
+
+[module/redshift-dpms-display]
+type = custom/script
+exec = redshift-dpms-display
+interval = 0.5
+click-left = redshift-toggle 44:-123
+click-right = dpms-toggle
+format-background = ${colors.background}
+format-foreground = ${colors.secondary}
+
+#####################################################################################################################
+
+[module/network-display]
+type = custom/script
+exec = network-display
+interval = 0.5
+click-left = rofimenu-wifi
+format-background = ${colors.background}
+format-foreground = ${colors.secondary}
+
+#####################################################################################################################
+
+[module/dpms-display]
+type = custom/script
+exec = dpms-display
+interval = 0.5
+click-left = dpms-toggle
+format-background = ${colors.background}
+format-foreground = ${colors.secondary}
+
+#####################################################################################################################
+
+[module/pulseaudio]
+type = internal/pulseaudio
+use-ui-max = false
+interval = 5
+format-volume = "<ramp-volume> <label-volume>"
+format-muted = "<label-muted>"
+label-muted =" 0%"
+ramp-volume-0 =""
+ramp-volume-1 =""
+ramp-volume-2 ="墳"
+format-volume-background = ${colors.background}
+format-volume-foreground = ${colors.primary}
+format-muted-background = ${colors.background}
+format-muted-foreground = ${colors.primary}
+enable-scroll = false
+
+#####################################################################################################################
+
+[module/backlight]
+type = internal/backlight
+card = intel_backlight
+enable-scroll = false
+format = <label>
+label = " %percentage%%  "
+format-background = ${colors.background}
+format-foreground = ${colors.secondary}
+
+#####################################################################################################################
+
+[module/wireless-network]
+type = internal/network
+format-connected ="直"
+format-disconnected ="睊"
+enable-click = true
+click-left = rofimenu-wifi
+format-disconnected-background = ${colors.background}
+format-connected-background = ${colors.background}
+format-connected-foreground = ${colors.secondary}
+format-disconnected-foreground = ${colors.secondary}
+
+#TRITON
+interface = wlp59s0
+
+#NEPTUNE
+#interface = wlo1
+
+#####################################################################################################################
+
+[module/network]
+type = internal/network   
+format-connected ="|"
+format-diconnected =""
+format-disconnected-background = ${colors.background}
+format-connected-background = ${colors.background}
+format-connected-foreground = ${colors.secondary}
+format-disconnected-foreground = ${colors.secondary}
+
+#TRITON
+#T interface = enp58s0f1
+
+#NEPTUNE
+interface = eno1
+
+#####################################################################################################################
+
+[module/date]
+type = internal/date
+interval = 1.0
+date =  %A %b %e
+date-alt = %m/%d/%Y
+time = " %l:%M"
+time-alt = " %m/%d"
+format = "<label>"
+label = "%time%"
+format-foreground = ${colors.primary}
+;format-background = ${colors.background-alt}

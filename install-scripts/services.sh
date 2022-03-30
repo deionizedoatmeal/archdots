@@ -93,6 +93,13 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 #    systemctl --user start --now flashfocus
 fi
 
+# teamviewer 
+read -r -p "#### Would you like to enable teamviewer? [y/N] ####" response
+if [[ "$response" =~ ^([Yy])+$ ]]; then
+    sudo systemctl enable teamviewerd.service
+    sudo systemctl start teamviewerd.service
+fi
+
 
 # apcupsd 
 read -r -p "#### Would you like to enable apcupsd.service? [y/N] ####" response

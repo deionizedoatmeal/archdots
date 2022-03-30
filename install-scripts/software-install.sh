@@ -14,7 +14,7 @@ fi
 sudo pacman -Syyu
 
 # package lists
-SYS="traceroute udiskie udisks2 atool lsd fd python-pywal python-pillow python python-pip ttf-jetbrains-mono calcurse ntp openconnect rclone cpupower dmidecode inetutils xdotool nfsidmap exfat-utils dosfstools ntfsprogs rsync rdiff-backup materia-kde materia-gtk-theme gvim ctags cmake clang bc gdisk rust dbus pulseaudio paprefs pavucontrol pulseaudio-bluetooth blueman bluez bluez-utils pass redshift git sudo vi kitty rofi dunst openvpn gnupg imagemagick sox mpg123 ffmpeg feh ttf-fantasque-sans-mono nvme-cli lm_sensors openssh bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib htop pacman-contrib hyperfine rpmextract expect unrar minicom noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra gnome-icon-theme gnome-icon-theme-extras gnome-icon-theme-symbolic"
+SYS="traceroute udiskie udisks2 atool lsd fd python-pywal python-pillow python python-pip ttf-jetbrains-mono calcurse ntp openconnect rclone cpupower dmidecode inetutils xdotool nfsidmap exfat-utils dosfstools ntfsprogs rsync rdiff-backup materia-kde materia-gtk-theme gvim ctags cmake clang bc gdisk rust dbus pulseaudio paprefs pavucontrol pulseaudio-bluetooth blueman bluez bluez-utils pass redshift git git-lfs sudo vi kitty rofi dunst openvpn gnupg imagemagick sox mpg123 ffmpeg feh ttf-fantasque-sans-mono nvme-cli lm_sensors openssh bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib htop pacman-contrib hyperfine rpmextract expect unrar minicom noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra gnome-icon-theme gnome-icon-theme-extras gnome-icon-theme-symbolic  python-pycryptodome gparted"
 # displaycal
 # dialog python-setuptools installed on nep??
 
@@ -69,7 +69,7 @@ fi
 # yay package list #########################################################
 YAYSYS="bottom flashfocus-git fet.sh-git brother-mfc-9560cdw ttf-symbola vim-plug i3lock-color-git steam-fonts comptone-tryone-git icdiff git-delta-bin duf code-minimap-bin"
 #python-pipx teamviewer autotiling picom-ibhagwan-git
-YAYNEPTUNE="siril-git google-earth-pro virtualbox-ext-oracle remmina-plugin-rdesktop howdy-git opencv freecad-appimage-git"
+YAYNEPTUNE="siril-git google-earth-pro virtualbox-ext-oracle remmina-plugin-rdesktop howdy-git opencv freecad-appimage-git opentrack"
 YAYTRITON="system76-power system76-firmware-daemon system76-driver light-git"
 YAYNONES="jupyterthemes python-pytube3 python-spotdl remarkable-client rmapi slack-desktop slack-term spotify-tui-git spotify android-messages-desktop zoom texlive-full rmview-git openboardview-git circuitjs-bin eagle"
 YAYASTR="topcat ds9 astroimagej imagej fiji-bin"
@@ -112,6 +112,14 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
         done
 fi
 
+read -r -p "#### Would you like to install gnome and pop shell? [y/N] ####" response
+if [[ "$response" =~ ^([Yy])+$ ]]; then
+        ARR=($YAYASTR)
+        for i in "${ARR[@]}"; do
+                yay -S --needed gnome-shell-extension-pop-shell-bin gnome-control-center gnome-tweaks gnome-shell gnome-shell-extensions
+        done
+fi
+
 read -r -p "#### Would you like to install 'astro' yay packages? [y/N] ####" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
         ARR=($YAYASTR)
@@ -127,8 +135,9 @@ fi
 
 read -r -p "#### Would you like to install sddm? [y/N] ####" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
-        yay -S --needed ly
+        sudo pacman -S --needed sddm qt5-graphicaleffects
 fi
+
 
 
 ####################

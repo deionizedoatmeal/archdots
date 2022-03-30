@@ -191,6 +191,12 @@ sed -i '/GenericName=/d' ./org.remmina.Remmina.desktop
 sed -i "2iName= Remmina" org.remmina.Remmina.desktop
 sed -i "3iGenericName=Remote Desktop Client" org.remmina.Remmina.desktop
 
+# teamviewer 
+sed -i '/Name=/d' ./com.teamviewer.TeamViewer.desktop
+sed -i '/GenericName=/d' ./com.teamviewer.TeamViewer.desktop
+sed -i "2iName= TeamViewer" com.teamviewer.TeamViewer.desktop
+sed -i "3iGenericName=Remote Desktop Client" com.teamviewer.TeamViewer.desktop
+
 # mathematica 
 sed -i '/Name=/d' ./wolfram-mathematica12.desktop
 sed -i '/GenericName=/d' ./wolfram-mathematica12.desktop
@@ -400,8 +406,8 @@ sed -i "5iGenericName=eInk Client" remarkable.desktop
 
 sed -i '/Name=/d' ./mathpix-snipping-tool.desktop
 sed -i '/GenericName=/d' ./mathpix-snipping-tool.desktop
-sed -i "24iName=烈 Math Snip" mathpix-snipping-tool.desktop
-sed -i "25iGenericName=TeX Generator" mathpix-snipping-tool.desktop
+sed -i "4iName=烈 Math Snip" mathpix-snipping-tool.desktop
+sed -i "5iGenericName=TeX Generator" mathpix-snipping-tool.desktop
 
 sed -i '/Name=/d' ./freecad_conda.desktop
 sed -i '/GenericName=/d' ./freecad_conda.desktop

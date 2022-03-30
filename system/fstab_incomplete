@@ -1,10 +1,10 @@
 
 # /mnt/external
-/dev/mapper/external			/mnt/external	ext4		rw,relatime	0 0
+/dev/mapper/external			/mnt/external	ext4		nofail,x-systemd.device-timeout=30s	0 0
 
 # ~/SSD
-/dev/mapper/ssd					/home/ian/SSD	ext4		rw,relatime	0 0
+/dev/mapper/ssd					/home/ian/SSD	ext4		nofail,x-systemd.device-timeout=30s	0 0
 
 # ~/HDD
-/dev/mapper/hdd 				/home/ian/HDD	ext4		rw,relatime	0 0
+/dev/mapper/hdd 				/home/ian/HDD	ext4		nofail,x-systemd.device-timeout=30s	0 0
 
