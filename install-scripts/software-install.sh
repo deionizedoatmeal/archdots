@@ -67,11 +67,11 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 # yay package list #########################################################
-YAYSYS="bottom flashfocus-git fet.sh-git brother-mfc-9560cdw ttf-symbola vim-plug i3lock-color-git steam-fonts comptone-tryone-git icdiff git-delta-bin duf code-minimap-bin"
+YAYSYS="bottom flashfocus-git fet.sh-git brother-mfc-9560cdw ttf-symbola vim-plug i3lock-color-git steam-fonts comptone-tryone-git icdiff git-delt,-bin duf code-minimap-bin"
 #python-pipx teamviewer autotiling picom-ibhagwan-git
 YAYNEPTUNE="siril-git google-earth-pro virtualbox-ext-oracle remmina-plugin-rdesktop howdy-git opencv freecad-appimage-git opentrack"
 YAYTRITON="system76-power system76-firmware-daemon system76-driver light-git"
-YAYNONES="jupyterthemes python-pytube3 python-spotdl remarkable-client rmapi slack-desktop slack-term spotify-tui-git spotify android-messages-desktop zoom texlive-full rmview-git openboardview-git circuitjs-bin eagle"
+YAYNONES="jupyterthemes python-pytube3 python-spotdl remarkable-client rmapi python-rmrl slack-desktop slack-term spotify-tui-git spotify android-messages-desktop zoom texlive-full rmview-git openboardview-git circuitjs-bin eagle wtfutil-bin"
 YAYASTR="topcat ds9 astroimagej imagej fiji-bin"
 ##########################################################################
 # yay install

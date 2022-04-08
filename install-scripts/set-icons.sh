@@ -406,7 +406,7 @@ sed -i "5iGenericName=eInk Client" remarkable.desktop
 
 sed -i '/Name=/d' ./mathpix-snipping-tool.desktop
 sed -i '/GenericName=/d' ./mathpix-snipping-tool.desktop
-sed -i "4iName=烈 Math Snip" mathpix-snipping-tool.desktop
+sed -i "4iName= Math Snip" mathpix-snipping-tool.desktop
 sed -i "5iGenericName=TeX Generator" mathpix-snipping-tool.desktop
 
 sed -i '/Name=/d' ./freecad_conda.desktop
@@ -443,6 +443,27 @@ sed -i '/Name=/d' ./com.ultimaker.cura.desktop
 sed -i '/GenericName=/d' ./com.ultimaker.cura.desktop
 sed -i "4iName= Cura" com.ultimaker.cura.desktop
 sed -i "5iGenericName=3D Print Slicer" com.ultimaker.cura.desktop
+
+sed -i '/Name=/d' ./org.gnome.DiskUtility.desktop
+sed -i '/GenericName=/d' ./org.gnome.DiskUtility.desktop
+sed -i "4iName= Disks" org.gnome.DiskUtility.desktop
+sed -i "5iGenericName=Gnome Ulitity" org.gnome.DiskUtility.desktop
+
+sed -i '/Name=/d' ./gparted.desktop
+sed -i '/GenericName=/d' ./gparted.desktop
+sed -i "4iName= Gparted" gparted.desktop
+sed -i "5iGenericName=Partition Editor" gparted.desktop
+
+sed -i '/Name=/d' ./nm-connection-editor.desktop
+sed -i '/GenericName=/d' ./nm-connection-editor.desktop
+sed -i "4iName= Network Manager" nm-connection-editor.desktop
+sed -i "5iGenericName=Connection Editor" gparted.desktop
+
+sed -i '/Name=/d' ./org.gnome.ColorProfileViewer.desktop
+sed -i '/GenericName=/d' ./org.gnome.ColorProfileViewer.desktop
+sed -i "4iName= Display Color Profiles" org.gnome.ColorProfileViewer.desktop
+sed -i "5iGenericName=Gnome Ulitity" org.gnome.ColorProfileViewer.desktop
+
 
 # sed -i '/Name=/d' ./.desktop
 # sed -i '/GenericName=/d' ./.desktop

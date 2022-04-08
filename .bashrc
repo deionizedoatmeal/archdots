@@ -176,6 +176,8 @@ alias pass-push='pass git push origin master'
 ##################
 alias remove-orphans='sudo pacman -Rns $(pacman -Qtdq)'
 alias list-size="pacman -Qi | awk '/^Name/{name=\$3} /^Installed Size/{print \$4\$5, name}' | sort -h"
+alias pacman-update="sudo pacman -Syy && sudo pacman -Syu --noconfirm && set-icons"
+alias yay-update="yay -Syy && yay -Syu --noconfirm && set-icons"
 alias clear-cache="sudo pacman -Sc && yay -Sc"
 
 #########
@@ -212,7 +214,7 @@ export APPID=XXXXXX-XXXXXXXXXX
 export MESA_DIR=${HOME}/Repos/mesa-r15140
 
 # set OMP_NUM_THREADS to be the number of cores on your machine
-export OMP_NUM_THREADS=10
+export OMP_NUM_THREADS=12
 
 # you should have done this when you set up the MESA SDK
 export MESASDK_ROOT=${HOME}/Repos/mesasdk
@@ -227,8 +229,12 @@ alias mesa-vars='vim $MESA_DIR/star_data/public/star_data.inc'
 # wal
 (cat ~/.cache/wal/sequences &)
 source ~/.cache/wal/colors-tty.sh
-alias wal-set="cat ${HOME}/.bash_history | grep 'wal -R -b' | tail -1"
+# alias wal-set="cat ${HOME}/.bash_history | grep 'wal -R -b' | tail -1"
+alias wal-set="wal -R -b 211915"
 
 # opencv compile gstreamer howdy fix
 export OPENCV_LOG_LEVEL=ERROR
 
+# BEGIN_KITTY_SHELL_INTEGRATION
+if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
+# END_KITTY_SHELL_INTEGRATION
