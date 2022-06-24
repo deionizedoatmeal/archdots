@@ -17,57 +17,57 @@ cd /usr/share/applications
 mkdir -p ../unused-applications
 
 # remove any applications you dont launch from rofi
-mv avahi-discover.desktop ../unused-applications/.
-mv bssh.desktop ../unused-applications/.
-mv bvnc.desktop ../unused-applications/.
-mv compton.desktop ../unused-applications/.
-mv feh.desktop ../unused-applications/.
-mv lstopo.desktop ../unused-applications/.
-mv redshift.desktop ../unused-applications/.
-mv qv4l2.desktop ../unused-applications/.
-mv qvidcap.desktop ../unused-applications/.
-mv redshift-gtk.desktop ../unused-applications/.
-mv electron.desktop ../unused-applications/.
-mv electron4.desktop ../unused-applications/.
-mv electron5.desktop ../unused-applications/.
-mv electron6.desktop ../unused-applications/.
-mv electron9.desktop ../unused-applications/.
-mv cmake-gui.desktop ../unused-applications/.
-mv org.fontforge.FontForge.desktop ../unused-applications/.
-mv QMLPlayer.desktop ../unused-applications/.
-mv Player.desktop ../unused-applications/.
-mv org.kde.showfoto.desktop ../unused-applications/.
-mv xdvi.desktop ../unused-applications/.
-mv picom.desktop ../unused-applications/.
-mv picom.desktop ../unused-applications/.
-mv stoken-gui-small.desktop ../unused-applications/.
-mv stoken-gui.desktop ../unused-applications/.
-mv ipython.desktop ../unused-applications/.
-mv java-java-openjdk.desktop ../unused-applications/.
-mv jconsole-java-openjdk.desktop ../unused-applications/.
-mv jshell-java-openjdk.desktop ../unused-applications/.
-mv calibre-ebook-edit.desktop ../unused-applications/.
-mv calibre-ebook-viewer.desktop ../unused-applications/.
-mv calibre-lrfviewer.desktop ../unused-applications/.
-mv electron11.desktop ../unused-applications/.
-mv org.freedesktop.IBus.Panel.Emojier.desktop ../unused-applications/.
-mv org.freedesktop.IBus.Panel.Extension.Gtk3.desktop ../unused-applications/.
-mv org.freedesktop.IBus.Setup.desktop ../unused-applications/.
-mv assistant.desktop ../unused-applications/.
-mv designer.desktop ../unused-applications/.
-mv linguist.desktop ../unused-applications/.
-mv qdbusviewer.desktop ../unused-applications/.
-mv system76-driver.desktop ../unused-applications/.
-mv bitmap2component.desktop ../unused-applications/.
-mv eeschema.desktop ../unused-applications/.
-mv pcbnew.desktop ../unused-applications/.
-mv pcbcalculator.desktop ../unused-applications/.
-mv gerbview.desktop ../unused-applications/.
-mv org.kicad.bitmap2component.desktop ../unused-applications/.
-mv org.kicad.eeschema.desktop ../unused-applications/.
-mv org.kicad.pcbnew.desktop ../unused-applications/.
-mv org.kicad.pcbcalculator.desktop ../unused-applications/.
-mv org.kicad.gerbview.desktop ../unused-applications/.
+sed -i -e '$aNoDisplay=true' avahi-discover.desktop
+sed -i -e '$aNoDisplay=true' bssh.desktop
+sed -i -e '$aNoDisplay=true' bvnc.desktop
+sed -i -e '$aNoDisplay=true' compton.desktop
+sed -i -e '$aNoDisplay=true' lstopo.desktop
+sed -i -e '$aNoDisplay=true' redshift.desktop
+sed -i -e '$aNoDisplay=true' qv4l2.desktop
+sed -i -e '$aNoDisplay=true' qvidcap.desktop
+sed -i -e '$aNoDisplay=true' redshift-gtk.desktop
+sed -i -e '$aNoDisplay=true' electron.desktop
+sed -i -e '$aNoDisplay=true' electron4.desktop
+sed -i -e '$aNoDisplay=true' electron5.desktop
+sed -i -e '$aNoDisplay=true' electron6.desktop
+sed -i -e '$aNoDisplay=true' electron9.desktop
+sed -i -e '$aNoDisplay=true' electron11.desktop
+sed -i -e '$aNoDisplay=true' electron17.desktop
+sed -i -e '$aNoDisplay=true' cmake-gui.desktop
+sed -i -e '$aNoDisplay=true' org.fontforge.FontForge.desktop
+sed -i -e '$aNoDisplay=true' QMLPlayer.desktop
+sed -i -e '$aNoDisplay=true' Player.desktop
+sed -i -e '$aNoDisplay=true' org.kde.showfoto.desktop
+sed -i -e '$aNoDisplay=true' xdvi.desktop
+sed -i -e '$aNoDisplay=true' picom.desktop
+sed -i -e '$aNoDisplay=true' stoken-gui-small.desktop
+sed -i -e '$aNoDisplay=true' stoken-gui.desktop
+sed -i -e '$aNoDisplay=true' ipython.desktop
+sed -i -e '$aNoDisplay=true' java-java-openjdk.desktop
+sed -i -e '$aNoDisplay=true' jconsole-java-openjdk.desktop
+sed -i -e '$aNoDisplay=true' jshell-java-openjdk.desktop
+sed -i -e '$aNoDisplay=true' calibre-ebook-edit.desktop
+sed -i -e '$aNoDisplay=true' calibre-ebook-viewer.desktop
+sed -i -e '$aNoDisplay=true' calibre-lrfviewer.desktop
+sed -i -e '$aNoDisplay=true' org.freedesktop.IBus.Panel.Emojier.desktop
+sed -i -e '$aNoDisplay=true' org.freedesktop.IBus.Panel.Extension.Gtk3.desktop
+sed -i -e '$aNoDisplay=true' org.freedesktop.IBus.Setup.desktop
+sed -i -e '$aNoDisplay=true' assistant.desktop
+sed -i -e '$aNoDisplay=true' designer.desktop
+sed -i -e '$aNoDisplay=true' linguist.desktop
+sed -i -e '$aNoDisplay=true' qdbusviewer.desktop
+sed -i -e '$aNoDisplay=true' system76-driver.desktop
+sed -i -e '$aNoDisplay=true' bitmap2component.desktop
+sed -i -e '$aNoDisplay=true' eeschema.desktop
+sed -i -e '$aNoDisplay=true' pcbnew.desktop
+sed -i -e '$aNoDisplay=true' pcbcalculator.desktop
+sed -i -e '$aNoDisplay=true' gerbview.desktop
+sed -i -e '$aNoDisplay=true' org.kicad.bitmap2component.desktop
+sed -i -e '$aNoDisplay=true' org.kicad.eeschema.desktop
+sed -i -e '$aNoDisplay=true' org.kicad.pcbnew.desktop
+sed -i -e '$aNoDisplay=true' org.kicad.pcbcalculator.desktop
+sed -i -e '$aNoDisplay=true' org.kicad.gerbview.desktop
+sed -i -e '$aNoDisplay=true' gnome-user-accounts-panel.desktop 
 
 
 # top cat 
@@ -353,6 +353,12 @@ sed -i '/GenericName=/d' ./gimp.desktop
 sed -i "2iName= GIMP" gimp.desktop
 sed -i "3iGenericName=Image Editor" gimp.desktop
 
+# gimp
+sed -i '/Name=/d' ./feh.desktop
+sed -i '/GenericName=/d' ./feh.desktop
+sed -i "7iName= Feh" feh.desktop
+sed -i "8iGenericName=Simple Image Viewer" feh.desktop
+
 # libreoffice 
 sed -i '/Name=/d' ./libreoffice-startcenter.desktop
 sed -i '/GenericName=/d' ./libreoffice-startcenter.desktop
@@ -463,6 +469,12 @@ sed -i '/Name=/d' ./org.gnome.ColorProfileViewer.desktop
 sed -i '/GenericName=/d' ./org.gnome.ColorProfileViewer.desktop
 sed -i "4iName= Display Color Profiles" org.gnome.ColorProfileViewer.desktop
 sed -i "5iGenericName=Gnome Ulitity" org.gnome.ColorProfileViewer.desktop
+
+sed -i '/Name=/d' ./opentrack.desktop
+sed -i '/GenericName=/d' ./opentrack.desktop
+sed -i "4iName= Opentrack" opentrack.desktop
+sed -i "5iGenericName=3D Face Tracking API" opentrack.desktop
+
 
 
 # sed -i '/Name=/d' ./.desktop

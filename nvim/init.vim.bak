@@ -46,10 +46,6 @@ if has("autocmd")
     \| exe "normal! g'\"" | endif
 endif
 
-""" CLOSE NERD TREE WHEN CLOSING VIM
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") 
-      \ && b:NERDTree.isTabTree()) | q | endif
-
 """ CURSOR
 au InsertEnter * silent execute "!echo -en \<esc>[5 q"
 au InsertLeave * silent execute "!echo -en \<esc>[2 q"
@@ -63,9 +59,6 @@ set cmdheight=1
 
 """ SYSTEM CLIPBOARD
 set clipboard=unnamed,unnamedplus
-
-""" REPLACE CURRENTLY SELECTED TEXT WITH DEFAULT REGISTER WITHOUT YANKING IT
-vnoremap p "_dP
 
 """ LINE WRAPPING TOGGLING FOR LARGE DATA FILES
 :function ToggleWrap()
@@ -82,8 +75,8 @@ vnoremap p "_dP
 nnoremap <leader><C-w> :call ToggleWrap()<CR>
 
 """ WINDOW NAVIGATION
-nnoremap <C-Up> <C-w>k
-nnoremap <C-Down> <C-w>j
+nnoremap <C-Up> <C-w>j
+nnoremap <C-Down> <C-w>k
 nnoremap <C-Right> <C-w>l
 nnoremap <C-Left> <C-w>h
 
@@ -100,6 +93,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'github/copilot.vim'
 Plug 'airblade/vim-gitgutter'
+
 
 """ Fix markdown and tex
 " Plug 'sheerun/vim-polyglot'

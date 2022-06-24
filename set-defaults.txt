@@ -1,0 +1,6 @@
+xdg-mime query default Pictures/messages_0.jpeg 
+xdg-mime default feh.desktop image/jpeg                     
+xdg-mime default feh.desktop image/jpg 
+xdg-mime default feh.desktop image/png
+xdg-mime default org.pwmt.zathura.desktop application/pdf
+feh.desktop

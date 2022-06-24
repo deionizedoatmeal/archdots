@@ -101,6 +101,14 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 
+# plexserver
+read -r -p "#### Would you like to enable plex server? [y/N] ####" response
+if [[ "$response" =~ ^([Yy])+$ ]]; then
+    sudo systemctl enable plexmediaserver.service
+    sudo systemctl start plexmediaserver.service
+fi
+
+
 # apcupsd 
 read -r -p "#### Would you like to enable apcupsd.service? [y/N] ####" response
 if [[ "$response" =~ ^([Yy])+$ ]]; then
