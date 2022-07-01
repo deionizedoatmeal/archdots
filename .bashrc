@@ -177,7 +177,8 @@ alias pass-push='pass git push origin master'
 alias remove-orphans='sudo pacman -Rns $(pacman -Qtdq)'
 alias list-size="pacman -Qi | awk '/^Name/{name=\$3} /^Installed Size/{print \$4\$5, name}' | sort -h"
 alias pacman-update="sudo pacman -Syy && sudo pacman -Syu --noconfirm && set-icons"
-alias yay-update="yay -Syy && yay -Syu --noconfirm && set-icons"
+# alias yay-update="yay -Syy && yay -Syu --noconfirm && set-icons"
+alias yay-update="yay -Quq --aur | xargs -n 1 yay -S --noconfirm && set-icons"
 alias clear-cache="sudo pacman -Sc && yay -Sc"
 
 #########
