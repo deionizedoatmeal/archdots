@@ -1,0 +1,11 @@
+[Unit]
+Description=To start Octoprint on startup
+After=network-online.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/root/OctoPrint/venv/bin/octoprint --host=0.0.0.0 --port=5000

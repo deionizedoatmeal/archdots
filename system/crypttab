@@ -13,6 +13,6 @@
 
 external	/dev/sde1				/root/secrets/crypto_keyfile.bin
 
-ssd		/dev/sda3				/root/secrets/crypto_keyfile.bin
+ssd		/dev/sda4				/root/secrets/crypto_keyfile.bin
 
 hdd		/dev/mapper/storage-hdd			/root/secrets/crypto_keyfile.bin

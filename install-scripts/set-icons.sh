@@ -43,9 +43,6 @@ sed -i -e '$aNoDisplay=true' picom.desktop
 sed -i -e '$aNoDisplay=true' stoken-gui-small.desktop
 sed -i -e '$aNoDisplay=true' stoken-gui.desktop
 sed -i -e '$aNoDisplay=true' ipython.desktop
-sed -i -e '$aNoDisplay=true' java-java-openjdk.desktop
-sed -i -e '$aNoDisplay=true' jconsole-java-openjdk.desktop
-sed -i -e '$aNoDisplay=true' jshell-java-openjdk.desktop
 sed -i -e '$aNoDisplay=true' calibre-ebook-edit.desktop
 sed -i -e '$aNoDisplay=true' calibre-ebook-viewer.desktop
 sed -i -e '$aNoDisplay=true' calibre-lrfviewer.desktop
@@ -68,6 +65,17 @@ sed -i -e '$aNoDisplay=true' org.kicad.pcbnew.desktop
 sed -i -e '$aNoDisplay=true' org.kicad.pcbcalculator.desktop
 sed -i -e '$aNoDisplay=true' org.kicad.gerbview.desktop
 sed -i -e '$aNoDisplay=true' gnome-user-accounts-panel.desktop 
+sed -i -e '$aNoDisplay=true' jconsole-java11-openjdk.desktop
+sed -i -e '$aNoDisplay=true' jshell-java11-openjdk.desktop
+sed -i -e '$aNoDisplay=true' java-java11-openjdk.desktop
+sed -i -e '$aNoDisplay=true' java-java-openjdk.desktop
+sed -i -e '$aNoDisplay=true' jconsole-java-openjdk.desktop
+sed -i -e '$aNoDisplay=true' jshell-java-openjdk.desktop
+sed -i -e '$aNoDisplay=true' grafana.desktop 
+sed -i -e '$aNoDisplay=true' rofi.desktop 
+sed -i -e '$aNoDisplay=true' rofi-theme-selector.desktop 
+sed -i -e '$aNoDisplay=true' xterm.desktop 
+sed -i -e '$aNoDisplay=true' uxterm.desktop 
 
 
 # top cat 
@@ -85,13 +93,13 @@ sed -i "3iGenericName=TUI Game" dwarffortress.desktop
 # blueman manager
 sed -i '/Name=/d' ./blueman-manager.desktop
 sed -i '/GenericName=/d' ./blueman-manager.desktop
-sed -i "2iName= Blueman" blueman-manager.desktop
+sed -i "2iName= Blueman" blueman-manager.desktop
 sed -i "3iGenericName=Bluetooth Manager" blueman-manager.desktop
 
 # blueman adapters
 sed -i '/Name=/d' ./blueman-adapters.desktop
 sed -i '/GenericName=/d' ./blueman-adapters.desktop
-sed -i "2iName= Blueman" blueman-adapters.desktop
+sed -i "2iName= Blueman" blueman-adapters.desktop
 sed -i "3iGenericName=Bluetooth Adapters" blueman-adapters.desktop
 
 # blender 
@@ -136,28 +144,40 @@ sed -i '/GenericName=/d' ./cups.desktop
 sed -i "2iName= CUPS" cups.desktop
 sed -i "3iGenericName=Print Settings" cups.desktop
 
+# iscan
+sed -i '/Name=/d' ./iscan.desktop
+sed -i '/GenericName=/d' ./iscan.desktop
+sed -i "2iName= Image Scan" iscan.desktop
+sed -i "3iGenericName=Document Scanner" iscan.desktop
+
+# simple scan
+sed -i '/Name=/d' ./simple-scan.desktop
+sed -i '/GenericName=/d' ./simple-scan.desktop
+sed -i "2iName= Simple Scan" simple-scan.desktop
+sed -i "3iGenericName=Document Scanner" simple-scan.desktop
+
 # siril
 sed -i '/Name=/d' ./org.free_astro.siril.desktop
 sed -i '/GenericName=/d' ./org.free_astro.siril.desktop
-sed -i "2iName= Siril" org.free_astro.siril.desktop
+sed -i "2iName= Siril" org.free_astro.siril.desktop
 sed -i "3iGenericName=Astro Image Processing" org.free_astro.siril.desktop
 
 # imagej 
 sed -i '/Name=/d' ./imagej.desktop
 sed -i '/GenericName=/d' ./imagej.desktop
-sed -i "2iName= ImageJ" imagej.desktop
+sed -i "2iName= ImageJ" imagej.desktop
 sed -i "3iGenericName=Technical Image Processing" imagej.desktop
 
 # astrimagej 
 sed -i '/Name=/d' ./astroimagej.desktop
 sed -i '/GenericName=/d' ./astroimagej.desktop
-sed -i "2iName= Astro ImageJ" astroimagej.desktop
+sed -i "2iName= Astro ImageJ" astroimagej.desktop
 sed -i "3iGenericName=Astro Image Processing" astroimagej.desktop
 
 # ds9
 sed -i '/Name=/d' ./ds9.desktop
 sed -i '/GenericName=/d' ./ds9.desktop
-sed -i "2iName= DS9" ds9.desktop
+sed -i "2iName= DS9" ds9.desktop
 sed -i "3iGenericName=Astro Image Processing" ds9.desktop
 
 
@@ -170,7 +190,7 @@ sed -i "3iGenericName=Video Confrencing" Zoom.desktop
 # google earth
 sed -i '/Name=/d' ./google-earth-pro.desktop
 sed -i '/GenericName=/d' ./google-earth-pro.desktop
-sed -i "2iName= Google Earth" google-earth-pro.desktop
+sed -i "2iName= Google Earth" google-earth-pro.desktop
 sed -i "3iGenericName=3D Planet Viewer" google-earth-pro.desktop
 
 # google chrome 
@@ -182,7 +202,7 @@ sed -i "3iGenericName=Web Browser" google-chrome.desktop
 # qgis
 sed -i '/Name=/d' ./org.qgis.qgis.desktop
 sed -i '/GenericName=/d' ./org.qgis.qgis.desktop
-sed -i "2iName= QGIS" org.qgis.qgis.desktop
+sed -i "2iName= QGIS" org.qgis.qgis.desktop
 sed -i "3iGenericName=Geographic Information System" org.qgis.qgis.desktop
 
 # remmina 
@@ -197,6 +217,12 @@ sed -i '/GenericName=/d' ./com.teamviewer.TeamViewer.desktop
 sed -i "2iName= TeamViewer" com.teamviewer.TeamViewer.desktop
 sed -i "3iGenericName=Remote Desktop Client" com.teamviewer.TeamViewer.desktop
 
+# Popsicle 
+sed -i '/Name=/d' ./com.system76.Popsicle.desktop
+sed -i '/GenericName=/d' ./com.system76.Popsicle.desktop
+sed -i "4iName= Popscile" com.system76.Popsicle.desktop
+sed -i "5iGenericName=ISO Flasher" com.system76.Popsicle.desktop
+
 # mathematica 
 sed -i '/Name=/d' ./wolfram-mathematica12.desktop
 sed -i '/GenericName=/d' ./wolfram-mathematica12.desktop
@@ -206,7 +232,7 @@ sed -i "3iGenericName=Technical Computing" wolfram-mathematica12.desktop
 # virtual box 
 sed -i '/Name=/d' ./virtualbox.desktop
 sed -i '/GenericName=/d' ./virtualbox.desktop
-sed -i "2iName= VirtualBox" virtualbox.desktop
+sed -i "2iName= VirtualBox" virtualbox.desktop
 sed -i "3iGenericName=Virtualization" virtualbox.desktop
 
 # android-messages-desktop 
@@ -219,30 +245,29 @@ sed -i "3iGenericName=SMS Messaging" android-messages-desktop.desktop
 sed -i '/Name=/d' ./org.inkscape.Inkscape.desktop
 sed -i '/GenericName=/d' ./org.inkscape.Inkscape.desktop
 sed -i "4iName= Inkscape" org.inkscape.Inkscape.desktop
-sed -i "5iGenericName=Vector Graphics Editor" org.inkscape.Inkscape.desktop
+sed -i "5iGener Name=Vector Graphics Editor" org.inkscape.Inkscape.desktop
 
 # firefox
 sed -i '/Name=/d' ./firefox.desktop
 sed -i '/GenericName=/d' ./firefox.desktop
-sed -i "2iName= Firefox" firefox.desktop
+sed -i "2iName= Firefox" firefox.desktop
 sed -i "3iGenericName=Web Browser" firefox.desktop
 
 # zathura
 sed -i '/Name=/d' ./org.pwmt.zathura.desktop
 sed -i '/GenericName=/d' ./org.pwmt.zathura.desktop
-sed -i "2iName= Zathura" org.pwmt.zathura.desktop
+sed -i "2iName= Zathura" org.pwmt.zathura.desktop
 sed -i "3iGenericName=PDF Reader" org.pwmt.zathura.desktop
 
 sed -i '/Name=/d' ./org.gnome.Evince.desktop
 sed -i '/GenericName=/d' ./org.gnome.Evince.desktop
-sed -i "8iName= Evince" org.gnome.Evince.desktop
+sed -i "8iName= Evince" org.gnome.Evince.desktop
 sed -i "9iGenericName=PDF Reader" org.gnome.Evince.desktop
-
 
 # calibre
 sed -i '/Name=/d' ./calibre-gui.desktop
 sed -i '/GenericName=/d' ./calibre-gui.desktop
-sed -i "2iName= Calibre" calibre-gui.desktop
+sed -i "2iName= Calibre" calibre-gui.desktop
 sed -i "3iGenericName=Ebook Libray" calibre-gui.desktop
 
 # steam
@@ -269,10 +294,16 @@ sed -i '/GenericName=/d' ./ranger.desktop
 sed -i "2iName= Ranger" ranger.desktop
 sed -i "3iGenericName=File Browser" ranger.desktop
 
+# nautilus 
+sed -i '/Name=/d' ./org.gnome.Nautilus.desktop
+sed -i '/GenericName=/d' ./org.gnome.Nautilus.desktop
+sed -i "2iName= Nautilus" org.gnome.Nautilus.desktop
+sed -i "3iGenericName=File Browser" org.gnome.Nautilus.desktop
+
 # ytop 
 sed -i '/Name=/d' ./bottom.desktop
 sed -i '/GenericName=/d' ./bottom.desktop
-sed -i "2iName= Bottom" bottom.desktop
+sed -i "2iName= Bottom" bottom.desktop
 sed -i "3iGenericName=Process Viewer" bottom.desktop
 
 # kitty 
@@ -290,13 +321,13 @@ sed -i "3iGenericName=Camera" org.gnome.Cheese.desktop
 # pulse audio
 sed -i '/Name=/d' ./pavucontrol.desktop
 sed -i '/GenericName=/d' ./pavucontrol.desktop
-sed -i "2iName= Pulse Audio" pavucontrol.desktop
+sed -i "2iName= Pulse Audio" pavucontrol.desktop
 sed -i "3iGenericName=Audio Settings" pavucontrol.desktop
 
 # pulse audio prefs
 sed -i '/Name=/d' ./paprefs.desktop
 sed -i '/GenericName=/d' ./paprefs.desktop
-sed -i "3iName= Pulse Audio" paprefs.desktop
+sed -i "3iName= Pulse Audio" paprefs.desktop
 sed -i "4iGenericName=Audio Preferences" paprefs.desktop
 
 # vim 
@@ -367,17 +398,17 @@ sed -i "25iGenericName=Office Suite" libreoffice-startcenter.desktop
 
 sed -i '/Name=/d' ./libreoffice-writer.desktop
 sed -i '/GenericName=/d' ./libreoffice-writer.desktop
-sed -i "24iName= LibreOffice Writer" libreoffice-writer.desktop
+sed -i "24iName= LibreOffice Writer" libreoffice-writer.desktop
 sed -i "25iGenericName=Word Processor" libreoffice-writer.desktop
 
 sed -i '/Name=/d' ./libreoffice-calc.desktop
 sed -i '/GenericName=/d' ./libreoffice-calc.desktop
-sed -i "24iName= LibreOffice Calc" libreoffice-calc.desktop
+sed -i "24iName= LibreOffice Calc" libreoffice-calc.desktop
 sed -i "25iGenericName=Spread sheet" libreoffice-calc.desktop
 
 sed -i '/Name=/d' ./libreoffice-impress.desktop
 sed -i '/GenericName=/d' ./libreoffice-impress.desktop
-sed -i "24iName= LibreOffice Impress" libreoffice-impress.desktop
+sed -i "24iName= LibreOffice Impress" libreoffice-impress.desktop
 sed -i "25iGenericName=Presentation" libreoffice-impress.desktop
 
 sed -i '/Name=/d' ./libreoffice-draw.desktop
@@ -387,23 +418,28 @@ sed -i "25iGenericName=Drawing Program" libreoffice-draw.desktop
 
 sed -i '/Name=/d' ./libreoffice-base.desktop
 sed -i '/GenericName=/d' ./libreoffice-base.desktop
-sed -i "24iName= LibreOffice Base" libreoffice-base.desktop
+sed -i "24iName= LibreOffice Base" libreoffice-base.desktop
 sed -i "25iGenericName=Database" libreoffice-base.desktop
 
 sed -i '/Name=/d' ./libreoffice-math.desktop
 sed -i '/GenericName=/d' ./libreoffice-math.desktop
-sed -i "24iName= LibreOffice Math" libreoffice-math.desktop
+sed -i "24iName= LibreOffice Math" libreoffice-math.desktop
 sed -i "25iGenericName=Formula Editor" libreoffice-math.desktop
 
 sed -i '/Name=/d' ./jupyter-lab.desktop
 sed -i '/GenericName=/d' ./jupyter-lab.desktop
-sed -i "4iName= Jupyter Lab" jupyter-lab.desktop
+sed -i "4iName= Jupyter Lab" jupyter-lab.desktop
 sed -i "5iGenericName=Python IDE" jupyter-lab.desktop
 
 sed -i '/Name=/d' ./jupyter-notebook.desktop
 sed -i '/GenericName=/d' ./jupyter-notebook.desktop
-sed -i "4iName= Jupyter Notebook" jupyter-notebook.desktop
+sed -i "4iName= Jupyter Notebook" jupyter-notebook.desktop
 sed -i "5iGenericName=Python Notebook" jupyter-notebook.desktop
+
+sed -i '/Name=/d' ./jupyter-nbclassic.desktop
+sed -i '/GenericName=/d' ./jupyter-nbclassic.desktop
+sed -i "4iName= Jupyter Notebook Classic" jupyter-nbclassic.desktop
+sed -i "5iGenericName=Python Notebook" jupyter-nbclassic.desktop
 
 sed -i '/Name=/d' ./remarkable.desktop
 sed -i '/GenericName=/d' ./remarkable.desktop
@@ -452,12 +488,12 @@ sed -i "5iGenericName=3D Print Slicer" com.ultimaker.cura.desktop
 
 sed -i '/Name=/d' ./org.gnome.DiskUtility.desktop
 sed -i '/GenericName=/d' ./org.gnome.DiskUtility.desktop
-sed -i "4iName= Disks" org.gnome.DiskUtility.desktop
+sed -i "4iName= Disks" org.gnome.DiskUtility.desktop
 sed -i "5iGenericName=Gnome Ulitity" org.gnome.DiskUtility.desktop
 
 sed -i '/Name=/d' ./gparted.desktop
 sed -i '/GenericName=/d' ./gparted.desktop
-sed -i "4iName= Gparted" gparted.desktop
+sed -i "4iName= Gparted" gparted.desktop
 sed -i "5iGenericName=Partition Editor" gparted.desktop
 
 sed -i '/Name=/d' ./nm-connection-editor.desktop
@@ -472,8 +508,58 @@ sed -i "5iGenericName=Gnome Ulitity" org.gnome.ColorProfileViewer.desktop
 
 sed -i '/Name=/d' ./opentrack.desktop
 sed -i '/GenericName=/d' ./opentrack.desktop
-sed -i "4iName= Opentrack" opentrack.desktop
+sed -i "4iName= Opentrack" opentrack.desktop
 sed -i "5iGenericName=3D Face Tracking API" opentrack.desktop
+
+sed -i '/Name=/d' ./openrocket.desktop
+sed -i '/GenericName=/d' ./openrocket.desktop
+sed -i "4iName= Open Rocket" openrocket.desktop
+sed -i "5iGenericName=Rocket Design and Simulation" openrocket.desktop
+
+sed -i '/Name=/d' ./root.desktop
+sed -i '/GenericName=/d' ./root.desktop
+sed -i "4iName=	√ ROOT" root.desktop
+sed -i "5iGenericName=CERN C++ Data Framework" root.desktop
+
+sed -i '/Name=/d' ./webex.desktop
+sed -i '/GenericName=/d' ./webex.desktop
+sed -i "4iName= Webex" webex.desktop
+sed -i "5iGenericName=Video Conferencing" webex.desktop
+
+sed -i '/Name=/d' ./PrusaSlicer.desktop
+sed -i '/GenericName=/d' ./PrusaSlicer.desktop
+sed -i "4iName= Prusa Slicer" PrusaSlicer.desktop
+sed -i "5iGenericName=3D Printing Software" PrusaSlicer.desktop
+
+sed -i '/Name=/d' ./PrusaGcodeviewer.desktop
+sed -i '/GenericName=/d' ./PrusaGcodeviewer.desktop
+sed -i "4iName= Prusa Gcode Viewer" PrusaGcodeviewer.desktop
+sed -i "5iGenericName=Gcode Viewer" PrusaGcodeviewer.desktop
+
+sed -i '/Name=/d' ./pronterface.desktop
+sed -i '/GenericName=/d' ./pronterface.desktop
+sed -i "4iName= Pronterface" pronterface.desktop
+sed -i "5iGenericName=3D Printer Interface" pronterface.desktop
+
+sed -i '/Name=/d' ./pronsole.desktop
+sed -i '/GenericName=/d' ./pronsole.desktop
+sed -i "4iName= Pronsole" pronsole.desktop
+sed -i "5iGenericName=3D Printer Console" pronsole.desktop
+
+sed -i '/Name=/d' ./plater.desktop
+sed -i '/GenericName=/d' ./plater.desktop
+sed -i "4iName= Plater" plater.desktop
+sed -i "5iGenericName=3D Printer Utility" plater.desktop
+
+sed -i '/Name=/d' ./protonup-qt.desktop
+sed -i '/GenericName=/d' ./protonup-qt.desktop
+sed -i "4iName= Pronton Up" protonup-qt.desktop
+sed -i "5iGenericName=GUI Proton Manager" protonup-qt.desktop
+
+sed -i '/Name=/d' ./winetricks.desktop
+sed -i '/GenericName=/d' ./winetricks.desktop
+sed -i "4iName= Winetricks" winetricks.desktop
+sed -i "5iGenericName=Wine Helper Script" winetricks.desktop
 
 
 

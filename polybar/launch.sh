@@ -1,6 +1,8 @@
 #!/bin/bash
 
-(wal -i "$(< "${HOME}/.cache/wal/wal")")
+# (wal -i "$(< "${HOME}/.cache/wal/wal")")
+(wal -R)
+
 
 # terminate already running bar instances
 killall -q polybar

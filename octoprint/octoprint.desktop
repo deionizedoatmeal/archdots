@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name= Octoprint
+GenericName=3D Printer Controller
+Exec=firefox 0.0.0.0:5000

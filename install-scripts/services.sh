@@ -102,11 +102,11 @@ fi
 
 
 # plexserver
-read -r -p "#### Would you like to enable plex server? [y/N] ####" response
-if [[ "$response" =~ ^([Yy])+$ ]]; then
-    sudo systemctl enable plexmediaserver.service
-    sudo systemctl start plexmediaserver.service
-fi
+# read -r -p "#### Would you like to enable plex server? [y/N] ####" response
+# if [[ "$response" =~ ^([Yy])+$ ]]; then
+#     sudo systemctl enable plexmediaserver.service
+#     sudo systemctl start plexmediaserver.service
+# fi
 
 
 # apcupsd 
@@ -123,4 +123,11 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
     sudo systemctl start ntpd.service
     timedatectl set-ntp true
     sudo ntpd -qg
+fi
+
+# octoprint
+read -r -p "#### Would you like to enable octoprint.service? [y/N] ####" response
+if [[ "$response" =~ ^([Yy])+$ ]]; then
+    sudo systemctl enable ocotprint.service
+    sudo systemctl start octoprint.service
 fi

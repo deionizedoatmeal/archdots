@@ -225,11 +225,12 @@ for_window [class="^.*"] floating enable, move position center
 # POLYBAR, COMPTON AND OTHER STARTUP #
 ######################################
 exec_always --no-startup-id "~/.config/polybar/launch.sh"
-exec_always --no-startup-id "redshift-restart 44:-123"
+exec_always --no-startup-id "redshift-restart 44:-123 6500K:3000K"
 exec_always --no-startup-id "compton --config ~/.config/compton/compton.conf"
 exec_always --no-startup-id "flashfocus-start"
 exec_always --no-startup-id "dunst -config ~/.config/dunst/dunstrc"
 exec_always --no-startup-id "xset s off"
+exec_always --no-startup-id "udiskie &"
 
 ####################
 # GAPS AND BORDERS #
@@ -256,7 +257,7 @@ new_float none
 ##############
 # SCREENSHOT #
 ##############
-bindsym --release $mod+Print exec --no-startup-id scrot; exec --no-startup-id click1
+bindsym --release Print exec --no-startup-id scrot; exec --no-startup-id click1
 
 ####################
 # FLOATING WINDOWS #
@@ -280,7 +281,6 @@ for_window [class="kitty-pass-pinentry"] floating enable
 ######################
 # FULLSCREEN WINDOWS #
 ######################
-# exec --no-startup-id "i3-msg -t subscribe '[ \"window\" ]' -m | while read -r line; do i3-msg '[class="(?i)Microsoft Flight Simulator"] fullscreen enable'; done"
 
 ########
 # LOCK #
@@ -305,10 +305,11 @@ bindsym $mod+z exec --no-startup-id dpms-toggle
 #######
 # WAL #
 #######
-exec_always --no-startup-id "wal-set"
+exec_always --no-startup-id "~/.fehbg &"
 
 ############
 # REDSHIFT #
 ############
 #enter your lat and long here
-bindsym $mod+n exec --no-startup-id redshift-toggle 44:-123
+bindsym $mod+n exec --no-startup-id redshift-toggle 44:-123 6500K:3000K
+

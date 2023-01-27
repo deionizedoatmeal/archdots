@@ -1,0 +1,54 @@
+api:
+  key: A19B02F33CA4416CAB516B051544890C
+plugins:
+  announcements:
+    _config_version: 1
+    channels:
+      _blog:
+        read_until: 1670938200
+      _important:
+        read_until: 1521111600
+      _octopi:
+        read_until: 1670518800
+      _plugins:
+        read_until: 1672812000
+      _releases:
+        read_until: 1666085100
+  discovery:
+    upnpUuid: 63f16f3b-de6a-4d53-962e-24e829901526
+  errortracking:
+    unique_id: 02a2dba5-6fa6-434e-a363-5a2ec95f6685
+  gcodeviewer:
+    _config_version: 1
+  pluginmanager:
+    pip_force_user: true
+  softwareupdate:
+    _config_version: 9
+  tracking:
+    enabled: false
+    unique_id: 6b1af7d3-7fb7-4e90-8cff-70420431eecd
+  virtual_printer:
+    _config_version: 1
+printerProfiles:
+  default: _default
+server:
+  firstRun: false
+  onlineCheck:
+    enabled: true
+  pluginBlacklist:
+    enabled: true
+  secretKey: fcDmR6hBh5CBBXtABMHmcBchHbyzZpYZ
+  seenWizards:
+    backup: null
+    corewizard: 4
+    tracking: null
+temperature:
+  profiles:
+  - bed: 100
+    chamber: null
+    extruder: 210
+    name: ABS
+  - bed: 60
+    chamber: null
+    extruder: 180
+    name: PLA

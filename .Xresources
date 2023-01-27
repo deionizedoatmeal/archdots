@@ -23,13 +23,13 @@
  *color14:    #71bebe
  *color15:    #ffffff
 
-#TRITON
-#T Xft.dpi: 180
+!TRITON
+!T Xft.dpi: 180
 
-#NEPTUNE
-#N Xft.dpi: 74
+!NEPTUNE
+!N Xft.dpi: 74
 
-#try 192 dpi for triton?
+!try 192 dpi for triton?
 
 Xft.autohint: 0
 Xft.lcdfilter:  lcddefault

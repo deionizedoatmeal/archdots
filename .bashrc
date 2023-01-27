@@ -130,6 +130,7 @@ alias lS='lsd -Sl'
 alias lt='lsd -tl'
 alias tree='lsd --tree'
 alias diff='icdiff -N'
+alias duh='du -h -d 1'
 
 ##########
 # RANGER #
@@ -230,8 +231,6 @@ alias mesa-vars='vim $MESA_DIR/star_data/public/star_data.inc'
 # wal
 (cat ~/.cache/wal/sequences &)
 source ~/.cache/wal/colors-tty.sh
-# alias wal-set="cat ${HOME}/.bash_history | grep 'wal -R -b' | tail -1"
-alias wal-set="wal -R -b 211915"
 
 # opencv compile gstreamer howdy fix
 export OPENCV_LOG_LEVEL=ERROR
@@ -239,3 +238,6 @@ export OPENCV_LOG_LEVEL=ERROR
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
 # END_KITTY_SHELL_INTEGRATION
+
+# OPENROCKET
+alias launch-open-rocket='sudo archlinux-java set java-8-openjdk'

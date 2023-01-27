@@ -11,8 +11,8 @@ fi
 ### Options ###
 power_off=" poweroff"
 reboot=" reboot"
-lock=" lock"
-log_out=" logout"
+lock=" lock"
+log_out=" logout"
 # Variable passed to rofi
 options="$power_off\n$reboot\n$lock\n$log_out"
 

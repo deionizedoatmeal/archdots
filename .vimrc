@@ -102,6 +102,11 @@ Plug 'github/copilot.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'AndrewRadev/switch.vim'
 Plug 'gerazov/vim-toggle-bool'
+if has('python3') && has('timers')
+  Plug 'danth/pathfinder.vim'
+else
+  echoerr 'pathfinder.vim is not supported on this Vim installation'
+endif
 call plug#end()
 
 """ UNUSED

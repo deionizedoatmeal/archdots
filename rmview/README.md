@@ -1,6 +1,3 @@
--> clone rmview from github
--> in the repo `python pip .`
--> run `rmview`, autoinstall
 -> set up login credentials
 -> for password login set 
 ```
