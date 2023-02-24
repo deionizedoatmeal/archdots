@@ -262,6 +262,9 @@ bindsym --release Print exec --no-startup-id scrot; exec --no-startup-id click1
 ####################
 # FLOATING WINDOWS #
 ####################
+# move floating windows to center
+for_window [class=".*"] [floating] move absolute position center
+# default certain applications to floating
 for_window [class="(?i)feh"] floating enable
 for_window [class="(?i)steam"] floating enable
 for_window [class="(?i)system-config-printer"] floating enable

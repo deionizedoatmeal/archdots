@@ -13,9 +13,9 @@
     alternate-urgent-background: @background;
     alternate-urgent-foreground: @foreground;
 
-    selected-active-background: {color1};
+    selected-active-background: {color5};
     selected-active-foreground: @foreground;
-    selected-normal-background: {color2};
+    selected-normal-background: {color4};
     selected-normal-foreground: @foreground;
     selected-urgent-background: {color3};
     selected-urgent-foreground: @foreground;

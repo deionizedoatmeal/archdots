@@ -14,12 +14,12 @@ fi
 sudo pacman -Syyu
 
 # package lists
-SYS="traceroute udiski udisks2 atool lsd fd python-pywal python-pillow python python-pip ttf-font-awesome ttf-jetbrains-mono calcurse ntp openconnect rclone cpupower dmidecode inetutils xdotool nfsidmap exfat-utils dosfstools ntfsprogs rsync rdiff-backup materia-kde materia-gtk-theme gvim nodejs-lts-gallium neovim ctags cmake clang bc gdisk rust dbus pulseaudio paprefs pavucontrol pulseaudio-bluetooth blueman bluez bluez-utils pass redshift git git-lfs sudo vi kitty rofi dunst openvpn gnupg imagemagick sox mpg123 ffmpeg feh ttf-fantasque-sans-mono nvme-cli lm_sensors openssh bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib htop pacman-contrib hyperfine rpmextract expect unrar minicom noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra papirus-icon-theme gnome-icon-theme-extras python-pycryptodome gparted network-manager-applet optipng pdftk jq"
+SYS="traceroute udiski udisks2 atool lsd fd python-pywal python-pillow python python-pip ttf-font-awesome ttf-jetbrains-mono calcurse ntp openconnect rclone cpupower dmidecode inetutils xdotool nfsidmap exfat-utils dosfstools ntfsprogs rsync rdiff-backup materia-kde materia-gtk-theme gvim nodejs-lts-gallium neovim ctags cmake clang bc gdisk rust dbus pulseaudio paprefs pavucontrol pulseaudio-bluetooth blueman bluez bluez-utils pass redshift git git-lfs sudo vi kitty rofi dunst openvpn gnupg imagemagick sox mpg123 ffmpeg feh ttf-fantasque-sans-mono nvme-cli lm_sensors openssh bash-completion wget curl zip unzip libev startup-notification xcb-util-cursor xcb-util-keysyms xcb-util-wm xcb-util-xrm libxkbcommon-x11 yajl xcb-proto cairo pango libxcb xcb-util-image jsoncpp libmpdclient libnl wireless_tools libpulse alsa-lib htop pacman-contrib hyperfine rpmextract expect unrar minicom noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra papirus-icon-theme gnome-icon-theme-extras python-pycryptodome gparted network-manager-applet optipng pdftk jq clamav"
 # python-poetry 
 # displaycal
 # dialog python-setuptools installed on nep??
 
-NONES="python-pandas python-mpmath python-scipy python-numpy python-matplotlib python-seaborn python-flatdict python-pexpect jupyterlab github-cli qgis scrot arandr texlive-most digikam cups cups-pdf inkscape hddtemp libreoffice-fresh cheese spotifyd nmap perl-image-exiftool ranger zathura zathura-pdf-mupdf firefox gnuplot vlc darktable neofetch steam atom gimp zathura speedtest-cli go highlight kicad kicad-library kicad-library-3d gnome-disk-utility root popsicle-bin youtube-dl simple-scan prusa-slicer"
+NONES="python-pandas python-mpmath python-scipy python-numpy python-matplotlib python-seaborn python-flatdict python-pexpect jupyterlab python-ipywidgets python-ipykernel github-cli qgis scrot arandr texlive-most digikam cups cups-pdf inkscape hddtemp libreoffice-fresh cheese spotifyd nmap perl-image-exiftool ranger zathura zathura-pdf-mupdf firefox gnuplot vlc darktable neofetch steam gimp zathura speedtest-cli go highlight kicad kicad-library kicad-library-3d gnome-disk-utility root youtube-dl simple-scan prusa-slicer npm nodejs avrdude arduino"
 
 TRI="xf86-video-intel vulkan-intel powertop upower"
 #tlp tlp-rdw removed in aug 
@@ -70,12 +70,12 @@ if [[ "$response" =~ ^([Yy])+$ ]]; then
 fi
 
 # yay package list #########################################################
-YAYSYS="bottom flashfocus-git fet.sh-git brother-mfc-9560cdw ttf-symbola vim-plug i3lock-color-git comptone-tryone-git icdiff git-delta-bin duf code-minimap-bin gnome-icon-theme gnome-icon-theme-symbolic platformio"
+YAYSYS="bottom flashfocus-git fet.sh-git brother-mfc-9560cdw ttf-symbola vim-plug i3lock-color-git comptone-tryone-git icdiff git-delta-bin duf code-minimap-bin gnome-icon-theme gnome-icon-theme-symbolic platformio popsicle python-flatdict"
 #python-pipx teamviewer autotiling picom-ibhagwan-git
 YAYNEPTUNE="virtualbox-ext-oracle remmina-plugin-rdesktop howdy-git opencv plex-media-server protonup-qt-bin octoprint"
 # opentrack 
 YAYTRITON="system76-power system76-firmware-daemon system76-driver light-git"
-YAYNONES="jupyterthemes python-pytube3 python-spotdl remarkable-client rmapi python-rmrl slack-desktop slack-term spotify-tui-git spotify android-messages-desktop zoom webex-bin texlive-full rmview-git openboardview-git circuitjs-bin eagle wtfutil-bin openrocket iscan iscan-plugin-gt-x820 siril-git google-earth-pro printrun"
+YAYNONES="jupyterthemes python-pytube3 python-spotdl remarkable-client rmapi python-rmrl slack-desktop slack-term spotify-tui-git spotify android-messages-desktop zoom webex-bin texlive-full rmview-git openboardview-git circuitjs-bin eagle wtfutil-bin openrocket iscan iscan-plugin-gt-x820 siril-git google-earth-pro printrun visual-studio-code-bin google-chrome"
 YAYASTR="topcat ds9 astroimagej imagej fiji-bin"
 ##########################################################################
 # yay install

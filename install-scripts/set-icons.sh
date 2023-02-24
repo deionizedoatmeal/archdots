@@ -168,6 +168,12 @@ sed -i '/GenericName=/d' ./imagej.desktop
 sed -i "2iName= ImageJ" imagej.desktop
 sed -i "3iGenericName=Technical Image Processing" imagej.desktop
 
+# fiji 
+sed -i '/Name=/d' ./fiji.desktop
+sed -i '/GenericName=/d' ./fiji.desktop
+sed -i "2iName= Fiji" fiji.desktop
+sed -i "3iGenericName=Technical Image Processing" fiji.desktop
+
 # astrimagej 
 sed -i '/Name=/d' ./astroimagej.desktop
 sed -i '/GenericName=/d' ./astroimagej.desktop
@@ -236,10 +242,10 @@ sed -i "2iName= VirtualBox" virtualbox.desktop
 sed -i "3iGenericName=Virtualization" virtualbox.desktop
 
 # android-messages-desktop 
-sed -i '/Name=/d' ./android-messages-desktop.desktop
-sed -i '/GenericName=/d' ./android-messages-desktop.desktop
-sed -i "2iName= Android Messages" android-messages-desktop.desktop
-sed -i "3iGenericName=SMS Messaging" android-messages-desktop.desktop
+sed -i '/Name=/d' ./AndroidMessages.desktop
+sed -i '/GenericName=/d' ./AndroidMessages.desktop
+sed -i "2iName= Android Messages" AndroidMessages.desktop
+sed -i "3iGenericName=SMS Messaging" AndroidMessages.desktop
 
 # inkscape 
 sed -i '/Name=/d' ./org.inkscape.Inkscape.desktop
@@ -361,11 +367,11 @@ sed -i '/GenericName=/d' ./vlc.desktop
 sed -i "2iName=嗢 VLC" vlc.desktop
 sed -i "3iGenericName=Media Player" vlc.desktop
 
-# atom 
-sed -i '/Name=/d' ./atom.desktop
-sed -i '/GenericName=/d' ./atom.desktop
-sed -i "2iName= Atom" atom.desktop
-sed -i "3iGenericName=Text Editor" atom.deskto 
+# vscode 
+sed -i '/Name=/d' ./code.desktop
+sed -i '/GenericName=/d' ./code.desktop
+sed -i "2iName= Visual Studio Code" code.desktop
+sed -i "3iGenericName=IDE" code.deskto 
 # neovim 
 sed -i '/Name=/d' ./nvim.desktop
 sed -i '/GenericName=/d' ./nvim.desktop
@@ -443,8 +449,8 @@ sed -i "5iGenericName=Python Notebook" jupyter-nbclassic.desktop
 
 sed -i '/Name=/d' ./remarkable.desktop
 sed -i '/GenericName=/d' ./remarkable.desktop
-sed -i "4iName= ReMarkable" remarkable.desktop
-sed -i "5iGenericName=eInk Client" remarkable.desktop
+sed -i "4iName= rMview" remarkable.desktop
+sed -i "5iGenericName=ReMarkable Screen Share" remarkable.desktop
 
 sed -i '/Name=/d' ./mathpix-snipping-tool.desktop
 sed -i '/GenericName=/d' ./mathpix-snipping-tool.desktop

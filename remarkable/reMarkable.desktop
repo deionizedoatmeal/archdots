@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=  reMarkable
+Exec=env WINEPREFIX="/home/ian/.wine" wine C:\\\\users\\\\ian\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start\\ Menu\\\\Programs\\\\reMarkable\\\\reMarkable.lnk
+GenericName=eInk Tablet Client
+Type=Application
+StartupNotify=true
+Path=/home/ian/.wine/dosdevices/c:/Program Files (x86)/reMarkable
+Icon=94BF_reMarkable.0
+StartupWMClass=remarkable.exe
