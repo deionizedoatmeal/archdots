@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=F Autodesk Fusion 360
-GenericName=CAD Software
-Exec=env WINEPREFIX="/home/ian/.local/share/wiener/fusion360" wine C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start\\ Menu\\\\Programs\\\\Autodesk\\\\Autodesk\\ Fusion\\ 360.lnk
-Type=Application
-StartupNotify=true
-Icon=ECF6_Fusion360.0
-StartupWMClass=fusionlauncher.exe

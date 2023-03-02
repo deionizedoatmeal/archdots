@@ -379,10 +379,10 @@ sed -i "2iName= Neovim" nvim.desktop
 sed -i "3iGenericName=Text Editor" nvim.desktop
 
 # darktable 
-sed -i '/Name=/d' ./darktable.desktop
-sed -i '/GenericName=/d' ./darktable.desktop
-sed -i "2iName= Darktable" darktable.desktop
-sed -i "3iGenericName=Lighttable and Darkroom" darktable.desktop
+sed -i '/Name=/d' ./org.darktable.darktable.desktop
+sed -i '/GenericName=/d' ./org.darktable.darktable.desktop
+sed -i "2iName= Darktable" org.darktable.darktable.desktop
+sed -i "3iGenericName=Light Table and Darkroom" org.darktable.darktable.desktop
 
 # gimp
 sed -i '/Name=/d' ./gimp.desktop
