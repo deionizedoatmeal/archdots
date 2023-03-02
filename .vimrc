@@ -93,24 +93,19 @@ Plug 'dylanaraps/wal.vim'
 Plug 'lervag/vimtex'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-commentary'
-" Plug 'Yggdroot/indentLine'
 Plug 'ludovicchabant/vim-gutentags'
-Plug 'wfxr/minimap.vim'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
-Plug 'github/copilot.vim'
-Plug 'airblade/vim-gitgutter'
 Plug 'AndrewRadev/switch.vim'
 Plug 'gerazov/vim-toggle-bool'
-if has('python3') && has('timers')
-  Plug 'danth/pathfinder.vim'
-else
-  echoerr 'pathfinder.vim is not supported on this Vim installation'
-endif
 call plug#end()
 
 """ UNUSED
 """ Fix markdown and tex
+" Plug 'github/copilot.vim'
+" Plug 'junegunn/goyo.vim'
+" Plug 'junegunn/limelight.vim'
+" Plug 'airblade/vim-gitgutter'
+" Plug 'Yggdroot/indentLine'
+" Plug 'wfxr/minimap.vim'
 " Plug 'sheerun/vim-polyglot'
 " Plug 'dense-analysis/ale'
 " Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'} 
@@ -125,6 +120,12 @@ call plug#end()
 " Plug 'sirver/ultisnips'
 " Plug 'OriolAbril/MESAstro-vim'
 " Plug 'severin-lemaignan/vim-minimap'
+""" PATHFINDER
+" if has('python3') && has('timers')
+"   Plug 'danth/pathfinder.vim'
+" else
+"   echoerr 'pathfinder.vim is not supported on this Vim installation'
+" endif
 
 """ TAGS
 set statusline+=%{gutentags#statusline()}
@@ -157,7 +158,7 @@ set encoding=utf-8
 " nnoremap gm m
 
 """ GITGUTTER
-autocmd VimEnter * GitGutterEnable
+" autocmd VimEnter * GitGutterEnable
 
 """ BOOL TOGGLE
 nnoremap <silent> <Leader>t :ToggleBool<CR>
@@ -198,19 +199,19 @@ endfunction
 nnoremap <silent> <Leader>s :call ToggleSpellCheck()<CR>
 
 """ MESA SYNTAX
-filetype indent plugin on
+" filetype indent plugin on
 
-augroup inlist
-  au!
-  autocmd BufNewFile,BufRead inlist*   set syntax=fortran
-  autocmd BufNewFile,BufRead inlist*   setlocal commentstring=!\ %s
-augroup END
+" augroup inlist
+"   au!
+"   autocmd BufNewFile,BufRead inlist*   set syntax=fortran
+"   autocmd BufNewFile,BufRead inlist*   setlocal commentstring=!\ %s
+" augroup END
 
-augroup histprof
-  au!
-  autocmd BufNewFile,BufRead *.list   set syntax=fortran
-  autocmd BufNewFile,BufRead *.list   setlocal commentstring=!\ %s
-augroup END
+" augroup histprof
+"   au!
+"   autocmd BufNewFile,BufRead *.list   set syntax=fortran
+"   autocmd BufNewFile,BufRead *.list   setlocal commentstring=!\ %s
+" augroup END
 
 """ FORTRAN TABS
 autocmd FileType fortran setlocal shiftwidth=3 softtabstop=3 expandtab ignorecase
