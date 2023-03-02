@@ -1,10 +1,10 @@
 
 [colors]
 background = ${xrdb:color0:#222}
-foreground = ${xrdb:color2:#222}
+foreground = ${xrdb:color7:#222}
 foreground-alt = ${xrdb:color5:#222}
-primary = ${xrdb:color4:#222}
-secondary = ${xrdb:color5:#222}
+primary = ${xrdb:color2:#222}
+secondary = ${xrdb:color3:#222}
 alert = ${xrdb:color7:#222}
 
 #####################################################################################################################
@@ -380,62 +380,6 @@ foreground = ${colors.foreground}
 module-margin = 0
 cursor-click = pointer
 cursor-scroll = ns-resize
-
-#####################################################################################################################
-
-[bar/vert1080-i3]
-width = 120
-height = 32.4
-offset-x = 25
-offset-y = 12.0
-bottom = false
-fixed-center = true
-line-size = 2
-padding-right = 2
-radius = 16.0
-tray-position = none
-wm-restack = i3
-override-redirect = true
-background = ${colors.background}
-foreground = ${colors.foreground}
-font-0 = Iosevka Nerd Font:pixelsize=14;4
-font-1 = Iosevka Nerd Font:size=14;4
-font-2 = Iosevka Nerd Font:size=22;4
-modules-left =
-modules-center = i3
-modules-right =
-module-margin = 0
-cursor-click = pointer
-cursor-scroll = ns-resize
-monitor = DisplayPort-1 
-
-#####################################################################################################################
-
-[bar/vert1080-audio]
-offset-x = 155
-offset-y = 12.0
-bottom = false
-fixed-center = false
-line-size = 2
-padding-right = 2
-width = 140
-height = 32.4
-radius = 16.0
-font-0 = Iosevka Nerd Font:pixelsize=14;4
-font-1 = Iosevka Nerd Font:size=14;4
-font-2 = Iosevka Nerd Font:size=22;4
-separator = "  "
-modules-center = bluetooth-display pulseaudio 
-monitor = DisplayPort-1 
-tray-position = none
-wm-restack = i3
-override-redirect = true
-background = ${colors.background}
-foreground = ${colors.foreground}
-module-margin = 0
-cursor-click = pointer
-cursor-scroll = ns-resize
-
 
 #####################################################################################################################
                                                  #### MODULES ####

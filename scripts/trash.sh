@@ -1,3 +1,3 @@
 #!/bin/sh
 
-mv -b "$@" ${HOME}/.local/share/Trash/files/
+mv "$@" ${HOME}/.local/share/Trash/files/

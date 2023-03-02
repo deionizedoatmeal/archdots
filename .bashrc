@@ -131,6 +131,7 @@ alias lt='lsd -tl'
 alias tree='lsd --tree'
 alias diff='icdiff -N'
 alias duh='du -h -d 1'
+# alias cat='bat'
 
 ##########
 # RANGER #
@@ -165,12 +166,6 @@ export PATH=$PATH:$(go env GOPATH)/bin
 ########
 alias pass-pull='pass git pull origin master'
 alias pass-push='pass git push origin master'
-
-########
-# REPOS #
-########
-# alias dijo-pull='git -C ${HOME}/.local/share/dijo pull origin master'
-# alias dijo-push='git -C ${HOME}/.local/share/dijo add -A && git -C ${HOME}/.local/share/dijo commit --allow-empty-message -m "" && git -C ${HOME}/.local/share/dijo push origin master'
 
 ##################
 # PACMAN ALIASES #
@@ -207,7 +202,7 @@ export PATH="$HOME/.local/bin:$PATH"
 #################
 # WOLFRAM ALPHA #
 #################
-export APPID=XXXXXX-XXXXXXXXXX
+export APPID=XXXXXXXXXXXXXXXXX
 
 ########
 # MESA #

@@ -42,7 +42,6 @@ set $RIGHT HDMI-A-0
 #T bindsym F3 exec --no-startup-id amixer -D pulse sset Master toggle; exec --no-startup-id click1 #mute sound
 #T bindsym $mod+Shift+p exec rofimenu-power T
 #T bindsym $mod+Shift+e exec rofimenu-exit T
-#T bindsym $mod+Shift+m exec sudo udiskie-dmenu -matching regex -dmenu -i -no-custom -multi-select
 #T bindsym $mod+a exec rofimenu-ranger T
 #T bindsym $mod+Shift+b exec --no-startup-id rofimenu-bluetooth T
 #T bindsym $mod+Shift+v exec --no-startup-id rofimenu-vpn T
@@ -63,7 +62,6 @@ set $RIGHT HDMI-A-0
 #N Workspace $ws9 output $RIGHT
 #N Workspace $ws10 output $RIGHT
 #N bindsym $mod+Shift+e exec rofimenu-exit
-#N bindsym $mod+Shift+m exec sudo udiskie-dmenu -matching regex -dmenu -i -no-custom -multi-select
 #N bindsym $mod+a exec rofimenu-ranger
 #N bindsym $mod+Shift+b exec --no-startup-id rofimenu-bluetooth
 #N bindsym $mod+Shift+v exec --no-startup-id rofimenu-vpn
@@ -199,6 +197,11 @@ bindsym $mod+Shift+s exec --no-startup-id rofimenu-pass-wrapper
 ###########################
 bindsym $mod+t exec theme-toggle
 
+###########
+# UDISKIE #
+###########Ü
+bindsym $mod+Shift+m exec udiskie-dmenu -matching regex -dmenu -i -no-custom -multi-select
+
 ########################
 # FLASH FOCUSED WINDOW #
 ########################
@@ -217,9 +220,7 @@ bindsym $mod+Mod1+minus resize shrink height 1
 bindsym $mod+Mod1+bracketright resize grow width 1
 
 # center floating windows
-for_window [class="^.*"] floating enable, move position center
-
-
+for_window [floating] move position center
 
 ######################################
 # POLYBAR, COMPTON AND OTHER STARTUP #
@@ -262,8 +263,6 @@ bindsym --release Print exec --no-startup-id scrot; exec --no-startup-id click1
 ####################
 # FLOATING WINDOWS #
 ####################
-# move floating windows to center
-for_window [class=".*"] [floating] move absolute position center
 # default certain applications to floating
 for_window [class="(?i)feh"] floating enable
 for_window [class="(?i)steam"] floating enable

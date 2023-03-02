@@ -37,7 +37,7 @@ FIRE=$(ps aux | grep -w 'firefox' | grep -v 'grep' | wc -l)
 killall -q firefox
 
 # if firefox was open
-if [[ ${FIRE} -gt 1 ]]; then
+if [[ ${FIRE} -gt 0 ]]; then
         (firefox &> /dev/null &)
 fi
 

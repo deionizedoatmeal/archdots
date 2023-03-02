@@ -25,9 +25,7 @@ polybar 1080-btaudio &
 #polybar 1080-audio &
 #polybar 1080-bt &
 polybar 1080-i3 &
-# polybar sq-i3 &
-# polybar sq-audio &
+polybar sq-i3 &
+polybar sq-audio &
 polybar vert-i3 &
 polybar vert-audio &
-polybar vert1080-i3 &
-polybar vert1080-audio &
