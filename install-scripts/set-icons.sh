@@ -17,6 +17,8 @@ cd /usr/share/applications
 mkdir -p ../unused-applications
 
 # remove any applications you dont launch from rofi
+sed -i -e '$aNoDisplay=true' yad-settings.desktop
+sed -i -e '$aNoDisplay=true' yad-icon-browser.desktop
 sed -i -e '$aNoDisplay=true' avahi-discover.desktop
 sed -i -e '$aNoDisplay=true' bssh.desktop
 sed -i -e '$aNoDisplay=true' bvnc.desktop
@@ -306,11 +308,17 @@ sed -i '/GenericName=/d' ./org.gnome.Nautilus.desktop
 sed -i "2iName= Nautilus" org.gnome.Nautilus.desktop
 sed -i "3iGenericName=File Browser" org.gnome.Nautilus.desktop
 
-# ytop 
+# bottom
 sed -i '/Name=/d' ./bottom.desktop
 sed -i '/GenericName=/d' ./bottom.desktop
-sed -i "2iName= Bottom" bottom.desktop
-sed -i "3iGenericName=Process Viewer" bottom.desktop
+sed -i "2iName= Bottom" bottom.desktop
+sed -i "3iGenericName=Process and Resource Viewer" bottom.desktop
+
+# gpu
+sed -i '/Name=/d' ./io.github.arunsivaramanneo.GPUViewer.desktop
+sed -i '/GenericName=/d' ./io.github.arunsivaramanneo.GPUViewer.desktop
+sed -i "2iName= GPU" io.github.arunsivaramanneo.GPUViewer.desktop
+sed -i "3iGenericName=GPU Viewer" io.github.arunsivaramanneo.GPUViewer.desktop
 
 # kitty 
 sed -i '/Name=/d' ./kitty.desktop
